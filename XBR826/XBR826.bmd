@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<document type="BLUMIND" editor_version="3.2.902.24361" document_version="3.0.0.0">
+  <!--Create by Blumind, you can download it free from http://www.blumind.org-->
+  <information>
+    <author>cuiwe</author>
+    <company>
+    </company>
+    <version>3.0</version>
+    <description>
+    </description>
+  </information>
+  <attributes>
+    <item name="editor_show_sidebar">True</item>
+  </attributes>
+  <charts active_chart="0">
+    <chart name="XBR822" type="MindMap">
+      <remark>
+      </remark>
+      <layout>LOGIC_RIGHT</layout>
+      <style>
+        <back_color>Black</back_color>
+        <fore_color>Lime</fore_color>
+        <line_color>White</line_color>
+        <border_color>Gray</border_color>
+        <node_back_color>Black</node_back_color>
+        <node_fore_color>Lime</node_fore_color>
+        <select_color>Blue</select_color>
+        <hover_color>Purple</hover_color>
+        <link_line_color>Cyan</link_line_color>
+        <widget_margin>1</widget_margin>
+        <picture_thumb_size>100, 100</picture_thumb_size>
+      </style>
+      <nodes>
+        <node id="1" text="XBR826" x="349" y="369" width="140" height="58" text_b="12, 12, 116, 34" remark_b="142, 0, 16, 16">
+          <remark>&lt;FONT face=宋体&gt;XBR826是带816AX前端的SOC，用的是E906的核&lt;/FONT&gt;</remark>
+          <style>
+            <back_color>Cyan</back_color>
+            <fore_color>Black</fore_color>
+            <border_color>Cyan</border_color>
+            <padding>12</padding>
+          </style>
+          <nodes>
+            <node id="6" text="子主题 5" x="569" y="283" width="108" height="38" text_b="2, 2, 104, 34" />
+            <node id="2" text="子主题 4" x="569" y="331" width="108" height="38" text_b="2, 2, 104, 34" />
+            <node id="3" text="子主题 3" x="569" y="379" width="108" height="38" text_b="2, 2, 104, 34" />
+            <node id="4" text="子主题 2" x="569" y="427" width="108" height="38" text_b="2, 2, 104, 34" />
+            <node id="5" text="子主题 1" x="569" y="475" width="108" height="38" text_b="2, 2, 104, 34" />
+          </nodes>
+          <lines>
+            <line target="6" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 279, 116, 46" />
+            <line target="2" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 327, 116, 46" />
+            <line target="3" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 375, 116, 46" />
+            <line target="4" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 423, 116, 46" />
+            <line target="5" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 471, 116, 46" />
+          </lines>
+        </node>
+      </nodes>
+    </chart>
+  </charts>
+</document>
