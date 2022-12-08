@@ -29,29 +29,42 @@
         <link_line_color>Blue</link_line_color>
         <widget_margin>1</widget_margin>
         <picture_thumb_size>100, 100</picture_thumb_size>
+        <items_space>20</items_space>
       </style>
       <nodes>
-        <node id="1" text="XBR822" x="349" y="369" width="140" height="58" text_b="12, 12, 116, 34" remark_b="142, 0, 16, 16">
+        <node id="1" text="XBR822" x="324" y="369" width="140" height="58" text_b="12, 12, 116, 34" remark_b="142, 0, 16, 16">
           <remark>&lt;FONT face=宋体&gt;XBR822是配FMCW前端的MCU，用的是E902的核&lt;/FONT&gt;</remark>
           <style>
             <back_color>Blue</back_color>
             <fore_color>White</fore_color>
-            <border_color>Blue</border_color>
+            <border_color>Lavender</border_color>
             <padding>12</padding>
           </style>
           <nodes>
-            <node id="6" text="子主题 5" x="569" y="283" width="108" height="38" text_b="2, 2, 104, 34" />
-            <node id="2" text="子主题 4" x="569" y="331" width="108" height="38" text_b="2, 2, 104, 34" />
-            <node id="3" text="子主题 3" x="569" y="379" width="108" height="38" text_b="2, 2, 104, 34" />
-            <node id="4" text="子主题 2" x="569" y="427" width="108" height="38" text_b="2, 2, 104, 34" />
-            <node id="5" text="子主题 1" x="569" y="475" width="108" height="38" text_b="2, 2, 104, 34" />
+            <node id="6" text="ADC" x="544" y="89" width="65" height="38" text_b="2, 2, 61, 34" />
+            <node id="4" text="I2C SLAVE" x="544" y="147" width="133" height="38" text_b="2, 2, 129, 34" />
+            <node id="5" text="I2C MASTER" x="544" y="205" width="158" height="38" text_b="2, 2, 154, 34" />
+            <node id="6" text="FLASH" x="544" y="263" width="89" height="38" text_b="2, 2, 85, 34" />
+            <node id="2" text="SRAM" x="544" y="321" width="84" height="38" text_b="2, 2, 80, 34" />
+            <node id="1" text="PMU" x="544" y="379" width="70" height="38" text_b="2, 2, 66, 34" />
+            <node id="3" text="DSP" x="544" y="437" width="61" height="38" text_b="2, 2, 57, 34" />
+            <node id="4" text="STC" x="544" y="495" width="57" height="38" text_b="2, 2, 53, 34" />
+            <node id="5" text="IR" x="544" y="553" width="36" height="38" text_b="2, 2, 32, 34" />
+            <node id="2" text="UART" x="544" y="611" width="79" height="38" text_b="2, 2, 75, 34" />
+            <node id="3" text="中断" x="544" y="669" width="62" height="38" text_b="2, 2, 58, 34" />
           </nodes>
           <lines>
-            <line target="6" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 279, 116, 46" />
-            <line target="2" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 327, 116, 46" />
-            <line target="3" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 375, 116, 46" />
-            <line target="4" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 423, 116, 46" />
-            <line target="5" begin_side="Right" end_side="Left" begin_rect="349, 369, 140, 58" end_rect="565, 471, 116, 46" />
+            <line target="6" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 85, 73, 46" />
+            <line target="4" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 143, 141, 46" />
+            <line target="5" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 201, 166, 46" />
+            <line target="6" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 259, 97, 46" />
+            <line target="2" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 317, 92, 46" />
+            <line target="1" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 375, 78, 46" />
+            <line target="3" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 433, 69, 46" />
+            <line target="4" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 491, 65, 46" />
+            <line target="5" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 549, 44, 46" />
+            <line target="2" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 607, 87, 46" />
+            <line target="3" begin_side="Right" end_side="Left" begin_rect="324, 369, 140, 58" end_rect="540, 665, 70, 46" />
           </lines>
         </node>
       </nodes>
