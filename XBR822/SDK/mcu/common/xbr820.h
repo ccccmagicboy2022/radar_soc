@@ -63,7 +63,8 @@ typedef struct
 {
     __IO uint32_t VALUE                      : 8;
     __IO uint32_t INOUT                      : 8;
-    __IO uint32_t INEN                       : 8;
+    //__IO uint32_t INEN                       : 8;
+    uint32_t                                 : 8;
     uint32_t                                 : 8;
 } str_gpio_ctl_field_t;
 
@@ -78,6 +79,29 @@ typedef struct
     __IO uint32_t PX_6                       : 4;
     __IO uint32_t PX_7                       : 4;
 } str_gpio_ps_field_t;
+
+typedef struct
+{
+    __IO uint32_t ADC_DIV                    : 12;
+    __IO uint32_t TRI_MODE                   : 1;
+    __IO uint32_t TRI_SRC                    : 1;
+    uint32_t                                 : 18;
+} str_adc_ctl_field_t;
+
+typedef struct
+{
+    __IO uint32_t ADC_DELAY                  : 12;
+    uint32_t                                 : 20;
+} str_adc_delay_field_t;
+
+typedef struct
+{
+    __IO uint32_t ADC_BEGIN                  : 11;
+    uint32_t                                 : 5;
+    __IO uint32_t ADC_END                    : 11;
+    uint32_t                                 : 5;
+} str_adc_range_field_t;
+
 
 typedef struct
 {
@@ -122,9 +146,31 @@ typedef struct
     };
 } brx820_gpio_regdef;
 
+typedef struct
+{
+    union
+    {
+        __IO uint32_t CTL;
+        str_adc_ctl_field_t CTL_f;
+    };
+    union
+    {
+        __IO uint32_t DELAY;
+        str_adc_delay_field_t DELAY_f;
+    };
+    union
+    {
+        __IO uint32_t RANGE;
+        str_adc_range_field_t RANGE_f;
+    };    
+} brx820_adc_regdef;
+
+
 #define BRX820_UART     ((brx820_uart_regdef *)(0x1f040000UL))
-#define BRX820_GPIO_P1  ((brx820_gpio_regdef *)(0x1f000100UL))
-#define BRX820_GPIO_P2  ((brx820_gpio_regdef *)(0x1f000120UL))
-#define BRX820_GPIO_P3  ((brx820_gpio_regdef *)(0x1f000140UL))
+#define BRX820_GPIO_PA  ((brx820_gpio_regdef *)(0x1f000100UL))
+#define BRX820_GPIO_PB  ((brx820_gpio_regdef *)(0x1f000120UL))
+#define BRX820_DSP_ADC  ((brx820_adc_regdef *)(0x1f010000UL))
+
+#define SYSTEM_CLOCK 40000000
 
 #endif
