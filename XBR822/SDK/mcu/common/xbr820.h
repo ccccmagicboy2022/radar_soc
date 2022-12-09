@@ -5,17 +5,23 @@
 
 typedef enum irq_number
 {
-    INT_SOFT                 = 3,
-    INT_SYS_TIMER            = 7,
-    INT_EXTERNAL            = 11,
-    INT_000                 = 16,
-    INT_001                 = 17,
-    INT_002                 = 18,
-    INT_003                 = 19,
-    INT_004                 = 20,
-    INT_005                 = 21,
-    INT_006                 = 22,
-    INT_007                 = 23,
+    UART_RX_IRQ             = 1,
+    UART_TX_IRQ             = 2,
+    TIMER1_IRQ              = 3,
+    TIMER2_IRQ              = 4,
+    TIMER3_IRQ              = 5,
+    TIMER4_IRQ              = 6,
+    ADC_DONE_IRQ            = 7,
+    IR_IRQ                  = 9,
+    WDG_IRQ                 = 10,
+    GPIO_PA0_IRQ            = 11,
+    GPIO_PA1_IRQ            = 12,
+    GPIO_PA2_IRQ            = 13,
+    GPIO_PA3_IRQ            = 14,
+    LIGHT_SENSOR_IRQ        = 17,
+    FREQ_DET_IRQ            = 18,
+    I2C_MASTER              = 19,
+    I2C_SLAVE               = 20,
 }irq_number_e;
 
 
@@ -102,6 +108,11 @@ typedef struct
     uint32_t                                 : 5;
 } str_adc_range_field_t;
 
+typedef struct {
+    __IO uint32_t WDG_RST_EN                                      :1;
+    __IO uint32_t WDG_INT_EN                                      :1;
+    uint32_t                                                      :30;
+} str_wdg_en_filed_t;
 
 typedef struct
 {
@@ -165,11 +176,27 @@ typedef struct
     };    
 } brx820_adc_regdef;
 
+/**
+ * @brief WFG
+ *
+ */
+typedef struct {
+    union
+    {
+        __IO uint32_t WDG_CFG;
+        str_wdg_en_filed_t WDG_CFG_f;
+    };
+    __IO uint32_t STC_WDG_CNT_REG;
+} brx820_wdg_regdef;
+
+
 
 #define BRX820_UART     ((brx820_uart_regdef *)(0x1f040000UL))
 #define BRX820_GPIO_PA  ((brx820_gpio_regdef *)(0x1f000100UL))
 #define BRX820_GPIO_PB  ((brx820_gpio_regdef *)(0x1f000120UL))
 #define BRX820_DSP_ADC  ((brx820_adc_regdef *)(0x1f010000UL))
+#define BRX820_WDG      ((brx820_wdg_regdef *)(0x1f020010UL))
+
 
 #define SYSTEM_CLOCK 40000000
 
