@@ -62,9 +62,18 @@ void wdg_enable(brx820_wdg_regdef *wdg, uint32_t wdg_counter)
   */
 void wdg_disable(brx820_wdg_regdef *wdg)
 {
-    assert_param(IS_WDG_PERIPH(wdg_cfg));
+    assert_param(IS_WDG_PERIPH(wdg));
 
     wdg->WDG_CFG_f.WDG_INT_EN = 0;
     wdg->WDG_CFG_f.WDG_RST_EN = 0;
 }
+
+void feed_dog(brx820_wdg_regdef *wdg)
+{
+    assert_param(IS_WDG_PERIPH(wdg));
+
+    wdg->WDG_CFG_f.WDG_RST_EN = 0;
+    wdg->WDG_CFG_f.WDG_RST_EN = 1;
+}
+
 

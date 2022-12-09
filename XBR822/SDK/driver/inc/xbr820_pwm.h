@@ -1,5 +1,5 @@
 /**
- * @file phm320_pwm.h
+ * @file xbr820_pwm.h
  * @author Phosense Software Team
  * @brief pwm C head file
  * @version 1.0.0.0
@@ -9,13 +9,22 @@
  * 
  */
 
-#ifndef __PHM320_PWM_H__
-#define __PHM320_PWM_H__
+#ifndef __XBR820_PWM_H__
+#define __XBR820_PWM_H__
 
 /*******************************************************************************
  * Include files
  ******************************************************************************/
 #include "pho_common.h"
+
+enum timer_num
+{
+    PWM0,
+    PWM1,
+    PWM2,
+    PWM3,
+    PWM4,
+};
 
 /**
  * @defgroup pwm_group Pulse Width Modulation(PWM)
@@ -29,7 +38,7 @@
   */ 
 typedef struct{
 	uint32_t idx;	 /*!< Specifies the PWM index to be configured. 
-	  							This parameter can be any value of 0~5 */
+	  							This parameter can be any value of 0~4 */
 	uint32_t freq;	/*!< Specifies the PWM frequency to be configured. 
 							This parameter can be any value of 0~16,000,000 */
 	uint32_t duty;	/*!< Specifies the PWM duty ration to be configured. 

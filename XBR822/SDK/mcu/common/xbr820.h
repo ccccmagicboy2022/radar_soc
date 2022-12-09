@@ -189,6 +189,34 @@ typedef struct {
     __IO uint32_t STC_WDG_CNT_REG;
 } brx820_wdg_regdef;
 
+typedef struct {
+    union
+    {
+        __IO uint32_t TIMER_EN                                        :1;
+        __IO uint32_t TIMER_STA                                       :1;
+        uint32_t                                                      :30;
+    };
+    __IO uint32_t TIMER_INIT;
+    __IO uint32_t TIMER_CNT;
+} brx820_timer_regdef;
+
+typedef struct {
+    union
+    {
+        __IO uint32_t PWM_EN                                          :1;
+        uint32_t                                                      :31;
+    };
+    union
+    {
+        __IO uint32_t PWM_CTRL                                        :24;
+        uint32_t                                                      :8;
+    };
+    union
+    {
+        __IO uint32_t PWM_DUTY                                        :24;
+        uint32_t                                                      :8;
+    };
+} brx820_pwm_regdef;
 
 
 #define BRX820_UART     ((brx820_uart_regdef *)(0x1f040000UL))
@@ -196,7 +224,15 @@ typedef struct {
 #define BRX820_GPIO_PB  ((brx820_gpio_regdef *)(0x1f000120UL))
 #define BRX820_DSP_ADC  ((brx820_adc_regdef *)(0x1f010000UL))
 #define BRX820_WDG      ((brx820_wdg_regdef *)(0x1f020010UL))
-
+#define BRX820_TIMER1   ((brx820_timer_regdef *)(0x1f020020UL))
+#define BRX820_TIMER2   ((brx820_timer_regdef *)(0x1f020040UL))
+#define BRX820_TIMER3   ((brx820_timer_regdef *)(0x1f020060UL))
+#define BRX820_TIMER4   ((brx820_timer_regdef *)(0x1f020080UL))
+#define BRX820_PWM1     ((brx820_pwm_regdef *)(0x1f020100UL))
+#define BRX820_PWM2     ((brx820_pwm_regdef *)(0x1f020120UL))
+#define BRX820_PWM3     ((brx820_pwm_regdef *)(0x1f020140UL))
+#define BRX820_PWM4     ((brx820_pwm_regdef *)(0x1f020160UL))
+#define BRX820_PWM5     ((brx820_pwm_regdef *)(0x1f020180UL))
 
 #define SYSTEM_CLOCK 40000000
 

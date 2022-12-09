@@ -1,5 +1,5 @@
 /**
- * @file phm320_timer.h
+ * @file xbr820_timer.h
  * @author Phosense Software Team
  * @brief pwm C head file
  * @version 1.0.0.0
@@ -8,8 +8,8 @@
  * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
  * 
  */
-#ifndef __PHM320_TIMER_H__
-#define __PHM320_TIMER_H__
+#ifndef __XBR820_TIMER_H__
+#define __XBR820_TIMER_H__
 /*******************************************************************************
  * Include files
  ******************************************************************************/
@@ -109,20 +109,6 @@ int timer_get_initvalue(Timer_Cfg_t* timer);
   * @retval  the timer's current value; -1 for wrong timer id.
   */
 int timer_get_currentval(Timer_Cfg_t* timer);
-
-/**
-  * @brief  Enable the WatchDog timer. This is a cpu watchdog, only reset cpu not system.
-  * @param  wdg: which is a defined structure, include watchdog counter, enable and reset enable settings.
-  * @retval 0 for success, -1 for wrong input param.
-  */
-int wdg_config(WDGCfg* wdg);
-
-/**
-  * @brief  Enable the WatchDog timer. This is a cpufeeddog, only reset cpu not system.
-  * @param  None
-  * @retval None
-  */
-void feed_dog(void);
 
 /**  @} timer_group*/
 #endif
