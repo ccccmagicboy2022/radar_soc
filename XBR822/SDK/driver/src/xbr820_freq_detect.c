@@ -40,7 +40,7 @@
 void freq_detect_init(brx820_freq_detect_regdef * freq, const freq_detect_Cfg* freq_det_init)
 {
     assert_param(IS_FREQ_PERIPH(freq));
-    
+
     freq->FREQ_DETECT_CTRL_f.FREQ_DET_EN = freq_det_init.enable;
     freq->FREQ_DETECT_CTRL_f.FREQ_DET_INT_EN = freq_det_init.int_en;
     freq->FREQ_DETECT_CFG_f.FREQ_DET_INTERVAL = freq_det_init.interval;
@@ -74,7 +74,7 @@ void freq_detect_enable(brx820_freq_detect_regdef *freq)
 void freq_detect_enable(brx820_freq_detect_regdef *freq)
 {
     assert_param(IS_FREQ_PERIPH(freq));
-    
+
     freq->FREQ_DETECT_CTRL_f.FREQ_DET_EN = 0;
     freq->FREQ_DETECT_CTRL_f.FREQ_DET_INT_EN = 0;
 }
@@ -94,7 +94,7 @@ uint32_t freq_get_value(brx820_freq_detect_regdef *freq)
 
 /**
   * @brief  freq_get_interrupt_status.
-  * 		Reset means counting from the init value again.
+  *         Reset means counting from the init value again.
   * @param  freq and freq_status.
   * @retval none.
   */

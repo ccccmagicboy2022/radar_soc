@@ -33,7 +33,7 @@ extern "C" {
 #define I2C_SL_MSK_RWO     1<<12
 
 /**
-  * @brief  I2C slave initialize. 
+  * @brief  I2C slave initialize.
   *
   * @note   To assign an address for this I2C slave deive and enable it.
   *
@@ -43,7 +43,7 @@ extern "C" {
 void I2C_SL_Init(uint8_t sl_addr);
 
 /**
-  * @brief  I2C slave de-initialize. 
+  * @brief  I2C slave de-initialize.
   *
   * @note   Disable this I2C slave device and set its address to zero.
   *

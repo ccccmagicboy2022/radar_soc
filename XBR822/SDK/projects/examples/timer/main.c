@@ -11,6 +11,6 @@ int main()
     timer_init(TIMER1, 16100000);
 
     while(1);
-    
+
     return 0;
 }

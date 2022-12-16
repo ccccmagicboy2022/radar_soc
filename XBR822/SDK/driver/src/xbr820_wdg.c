@@ -28,8 +28,8 @@ void wdg_init(const str_wdg_init_t *wdg_init_cfg)
 {
     uint32_t counter;
 
-    counter = wdg_init_cfg.duty_ms / 1000 * SYSTEM_CLOCK; 
-    
+    counter = wdg_init_cfg.duty_ms / 1000 * SYSTEM_CLOCK;
+
     wdg_enable(BRX820_WDG, counter);
 }
 

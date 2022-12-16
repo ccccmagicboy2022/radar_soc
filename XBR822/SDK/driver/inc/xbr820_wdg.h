@@ -27,7 +27,7 @@ void wdg_disable(brx820_wdg_regdef *wdg);
 typedef void (*fun_wdg)(void);
 /**
  * @brief wdg init structure definition
- * 
+ *
  */
 typedef struct str_wdg_init
 {

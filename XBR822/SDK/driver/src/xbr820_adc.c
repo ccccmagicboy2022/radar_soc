@@ -4,9 +4,9 @@
  * @brief adc driver C source file
  * @version 1.0.0.0
  * @date 2022-03-18
- * 
+ *
 * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
- * 
+ *
  */
 
 /*******************************************************************************
@@ -18,10 +18,10 @@
 
 /**
  * @brief initializes an ADC instance.
- * 
+ *
  * @param [in] adc_init_cfg pointer to ADC initialization structure.
  *                          see @ref str_adc_init_cfg_t for details.
- * @return em_result_t 
+ * @return em_result_t
  * - OK no error occurred.
  * - ERRORINVALIDPARAMETER parameter error.
  */
@@ -40,10 +40,10 @@ em_result_t adc_init(const str_adc_init_cfg_t *adc_init_cfg)
 
 /**
  * @brief start ADC, and get the data.
- * 
+ *
  * @param [out] adc_val the address to store ADC value.
  * @return em_result_t
- * - OK no error occurred. 
+ * - OK no error occurred.
  */
 em_result_t adc_get_polling(uint16_t *adc_val)
 {
@@ -55,9 +55,9 @@ em_result_t adc_get_polling(uint16_t *adc_val)
 
 /**
  * @brief start ADC.
- * 
+ *
  * @return em_result_t
- * - OK no error occurred. 
+ * - OK no error occurred.
  */
 em_result_t adc_start_sample(void)
 {
@@ -69,9 +69,9 @@ em_result_t adc_start_sample(void)
 
 /**
  * @brief wait adc ready
- * 
+ *
   * @return em_result_t
- * - OK no error occurred. 
+ * - OK no error occurred.
  */
 em_result_t adc_wait_ready(void)
 {
@@ -81,10 +81,10 @@ em_result_t adc_wait_ready(void)
 
 /**
  * @brief get adc data
- * 
+ *
  * @param [out] adc_val the address to store ADC value.
  * @return em_result_t
- * - OK no error occurred. 
+ * - OK no error occurred.
  */
 em_result_t adc_get_data(uint16_t *adc_val)
 {
@@ -94,9 +94,9 @@ em_result_t adc_get_data(uint16_t *adc_val)
 
 /**
  * @brief clear adc finish flag for next get data
- * 
+ *
  * @return em_result_t
- * - OK no error occurred.  
+ * - OK no error occurred.
  */
 em_result_t adc_clear_flag(void)
 {

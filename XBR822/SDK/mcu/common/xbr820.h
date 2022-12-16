@@ -218,7 +218,7 @@ typedef struct
     {
         __IO uint32_t RANGE;
         str_adc_range_field_t RANGE_f;
-    };    
+    };
 } brx820_adc_regdef;
 
 /**
@@ -303,89 +303,89 @@ typedef struct {
 } brx820_ir_regdef;
 
 typedef struct {
-	__IOM uint32_t NACK              :1;
-	__IOM uint32_t FINISH            :1;
-	__IOM uint32_t TIME_OUT          :1;
-	__IOM uint32_t ONE_BYTE_FINISH   :1;
-	__IOM uint32_t 		            :28;        
+    __IOM uint32_t NACK              :1;
+    __IOM uint32_t FINISH            :1;
+    __IOM uint32_t TIME_OUT          :1;
+    __IOM uint32_t ONE_BYTE_FINISH   :1;
+    __IOM uint32_t                     :28;
 } I2C_INT;
 
 typedef struct {
-	__IM uint32_t NACK             :1;
-	__IM uint32_t FINISH           :1;
-	__IM uint32_t TIME_OUT         :1;
-	__IM uint32_t IDLE             :1;
-	__IM uint32_t ONE_BYTE_FINISH  :1;
-	uint32_t                       :3;
-	__IM uint32_t DATA_NUM         :8;
-	uint32_t                      :16;
+    __IM uint32_t NACK             :1;
+    __IM uint32_t FINISH           :1;
+    __IM uint32_t TIME_OUT         :1;
+    __IM uint32_t IDLE             :1;
+    __IM uint32_t ONE_BYTE_FINISH  :1;
+    uint32_t                       :3;
+    __IM uint32_t DATA_NUM         :8;
+    uint32_t                      :16;
 } I2C_status_t;
 
 typedef struct {
-    __IOM uint32_t SLAVE_ADDR       :8; 
-	uint32_t                       :24; 
-	
+    __IOM uint32_t SLAVE_ADDR       :8;
+    uint32_t                       :24;
+
     __IOM uint32_t DATA_LENTH       :8;
     uint32_t                       :24;
-	
-	__IOM uint32_t CMD              :4;
-	__IOM uint32_t CMD_W            :1;
-	uint32_t                       :27;
-	
-	__IOM uint32_t WAIT_TIME       :16;
-	uint16_t                       :16;
-	
-    __IOM uint32_t CPU_CLK_STR_EN   :1;
-	__IOM uint32_t CPU_LAST_ACK_EN  :1;
-	uint32_t                       :30;
-	
-	__IOM uint32_t REG_ADDR        :16;
-	uint32_t                       :16;
 
-	__IOM uint32_t T_DATA0;
-	__IOM uint32_t T_DATA1;
-	__IOM uint32_t R_DATA0;
-	__IOM uint32_t R_DATA1;
-	
-	union {
-		__IM uint32_t STATUS;
-		I2C_status_t STATUS_f;
-	};
-	
-	I2C_INT INT_EN;
-	
-	I2C_INT INT_CLEAR;
-	
-	__IOM uint32_t CLK_DIV        :16;
-	uint32_t 	                  :16;
-	
-	__IOM uint32_t CLK_EN          :1;
-	uint32_t                      :31;	
+    __IOM uint32_t CMD              :4;
+    __IOM uint32_t CMD_W            :1;
+    uint32_t                       :27;
+
+    __IOM uint32_t WAIT_TIME       :16;
+    uint16_t                       :16;
+
+    __IOM uint32_t CPU_CLK_STR_EN   :1;
+    __IOM uint32_t CPU_LAST_ACK_EN  :1;
+    uint32_t                       :30;
+
+    __IOM uint32_t REG_ADDR        :16;
+    uint32_t                       :16;
+
+    __IOM uint32_t T_DATA0;
+    __IOM uint32_t T_DATA1;
+    __IOM uint32_t R_DATA0;
+    __IOM uint32_t R_DATA1;
+
+    union {
+        __IM uint32_t STATUS;
+        I2C_status_t STATUS_f;
+    };
+
+    I2C_INT INT_EN;
+
+    I2C_INT INT_CLEAR;
+
+    __IOM uint32_t CLK_DIV        :16;
+    uint32_t                       :16;
+
+    __IOM uint32_t CLK_EN          :1;
+    uint32_t                      :31;
 } brx820_i2c_master_regdef;
 
 typedef volatile union{
-	uint32_t status;
-	struct{
-		uint32_t slave_rw    		:1;
-		uint32_t slave_nackb    	:1;
-		uint32_t slave_stopb    	:1;
-		uint32_t slave_addrb    	:1;
-		uint32_t slave_rw_o    	:1;
-		uint32_t          :27;
-	}Bits;
+    uint32_t status;
+    struct{
+        uint32_t slave_rw            :1;
+        uint32_t slave_nackb        :1;
+        uint32_t slave_stopb        :1;
+        uint32_t slave_addrb        :1;
+        uint32_t slave_rw_o        :1;
+        uint32_t          :27;
+    }Bits;
 }I2C_SL_Intr;
 
 typedef volatile struct {
     __IOM   uint32_t    slavedev        :8;     //device id[7:1]; what about bit0
     __IM    uint32_t    :24;
-    
+
     __IOM   uint32_t    en_slaveb   :1;     //iic slave enable signal
     __IM    uint32_t    :31;
-    
+
     __IM   uint32_t    slaveb_data        :8;     //slave data from iic slave interface
     __IM   uint32_t    slaveb_addr        :8;     //slave addr from iic slave interface
     __IM    uint32_t    :16;
-    
+
     __IOM   uint32_t    slaveb_data_2_iic   :8;     //data to iic slave interface
     __IM    uint32_t    :24;
 
@@ -396,12 +396,12 @@ typedef volatile struct {
     __IOM   uint32_t    rel_slb_stop        :1;     //release iic slave stop
     __IOM   uint32_t    rel_slb_addr        :1;     //release iic slave addr
     __IOM   uint32_t    rel_slb_int        :1;     //release iic slave int
-    __IM    uint32_t    :3;  
+    __IM    uint32_t    :3;
     __IOM   uint32_t    msk_slb_rw        :1;     //mask iic slave rw
     __IOM   uint32_t    msk_slb_nack        :1;     //mask iic slave nak
     __IOM   uint32_t    msk_slb_stop        :1;     //mask iic slave stop
     __IOM   uint32_t    msk_slb_addr        :1;     //mask iic slave addr
-    __IM    uint32_t    :20;    
+    __IM    uint32_t    :20;
 }brx820_i2c_slave_regdef;
 
 

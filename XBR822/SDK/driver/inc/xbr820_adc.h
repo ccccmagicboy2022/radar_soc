@@ -4,9 +4,9 @@
  * @brief adc driver C head file
  * @version 1.0.0.0
  * @date 2022-12-08
- * 
+ *
  * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
- * 
+ *
  */
 
 #ifndef __XBR820_ADC_H__
@@ -24,7 +24,7 @@
 
 /**
  * @brief adc channel selection
- * 
+ *
  */
 typedef enum em_adc_ch_sel
 {
@@ -36,7 +36,7 @@ typedef enum em_adc_ch_sel
 
 /**
  * @brief adc trigger mode selection
- * 
+ *
  */
 typedef enum em_adc_trigger_mode
 {
@@ -46,7 +46,7 @@ typedef enum em_adc_trigger_mode
 
 /**
  * @brief adc trigger source selection
- * 
+ *
  */
 typedef enum em_adc_trigger_src
 {
@@ -57,7 +57,7 @@ typedef enum em_adc_trigger_src
 
 /**
  * @brief ADC init structure definition
- * 
+ *
  */
 typedef struct str_adc_init
 {

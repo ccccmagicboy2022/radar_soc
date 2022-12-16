@@ -4,9 +4,9 @@
  * @brief mtpc C head file
  * @version 1.0.0.0
  * @date 2022-03-22
- * 
+ *
  * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
- * 
+ *
  */
 
 #ifndef __PHM320_PMU_H___
@@ -27,7 +27,7 @@
 
 /**
  * @brief power work way enumeration
- * 
+ *
  */
 typedef enum em_powered_way
 {

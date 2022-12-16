@@ -14,7 +14,7 @@ extern "C" {
 
 static inline uint32_t get_data_num(void)
 {
-	return BRX820_I2C_master->STATUS_f.DATA_NUM;
+    return BRX820_I2C_master->STATUS_f.DATA_NUM;
 }
 void i2c_init(uint32_t clk);
 void i2c_enable_int(void);
@@ -34,24 +34,24 @@ uint32_t i2c_master_get_status();
 static inline void i2c_clear_rw_done(void)
 {
 #if 0
-	int ret;
+    int ret;
 
-	if (I2C_master->STATUS & RW_DONE_INT_MASK) {
-		I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
-		ret = 0;
-	} else if (I2C_master->STATUS & FINISH_INT_MASK) {
-		I2C_master->INT_CLEAR.FINISH = 1;
-		ret = 1;
-	}
+    if (I2C_master->STATUS & RW_DONE_INT_MASK) {
+        I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
+        ret = 0;
+    } else if (I2C_master->STATUS & FINISH_INT_MASK) {
+        I2C_master->INT_CLEAR.FINISH = 1;
+        ret = 1;
+    }
 
-	return ret;
+    return ret;
 #endif
-	BRX820_I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
+    BRX820_I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
 }
 
 static inline void i2c_clear_stop(void)
 {
-	BRX820_I2C_master->INT_CLEAR.FINISH = 1;
+    BRX820_I2C_master->INT_CLEAR.FINISH = 1;
 }
 
 #ifdef __cplusplus

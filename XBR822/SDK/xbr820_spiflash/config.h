@@ -3,9 +3,9 @@
 
 #define CONFIG_HAVE_VIC 0
 #define __NO_ICACHE
-#define CONFIG_ARCH_INTERRUPTSTACK	0x100
+#define CONFIG_ARCH_INTERRUPTSTACK    0x100
 
-#define CONFIG_LOG_NUMS	16
+#define CONFIG_LOG_NUMS    16
 //#define CONFIG_DEBUG_TEST
 #ifdef CONFIG_DEBUG_TEST
 //#define CONFIG_SE_TEST
@@ -19,4 +19,4 @@
 //#define CONFIG_TICK_DELAY
 
 #include <gconfig.h>
-#endif	// __SF_CONFIG_H__
+#endif    // __SF_CONFIG_H__

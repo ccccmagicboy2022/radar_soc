@@ -36,13 +36,13 @@ extern "C"
 /* Exported constants --------------------------------------------------------*/
 
 #define IS_FREQ_PERIPH(PERIPH)                                  ((PERIPH) == BRX820_FREQ_DETECT)
-                                                               
+
 
 /* Exported types ------------------------------------------------------------*/
 typedef struct{
-	uint32_t	enable;
-	uint32_t	int_en;
-	uint32_t	interval;
+    uint32_t    enable;
+    uint32_t    int_en;
+    uint32_t    interval;
 }freq_detect_Cfg;
 
 /* Exported functions --------------------------------------------------------*/

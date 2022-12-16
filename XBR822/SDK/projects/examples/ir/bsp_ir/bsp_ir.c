@@ -14,8 +14,8 @@
 void ir_init(uint8_t ir_priority)
 {
     //set_pin_func(P1_5, FUNC_IR);
-    assert_param(IS_IR_CONFIG_IT(ir_priority));  
-    
+    assert_param(IS_IR_CONFIG_IT(ir_priority));
+
     stc_irq_set_cfg_t  irq_ir_set_cfg;
     irq_ir_set_cfg.irq_number = IR_IRQ;
     irq_ir_set_cfg.irq_func_pointer = IR_irqhandler;

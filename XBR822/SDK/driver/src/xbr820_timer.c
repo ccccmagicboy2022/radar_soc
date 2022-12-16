@@ -4,9 +4,9 @@
  * @brief pwm C source file
  * @version 1.0.0.0
  * @date 2022-03-23
- * 
+ *
  * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
- * 
+ *
  */
 
 /*******************************************************************************
@@ -59,7 +59,7 @@ int timer_disable(Timer_Cfg_t *timer)
 
 /**
   * @brief  Reset the timer according to the param id.
-  * 				Reset means counting from the init value again.
+  *                 Reset means counting from the init value again.
   * @param  timer: which is a defined structure, include timerID, counter.
   * @retval 0 for success, -1 for wrong input param.
   */
@@ -69,7 +69,7 @@ int timer_reset(Timer_Cfg_t *timer)
         return -1;
 
     brx820_timer_regdef *tmr_reg = ((brx820_timer_regdef*)(BRX820_TIMER1));
-    
+
     __IO uint32_t* tmr_Init = &(tmr_reg->TIMER_INIT);
 
     tmr_Init[timer->id] = 0xFFFFF;
@@ -79,7 +79,7 @@ int timer_reset(Timer_Cfg_t *timer)
 
 /**
   * @brief  Restart the timer according to the param id.
-  * 				That means counting from the init value again.
+  *                 That means counting from the init value again.
   * @param  timer: which is a defined structure, include timerID, counter.
   * @retval 0 for success, -1 for wrong input param.
   */
@@ -113,7 +113,7 @@ int timer_set_initvalue(Timer_Cfg_t *timer)
 
     __IO uint32_t* tmr_Init = &(tmr_reg->TIMER_INIT);
     tmr_Init[timer->id] = timer->counter;
-    
+
     return 0;
 }
 
@@ -129,7 +129,7 @@ int timer_get_initvalue(Timer_Cfg_t *timer)
         return -1;
 
     brx820_timer_regdef *tmr_reg = ((brx820_timer_regdef*)(BRX820_TIMER1));
-    
+
     __IO uint32_t* tmr_Init = &(tmr_reg->TIMER_INIT);
     retval = tmr_Init[timer->id];
     return retval;
@@ -148,7 +148,7 @@ int timer_get_currentval(Timer_Cfg_t *timer)
         return -1;
 
     brx820_timer_regdef *tmr_reg = ((brx820_timer_regdef*)(BRX820_TIMER1));
-    
+
     __I uint32_t *tmrCurr = &(tmr_reg->TIMER_CNT);
     retval = tmrCurr[timer->id];
     return retval;

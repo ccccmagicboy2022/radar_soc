@@ -11,17 +11,17 @@
  */
 #include <string.h>
 /**
- * Globl symbols in ckcpu.ld 
+ * Globl symbols in ckcpu.ld
  */
 extern char __e_ram_bss_1[];
 extern char __s_ram_bss_1[];
 
-static void MemoryInit( void ) 
+static void MemoryInit( void )
 {
-	  /* zero the bss 
-	   */
-	for (int i = 0; i < __e_ram_bss_1 - __s_ram_bss_1; i++)
-		__s_ram_bss_1[i] = 0;
+      /* zero the bss
+       */
+    for (int i = 0; i < __e_ram_bss_1 - __s_ram_bss_1; i++)
+        __s_ram_bss_1[i] = 0;
 }
 
 
@@ -29,28 +29,28 @@ static void MemoryInit( void )
  * @brief entry of whole chip initialization
  * Since here SystemInit is a weak symbol, any vendor can override this symbol on its own wishes.
  */
-__attribute__((weak)) void  SystemInit(void) 
+__attribute__((weak)) void  SystemInit(void)
 {
-	/**
-	 * Initial the bss section and data decompression from LMA to VMA
-	 */
-	MemoryInit();
-	
-	/**
-	 * TODO: initial IO, memory, flash... 
-	 */
-	
+    /**
+     * Initial the bss section and data decompression from LMA to VMA
+     */
+    MemoryInit();
+
+    /**
+     * TODO: initial IO, memory, flash...
+     */
+
     return;
 }
 
 __attribute__((weak)) void __main()
 {
-	SystemInit();
-	// got to main 
-	extern int main(void);
-	main();
-	// loop here;
-	while(1);
+    SystemInit();
+    // got to main
+    extern int main(void);
+    main();
+    // loop here;
+    while(1);
 }
 
 void __attribute__((weak)) handle_trap(unsigned int cause, unsigned int epc, unsigned int regs[32])

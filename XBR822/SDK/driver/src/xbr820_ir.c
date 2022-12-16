@@ -4,9 +4,9 @@
  * @brief ir driver C source file
  * @version 1.0.0.0
  * @date 2022-03-23
- * 
+ *
  * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
- * 
+ *
  */
 
 /*******************************************************************************
@@ -43,7 +43,7 @@ int ir_read_code(IR_mc_t *irdata)
     brx820_ir_regdef* ir_reg;
 
     ir_reg = (brx820_ir_regdef*)(BRX820_IR);
-    
+
     irdata->ir_mode = ((ir_reg->IR_CMD_f.IR_REPEAT) << 1) | (ir_reg->IR_CMD_f.IR_INT_STA);
     irdata->ir_code = ir_reg->IR_READ_DATA;
     return 0;

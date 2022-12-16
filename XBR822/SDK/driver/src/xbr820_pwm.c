@@ -4,9 +4,9 @@
  * @brief pwm C source file
  * @version 1.0.0.0
  * @date 2022-03-23
- * 
+ *
  * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
- * 
+ *
  */
 
 /*******************************************************************************
@@ -51,7 +51,7 @@ int pwm_disable(PWM_Config_t* pwm)
 
     brx820_pwm_regdef *PWM_reg = ((brx820_pwm_regdef*)(BRX820_PWM1));
     __IO uint32_t *pwm_en = &(PWM_reg->PWM_EN);
-    
+
     pwm_en[pwm->idx] = 0
 
     return 0;

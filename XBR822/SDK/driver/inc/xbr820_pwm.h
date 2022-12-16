@@ -4,9 +4,9 @@
  * @brief pwm C head file
  * @version 1.0.0.0
  * @date 2022-03-23
- * 
+ *
  * @copyright Copyright (c) 2022, Phosense-tech, All rights reserved.
- * 
+ *
  */
 
 #ifndef __XBR820_PWM_H__
@@ -33,16 +33,16 @@ enum timer_num
 
 #define CONFIG_PWM_NUM  5
 
-/** 
-  * @brief   PWM Init structure definition  
-  */ 
+/**
+  * @brief   PWM Init structure definition
+  */
 typedef struct{
-	uint32_t idx;	 /*!< Specifies the PWM index to be configured. 
-	  							This parameter can be any value of 0~4 */
-	uint32_t freq;	/*!< Specifies the PWM frequency to be configured. 
-							This parameter can be any value of 0~16,000,000 */
-	uint32_t duty;	/*!< Specifies the PWM duty ration to be configured. 
-							This parameter can be any value of 0~100  */
+    uint32_t idx;     /*!< Specifies the PWM index to be configured.
+                                  This parameter can be any value of 0~4 */
+    uint32_t freq;    /*!< Specifies the PWM frequency to be configured.
+                            This parameter can be any value of 0~16,000,000 */
+    uint32_t duty;    /*!< Specifies the PWM duty ration to be configured.
+                            This parameter can be any value of 0~100  */
 }PWM_Config_t;
 
 /**
