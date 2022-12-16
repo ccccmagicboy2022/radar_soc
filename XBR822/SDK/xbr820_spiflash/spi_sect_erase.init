@@ -1,0 +1,50 @@
+set arch riscv:rv32
+target remote localhost:1025
+set *(int*)0x1f010058=0x13
+set *(int*)0x1f090000=0x0c
+set *(int*)0x1f090004=0x601
+set *(int*)0x1f090004=0x102
+set *(int*)0x1f090004=0x592
+x/xw 0x1f090000
+set *(int*)0x1f090004=0x592
+x/xw 0x1f090000
+set *(int*)0x1f090004=0x601
+set *(int*)0x1f090008=0
+set *(int*)0x1f090004=0x592
+x/xw 0x1f090000
+#set *(int*)0x1f090004=0xc704
+set *(int*)0x1f090004=0xd804
+set *(int*)0x1f090004=0x592
+x/xw 0x1f090000
+set *(int*)0x1f090004=0x592
+x/xw 0x1f090000
+set *(int*)0x1f090004=0x592
+x/xw 0x1f090000
+x/16xw 0x1000e50
+set *(int*)0x1f010058=0x10
+x/16xw 0x800
+
+set arch riscv:rv32
+target remote localhost:1025
+x/16xw 0x1000e50
+q
+y
+
+set arch riscv:rv32
+target remote localhost:1025
+set *(int*)0x1f010058=0x10
+x/16xw 0xe30
+q
+y
+
+set arch riscv:rv32
+target remote localhost:1025
+x/16xw 0x1000e50
+set *(int*)0x1f010058=0x10
+x/16xw 0
+x/16xw 0x800
+x/16xw 0x1000
+q
+y
+
+dump binary value d0.bin g_rwBuffer

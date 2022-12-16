@@ -2,26 +2,15 @@
 // <<< Use Configuration Wizard in Context Menu >>>
 */
 
+OUTPUT_ARCH( "riscv" )
+
 /*
 // <m> Entry Point <2>
 // <i> config start function for this application
 */
 ENTRY( Reset_Handler )
 
-MEMORY
-{
-  MEM :
-/*
-// <o> Memory Start Address (in Bytes) <0x0-0xFFFFFFFF:0x100>
-// <i> config start address of RAM area for this application
-*/
-  ORIGIN = 0x1000000 ,
-/*
-// <o> Memory Length (in Bytes) <0x0-0xFFFFFFFF:0x1>
-// <i> config the length of RAM area for this application
-*/
-  LENGTH = 0x1000
-}
+INCLUDE Obj\memory.ld
 
 SECTIONS
 {
@@ -31,8 +20,8 @@ SECTIONS
 		}
     .text : {
 		. = ALIGN(0x4) ;
-		*crt0.o(.exp_table)
 		__stext = . ;
+		KEEP(*crt0.o(*.text.init))
 		*(.text)
 		*(.text*)
 		*(.text.*)
@@ -45,20 +34,20 @@ SECTIONS
 
 		KEEP (*(.init))
 		KEEP (*(.fini))
-
+		
 		/* This is special code area at the end of the normal
 		   text section.  It contains a small lookup table at
 		   the start followed by the code pointed to by entries
-		   in the lookup table.
+		   in the lookup table.  
 		 */
 		. = ALIGN (4) ;
 		PROVIDE(__ctbp = .);
 		*(.call_table_data)
 		*(.call_table_text)
-
+		
 		. = ALIGN(0x10) ;
 		__etext = . ;
-    } > MEM
+    } > RAM
 
     .rodata : {
 		. = ALIGN(0x4) ;
@@ -74,17 +63,17 @@ SECTIONS
 		*(.rodata.str1.4)
 		. = ALIGN(0x10) ;
 		__erodata = .;
-    } > MEM
+    } > RAM
 
     .data : {
 		. = ALIGN(0x4) ;
 		__sdata = . ;
-		__data_start = . ;
+		__data_start__ = . ;
 		data_start = . ;
-		KEEP (*main.o(.data))
 		*(.got.plt)
 		*(.got)
 		*(.gnu.linkonce.r*)
+		KEEP(*main.o(.data))
 		*(.data)
 		*(.data*)
 		*(.data1)
@@ -93,22 +82,24 @@ SECTIONS
 		*(.data1)
 		*(.gcc_except_table)
 		*(.gcc_except_table*)
-		*(.sdata)
+		*(.sdata) 
 		*(.sdata.*)
 		*(.gnu.linkonce.s.*)
 		*(__libc_atexit)
 		*(__libc_subinit)
 		*(__libc_subfreeres)
 		*(.note.ABI-tag)
-
-		. = ALIGN(0x10) ;
+		. = ALIGN(0x10) ; 
+		__data_end__ = .;
 		__edata = . ;
-	} > MEM
+	} > RAM
 
     .bss : {
 		. = ALIGN(0x4) ;
 		__sbss = ALIGN(0x4) ;
 		__s_ram_bss_1 = . ;
+		KEEP(*main.o(.bss))
+		KEEP(*main.o*(COMMON))
 		*(.dynsbss)
 		*(.sbss)
 		*(.sbss.*)
@@ -122,12 +113,11 @@ SECTIONS
 		KEEP(*crt0.o(.app_stack))
 		KEEP(*crt0.o(.app_heap))
 		__end = . ;
-		_end = . ;
 		end = . ;
-	} > MEM
-
-	.eh_frame           : ONLY_IF_RO { KEEP (*(.eh_frame)) } > MEM
-	.gcc_except_table   : ONLY_IF_RO { *(.gcc_except_table .gcc_except_table.*) } > MEM
+	} > RAM
+	  
+	.eh_frame           : ONLY_IF_RO { KEEP (*(.eh_frame)) } > RAM
+	.gcc_except_table   : ONLY_IF_RO { *(.gcc_except_table .gcc_except_table.*) } > RAM
 	.eh_frame           : ONLY_IF_RW { KEEP (*(.eh_frame)) }
 	.gcc_except_table   : ONLY_IF_RW { *(.gcc_except_table .gcc_except_table.*) }
 	.eh_frame_hdr       : { *(.eh_frame_hdr) }
@@ -151,8 +141,8 @@ SECTIONS
 		KEEP (*(.fini_array))
 		KEEP (*(SORT(.fini_array.*)))
 		PROVIDE_HIDDEN (__fini_array_end = .);
-	}
-
+	} 
+	 
 	.ctors :
 	{
 		/* gcc uses crtbegin.o to find the start of
@@ -173,7 +163,7 @@ SECTIONS
 		KEEP (*(EXCLUDE_FILE (*crtend.o *crtend?.o ) .ctors))
 		KEEP (*(SORT(.ctors.*)))
 		KEEP (*(.ctors))
-	} > MEM
+	} > RAM
 	.dtors :
 	{
 		KEEP (*crtbegin.o(.dtors))
@@ -181,7 +171,7 @@ SECTIONS
 		KEEP (*(EXCLUDE_FILE (*crtend.o *crtend?.o ) .dtors))
 		KEEP (*(SORT(.dtors.*)))
 		KEEP (*(.dtors))
-	} > MEM
+	} > RAM
 
 	.junk 0 : { *(.rel*) *(.rela*) }
 	/* Stabs debugging sections.    */

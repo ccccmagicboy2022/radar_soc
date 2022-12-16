@@ -11,47 +11,6 @@ extern "C" {
 /* ================                I2C Slave declaration                ================ */
 /* ================================================================================ */
 
-typedef volatile union{
-	uint32_t status;
-	struct{
-		uint32_t slave_rw    		:1;
-		uint32_t slave_nackb    	:1;
-		uint32_t slave_stopb    	:1;
-		uint32_t slave_addrb    	:1;
-		uint32_t slave_rw_o    	:1;
-		uint32_t          :27;
-	}Bits;
-}I2C_SL_Intr;
-
-typedef volatile struct {
-    __IOM   uint32_t    slavedev        :8;     //device id[7:1]; what about bit0
-    __IM    uint32_t    :24;
-    
-    __IOM   uint32_t    en_slaveb   :1;     //iic slave enable signal
-    __IM    uint32_t    :31;
-    
-    __IM   uint32_t    slaveb_data        :8;     //slave data from iic slave interface
-    __IM   uint32_t    slaveb_addr        :8;     //slave addr from iic slave interface
-    __IM    uint32_t    :16;
-    
-    __IOM   uint32_t    slaveb_data_2_iic   :8;     //data to iic slave interface
-    __IM    uint32_t    :24;
-
-    __IM   I2C_SL_Intr    slave_int;     //iic slave rw(write/read data done)
-
-    __IOM   uint32_t    rel_slb_rw        :1;     //release iic slave rw
-    __IOM   uint32_t    rel_slb_nack        :1;     //release iic slave nak
-    __IOM   uint32_t    rel_slb_stop        :1;     //release iic slave stop
-    __IOM   uint32_t    rel_slb_addr        :1;     //release iic slave addr
-    __IOM   uint32_t    rel_slb_int        :1;     //release iic slave int
-    __IM    uint32_t    :3;  
-    __IOM   uint32_t    msk_slb_rw        :1;     //mask iic slave rw
-    __IOM   uint32_t    msk_slb_nack        :1;     //mask iic slave nak
-    __IOM   uint32_t    msk_slb_stop        :1;     //mask iic slave stop
-    __IOM   uint32_t    msk_slb_addr        :1;     //mask iic slave addr
-    __IM    uint32_t    :20;    
-}I2C_SReg_t;
-
 #define I2C_SL_ENABLE     1
 #define I2C_SL_DISABLE     0
 

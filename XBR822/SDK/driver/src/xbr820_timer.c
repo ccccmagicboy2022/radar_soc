@@ -30,7 +30,7 @@ int timer_enable(Timer_Cfg_t *timer)
 
     brx820_timer_regdef *tmr_reg = ((brx820_timer_regdef*)(BRX820_TIMER1));
     __IO uint32_t* tmr_Init = &(tmr_reg->TIMER_INIT);
-    __IO uint32_t* tmr_En = &(tmr_reg->TIMER_EN);
+    __IO uint32_t* tmr_En = &(tmr_reg->TIMER_CTRL_f.TIMER_EN);
 
     tmr_Init[timer->id] = timer->counter;
     tmr_En[timer->id] = 1;
@@ -49,7 +49,7 @@ int timer_disable(Timer_Cfg_t *timer)
 
     brx820_timer_regdef *tmr_reg = ((brx820_timer_regdef*)(BRX820_TIMER1));
 
-    __IO uint32_t* tmr_En = &(tmr_reg->TIMER_EN);
+    __IO uint32_t* tmr_En = &(tmr_reg->TIMER_CTRL_f.TIMER_EN);
     tmr_En[timer->id] = 0;
 
     csi_vic_disable_irq(TIMER1_IRQ + timer->id);
@@ -89,7 +89,7 @@ int timer_restart(Timer_Cfg_t *timer)
         return -1;
 
     brx820_timer_regdef *tmr_reg = ((brx820_timer_regdef*)(BRX820_TIMER1));
-    __IO uint32_t* tmr_En = &(tmr_reg->TIMER_EN);
+    __IO uint32_t* tmr_En = &(tmr_reg->TIMER_CTRL_f.TIMER_EN);
     __IO uint32_t* tmr_Init = &(tmr_reg->TIMER_INIT);
 
     tmr_En[timer->id] = 0;

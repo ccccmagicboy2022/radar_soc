@@ -1,5 +1,5 @@
 /**
- * @file phm320_ir.h
+ * @file xbr820_ir.h
  * @author Phosense Software Team
  * @brief ir driver head file
  * @version 1.0.0.0
@@ -9,8 +9,8 @@
  * 
  */
 
-#ifndef __PHM320_IR_H__
-#define __PHM320_IR_H__
+#ifndef __XBR820_IR_H__
+#define __XBR820_IR_H__
 
 /*******************************************************************************
  * Include files

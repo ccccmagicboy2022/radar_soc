@@ -1,5 +1,5 @@
 /**
- * @file phm320_ir.c
+ * @file xbr820_ir.c
  * @author Phosense Software Team
  * @brief ir driver C source file
  * @version 1.0.0.0
@@ -12,7 +12,7 @@
 /*******************************************************************************
  * Include files
  ******************************************************************************/
-#include "phm320_ir.h"
+#include "xbr820_ir.h"
 
 /** @{*/
 
@@ -23,11 +23,10 @@
 */
 void ir_clr_int(void)
 {
-    IR_reg_t *ir_reg;
-    ir_reg = (IR_reg_t*)(PHM320_IR_BASE);
+    brx820_ir_regdef *ir_reg;
+    ir_reg = (brx820_ir_regdef*)(BRX820_IR);
 
-    ir_reg->rf_int_clr = 1;
-    ir_reg->rf_cmp_clr = 1;
+    //not find
 }
 
 /**
@@ -41,11 +40,12 @@ int ir_read_code(IR_mc_t *irdata)
     if (irdata == NULL) {
         return -1;
     }
-    IR_reg_t* ir_reg;
+    brx820_ir_regdef* ir_reg;
 
-    ir_reg = (IR_reg_t*)(PHM320_IR_BASE);
-    irdata->ir_mode = ((ir_reg->ir_repeat) << 1) | (ir_reg->ir_int);
-    irdata->ir_code = ir_reg->ir_data;
+    ir_reg = (brx820_ir_regdef*)(BRX820_IR);
+    
+    irdata->ir_mode = ((ir_reg->IR_CMD_f.IR_REPEAT) << 1) | (ir_reg->IR_CMD_f.IR_INT_STA);
+    irdata->ir_code = ir_reg->IR_READ_DATA;
     return 0;
 }
 

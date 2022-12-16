@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Name="xbr820_spi_flash" Version="1" Language="C" Type="Flash">
+<Project Name="xbr820_spiflash" Version="1" Language="C">
+  <VirtualDirectory Name="inc">
+    <File Name="encoding.h">
+      <FileOption/>
+    </File>
+    <File Name="xbr820.h">
+      <FileOption/>
+    </File>
+    <File Name="flash_config.h">
+      <FileOption/>
+    </File>
+    <File Name="typdef.h">
+      <FileOption/>
+    </File>
+    <File Name="config.h">
+      <FileOption/>
+    </File>
+  </VirtualDirectory>
   <Description/>
-  <Dependencies Name="BuildSet"/>
   <VirtualDirectory Name="arch">
     <File Name="crt0.S">
+      <FileOption/>
+    </File>
+    <File Name="xbr820.c">
       <FileOption/>
     </File>
   </VirtualDirectory>
   <VirtualDirectory Name="script">
     <File Name="ckcpu.ld">
+      <FileOption/>
+    </File>
+    <File Name="gdb.init">
       <FileOption/>
     </File>
   </VirtualDirectory>
@@ -23,9 +45,9 @@
       <FileOption/>
     </File>
   </VirtualDirectory>
-  <VendorInfo>
-    <VendorName>new_soc_project_c_flash_e902</VendorName>
-  </VendorInfo>
+  <MonitorProgress>
+    <DebugLaunch>35</DebugLaunch>
+  </MonitorProgress>
   <BuildConfigs>
     <BuildConfig Name="BuildSet">
       <Target>
@@ -59,9 +81,9 @@
         <RAMBank>
           <RAM1>
             <InUse>yes</InUse>
-            <Start>0x1000000</Start>
+            <Start>0x01000000</Start>
             <Size>0x1000</Size>
-            <Init>yes</Init>
+            <Init>no</Init>
           </RAM1>
           <RAM2>
             <InUse>no</InUse>
@@ -89,7 +111,7 @@
           </RAM5>
         </RAMBank>
         <CPU>e902</CPU>
-        <UseMiniLib>yes</UseMiniLib>
+        <UseMiniLib>no</UseMiniLib>
         <Endian>little</Endian>
         <UseHardFloat>no</UseHardFloat>
         <UseEnhancedLRW>no</UseEnhancedLRW>
@@ -104,7 +126,7 @@
         <Preprocessor>no</Preprocessor>
         <Disassmeble>yes</Disassmeble>
         <CallGraph>no</CallGraph>
-        <Map>no</Map>
+        <Map>yes</Map>
       </Output>
       <User>
         <BeforeCompile>
@@ -112,21 +134,20 @@
           <UserProgName/>
         </BeforeCompile>
         <BeforeMake>
-          <RunUserProg>no</RunUserProg>
-          <UserProgName/>
+          <RunUserProg>yes</RunUserProg>
+          <UserProgName>riscv64-unknown-elf-gcc -I. -I ../config -E -P ../config/memory_s.ld.c -o Obj/memory.ld</UserProgName>
         </BeforeMake>
         <AfterMake>
           <RunUserProg>yes</RunUserProg>
           <UserProgName>cp "$(ProjectPath)/Obj/$(ProjectName).elf" "$(CDKPath)/CSKY/Flash/$(ProjectName).elf"</UserProgName>
         </AfterMake>
-        <Tools/>
       </User>
       <Compiler>
         <Define/>
         <Undefine/>
-        <Optim>None (-O0)</Optim>
+        <Optim>Optimize (-Og)</Optim>
         <DebugLevel>Default (-g)</DebugLevel>
-        <IncludePath>$(ProjectPath);$(CDKPath)/CSKY/Flash;$(CDKPath)/CSKY/csi/csi_core/include/;$(CDKPath)/CSKY/csi/csi_core/csi_cdk/;$(CDKPath)/CSKY/csi/csi_driver/include/</IncludePath>
+        <IncludePath>$(ProjectPath);$(CDKPath)/CSKY/Flash;$(CDKPath)/CSKY/csi/csi_core/include/;$(CDKPath)/CSKY/csi/csi_core/csi_cdk/;$(CDKPath)/CSKY/csi/csi_driver/include/;$(ProjectPath)../config/</IncludePath>
         <OtherFlags>-fno-isolate-erroneous-paths-dereference</OtherFlags>
         <Verbose>no</Verbose>
         <Ansi>no</Ansi>
@@ -137,13 +158,12 @@
         <AllWarn>yes</AllWarn>
         <WarnErr>no</WarnErr>
         <OneElfS>no</OneElfS>
-        <OneElfSPerData>no</OneElfSPerData>
         <Fstrict>no</Fstrict>
       </Compiler>
       <Asm>
         <Define/>
         <Undefine/>
-        <IncludePath>$(ProjectPath);$(CDKPath)/CSKY/csi/csi_core/include/;$(CDKPath)/CSKY/csi/csi_core/csi_cdk/;$(CDKPath)/CSKY/csi/csi_driver/include/</IncludePath>
+        <IncludePath>$(ProjectPath);$(CDKPath)/CSKY/csi/csi_core/include/;$(CDKPath)/CSKY/csi/csi_core/csi_cdk/;$(CDKPath)/CSKY/csi/csi_driver/include/;$(ProjectPath)../config/</IncludePath>
         <OtherFlags/>
         <DebugLevel>gdwarf2</DebugLevel>
       </Asm>
@@ -156,29 +176,26 @@
         <OtherFlags/>
         <AutoLDFile>no</AutoLDFile>
         <LinkType/>
-        <IncludeAllLibs>no</IncludeAllLibs>
       </Linker>
       <Debug>
         <LoadApplicationAtStartup>yes</LoadApplicationAtStartup>
         <Connector>ICE</Connector>
-        <StopAt>yes</StopAt>
+        <StopAt>no</StopAt>
         <StopAtText>main</StopAtText>
         <InitFile>$(ProjectPath)/gdb.init</InitFile>
         <AfterLoadFile/>
-        <AutoRun>yes</AutoRun>
-        <ResetType>Hard Reset</ResetType>
+        <AutoRun>no</AutoRun>
+        <ResetType>Soft Reset</ResetType>
         <SoftResetVal>0</SoftResetVal>
         <ResetAfterLoad>no</ResetAfterLoad>
-        <AfterResetFile/>
         <Dumpcore>no</Dumpcore>
-        <DumpcoreText/>
+        <DumpcoreText>$(ProjectPath)/$(ProjectName).cdkcore</DumpcoreText>
         <ConfigICE>
           <IP>localhost</IP>
           <PORT>1025</PORT>
           <CPUNumber>0</CPUNumber>
           <Clock>12000</Clock>
           <Delay>10</Delay>
-          <NResetDelay>100</NResetDelay>
           <WaitReset>50</WaitReset>
           <DDC>yes</DDC>
           <TRST>no</TRST>
@@ -192,10 +209,6 @@
           <GDBName/>
           <GDBServerType>Local</GDBServerType>
           <OtherFlags/>
-          <ICEEnablePCSampling>yes</ICEEnablePCSampling>
-          <ICESamplingFreq>1000</ICESamplingFreq>
-          <RemoteICEEnablePCSampling>yes</RemoteICEEnablePCSampling>
-          <RemoteICESamplingPort>1026</RemoteICESamplingPort>
         </ConfigICE>
         <ConfigSIM>
           <SIMTarget/>
@@ -211,12 +224,11 @@
           <OpenOCDTclPortEnable>no</OpenOCDTclPortEnable>
           <OpenOCDTclPort>6666</OpenOCDTclPort>
           <OpenOCDConfigOptions/>
-          <OpenOCDTimeout>5000</OpenOCDTimeout>
         </ConfigOpenOCD>
       </Debug>
       <Flash>
         <InitFile/>
-        <Erase>Erase Sectors</Erase>
+        <Erase>Do Not Erase</Erase>
         <Algorithms Path=""/>
         <Program>no</Program>
         <Verify>no</Verify>
@@ -229,4 +241,15 @@
       </Flash>
     </BuildConfig>
   </BuildConfigs>
+  <DebugSessions>
+    <watchExpressions>g_rwBuffer:1</watchExpressions>
+    <memoryExpressions>0x1f090000;0x01000668;;</memoryExpressions>
+    <statistics>;;MHZ;</statistics>
+    <peripheralTabs/>
+    <WatchDisplayFormat>1</WatchDisplayFormat>
+    <LocalDisplayFormat>1</LocalDisplayFormat>
+    <debugLayout/>
+    <memoryTabColSizeExpressions>100:8;32:16;100:8;100:8;</memoryTabColSizeExpressions>
+  </DebugSessions>
+  <Dependencies Name="BuildSet"/>
 </Project>

@@ -11,19 +11,20 @@
  *     Initial API and implementation
  *******************************************************************************/
 #include "FlashOS.h"
+#include "flash_config.h"
 
 /**
  * structure to describe flash device
  */
 struct FlashDevice const FlashDevices  INDEVSECTION =  {
     6,                      // Reserved version description, do not modify!!!
-    "xbr820_spiflash_downlload",              // Flash name
-    "e902",              // CPU name, must in low case
-    0x22030301,               // Flash ID
-    "spiflash",             // type
-    512*1024,               // Reserved
+    SF_CHIP_NAME,      // Flash name
+    "xbr820",               // CPU name, must in low case
+    SF_CHIP_ID,      // Flash ID
+    "SPINorFlash",          // type
+    SF_CHIP_SIZE,           // Reserved
     1,                      // Access directly
     1,                      // RangeNumbers
 	// {start address, the flash size, sector size}
-    {{0x0, 0x1000000, 0x2000}}
+    {{0x0, SF_CHIP_SIZE, SF_SECT_SIZE}}
 };

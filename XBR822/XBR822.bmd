@@ -31,7 +31,7 @@
         <picture_thumb_size>100, 100</picture_thumb_size>
       </style>
       <nodes>
-        <node id="1" text="XBR822" x="106" y="1204" width="124" height="58" text_b="12, 12, 100, 34" remark_b="142, 0, 16, 16">
+        <node id="1" text="XBR822" x="106" y="1408" width="124" height="58" text_b="12, 12, 100, 34" remark_b="142, 0, 16, 16">
           <remark>&lt;FONT face=宋体&gt;XBR822是配FMCW前端的MCU，用的是E902的核。（固定40MHz时钟）&lt;/FONT&gt;</remark>
           <style>
             <back_color>Navy</back_color>
@@ -146,12 +146,7 @@
                     <fore_color>Black</fore_color>
                   </style>
                   <nodes>
-                    <node id="44" text="driver" x="825" y="596" width="81" height="38" text_b="2, 2, 77, 34">
-                      <style>
-                        <back_color>Fuchsia</back_color>
-                        <fore_color>Black</fore_color>
-                      </style>
-                    </node>
+                    <node id="44" text="driver" x="825" y="596" width="81" height="38" text_b="2, 2, 77, 34" />
                     <node id="45" text="example" x="825" y="644" width="112" height="38" text_b="2, 2, 108, 34" />
                   </nodes>
                   <lines>
@@ -280,7 +275,7 @@
                 <line target="72" begin_side="Right" end_side="Left" begin_rect="310, 1073, 174, 68" end_rect="551, 1232, 87, 38" />
               </lines>
             </node>
-            <node id="6" text="STC&#xD;&#xA;0x1f02_0000" x="310" y="1541" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 1569, 13, 13">
+            <node id="6" text="STC&#xD;&#xA;0x1f02_0000" x="310" y="1649" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 1677, 13, 13">
               <style>
                 <back_color>Yellow</back_color>
                 <fore_color>Black</fore_color>
@@ -310,7 +305,7 @@
                     <line target="7" begin_side="Right" end_side="Left" begin_rect="551, 1346, 155, 38" end_rect="773, 1388, 112, 38" />
                   </lines>
                 </node>
-                <node id="21" text="WDG" x="551" y="1478" width="75" height="38" text_b="2, 2, 71, 34" fold_btn_b="626, 1491, 13, 13">
+                <node id="21" text="WDG" x="551" y="1496" width="75" height="38" text_b="2, 2, 71, 34" fold_btn_b="626, 1509, 13, 13">
                   <style>
                     <back_color>#E0E0E0</back_color>
                     <fore_color>Black</fore_color>
@@ -318,87 +313,120 @@
                   <nodes>
                     <node id="64" text="driver" x="706" y="1436" width="81" height="74" text_b="2, 2, 77, 34">
                       <style>
-                        <back_color>Fuchsia</back_color>
+                        <back_color>Lime</back_color>
                         <fore_color>Black</fore_color>
                       </style>
                       <widgets>
-                        <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="1" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                        <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="95" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
                       </widgets>
                     </node>
-                    <node id="65" text="example" x="706" y="1520" width="112" height="38" text_b="2, 2, 108, 34" />
+                    <node id="65" text="example" x="706" y="1520" width="112" height="74" text_b="2, 2, 108, 34">
+                      <style>
+                        <back_color>Lime</back_color>
+                        <fore_color>Black</fore_color>
+                      </style>
+                      <widgets>
+                        <widget type="PROGRESSBAR" x="3" y="37" width="106" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="95" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                      </widgets>
+                    </node>
                   </nodes>
                   <lines>
-                    <line target="64" begin_side="Right" end_side="Left" begin_rect="551, 1478, 88, 38" end_rect="706, 1436, 81, 74" />
-                    <line target="65" begin_side="Right" end_side="Left" begin_rect="551, 1478, 88, 38" end_rect="706, 1520, 112, 38" />
+                    <line target="64" begin_side="Right" end_side="Left" begin_rect="551, 1496, 88, 38" end_rect="706, 1436, 81, 74" />
+                    <line target="65" begin_side="Right" end_side="Left" begin_rect="551, 1496, 88, 38" end_rect="706, 1520, 112, 74" />
                   </lines>
                 </node>
-                <node id="13" text="TIMER" x="551" y="1592" width="88" height="38" text_b="2, 2, 84, 34" fold_btn_b="639, 1605, 13, 13">
+                <node id="13" text="TIMER" x="551" y="1664" width="88" height="38" text_b="2, 2, 84, 34" fold_btn_b="639, 1677, 13, 13">
                   <style>
                     <back_color>#E0E0E0</back_color>
                     <fore_color>Black</fore_color>
                   </style>
                   <nodes>
-                    <node id="66" text="driver" x="719" y="1568" width="81" height="38" text_b="2, 2, 77, 34">
+                    <node id="66" text="driver" x="719" y="1604" width="81" height="74" text_b="2, 2, 77, 34">
                       <style>
-                        <back_color>Fuchsia</back_color>
+                        <back_color>Lime</back_color>
                         <fore_color>Black</fore_color>
                       </style>
+                      <widgets>
+                        <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="95" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                      </widgets>
                     </node>
-                    <node id="67" text="example" x="719" y="1616" width="112" height="38" text_b="2, 2, 108, 34" />
+                    <node id="67" text="example" x="719" y="1688" width="112" height="74" text_b="2, 2, 108, 34">
+                      <style>
+                        <back_color>Lime</back_color>
+                        <fore_color>Black</fore_color>
+                      </style>
+                      <widgets>
+                        <widget type="PROGRESSBAR" x="3" y="37" width="106" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                      </widgets>
+                    </node>
                   </nodes>
                   <lines>
-                    <line target="66" begin_side="Right" end_side="Left" begin_rect="551, 1592, 101, 38" end_rect="719, 1568, 81, 38" />
-                    <line target="67" begin_side="Right" end_side="Left" begin_rect="551, 1592, 101, 38" end_rect="719, 1616, 112, 38" />
+                    <line target="66" begin_side="Right" end_side="Left" begin_rect="551, 1664, 101, 38" end_rect="719, 1604, 81, 74" />
+                    <line target="67" begin_side="Right" end_side="Left" begin_rect="551, 1664, 101, 38" end_rect="719, 1688, 112, 74" />
                   </lines>
                 </node>
-                <node id="12" text="PWM" x="551" y="1688" width="77" height="38" text_b="2, 2, 73, 34" fold_btn_b="628, 1701, 13, 13">
+                <node id="12" text="PWM" x="551" y="1832" width="77" height="38" text_b="2, 2, 73, 34" fold_btn_b="628, 1845, 13, 13">
                   <style>
                     <back_color>#E0E0E0</back_color>
                     <fore_color>Black</fore_color>
                   </style>
                   <nodes>
-                    <node id="68" text="driver" x="708" y="1664" width="81" height="38" text_b="2, 2, 77, 34">
+                    <node id="68" text="driver" x="708" y="1772" width="81" height="74" text_b="2, 2, 77, 34">
                       <style>
-                        <back_color>Fuchsia</back_color>
+                        <back_color>Lime</back_color>
                         <fore_color>Black</fore_color>
                       </style>
+                      <widgets>
+                        <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="95" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                      </widgets>
                     </node>
-                    <node id="69" text="example" x="708" y="1712" width="112" height="38" text_b="2, 2, 108, 34" />
+                    <node id="69" text="example" x="708" y="1856" width="112" height="74" text_b="2, 2, 108, 34">
+                      <style>
+                        <back_color>Lime</back_color>
+                        <fore_color>Black</fore_color>
+                      </style>
+                      <widgets>
+                        <widget type="PROGRESSBAR" x="3" y="37" width="106" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                      </widgets>
+                    </node>
                   </nodes>
                   <lines>
-                    <line target="68" begin_side="Right" end_side="Left" begin_rect="551, 1688, 90, 38" end_rect="708, 1664, 81, 38" />
-                    <line target="69" begin_side="Right" end_side="Left" begin_rect="551, 1688, 90, 38" end_rect="708, 1712, 112, 38" />
+                    <line target="68" begin_side="Right" end_side="Left" begin_rect="551, 1832, 90, 38" end_rect="708, 1772, 81, 74" />
+                    <line target="69" begin_side="Right" end_side="Left" begin_rect="551, 1832, 90, 38" end_rect="708, 1856, 112, 74" />
                   </lines>
                 </node>
-                <node id="16" text="FREQ" x="551" y="1784" width="76" height="38" text_b="2, 2, 72, 34" fold_btn_b="627, 1797, 13, 13">
+                <node id="16" text="FREQ_DETECT" x="551" y="1982" width="177" height="38" text_b="2, 2, 173, 34" fold_btn_b="728, 1995, 13, 13">
                   <style>
                     <back_color>#E0E0E0</back_color>
                     <fore_color>Black</fore_color>
                   </style>
                   <nodes>
-                    <node id="70" text="driver" x="707" y="1760" width="81" height="38" text_b="2, 2, 77, 34">
+                    <node id="70" text="driver" x="808" y="1940" width="81" height="74" text_b="2, 2, 77, 34">
                       <style>
-                        <back_color>Fuchsia</back_color>
+                        <back_color>Lime</back_color>
                         <fore_color>Black</fore_color>
                       </style>
+                      <widgets>
+                        <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                      </widgets>
                     </node>
-                    <node id="71" text="example" x="707" y="1808" width="112" height="38" text_b="2, 2, 108, 34" />
+                    <node id="71" text="example" x="808" y="2024" width="112" height="38" text_b="2, 2, 108, 34" />
                   </nodes>
                   <lines>
-                    <line target="70" begin_side="Right" end_side="Left" begin_rect="551, 1784, 89, 38" end_rect="707, 1760, 81, 38" />
-                    <line target="71" begin_side="Right" end_side="Left" begin_rect="551, 1784, 89, 38" end_rect="707, 1808, 112, 38" />
+                    <line target="70" begin_side="Right" end_side="Left" begin_rect="551, 1982, 190, 38" end_rect="808, 1940, 81, 74" />
+                    <line target="71" begin_side="Right" end_side="Left" begin_rect="551, 1982, 190, 38" end_rect="808, 2024, 112, 38" />
                   </lines>
                 </node>
               </nodes>
               <lines>
-                <line target="15" begin_side="Right" end_side="Left" begin_rect="310, 1541, 174, 68" end_rect="551, 1346, 142, 38" />
-                <line target="21" begin_side="Right" end_side="Left" begin_rect="310, 1541, 174, 68" end_rect="551, 1478, 75, 38" />
-                <line target="13" begin_side="Right" end_side="Left" begin_rect="310, 1541, 174, 68" end_rect="551, 1592, 88, 38" />
-                <line target="12" begin_side="Right" end_side="Left" begin_rect="310, 1541, 174, 68" end_rect="551, 1688, 77, 38" />
-                <line target="16" begin_side="Right" end_side="Left" begin_rect="310, 1541, 174, 68" end_rect="551, 1784, 76, 38" />
+                <line target="15" begin_side="Right" end_side="Left" begin_rect="310, 1649, 174, 68" end_rect="551, 1346, 142, 38" />
+                <line target="21" begin_side="Right" end_side="Left" begin_rect="310, 1649, 174, 68" end_rect="551, 1496, 75, 38" />
+                <line target="13" begin_side="Right" end_side="Left" begin_rect="310, 1649, 174, 68" end_rect="551, 1664, 88, 38" />
+                <line target="12" begin_side="Right" end_side="Left" begin_rect="310, 1649, 174, 68" end_rect="551, 1832, 77, 38" />
+                <line target="16" begin_side="Right" end_side="Left" begin_rect="310, 1649, 174, 68" end_rect="551, 1982, 177, 38" />
               </lines>
             </node>
-            <node id="5" text="IR&#xD;&#xA;0x1f03_0000" x="310" y="1865" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 1893, 13, 13">
+            <node id="5" text="IR&#xD;&#xA;0x1f03_0000" x="310" y="2099" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2127, 13, 13">
               <style>
                 <back_color>Yellow</back_color>
                 <fore_color>Black</fore_color>
@@ -406,28 +434,7 @@
                 <shape>1</shape>
               </style>
               <nodes>
-                <node id="18" text="driver" x="551" y="1856" width="81" height="38" text_b="2, 2, 77, 34">
-                  <style>
-                    <back_color>Fuchsia</back_color>
-                    <fore_color>Black</fore_color>
-                  </style>
-                </node>
-                <node id="17" text="example" x="551" y="1904" width="112" height="38" text_b="2, 2, 108, 34" />
-              </nodes>
-              <lines>
-                <line target="18" begin_side="Right" end_side="Left" begin_rect="310, 1865, 174, 68" end_rect="551, 1856, 81, 38" />
-                <line target="17" begin_side="Right" end_side="Left" begin_rect="310, 1865, 174, 68" end_rect="551, 1904, 112, 38" />
-              </lines>
-            </node>
-            <node id="2" text="UART&#xD;&#xA;0x1f04_0000" x="310" y="1979" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2007, 13, 13">
-              <style>
-                <back_color>Yellow</back_color>
-                <fore_color>Black</fore_color>
-                <border_color>Red</border_color>
-                <shape>1</shape>
-              </style>
-              <nodes>
-                <node id="4" text="driver" x="551" y="1952" width="81" height="74" text_b="2, 2, 77, 34">
+                <node id="18" text="driver" x="551" y="2072" width="81" height="74" text_b="2, 2, 77, 34">
                   <style>
                     <back_color>Lime</back_color>
                     <fore_color>Black</fore_color>
@@ -436,14 +443,14 @@
                     <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
                   </widgets>
                 </node>
-                <node id="5" text="example" x="551" y="2036" width="112" height="38" text_b="2, 2, 108, 34" />
+                <node id="17" text="example" x="551" y="2156" width="112" height="38" text_b="2, 2, 108, 34" />
               </nodes>
               <lines>
-                <line target="4" begin_side="Right" end_side="Left" begin_rect="310, 1979, 174, 68" end_rect="551, 1952, 81, 74" />
-                <line target="5" begin_side="Right" end_side="Left" begin_rect="310, 1979, 174, 68" end_rect="551, 2036, 112, 38" />
+                <line target="18" begin_side="Right" end_side="Left" begin_rect="310, 2099, 174, 68" end_rect="551, 2072, 81, 74" />
+                <line target="17" begin_side="Right" end_side="Left" begin_rect="310, 2099, 174, 68" end_rect="551, 2156, 112, 38" />
               </lines>
             </node>
-            <node id="5" text="I2C MASTER&#xD;&#xA;0x1f05_0000" x="310" y="2093" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2121, 13, 13">
+            <node id="2" text="UART&#xD;&#xA;0x1f04_0000" x="310" y="2249" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2277, 13, 13">
               <style>
                 <back_color>Yellow</back_color>
                 <fore_color>Black</fore_color>
@@ -451,89 +458,139 @@
                 <shape>1</shape>
               </style>
               <nodes>
-                <node id="23" text="driver" x="551" y="2084" width="81" height="38" text_b="2, 2, 77, 34">
-                  <style>
-                    <back_color>Fuchsia</back_color>
-                    <fore_color>Black</fore_color>
-                  </style>
-                </node>
-                <node id="22" text="example" x="551" y="2132" width="112" height="38" text_b="2, 2, 108, 34" />
-              </nodes>
-              <lines>
-                <line target="23" begin_side="Right" end_side="Left" begin_rect="310, 2093, 174, 68" end_rect="551, 2084, 81, 38" />
-                <line target="22" begin_side="Right" end_side="Left" begin_rect="310, 2093, 174, 68" end_rect="551, 2132, 112, 38" />
-              </lines>
-            </node>
-            <node id="4" text="I2C SLAVE&#xD;&#xA;0x1f06_0000" x="310" y="2189" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2217, 13, 13">
-              <style>
-                <back_color>Yellow</back_color>
-                <fore_color>Black</fore_color>
-                <border_color>Red</border_color>
-                <shape>1</shape>
-              </style>
-              <nodes>
-                <node id="25" text="driver" x="551" y="2180" width="81" height="38" text_b="2, 2, 77, 34">
-                  <style>
-                    <back_color>Fuchsia</back_color>
-                    <fore_color>Black</fore_color>
-                  </style>
-                </node>
-                <node id="24" text="example" x="551" y="2228" width="112" height="38" text_b="2, 2, 108, 34" />
-              </nodes>
-              <lines>
-                <line target="25" begin_side="Right" end_side="Left" begin_rect="310, 2189, 174, 68" end_rect="551, 2180, 81, 38" />
-                <line target="24" begin_side="Right" end_side="Left" begin_rect="310, 2189, 174, 68" end_rect="551, 2228, 112, 38" />
-              </lines>
-            </node>
-            <node id="6" text="FLASH&#xD;&#xA;0x1f07_0000" x="310" y="2285" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2313, 13, 13">
-              <style>
-                <back_color>Yellow</back_color>
-                <fore_color>Black</fore_color>
-                <border_color>Red</border_color>
-                <shape>1</shape>
-              </style>
-              <nodes>
-                <node id="20" text="driver" x="551" y="2276" width="81" height="38" text_b="2, 2, 77, 34" />
-                <node id="19" text="example" x="551" y="2324" width="112" height="38" text_b="2, 2, 108, 34" />
-              </nodes>
-              <lines>
-                <line target="20" begin_side="Right" end_side="Left" begin_rect="310, 2285, 174, 68" end_rect="551, 2276, 81, 38" />
-                <line target="19" begin_side="Right" end_side="Left" begin_rect="310, 2285, 174, 68" end_rect="551, 2324, 112, 38" />
-              </lines>
-            </node>
-            <node id="3" text="中断" x="310" y="2390" width="62" height="38" text_b="2, 2, 58, 34" fold_btn_b="372, 2403, 13, 13">
-              <style>
-                <back_color>Yellow</back_color>
-                <fore_color>Black</fore_color>
-                <border_color>Red</border_color>
-                <shape>1</shape>
-              </style>
-              <nodes>
-                <node id="9" text="driver" x="452" y="2372" width="81" height="74" text_b="2, 2, 77, 34">
+                <node id="4" text="driver" x="551" y="2204" width="81" height="74" text_b="2, 2, 77, 34">
                   <style>
                     <back_color>Lime</back_color>
                     <fore_color>Black</fore_color>
                   </style>
                   <widgets>
-                    <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="80" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                    <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                  </widgets>
+                </node>
+                <node id="5" text="example" x="551" y="2288" width="112" height="74" text_b="2, 2, 108, 34">
+                  <style>
+                    <back_color>Lime</back_color>
+                    <fore_color>Black</fore_color>
+                  </style>
+                  <widgets>
+                    <widget type="PROGRESSBAR" x="3" y="37" width="106" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
                   </widgets>
                 </node>
               </nodes>
               <lines>
-                <line target="9" begin_side="Right" end_side="Left" begin_rect="310, 2390, 75, 38" end_rect="452, 2372, 81, 74" />
+                <line target="4" begin_side="Right" end_side="Left" begin_rect="310, 2249, 174, 68" end_rect="551, 2204, 81, 74" />
+                <line target="5" begin_side="Right" end_side="Left" begin_rect="310, 2249, 174, 68" end_rect="551, 2288, 112, 74" />
+              </lines>
+            </node>
+            <node id="5" text="I2C MASTER&#xD;&#xA;0x1f05_0000" x="310" y="2399" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2427, 13, 13">
+              <style>
+                <back_color>Yellow</back_color>
+                <fore_color>Black</fore_color>
+                <border_color>Red</border_color>
+                <shape>1</shape>
+              </style>
+              <nodes>
+                <node id="23" text="driver" x="551" y="2372" width="81" height="74" text_b="2, 2, 77, 34">
+                  <style>
+                    <back_color>Lime</back_color>
+                    <fore_color>Black</fore_color>
+                  </style>
+                  <widgets>
+                    <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                  </widgets>
+                </node>
+                <node id="22" text="example" x="551" y="2456" width="112" height="38" text_b="2, 2, 108, 34" />
+              </nodes>
+              <lines>
+                <line target="23" begin_side="Right" end_side="Left" begin_rect="310, 2399, 174, 68" end_rect="551, 2372, 81, 74" />
+                <line target="22" begin_side="Right" end_side="Left" begin_rect="310, 2399, 174, 68" end_rect="551, 2456, 112, 38" />
+              </lines>
+            </node>
+            <node id="4" text="I2C SLAVE&#xD;&#xA;0x1f06_0000" x="310" y="2513" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2541, 13, 13">
+              <style>
+                <back_color>Yellow</back_color>
+                <fore_color>Black</fore_color>
+                <border_color>Red</border_color>
+                <shape>1</shape>
+              </style>
+              <nodes>
+                <node id="25" text="driver" x="551" y="2504" width="81" height="38" text_b="2, 2, 77, 34">
+                  <style>
+                    <back_color>Fuchsia</back_color>
+                    <fore_color>Black</fore_color>
+                  </style>
+                </node>
+                <node id="24" text="example" x="551" y="2552" width="112" height="38" text_b="2, 2, 108, 34" />
+              </nodes>
+              <lines>
+                <line target="25" begin_side="Right" end_side="Left" begin_rect="310, 2513, 174, 68" end_rect="551, 2504, 81, 38" />
+                <line target="24" begin_side="Right" end_side="Left" begin_rect="310, 2513, 174, 68" end_rect="551, 2552, 112, 38" />
+              </lines>
+            </node>
+            <node id="6" text="FLASH&#xD;&#xA;0x1f07_0000" x="310" y="2609" width="161" height="68" text_b="2, 2, 157, 64" fold_btn_b="471, 2637, 13, 13">
+              <style>
+                <back_color>Yellow</back_color>
+                <fore_color>Black</fore_color>
+                <border_color>Red</border_color>
+                <shape>1</shape>
+              </style>
+              <nodes>
+                <node id="20" text="driver" x="551" y="2600" width="81" height="38" text_b="2, 2, 77, 34">
+                  <style>
+                    <back_color>Fuchsia</back_color>
+                    <fore_color>Black</fore_color>
+                  </style>
+                </node>
+                <node id="19" text="example" x="551" y="2648" width="112" height="38" text_b="2, 2, 108, 34" />
+              </nodes>
+              <lines>
+                <line target="20" begin_side="Right" end_side="Left" begin_rect="310, 2609, 174, 68" end_rect="551, 2600, 81, 38" />
+                <line target="19" begin_side="Right" end_side="Left" begin_rect="310, 2609, 174, 68" end_rect="551, 2648, 112, 38" />
+              </lines>
+            </node>
+            <node id="3" text="中断" x="310" y="2756" width="62" height="38" text_b="2, 2, 58, 34" fold_btn_b="372, 2769, 13, 13">
+              <style>
+                <back_color>Yellow</back_color>
+                <fore_color>Black</fore_color>
+                <border_color>Red</border_color>
+                <shape>1</shape>
+              </style>
+              <nodes>
+                <node id="9" text="driver" x="452" y="2696" width="81" height="74" text_b="2, 2, 77, 34">
+                  <style>
+                    <back_color>Lime</back_color>
+                    <fore_color>Black</fore_color>
+                  </style>
+                  <widgets>
+                    <widget type="PROGRESSBAR" x="3" y="37" width="75" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="95" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                  </widgets>
+                </node>
+                <node id="1" text="example" x="452" y="2780" width="112" height="74" text_b="2, 2, 108, 34">
+                  <style>
+                    <back_color>Lime</back_color>
+                    <fore_color>Black</fore_color>
+                  </style>
+                  <widgets>
+                    <widget type="PROGRESSBAR" x="3" y="37" width="106" height="34" align="Bottom" hyperlink="" display_index="0" padding="0" max="100" min="0" value="90" show_text="False" auto_calculation="False" color="Green" back_color="White" fore_color="Black" />
+                  </widgets>
+                </node>
+              </nodes>
+              <lines>
+                <line target="9" begin_side="Right" end_side="Left" begin_rect="310, 2756, 75, 38" end_rect="452, 2696, 81, 74" />
+                <line target="1" begin_side="Right" end_side="Left" begin_rect="310, 2756, 75, 38" end_rect="452, 2780, 112, 74" />
               </lines>
             </node>
           </nodes>
           <lines>
-            <line target="1" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 431, 161, 68" />
-            <line target="3" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 1073, 161, 68" />
-            <line target="6" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 1541, 161, 68" />
-            <line target="5" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 1865, 161, 68" />
-            <line target="2" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 1979, 161, 68" />
-            <line target="5" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 2093, 161, 68" />
-            <line target="4" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 2189, 161, 68" />
-            <line target="6" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 2285, 161, 68" />
-            <line target="3" begin_side="Right" end_side="Left" begin_rect="106, 1204, 124, 58" end_rect="310, 2390, 62, 38" />
+            <line target="1" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 431, 161, 68" />
+            <line target="3" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 1073, 161, 68" />
+            <line target="6" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 1649, 161, 68" />
+            <line target="5" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 2099, 161, 68" />
+            <line target="2" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 2249, 161, 68" />
+            <line target="5" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 2399, 161, 68" />
+            <line target="4" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 2513, 161, 68" />
+            <line target="6" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 2609, 161, 68" />
+            <line target="3" begin_side="Right" end_side="Left" begin_rect="106, 1408, 124, 58" end_rect="310, 2756, 62, 38" />
           </lines>
         </node>
       </nodes>

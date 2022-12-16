@@ -1,5 +1,5 @@
 #include "xbr820.h"
-#include "drv_i2c_sl.h"
+#include "xbr820_i2c_slave.h"
 
 /**
   * @brief  I2C slave initialize. 
@@ -10,8 +10,8 @@
   * @retval none.
   */
 void I2C_SL_Init(uint8_t sl_addr) {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 	
 	i2c_sl->slavedev = sl_addr << 1;
 	i2c_sl->en_slaveb = 1;
@@ -35,8 +35,8 @@ void I2C_SL_Init(uint8_t sl_addr) {
   * @retval none.
   */
 void I2C_SL_DeInit(void){
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 	
 	i2c_sl->en_slaveb = 0;	
 	i2c_sl->slavedev = 0; //is this needed?
@@ -50,8 +50,8 @@ void I2C_SL_DeInit(void){
   * @retval none.
   */
 void I2C_SL_SendData(uint8_t data) {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 	
 	i2c_sl->slaveb_data_2_iic = data;
 }
@@ -63,8 +63,8 @@ void I2C_SL_SendData(uint8_t data) {
   * @retval none.
   */
 uint8_t I2C_SL_RecvSubAddr(void) {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 	
 	return i2c_sl->slaveb_addr;
 }
@@ -76,31 +76,31 @@ uint8_t I2C_SL_RecvSubAddr(void) {
   * @retval none.
   */
 uint8_t I2C_SL_RecvData( void) {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 	
 	return (uint8_t)(i2c_sl->slaveb_data);
 }
 
 uint8_t I2C_SL_GetIntr(void) {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 	
 	return i2c_sl->slave_int.status;
 }
 
 void I2C_SL_Clr_RW(void)
 {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 
 	i2c_sl->rel_slb_rw = 1;
 }
 
 void I2C_SL_Clr_addr(void)
 {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 
 	i2c_sl->rel_slb_addr = 1;
 }
@@ -111,8 +111,8 @@ void I2C_SL_Clr_addr(void)
   * @retval none.
   */
 void I2C_SL_ClrIntr(void) {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 	i2c_sl->rel_slb_int = 1;
 #if 0	
 	//uint32_t status  = i2c_sl->slave_int.status;
@@ -128,8 +128,8 @@ void I2C_SL_ClrIntr(void) {
 }
 
 uint32_t I2C_SL_RecvOrSend(void) {
-	I2C_SReg_t* i2c_sl;	
-	i2c_sl = (I2C_SReg_t*)(XBR820_I2CS_BASE);
+	brx820_i2c_slave_regdef* i2c_sl;	
+	i2c_sl = (brx820_i2c_slave_regdef*)(BRX820_I2C_slave);
 
 	return (i2c_sl->slave_int.status)&I2C_SL_INTR_RWO;
 }
