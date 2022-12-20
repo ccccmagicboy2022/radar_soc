@@ -11,10 +11,10 @@
     </File>
   </VirtualDirectory>
   <VirtualDirectory Name="driver">
-    <File Name="../../../driver/src/xbr821_interrupts.c">
+    <File Name="../../../driver/src/xbr820_interrupts.c">
       <FileOption/>
     </File>
-    <File Name="../../../driver/src/xbr821_timer.c">
+    <File Name="../../../driver/src/xbr820_timer.c">
       <FileOption/>
     </File>
   </VirtualDirectory>
@@ -38,9 +38,16 @@
     <memoryTabColSizeExpressions>100:4;100:8;100:8;100:8;</memoryTabColSizeExpressions>
   </DebugSessions>
   <VirtualDirectory Name="bsp_timer">
-    <File Name="bsp_timer/bsp_timer.c"/>
-    <File Name="bsp_timer/bsp_timer.h"/>
+    <File Name="bsp_timer/bsp_timer.c">
+      <FileOption/>
+    </File>
+    <File Name="bsp_timer/bsp_timer.h">
+      <FileOption/>
+    </File>
   </VirtualDirectory>
+  <VendorInfo>
+    <VendorName>NULL</VendorName>
+  </VendorInfo>
   <BuildConfigs>
     <BuildConfig Name="BuildSet">
       <Target>
@@ -134,6 +141,7 @@
           <RunUserProg>no</RunUserProg>
           <UserProgName/>
         </AfterMake>
+        <Tools/>
       </User>
       <Compiler>
         <Define>XBR820</Define>
@@ -192,6 +200,7 @@
           <CPUNumber>0</CPUNumber>
           <Clock>12000</Clock>
           <Delay>10</Delay>
+          <NResetDelay>100</NResetDelay>
           <WaitReset>50</WaitReset>
           <DDC>yes</DDC>
           <TRST>no</TRST>
@@ -205,6 +214,12 @@
           <GDBName/>
           <GDBServerType>Local</GDBServerType>
           <OtherFlags/>
+          <ICEEnablePCSampling>no</ICEEnablePCSampling>
+          <ICESamplingFreq>1000</ICESamplingFreq>
+          <RemoteICEEnablePCSampling>no</RemoteICEEnablePCSampling>
+          <RemoteICESamplingPort>1026</RemoteICESamplingPort>
+          <Version>latest</Version>
+          <SupportRemoteICEAsyncDebug>no</SupportRemoteICEAsyncDebug>
         </ConfigICE>
         <ConfigSIM>
           <SIMTarget/>
@@ -212,6 +227,7 @@
           <NoGraphic>yes</NoGraphic>
           <Log>no</Log>
           <SimTrace>no</SimTrace>
+          <Version>latest</Version>
         </ConfigSIM>
         <ConfigOpenOCD>
           <OpenOCDExecutablePath/>
@@ -221,6 +237,8 @@
           <OpenOCDTclPort>6666</OpenOCDTclPort>
           <OpenOCDConfigOptions/>
           <OpenOCDTimeout>5000</OpenOCDTimeout>
+          <PluginID>openocd-sifive</PluginID>
+          <Version>latest</Version>
         </ConfigOpenOCD>
       </Debug>
       <Flash>

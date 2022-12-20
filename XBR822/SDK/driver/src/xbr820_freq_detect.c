@@ -27,7 +27,6 @@
 #include "xbr820.h"
 #include "xbr820_utility.h"
 #include "xbr820_interrupts.h"
-#include "xbr820_system.h"
 #include "xbr820_freq_detect.h"
 
 /** @addtogroup PHO_Periph_Driver
@@ -41,9 +40,9 @@ void freq_detect_init(brx820_freq_detect_regdef * freq, const freq_detect_Cfg* f
 {
     assert_param(IS_FREQ_PERIPH(freq));
 
-    freq->FREQ_DETECT_CTRL_f.FREQ_DET_EN = freq_det_init.enable;
-    freq->FREQ_DETECT_CTRL_f.FREQ_DET_INT_EN = freq_det_init.int_en;
-    freq->FREQ_DETECT_CFG_f.FREQ_DET_INTERVAL = freq_det_init.interval;
+    freq->FREQ_DETECT_CTRL_f.FREQ_DET_EN = freq_det_init->enable;
+    freq->FREQ_DETECT_CTRL_f.FREQ_DET_INT_EN = freq_det_init->int_en;
+    freq->FREQ_DETECT_CFG_f.FREQ_DET_INTERVAL = freq_det_init->interval;
 }
 
 
@@ -71,7 +70,7 @@ void freq_detect_enable(brx820_freq_detect_regdef *freq)
   * @param  freq
   * @retval none.
   */
-void freq_detect_enable(brx820_freq_detect_regdef *freq)
+void freq_detect_disable(brx820_freq_detect_regdef *freq)
 {
     assert_param(IS_FREQ_PERIPH(freq));
 

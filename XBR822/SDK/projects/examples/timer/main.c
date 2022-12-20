@@ -1,14 +1,13 @@
-#include "xbr821.h"
-#include "xbr821_timer.h"
+#include "xbr820.h"
+#include "xbr820_timer.h"
 #include "bsp_timer.h"
-#include "xbr821_interrupts.h"
-
+#include "xbr820_interrupts.h"
 
 int main()
 {
-    timer_priority_cfg(TIMER1_irqhandler, IRQ_PRIORITY_DEFAULT, TIMER1_IRQ);
+    timer_irq_cfg(TIMER1_irqhandler, IRQ_PRIORITY_DEFAULT, TIMER1_IRQ);
 
-    timer_init(TIMER1, 16100000);
+    timer_init(TIMER1, 40*1000*1000);
 
     while(1);
 

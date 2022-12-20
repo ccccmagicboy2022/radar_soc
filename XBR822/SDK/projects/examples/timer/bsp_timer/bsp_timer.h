@@ -16,6 +16,14 @@ void TIMER1_irqhandler(void);
 void TIMER2_irqhandler(void);
 void TIMER3_irqhandler(void);
 void TIMER4_irqhandler(void);
-void timer_priority_cfg(fun_timer timer_handler, uint8_t timer_priority, uint8_t timer_int);
-void timer_init(TIMER_t *timer, uint32_t counter);
+
+void timer_irq_cfg(fun_timer timer_handler, uint8_t timer_priority, uint8_t timer_int);
+void timer_init(uint8_t id, uint32_t counter);
+
+
+#ifdef __cplusplus
+}
+#endif
+
+
 #endif

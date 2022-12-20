@@ -19,11 +19,11 @@
 
 enum timer_num
 {
-    PWM0,
     PWM1,
     PWM2,
     PWM3,
     PWM4,
+    PWM5,
 };
 
 /**

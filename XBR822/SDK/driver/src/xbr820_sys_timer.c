@@ -1,4 +1,4 @@
-#include "sys_timer.h"
+#include "xbr820_sys_timer.h"
 
 typedef struct {
     __IO uint32_t EN       :1;
@@ -6,12 +6,13 @@ typedef struct {
 } str_sys_timer_t;
 
 #define SYS_TIMER_EN  (((str_sys_timer_t *)(0x1f020000))->EN)
+
 #define MTIMECMPLO    (*(uint32_t *)0xe0004000)
 #define MTIMECMPHI    (*(uint32_t *)0xe0004004)
 #define MTIMELO       (*(uint32_t *)0xe000bff8)
 #define MTIMEHI       (*(uint32_t *)0xe000bffc)
 
-void sys_timer_start(em_sys_timer_ctl_t sys_timer_ctl)
+void sys_timer_start(em_functional_state_t sys_timer_ctl)
 {
     SYS_TIMER_EN = sys_timer_ctl;
 }

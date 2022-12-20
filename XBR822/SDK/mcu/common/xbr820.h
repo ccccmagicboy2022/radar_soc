@@ -57,7 +57,7 @@ typedef struct
 typedef struct
 {
     __IO uint32_t TI                        : 1;
-    __IO uint32_t TX_STATE                  : 3;
+    __I  uint32_t TX_STATE                  : 3;
     __IO uint32_t RI                        : 1;
     __IO uint32_t RX_STATE                  : 3;
     __IO uint32_t RX_ERROR                  : 2;
@@ -137,8 +137,8 @@ typedef struct {
 } str_freq_detect_value_filed_t;
 
 typedef struct {
-    __I uint32_t IR_INT_STA                                       :1;
-    __I uint32_t IR_CMP_ERR                                       :1;
+    __IO uint32_t IR_INT_STA                                       :1;
+    __IO uint32_t IR_CMP_ERR                                       :1;
     __I uint32_t IR_REPEAT                                        :1;
     uint32_t                                                      :29;
 } str_ir_int_filed_t;
@@ -245,12 +245,9 @@ typedef struct {
 } brx820_timer_regdef;
 
 typedef struct {
-    __IO uint32_t PWM_EN                                          :1;
-    uint32_t                                                      :31;
-    __IO uint32_t PWM_CTRL                                        :24;
-    uint32_t                                                      :8;
-    __IO uint32_t PWM_DUTY                                        :24;
-    uint32_t                                                      :8;
+    __IO uint32_t PWM_EN;
+    __IO uint32_t PWM_CTR;
+    __IO uint32_t PWM_DUTY;
 } brx820_pwm_regdef;
 
 typedef struct {
@@ -426,7 +423,6 @@ typedef volatile struct {
 #define BRX820_IR          ((brx820_ir_regdef *)(0x1f030000UL))
 #define BRX820_I2C_master  ((brx820_i2c_master_regdef *)(0x1f050000UL))
 #define BRX820_I2C_slave   ((brx820_i2c_slave_regdef *)(0x1f060000UL))
-#define BRX820_FLASH       ((brx820_flash_regdef *)(0x1f070000UL))
 
 
 #endif

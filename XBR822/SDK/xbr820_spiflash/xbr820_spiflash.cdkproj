@@ -252,4 +252,7 @@
     <memoryTabColSizeExpressions>100:8;32:16;100:8;100:8;</memoryTabColSizeExpressions>
   </DebugSessions>
   <Dependencies Name="BuildSet"/>
+  <VendorInfo>
+    <VendorName>NULL</VendorName>
+  </VendorInfo>
 </Project>

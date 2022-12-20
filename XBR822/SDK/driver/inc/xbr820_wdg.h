@@ -11,10 +11,11 @@ extern "C"
 
 /* Includes ------------------------------------------------------------------*/
 #include "xbr820_interrupts.h"
+#include "xbr820_utility.h"
 
 /* Exported constants --------------------------------------------------------*/
 
-#define IS_WDG_PERIPH(PERIPH)                                   ((PERIPH) == WDG)
+#define IS_WDG_PERIPH(PERIPH)                                   ((PERIPH) == BRX820_WDG)
 #define IS_WDG_CONFIG_IT(IT)                                    ((((IT) <= 0x0F) && ((IT) >= 0x00))
 
 /* Exported types ------------------------------------------------------------*/
@@ -42,4 +43,6 @@ void WDG_irqhandler(void);
 
 #ifdef __cplusplus
 {
+#endif
+
 #endif

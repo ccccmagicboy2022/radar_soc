@@ -11,10 +11,10 @@
     </File>
   </VirtualDirectory>
   <VirtualDirectory Name="driver">
-    <File Name="../../../driver/src/xbr821_interrupts.c">
+    <File Name="../../../driver/src/xbr820_interrupts.c">
       <FileOption/>
     </File>
-    <File Name="../../../driver/src/xbr821_ir.c"/>
+    <File Name="../../../driver/src/xbr820_ir.c"/>
   </VirtualDirectory>
   <VirtualDirectory Name="src">
     <File Name="main.c">
@@ -240,4 +240,7 @@
       </Flash>
     </BuildConfig>
   </BuildConfigs>
+  <VendorInfo>
+    <VendorName>NULL</VendorName>
+  </VendorInfo>
 </Project>

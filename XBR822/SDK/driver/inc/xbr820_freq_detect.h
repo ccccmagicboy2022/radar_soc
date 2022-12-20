@@ -1,11 +1,10 @@
 /**
   ******************************************************************************
-  * @file    xbr820_timer.h
+  * @file    xbr820_freq_detect.h
   * @author  software Team
   * @version V1.0.0
   * @date    24-December-2021
-  * @brief   This file contains all the functions prototypes for the PWM firmware
-  *          library.
+  * @brief   This file contains all the functions prototypes for freq detect
   ******************************************************************************
   * @attention
   *
@@ -57,4 +56,5 @@ void freq_clr_interrupt_status(brx820_freq_detect_regdef *freq);
 }
 #endif
 
+#endif
 

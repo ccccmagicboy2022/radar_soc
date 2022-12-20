@@ -1,7 +1,7 @@
 #include "xbr820_gpio.h"
 
 em_result_t pin_set_func(brx820_gpio_regdef *px, em_pin_t pin_sel,
-                            em_pin_func_t func_sel)
+                            uint8_t func_sel)
 {
     px->PS &= (~(0b1111 << (pin_sel * 4)));
     px->PS |= (func_sel << (pin_sel * 4));

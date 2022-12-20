@@ -1,8 +1,6 @@
-#include "xbr821_interrupts.h"
-#include "xbr821_ir.h"
+#include "xbr820_interrupts.h"
+#include "xbr820_ir.h"
 #include "bsp_ir.h"
-
-
 
 int main()
 {

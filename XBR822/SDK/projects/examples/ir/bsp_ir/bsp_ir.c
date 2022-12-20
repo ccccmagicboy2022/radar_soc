@@ -1,8 +1,8 @@
 #include "bsp_ir.h"
 #include "stdint.h"
-#include "xbr821.h"
-#include "xbr821_ir.h"
-#include "xbr821_utility.h"
+#include "xbr820.h"
+#include "xbr820_ir.h"
+#include "xbr820_utility.h"
 
 
 /**
@@ -34,6 +34,7 @@ void ir_deinit(void)
 {
      stop_irq_x(IR_IRQ);
 }
+
 uint8_t ir_flag = 0;
 IR_mc_t irdata;
 
@@ -46,7 +47,7 @@ __attribute__ ((section ("INT"))) void IR_irqhandler(void)
 void ir_test(void)
 {
     if (ir_flag) {
-        ir_read_code(&irdata, IR);
+        IR_read_code(&irdata, BRX820_IR);
 
         int i = 4;
         while (i) {
@@ -54,7 +55,7 @@ void ir_test(void)
             i--;
         }
         ir_flag = 0;
-        ir_clr_int(IR);
+        IR_clr_int(BRX820_IR);
     }
 }
 

@@ -1,5 +1,5 @@
-#ifndef __XBR821_UTILITY_H__
-#define __XBR821_UTILITY_H__
+#ifndef __XBR820_UTILITY_H__
+#define __XBR820_UTILITY_H__
 
 #define __WEAK                          __attribute__((weak))
 

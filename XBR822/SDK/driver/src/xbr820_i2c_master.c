@@ -1,182 +1,245 @@
-#include "xbr820.h"
+/**
+  ******************************************************************************
+  * @file    xbr820_i2c_master.c
+  * @author  software Team
+  * @version V1.0.0
+  * @date    24-December-2021
+  * @brief   This file provides firmware functions to manage the
+  *          functionalities of the Inter-integrated circuit (I2C)
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2021 PHOSENSE </center></h2>
+  *
+  * Licensed under Liberty SW License Agreement V1, (the "License");
+  * You may not use this file except in compliance with the License.
+
+  * Unless required by applicable law or agreed to in writing, software 
+  * distributed under the License is distributed on an "AS IS" BASIS, 
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  *
+  ******************************************************************************  
+  */ 
+
+/* Includes ------------------------------------------------------------------*/
 #include "xbr820_i2c_master.h"
+#include "xbr820_utility.h"
 
-#define BUFFER_LEN                      (8U)
+/** @addtogroup PHO_Periph_Driver
+  * @{
+  */
 
-typedef union {
-    uint32_t val;
-    uint8_t ch[4];
-} uint32_char_t;
+/** @defgroup I2C master
+  * @{
+  */
 
-void i2c_enable_int(void)
-{
-    BRX820_I2C_master->INT_EN.ONE_BYTE_FINISH = 1;
-    BRX820_I2C_master->INT_EN.FINISH = 1;
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/ 
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
+
+/**
+ * @brief  Enables or disables the specified I2C interrupts.
+ * @param  i2c_unit: select the I2C peripheral.
+ * @param  i2c_it: specifies the I2C interrupts sources to be enabled or disabled. 
+ *          This parameter can be any combination of the following values:
+ *             @arg I2C_INT_NACK
+ *             @arg I2C_INT_STOP
+ *             @arg I2C_INT_TIMEOUT
+ *             @arg I2C_INT_RW_DONE
+ * @param  state: new state of the specified I2C interrupts.
+ *          This parameter can be: ENABLE or DISABLE.
+ * @retval None
+ */
+void I2C_int_cmd(I2C_master_t *i2c_unit, uint32_t i2c_it, en_functional_state_t state)
+
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
+    assert_param(IS_FUNCTIONAL_STATE(state));
+    assert_param(IS_I2C_CONFIG_IT(i2c_it));
+
+    if (state != DISABLE)
+        i2c_unit->INT_EN |= i2c_it;
+    else
+        i2c_unit->INT_EN &= ~i2c_it;
 }
 
-void i2c_init(uint32_t clk)
+/**
+ * @brief  clear the specified I2C interrupt flags.
+ * @param  i2c_unit: select the I2C peripheral.
+ * @param  i2c_it: specifies the I2C interrupts sources to be enabled or disabled. 
+ *          This parameter can be any combination of the following values:
+ *             @arg I2C_INT_NACK
+ *             @arg I2C_INT_STOP
+ *             @arg I2C_INT_TIMEOUT
+ *             @arg I2C_INT_RW_DONE
+ * @retval None
+ */
+void I2C_clear_flag(I2C_master_t *i2c_unit, uint32_t i2c_it)
 {
-    BRX820_I2C_master->CLK_DIV = (uint32_t)SYSTEM_CLOCK / clk / 8;
-    BRX820_I2C_master->CLK_EN = 1;
-    BRX820_I2C_master->INT_CLEAR.FINISH = 1;
-    BRX820_I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
-    BRX820_I2C_master->INT_CLEAR.NACK = 1;
-    BRX820_I2C_master->INT_CLEAR.TIME_OUT = 1;
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
+    assert_param(IS_I2C_CONFIG_IT(i2c_it));
+
+    i2c_unit->INT_CLR |= i2c_it;
 }
 
-void i2c_deinit(void)
+/**
+ * @brief initialize I2C peripheral
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @param clk I2C clock speed
+ * @retval None
+ */
+void I2C_init(I2C_master_t *i2c_unit, uint32_t clk)
 {
-    BRX820_I2C_master->CLK_EN = 0;
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
+    assert_param(IS_I2C_CLOCK_SPEED(clk));
+
+    I2C_clear_flag(i2c_unit, I2C_INT_NACK | I2C_INT_STOP | I2C_INT_TIMEOUT | I2C_INT_RW_DONE);
+    i2c_unit->CLK_DIV = (uint32_t)SYSTEM_CLOCK / clk / 8;
+    i2c_unit->CLK_EN = 1;
 }
 
-void i2c_read_one_byte(uint8_t *data, uint8_t pos, uint8_t flag)
+/**
+ * @brief de-initialize I2C unit
+ * @param i2c_unit select the I2C peripheral.
+ * @retval None
+ */
+void I2C_deinit(I2C_master_t *i2c_unit)
+{
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
+
+    i2c_unit->CLK_EN = 0;
+}
+
+/**
+ * @brief read data register, one byte per time
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @param data point to the data buffer.
+ * @param pos the position from which data is read.
+ * @param flag the data register from which data is read.
+ */
+void I2C_read_data(I2C_master_t *i2c_unit, uint8_t *data, uint8_t pos, uint8_t flag)
 {
     if (!flag)
-        data[0] = ((BRX820_I2C_master->R_DATA0) >> (pos * 8)) & 0xff;
+        data[0] = ((i2c_unit->IICM_2_DATA0) >> (pos * 8)) & 0xff;
     else
-        data[0] = ((BRX820_I2C_master->R_DATA1) >> (pos * 8)) & 0xff;
+        data[0] = ((i2c_unit->IICM_2_DATA1) >> (pos * 8)) & 0xff;
 }
 
-void i2c_read_data(uint8_t *data, uint8_t len)
+/**
+ * @brief start i2c read operation
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @param reg_addr register address.
+ * @param word_addr denote if the address is byte address or word address.
+ *          This parameter can be any combination of the following values:
+ *              0
+ *              1
+ */
+void I2C_start_read(I2C_master_t *i2c_unit, uint16_t reg_addr, uint8_t word_addr)
 {
-    int i;
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
 
-    for (i = 0; i < len; i++) {
-
-        while (BRX820_I2C_master->STATUS_f.ONE_BYTE_FINISH == 0);
-        BRX820_I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
-        if (i <= 3)
-            i2c_read_one_byte(&data[i], i, 0);
-        else
-            i2c_read_one_byte(&data[i], i - 4, 1);
-    }
-}
-
-void i2c_read_setup(uint16_t reg_addr, uint8_t word_addr)
-{
-    BRX820_I2C_master->REG_ADDR = reg_addr;
+    i2c_unit->SLAVE_ADDR_f.SLAVE_ADDR = reg_addr;
 
     if (word_addr)
-        BRX820_I2C_master->CMD = 0xF;
+        i2c_unit->CMD_CR_f.CPU_CMD = 0xF;
     else
-        BRX820_I2C_master->CMD = 7;
+        i2c_unit->CMD_CR_f.CPU_CMD = 7;
 
-    BRX820_I2C_master->CMD_W = 1;
+    i2c_unit->CMD_CR_f.CPU_CMD_W = 1;
 }
 
-void i2c_recv(uint8_t slave_addr, uint16_t reg_addr, uint8_t word_addr, uint8_t *data, uint8_t len, uint32_t timeout)
+/**
+ * @brief start i2c write operation
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @retval None
+ */
+void I2C_start_write(I2C_master_t *i2c_unit)
 {
-    int i, times, rem;
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
 
-    if (NULL == data)
-        return;
-
-    times = len / 8;
-    rem = len % 8;
-
-    BRX820_I2C_master->SLAVE_ADDR = slave_addr << 1;
-    BRX820_I2C_master->DATA_LENTH = len - 1;
-    BRX820_I2C_master->REG_ADDR = reg_addr;
-
-    if (word_addr)
-        BRX820_I2C_master->CMD = 0xF;
-    else
-        BRX820_I2C_master->CMD = 7;
-
-    BRX820_I2C_master->CMD_W = 1;
-
-    while (BRX820_I2C_master->STATUS_f.ONE_BYTE_FINISH == 0);
-    BRX820_I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
-
-    for (i = 0; i < times; i++)
-        i2c_read_data(data, 8);
-    i2c_read_data(&data[times * 8], rem);
-
-    while (BRX820_I2C_master->STATUS_f.FINISH == 0);
-    BRX820_I2C_master->INT_CLEAR.FINISH=1;
-
-    return;
+    i2c_unit->CMD_CR_f.CPU_CMD = 1;
+    i2c_unit->CMD_CR_f.CPU_CMD_W = 1;
 }
 
-void i2c_write_data(uint8_t *data, uint8_t len, uint8_t flag)
+/**
+ * @brief config i2c slave address
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @param slave_addr i2c slave address
+ */
+void I2C_config_slave_addr(I2C_master_t *i2c_unit, uint8_t slave_addr)
 {
-    int i;
-    uint32_t tmp = 0;
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
 
-    for (i = 0; i < len; i++)
-        tmp |= data[i] << (8 * i);
-
-    if (flag)
-        BRX820_I2C_master->T_DATA1 = tmp;
-    else
-        BRX820_I2C_master->T_DATA0 = tmp;
+    i2c_unit->SLAVE_ADDR_f.SLAVE_ADDR = slave_addr << 1;
 }
 
-void i2c_start(void)
+/**
+ * @brief set i2c transfer data number.
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @param len transfer data number.
+ */
+void I2C_set_rw_num(I2C_master_t *i2c_unit, uint8_t len)
 {
-    BRX820_I2C_master->CMD = 1;
-    BRX820_I2C_master->CMD_W = 1;
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
+
+    i2c_unit->NWORD_f.NWORD = len - 1;
 }
 
-void i2c_config_addr(uint8_t slave_addr, uint8_t len)
+/**
+ * @brief checks whether the specified I2C interrupt has occurred or not.
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @param I2C_flag specifies the interrupt source to check.
+ *          This parameter can be any combination of the following values:
+ *              @arg I2C_SR_NACK
+ *              @arg I2C_SR_STOP
+ *              @arg I2C_SR_TIMEOUT
+ *              @arg I2C_SR_IDLE
+ *              @arg I2C_SR_RW_DONE
+ * @return en_flag_status the new state of I2C_IT (SET or RESET).
+ */
+en_flag_status I2C_get_int_status(I2C_master_t *i2c_unit, uint32_t I2C_flag)
 {
-    BRX820_I2C_master->SLAVE_ADDR = slave_addr << 1;
-    BRX820_I2C_master->DATA_LENTH = len - 1;
+    en_flag_status ret = RESET;
+
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
+    assert_param(IS_I2C_STATUS_BIT(I2C_flag));
+
+    if (0ul != i2c_unit->STATUS & I2C_flag)
+        ret = SET;
+
+    return ret;
 }
 
-uint32_t i2c_master_get_status()
+/**
+ * @brief get the data num transfered.
+ * 
+ * @param i2c_unit select the I2C peripheral.
+ * @return uint8_t data transfer number.
+ */
+uint8_t I2C_get_trans_number(I2C_master_t *i2c_unit)
 {
-    return BRX820_I2C_master->STATUS;
+    assert_param(IS_I2C_MASTER_PERIPH(i2c_unit));
+
+    return i2c_unit->STATUS_f.DATA_NUM;
 }
+/**
+  * @}
+  */ 
 
-void i2c_transmit(uint8_t slave_addr, uint8_t *data, uint8_t len, uint32_t timeout)
-{
-    int i = 0, tmp, flag = 0, wait = 1;
+/**
+  * @}
+  */ 
 
-    if (NULL == data)
-        return;
-
-    i2c_config_addr(slave_addr, len);
-
-    if (len < 4) {
-        i2c_write_data(data, len, 0);
-        i += len;
-    } else {
-        i2c_write_data(data, 4, 0);
-        tmp = len - 4;
-        tmp = tmp > 4 ? 4 : tmp;
-        i2c_write_data(&data[4], tmp, 1);
-        i = tmp + 4;
-    }
-
-    i2c_start();
-
-    while (i != len) {
-        while (wait) {
-            if (BRX820_I2C_master->STATUS_f.ONE_BYTE_FINISH) {
-                BRX820_I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
-                if (i - BRX820_I2C_master->STATUS_f.DATA_NUM <= 4)
-                    wait = 0;
-            }
-        }
-        wait = 1;
-        tmp = len - i;
-        tmp = tmp > 4 ? 4 : tmp;
-        i2c_write_data(&data[i], tmp, flag);
-        flag = flag == 0 ? 1 : 0;
-        i += tmp;
-    }
-
-    while (BRX820_I2C_master->STATUS_f.FINISH == 0);
-    BRX820_I2C_master->INT_CLEAR.FINISH = 1;
-
-    if (BRX820_I2C_master->STATUS_f.ONE_BYTE_FINISH)
-        BRX820_I2C_master->INT_CLEAR.ONE_BYTE_FINISH = 1;
-
-    return;
-}
-
-uint8_t is_i2c_busy(void)
-{
-    return BRX820_I2C_master->STATUS_f.IDLE;
-}
+/************************ (C) COPYRIGHT Phosense-tech *****END OF FILE****/

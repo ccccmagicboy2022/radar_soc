@@ -10,12 +10,14 @@
  */
 void wdg_priority_cfg(fun_wdg wdg_handler, uint8_t wdg_priority)
 {
-    str_irq_set_cfg_t  irq_wdg_set_cfg;
+    stc_irq_set_cfg_t  irq_wdg_set_cfg;
+	
     irq_wdg_set_cfg.irq_number = WDG_IRQ;
     irq_wdg_set_cfg.irq_func_pointer = wdg_handler;
     irq_wdg_set_cfg.irq_priority = wdg_priority;
-    irq_init(&irq_wdg_set_cfg);
-    irq_start_x(irq_wdg_set_cfg.irq_number);
+    set_irq(&irq_wdg_set_cfg);
+	
+    start_irq_x(irq_wdg_set_cfg.irq_number);
 }
 
 /**
@@ -28,7 +30,7 @@ void wdg_init(const str_wdg_init_t *wdg_init_cfg)
 {
     uint32_t counter;
 
-    counter = wdg_init_cfg.duty_ms / 1000 * SYSTEM_CLOCK;
+    counter = wdg_init_cfg->duty_ms / 1000 * SYSTEM_CLOCK;
 
     wdg_enable(BRX820_WDG, counter);
 }

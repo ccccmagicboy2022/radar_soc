@@ -26,10 +26,10 @@
  */
 enum timer_num
 {
-    TIMER0,
     TIMER1,
     TIMER2,
     TIMER3,
+    TIMER4,
 };
 
 #define CONFIG_TIMER_NUM    4
@@ -48,16 +48,6 @@ typedef struct
                                         The deault value is 0xFFF00000.
                                         In brief, the number, 16,000,000, equals to one second.*/
 }Timer_Cfg_t;
-
-/**
- * @brief
- *
- */
-typedef struct{
-    uint32_t    enable;
-    uint32_t    reset_enable;
-    uint32_t    counter;
-}WDGCfg;
 
 /**
   * @brief  Start the timer. The timer should be set a initial value, or use the default value 0xFFF00000.

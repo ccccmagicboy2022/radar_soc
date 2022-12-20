@@ -1,98 +1,96 @@
-#ifndef __DRV_I2C_SL_H__
-#define __DRV_I2C_SL_H__
+/**
+  ******************************************************************************
+  * @file    xbr820_i2c_slave.h
+  * @author  software Team
+  * @version V1.0.0
+  * @date    24-December-2021
+  * @brief   This file contains all the functions prototypes for the I2C firmware 
+  *          library.
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2021 PHOSENSE </center></h2>
+  *
+  * Licensed under Liberty SW License Agreement V1, (the "License");
+  * You may not use this file except in compliance with the License.
 
-#include "typdef.h"
+  * Unless required by applicable law or agreed to in writing, software 
+  * distributed under the License is distributed on an "AS IS" BASIS, 
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  *
+  ******************************************************************************  
+  */ 
+#ifndef __XBR820_I2C_SLAVE_H__
+#define __XBR820_I2C_SLAVE_H__
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
-/* ================================================================================ */
-/* ================                I2C Slave declaration                ================ */
-/* ================================================================================ */
+/* Includes ------------------------------------------------------------------*/
+#include "pho_common.h"
 
-#define I2C_SL_ENABLE     1
-#define I2C_SL_DISABLE     0
-
-#define I2C_SL_INTR_RW     1<<0
-#define I2C_SL_INTR_NACK     1<<1
-#define I2C_SL_INTR_STOP     1<<2
-#define I2C_SL_INTR_ADDR     1<<3
-#define I2C_SL_INTR_RWO     1<<4
-
-#define I2C_SL_REL_RW     1<<0
-#define I2C_SL_REL_NACK     1<<1
-#define I2C_SL_REL_STOP     1<<2
-#define I2C_SL_REL_ADDR     1<<3
-#define I2C_SL_REL_RWO     1<<4
-
-#define I2C_SL_MSK_RW     1<<8
-#define I2C_SL_MSK_NACK     1<<9
-#define I2C_SL_MSK_STOP     1<<10
-#define I2C_SL_MSK_ADDR     1<<11
-#define I2C_SL_MSK_RWO     1<<12
-
-/**
-  * @brief  I2C slave initialize.
-  *
-  * @note   To assign an address for this I2C slave deive and enable it.
-  *
-  * @param  sl_addr: I2C slave device's address.
-  * @retval none.
+/** @addtogroup PHO_Periph_Driver
+  * @{
   */
-void I2C_SL_Init(uint8_t sl_addr);
 
-/**
-  * @brief  I2C slave de-initialize.
-  *
-  * @note   Disable this I2C slave device and set its address to zero.
-  *
-  * @param  none.
-  * @retval none.
+/** @addtogroup I2C slave
+  * @{
   */
-void I2C_SL_DeInit(void);
 
-/**
-  * @brief  I2C slave device send data to the interface, eg. to the I2C master.
-  * @param  data: which will be sent to the interface.
-  *             It is an input param.
-  * @retval none.
-  */
-void I2C_SL_SendData(uint8_t data);
+/* Exported types ------------------------------------------------------------*/
 
-/**
-  * @brief  I2C slave device receive data from the interface, eg. from the I2C master.
-  * @param  data: which is received from the interface.
-  *             It is an output param.
-  * @retval none.
-  */
-/**
-  * @brief  I2C slave device receive data from the interface, eg. from the I2C master.
-  * @param  data: which is received from the interface.
-  *             It is an output param.
-  * @retval none.
-  */
-uint8_t I2C_SL_RecvSubAddr(void) ;
 
-/**
-  * @brief  I2C slave device receive data from the interface, eg. from the I2C master.
-  * @param  data: which is received from the interface.
-  *             It is an output param.
-  * @retval none.
-  */
-uint8_t I2C_SL_RecvData( void) ;
+/* Exported constants --------------------------------------------------------*/
 
-uint8_t I2C_SL_GetIntr(void) ;
+#define IS_I2C_SLAVE_PERIPH(PERIPH)                          ((PERIPH) == I2C_SLAVE)
+#define IS_I2C_SLAVE_CLR_IT(IT)                              ((((IT) & 0xFFFFFFE0) == 0) && ((IT) != 0x00))
+#define IS_I2C_SLAVE_MASK_IT(IT)                             ((((IT) & 0xFFFFF0FF) == 0) && ((IT) != 0x00))
+#define IS_I2C_SLAVE_SR_IT(IT)                               ((((IT) & 0xFFFFFFE0) == 0) && ((IT) != 0x00))
 
-void I2C_SL_ClrIntr(void);
+/* Exported macro ------------------------------------------------------------*/
+#define I2C_SLAVE_SR_RW_DONE                                          (1ul << 0)
+#define I2C_SLAVE_SR_NACK                                             (1ul << 1)
+#define I2C_SLAVE_SR_STOP                                             (1ul << 2)
+#define I2C_SLAVE_SR_ADDR                                             (1ul << 3)
+#define I2C_SLAVE_SR_RW                                               (1ul << 4)
 
-uint32_t I2C_SL_RecvOrSend(void) ;
+#define I2C_SLAVE_CLR_RW                                              (1ul << 0)
+#define I2C_SLAVE_CLR_NACK                                            (1ul << 1)
+#define I2C_SLAVE_CLR_STOP                                            (1ul << 2)
+#define I2C_SLAVE_CLR_ADDR                                            (1ul << 3)
+#define I2C_SLAVE_CLR_INT                                             (1ul << 4)
 
-void I2C_SL_Clr_RW(void);
-void I2C_SL_Clr_addr(void);
+#define I2C_SLAVE_RW_MASK                                             (1ul << 8)
+#define I2C_SLAVE_NACK_MASK                                           (1ul << 9)
+#define I2C_SLAVE_STOP_MASK                                           (1ul << 10)
+#define I2C_SLAVE_ADDR_MASK                                           (1ul << 11)
+
+/* Exported functions --------------------------------------------------------*/  
+void I2C_slave_int_cmd(I2C_slave_t *i2c_unit, uint32_t i2c_it, en_functional_state_t state);
+void I2C_slave_clear_flag(I2C_slave_t *i2c_unit, uint32_t i2c_it);
+void I2C_slave_init(I2C_slave_t *i2c_unit, uint8_t slave_addr);
+void I2C_slave_deinit(I2C_slave_t *i2c_unit);
+en_flag_status I2C_slave_get_int_status(I2C_slave_t *i2c_unit, uint32_t I2C_flag);
+uint8_t I2C_slave_read_data(I2C_slave_t *i2c_unit);
+uint8_t I2C_slave_read_word_addr(I2C_slave_t *i2c_unit);
+void I2C_slave_write_data(I2C_slave_t *i2c_unit, uint8_t data);
+
 #ifdef __cplusplus
 }
 #endif
 
+#endif
+/**
+  * @}
+  */ 
 
-#endif // __DRV_I2C_SL_H__
+/**
+  * @}
+  */ 
+
+/************************ (C) COPYRIGHT Phosense-tech *****END OF FILE****/
+

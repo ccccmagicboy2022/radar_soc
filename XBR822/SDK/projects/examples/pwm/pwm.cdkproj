@@ -11,12 +11,10 @@
     </File>
   </VirtualDirectory>
   <VirtualDirectory Name="driver">
-    <File Name="../../../driver/src/xbr821_interrupts.c">
+    <File Name="../../../driver/src/xbr820_interrupts.c">
       <FileOption/>
     </File>
-    <File Name="../../../driver/src/xbr821_pwm.c">
-      <FileOption/>
-    </File>
+    <File Name="../../../driver/src/xbr820_pwm.c"/>
   </VirtualDirectory>
   <VirtualDirectory Name="src">
     <File Name="main.c">
@@ -38,8 +36,12 @@
     <memoryTabColSizeExpressions>100:4;100:8;100:8;100:8;</memoryTabColSizeExpressions>
   </DebugSessions>
   <VirtualDirectory Name="bsp_pwm">
-    <File Name="bsp_pwm/bsp_pwm.c"/>
-    <File Name="bsp_pwm/bsp_pwm.h"/>
+    <File Name="bsp_pwm/bsp_pwm.c">
+      <FileOption/>
+    </File>
+    <File Name="bsp_pwm/bsp_pwm.h">
+      <FileOption/>
+    </File>
   </VirtualDirectory>
   <BuildConfigs>
     <BuildConfig Name="BuildSet">
@@ -238,4 +240,7 @@
       </Flash>
     </BuildConfig>
   </BuildConfigs>
+  <VendorInfo>
+    <VendorName>NULL</VendorName>
+  </VendorInfo>
 </Project>

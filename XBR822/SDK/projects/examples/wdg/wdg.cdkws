@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CDK_Workspace Name="wdg" Database="" DoubleClick="Yes">
+<CDK_Workspace Name="wdg" Database="wdg.tags" DoubleClick="Yes">
   <DefaultPackPath>$(CDKWS)\__workspace_pack__</DefaultPackPath>
-  <Project Name="wdg" Path="wdg.cdkproj" Active="Yes"/>
+  <Project Name="ir" Path="wdg.cdkproj" RootPath="" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
-      <Project Name="wdg" ConfigName="BuildSet"/>
+      <Project Name="ir" ConfigName="BuildSet"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CDK_Workspace>

@@ -13,4 +13,8 @@ void ir_deinit(void);
 void ir_test(void);
 void IR_irqhandler(void);
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif

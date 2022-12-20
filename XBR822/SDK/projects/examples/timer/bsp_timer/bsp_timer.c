@@ -3,6 +3,7 @@
 #include "xbr820.h"
 #include "xbr820_timer.h"
 #include "xbr820_utility.h"
+#include "xbr820_interrupts.h"
 
 /**
  * @brief  timer_priority_cfg
@@ -10,15 +11,17 @@
  * @param  timer_handler, timer_priority and timer_int.
  * @retval none.
  */
-void timer_priority_cfg(fun_timer timer_handler, uint8_t timer_priority, uint8_t timer_int)
+void timer_irq_cfg(fun_timer timer_handler, uint8_t timer_priority, uint8_t timer_int)
 {
     assert_param(IS_TIMER_CONFIG_IT(timer_priority));
     assert_param(IS_TIMER_CONFIG_INT(timer_int));
 
     stc_irq_set_cfg_t  irq_timer_set_cfg;
+	
     irq_timer_set_cfg.irq_number = timer_int;
     irq_timer_set_cfg.irq_func_pointer = timer_handler;
     irq_timer_set_cfg.irq_priority = timer_priority;
+	
     set_irq(&irq_timer_set_cfg);
     start_irq_x(irq_timer_set_cfg.irq_number);
 }
@@ -29,10 +32,14 @@ void timer_priority_cfg(fun_timer timer_handler, uint8_t timer_priority, uint8_t
  * @param  timer_cfg and counter,.
  * @retval none.
  */
-void timer_init(TIMER_t *timer, uint32_t counter)
+void timer_init(uint8_t id, uint32_t counter)
 {
-    //set_pin_func(P1_5, FUNC_IR);
-    timer_enable(timer, counter);
+	Timer_Cfg_t tim;
+	
+	tim.id = id;
+	tim.counter = counter;
+	
+    timer_enable(&tim);
 }
 
 __attribute__ ((section ("INT"))) void TIMER1_irqhandler(void)

@@ -8,9 +8,6 @@
 #if defined(XBR820)
 #include "xbr820.h"
 #endif
-#if defined(PHM320)
-#include "phm320.h"
-#endif
 
 #define     __I     volatile const       /*!< Defines 'read only' permissions */
 #define     __O     volatile             /*!< Defines 'write only' permissions */
