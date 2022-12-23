@@ -208,17 +208,17 @@ __INT_HANDLER __SECTION_INT void IRQ018_Handler(void)
 
 __INT_HANDLER __SECTION_INT void IRQ019_Handler(void)
 {
-    if (NULL != irq_handler[I2C_MASTER])
+    if (NULL != irq_handler[I2C_MASTER_IRQ])
     {
-        irq_handler[I2C_MASTER]();
+        irq_handler[I2C_MASTER_IRQ]();
     }
 }
 
 __INT_HANDLER __SECTION_INT void IRQ020_Handler(void)
 {
-    if (NULL != irq_handler[I2C_SLAVE])
+    if (NULL != irq_handler[I2C_SLAVE_IRQ])
     {
-        irq_handler[I2C_SLAVE]();
+        irq_handler[I2C_SLAVE_IRQ]();
     }
 }
 

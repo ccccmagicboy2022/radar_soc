@@ -58,7 +58,7 @@
 void IR_clr_int(brx820_ir_regdef *ir_clr)
 {
     assert_param(IS_IR_PERIPH(ir_clr));
-	
+
     ir_clr->IR_CMD_f.IR_INT_STA = 0;
 }
 
@@ -71,7 +71,7 @@ void IR_clr_int(brx820_ir_regdef *ir_clr)
 int IR_read_code(IR_mc_t *irdata, brx820_ir_regdef *ircfg)
 {
     assert_param(IS_IR_PERIPH(ircfg));
-	
+
     irdata->ir_mode = ((ircfg->IR_CMD_f.IR_REPEAT) <<1) | (ircfg->IR_CMD_f.IR_INT_STA);
     irdata->ir_code = ircfg->IR_READ_DATA;
     return 0;

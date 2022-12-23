@@ -11,12 +11,12 @@
 void wdg_priority_cfg(fun_wdg wdg_handler, uint8_t wdg_priority)
 {
     stc_irq_set_cfg_t  irq_wdg_set_cfg;
-	
+
     irq_wdg_set_cfg.irq_number = WDG_IRQ;
     irq_wdg_set_cfg.irq_func_pointer = wdg_handler;
     irq_wdg_set_cfg.irq_priority = wdg_priority;
     set_irq(&irq_wdg_set_cfg);
-	
+
     start_irq_x(irq_wdg_set_cfg.irq_number);
 }
 

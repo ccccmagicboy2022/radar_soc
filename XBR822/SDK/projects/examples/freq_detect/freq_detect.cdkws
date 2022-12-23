@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDK_Workspace Name="freq_detect" Database="freq_detect.tags" DoubleClick="Yes">
   <DefaultPackPath>$(CDKWS)\__workspace_pack__</DefaultPackPath>
-  <Project Name="timer" Path="freq_detect.cdkproj" RootPath="" Active="Yes"/>
+  <Project Name="freq_detect" Path="freq_detect.cdkproj" RootPath="" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
-      <Project Name="timer" ConfigName="BuildSet"/>
+      <Project Name="freq_detect" ConfigName="BuildSet"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CDK_Workspace>

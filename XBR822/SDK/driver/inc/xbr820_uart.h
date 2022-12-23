@@ -6,7 +6,7 @@
 typedef struct str_uart_init
 {
     uint32_t   BAND_RATE;
-	
+
 } str_uart_init_t;
 
 em_result_t uart_init(brx820_uart_regdef *uartx, const str_uart_init_t *uart_init_cfg);

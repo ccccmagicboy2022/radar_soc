@@ -20,8 +20,8 @@ typedef enum irq_number
     GPIO_PA3_IRQ            = 14,
     LIGHT_SENSOR_IRQ        = 17,
     FREQ_DET_IRQ            = 18,
-    I2C_MASTER              = 19,
-    I2C_SLAVE               = 20,
+    I2C_MASTER_IRQ          = 19,
+    I2C_SLAVE_IRQ           = 20,
 }irq_number_e;
 
 
@@ -339,8 +339,15 @@ typedef struct {
     __IOM uint32_t REG_ADDR        :16;
     uint32_t                       :16;
 
-    __IOM uint32_t T_DATA0;
-    __IOM uint32_t T_DATA1;
+    __IOM uint32_t T_DATA0_SLOT0	:8;
+	__IOM uint32_t T_DATA0_SLOT1	:8;
+	__IOM uint32_t T_DATA0_SLOT2	:8;
+	__IOM uint32_t T_DATA0_SLOT3	:8;
+    __IOM uint32_t T_DATA1_SLOT4	:8;
+	__IOM uint32_t T_DATA1_SLOT5	:8;
+	__IOM uint32_t T_DATA1_SLOT6	:8;
+	__IOM uint32_t T_DATA1_SLOT7	:8;
+
     __IOM uint32_t R_DATA0;
     __IOM uint32_t R_DATA1;
 
@@ -349,9 +356,17 @@ typedef struct {
         I2C_status_t STATUS_f;
     };
 
-    I2C_INT INT_EN;
+    union
+    {
+        __IO uint32_t INT_EN;
+        I2C_INT INT_EN_f;
+    };
 
-    I2C_INT INT_CLEAR;
+	union
+	{
+		__IO uint32_t INT_CLEAR;
+		I2C_INT INT_CLEAR_f;
+	};
 
     __IOM uint32_t CLK_DIV        :16;
     uint32_t                       :16;
@@ -360,48 +375,161 @@ typedef struct {
     uint32_t                      :31;
 } brx820_i2c_master_regdef;
 
-typedef volatile union{
-    uint32_t status;
-    struct{
-        uint32_t slave_rw            :1;
-        uint32_t slave_nackb        :1;
-        uint32_t slave_stopb        :1;
-        uint32_t slave_addrb        :1;
-        uint32_t slave_rw_o        :1;
-        uint32_t          :27;
-    }Bits;
-}I2C_SL_Intr;
+typedef struct {
+    __IO uint32_t SLAVE_ADDR                                       :8;
+    uint32_t                                                      :24;
+} i2c_slave_addr_field_t;
 
-typedef volatile struct {
-    __IOM   uint32_t    slavedev        :8;     //device id[7:1]; what about bit0
-    __IM    uint32_t    :24;
+typedef struct {
+    __IO uint32_t EN_SLAVE                                         :1;
+    uint32_t                                                      :31;
+} i2c_slave_en_slave_field_t;
 
-    __IOM   uint32_t    en_slaveb   :1;     //iic slave enable signal
-    __IM    uint32_t    :31;
+typedef struct {
+    __I uint32_t RECV_DATA                                         :8;
+    __I uint32_t RECV_ADDR                                         :8;
+    uint32_t                                                      :16;
+} i2c_slave_recv_data_field_t;
 
-    __IM   uint32_t    slaveb_data        :8;     //slave data from iic slave interface
-    __IM   uint32_t    slaveb_addr        :8;     //slave addr from iic slave interface
-    __IM    uint32_t    :16;
+typedef struct
+{
+    __IO uint32_t SEND_DATA                                        :8;
+    uint32_t                                                      :24;
+} i2c_slave_send_data_field_t;
 
-    __IOM   uint32_t    slaveb_data_2_iic   :8;     //data to iic slave interface
-    __IM    uint32_t    :24;
+typedef struct
+{
+    __I uint32_t RW                                               :1;
+    __I uint32_t NACK                                             :1;
+    __I uint32_t STOP                                             :1;
+    __I uint32_t ADDR                                             :1;
+    __I uint32_t RW_DONE                                          :1;
+    uint32_t                                                     :27;
+} i2c_slave_sr_field_t;
 
-    __IM   I2C_SL_Intr    slave_int;     //iic slave rw(write/read data done)
+typedef struct
+{
+    __IO uint32_t CLR_RW                                          :1;
+    __IO uint32_t CLR_NACK                                        :1;
+    __IO uint32_t CLR_STOP                                        :1;
+    __IO uint32_t CLR_ADDR                                        :1;
+    __IO uint32_t CLR_INT                                         :1;
+    uint32_t                                                      :3;
+    __IO uint32_t RW_MASK                                         :1;
+    __IO uint32_t NACK_MASK                                       :1;
+    __IO uint32_t STOP_MASK                                       :1;
+    __IO uint32_t ADDR_MASK                                       :1;
+    uint32_t                                                     :20;
+} i2c_slave_cr_field_t;
 
-    __IOM   uint32_t    rel_slb_rw        :1;     //release iic slave rw
-    __IOM   uint32_t    rel_slb_nack        :1;     //release iic slave nak
-    __IOM   uint32_t    rel_slb_stop        :1;     //release iic slave stop
-    __IOM   uint32_t    rel_slb_addr        :1;     //release iic slave addr
-    __IOM   uint32_t    rel_slb_int        :1;     //release iic slave int
-    __IM    uint32_t    :3;
-    __IOM   uint32_t    msk_slb_rw        :1;     //mask iic slave rw
-    __IOM   uint32_t    msk_slb_nack        :1;     //mask iic slave nak
-    __IOM   uint32_t    msk_slb_stop        :1;     //mask iic slave stop
-    __IOM   uint32_t    msk_slb_addr        :1;     //mask iic slave addr
-    __IM    uint32_t    :20;
-}brx820_i2c_slave_regdef;
+typedef struct
+{
+    __IO uint32_t RESETN                                          :1;
+    __IO uint32_t TRIM                                            :2;
+    uint32_t                                                      :29;	
+}light_sensor_cr1_field_t;
 
+typedef struct
+{
+	__IO uint32_t INT_EN                                          :1;
+	__IO uint32_t INT_STA                                         :1;
+	__I	 uint32_t FLAG											  :1;
+	uint32_t                                                      :1;
+	__IO uint32_t INTERVAL_SELECT							      :3;
+	uint32_t                                                      :1;
+	__IO uint32_t DELAY											  :7;
+	uint32_t                                                      :17;
+}light_sensor_cr2_field_t;
 
+typedef struct
+{
+    __IO uint32_t SEL                                             :5;
+    uint32_t                                                      :3;
+	__IO uint32_t START_WAIT									  :8;
+	__IO uint32_t IO_TRIGGER									  :1;
+	__IO uint32_t LATCH_EN										  :1;
+	uint32_t                                                      :14;
+}frame_cr1_field_t;
+
+typedef struct
+{
+    __IO uint32_t T1_VALUE                                        :27;
+    uint32_t                                                      :5;	
+}frame_t1_field_t;
+
+typedef struct
+{
+    __IO uint32_t T2_VALUE                                        :24;
+    uint32_t                                                      :8;	
+}frame_t2_field_t;
+
+/**
+ * @brief I2C slave
+ *
+ */
+typedef struct {
+    union
+    {
+        __IO uint32_t SLAVE_ADDR;
+        i2c_slave_addr_field_t SLAVE_ADDR_f;
+    };
+    union
+    {
+        __IO uint32_t EN_SLAVE;
+        i2c_slave_en_slave_field_t EN_SLAVE_f;
+    };
+    union
+    {
+        __IO uint32_t RECV_DATA;
+        i2c_slave_recv_data_field_t RECV_DATA_f;
+    };
+    union
+    {
+        __IO uint32_t SEND_DATA;
+        i2c_slave_send_data_field_t SEND_DATA_f;
+    };
+    union
+    {
+        __I uint32_t SR;
+        i2c_slave_sr_field_t SR_f;
+    };
+    union
+    {
+        __IO uint32_t CR;
+        i2c_slave_cr_field_t CR_f;
+    };
+} brx820_i2c_slave_regdef;
+
+typedef struct {
+    union
+    {
+        __IO uint32_t CR1;
+        light_sensor_cr1_field_t CR1_f;
+    };
+    union
+    {
+        __IO uint32_t CR2;
+        light_sensor_cr2_field_t CR2_f;
+    };
+} brx820_light_sensor_regdef;
+
+typedef struct {
+    union
+    {
+        __IO uint32_t CR1;
+        frame_cr1_field_t CR1_f;
+    };
+    union
+    {
+        __IO uint32_t T1;
+		frame_t1_field_t T1_f;
+    };
+    union
+    {
+        __IO uint32_t T2;
+		frame_t2_field_t T2_f;
+    };
+} brx820_frame_regdef;
 
 #define SYSTEM_CLOCK 40000000
 
@@ -421,8 +549,9 @@ typedef volatile struct {
 #define BRX820_PWM5        ((brx820_pwm_regdef *)(0x1f020180UL))
 #define BRX820_FREQ_DETECT ((brx820_freq_detect_regdef *)(0x1f020200UL))
 #define BRX820_IR          ((brx820_ir_regdef *)(0x1f030000UL))
-#define BRX820_I2C_master  ((brx820_i2c_master_regdef *)(0x1f050000UL))
-#define BRX820_I2C_slave   ((brx820_i2c_slave_regdef *)(0x1f060000UL))
-
+#define BRX820_I2C_MASTER  ((brx820_i2c_master_regdef *)(0x1f050000UL))
+#define BRX820_I2C_SLAVE   ((brx820_i2c_slave_regdef *)(0x1f060000UL))
+#define BRX820_LIGHT_SENSOR ((brx820_light_sensor_regdef *)(0x1f000090UL))
+#define BRX820_FRAME		((brx820_frame_regdef *)(0x1f000200UL))
 
 #endif

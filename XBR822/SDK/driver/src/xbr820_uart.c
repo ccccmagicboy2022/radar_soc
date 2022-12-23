@@ -32,5 +32,5 @@ em_result_t uart_rev_byte(brx820_uart_regdef *uartx, uint8_t *data)
 
 uint8_t uart_get_fifo_cnt(brx820_uart_regdef *uartx)
 {
-	return uartx->ST_f.RDATA_CNT;
+    return uartx->ST_f.RDATA_CNT;
 }

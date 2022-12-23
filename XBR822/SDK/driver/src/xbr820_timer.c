@@ -34,7 +34,7 @@ int timer_enable(Timer_Cfg_t *timer)
 
     tmr_Init[timer->id] = timer->counter;
     tmr_En[timer->id] = 0x1;
-	
+
     return 0;
 }
 

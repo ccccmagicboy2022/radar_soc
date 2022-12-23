@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Name="ir" Version="1" Language="C" Type="Simple">
+<Project Name="sys_timer" Version="1" Language="C" Type="Simple">
   <Description/>
   <Dependencies Name="Debug"/>
   <VirtualDirectory Name="GCC">
@@ -14,7 +14,9 @@
     <File Name="../../../driver/src/xbr820_sys_timer.c">
       <FileOption/>
     </File>
-    <File Name="../../../driver/src/xbr820_interrupts.c"/>
+    <File Name="../../../driver/src/xbr820_interrupts.c">
+      <FileOption/>
+    </File>
   </VirtualDirectory>
   <VirtualDirectory Name="src">
     <File Name="main.c">
@@ -25,16 +27,6 @@
     <FlashOperate>48</FlashOperate>
     <DebugLaunch>30</DebugLaunch>
   </MonitorProgress>
-  <DebugSessions>
-    <watchExpressions/>
-    <memoryExpressions>0xe0801000;;;</memoryExpressions>
-    <statistics>;;32;;MHZ;</statistics>
-    <peripheralTabs/>
-    <WatchDisplayFormat>1</WatchDisplayFormat>
-    <LocalDisplayFormat>1</LocalDisplayFormat>
-    <debugLayout/>
-    <memoryTabColSizeExpressions>100:4;100:8;100:8;100:8;</memoryTabColSizeExpressions>
-  </DebugSessions>
   <BuildConfigs>
     <BuildConfig Name="BuildSet">
       <Target>
@@ -235,4 +227,14 @@
   <VendorInfo>
     <VendorName>NULL</VendorName>
   </VendorInfo>
+  <DebugSessions>
+    <watchExpressions/>
+    <memoryExpressions>0xe0801000;;;</memoryExpressions>
+    <statistics>;;32;;MHZ;</statistics>
+    <peripheralTabs/>
+    <WatchDisplayFormat>1</WatchDisplayFormat>
+    <LocalDisplayFormat>1</LocalDisplayFormat>
+    <debugLayout/>
+    <memoryTabColSizeExpressions>100:4;100:8;100:8;100:8;</memoryTabColSizeExpressions>
+  </DebugSessions>
 </Project>

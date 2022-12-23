@@ -17,11 +17,11 @@ void timer_irq_cfg(fun_timer timer_handler, uint8_t timer_priority, uint8_t time
     assert_param(IS_TIMER_CONFIG_INT(timer_int));
 
     stc_irq_set_cfg_t  irq_timer_set_cfg;
-	
+
     irq_timer_set_cfg.irq_number = timer_int;
     irq_timer_set_cfg.irq_func_pointer = timer_handler;
     irq_timer_set_cfg.irq_priority = timer_priority;
-	
+
     set_irq(&irq_timer_set_cfg);
     start_irq_x(irq_timer_set_cfg.irq_number);
 }
@@ -34,11 +34,11 @@ void timer_irq_cfg(fun_timer timer_handler, uint8_t timer_priority, uint8_t time
  */
 void timer_init(uint8_t id, uint32_t counter)
 {
-	Timer_Cfg_t tim;
-	
-	tim.id = id;
-	tim.counter = counter;
-	
+    Timer_Cfg_t tim;
+
+    tim.id = id;
+    tim.counter = counter;
+
     timer_enable(&tim);
 }
 

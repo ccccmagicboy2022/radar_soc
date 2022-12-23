@@ -14,18 +14,19 @@
   * Licensed under Liberty SW License Agreement V1, (the "License");
   * You may not use this file except in compliance with the License.
 
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ******************************************************************************  
-  */ 
+  ******************************************************************************
+  */
 
 /* Includes ------------------------------------------------------------------*/
 #include "xbr820_i2c_slave.h"
 #include "xbr820_utility.h"
+#include "xbr820_interrupts.h"
 
 /** @addtogroup PHO_Periph_Driver
   * @{
@@ -36,7 +37,7 @@
   */
 
 /* Private typedef -----------------------------------------------------------*/
-/* Private define ------------------------------------------------------------*/ 
+/* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
@@ -46,7 +47,7 @@
 /**
  * @brief  Enables or disables the specified I2C interrupts.
  * @param  i2c_unit: select the I2C peripheral.
- * @param  i2c_it: specifies the I2C interrupts sources to be enabled or disabled. 
+ * @param  i2c_it: specifies the I2C interrupts sources to be enabled or disabled.
  *          This parameter can be any combination of the following values:
  *             @arg I2C_SLAVE_RW_MASK
  *             @arg I2C_SLAVE_NACK_MASK
@@ -56,8 +57,8 @@
  *          This parameter can be: ENABLE or DISABLE.
  * @retval None
  */
-void I2C_slave_int_cmd(I2C_slave_t *i2c_unit, uint32_t i2c_it, en_functional_state_t state)
-
+void I2C_slave_int_cmd(brx820_i2c_slave_regdef *i2c_unit, uint32_t i2c_it, em_functional_state_t state)
+{
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
     assert_param(IS_FUNCTIONAL_STATE(state));
     assert_param(IS_I2C_SLAVE_MASK_IT(i2c_it));
@@ -71,7 +72,7 @@ void I2C_slave_int_cmd(I2C_slave_t *i2c_unit, uint32_t i2c_it, en_functional_sta
 /**
  * @brief  clear the specified I2C interrupt flags.
  * @param  i2c_unit: select the I2C peripheral.
- * @param  i2c_it: specifies the I2C interrupts sources to be enabled or disabled. 
+ * @param  i2c_it: specifies the I2C interrupts sources to be enabled or disabled.
  *          This parameter can be any combination of the following values:
  *             @arg I2C_SLAVE_CLR_RW
  *             @arg I2C_SLAVE_CLR_NACK
@@ -80,7 +81,7 @@ void I2C_slave_int_cmd(I2C_slave_t *i2c_unit, uint32_t i2c_it, en_functional_sta
  *             @arg I2C_SLAVE_CLR_INT
  * @retval None
  */
-void I2C_slave_clear_flag(I2C_slave_t *i2c_unit, uint32_t i2c_it)
+void I2C_slave_clear_flag(brx820_i2c_slave_regdef *i2c_unit, uint32_t i2c_it)
 {
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
     assert_param(IS_I2C_SLAVE_CLR_IT(i2c_it));
@@ -90,12 +91,12 @@ void I2C_slave_clear_flag(I2C_slave_t *i2c_unit, uint32_t i2c_it)
 
 /**
  * @brief initialize I2C peripheral
- * 
+ *
  * @param i2c_unit select the I2C peripheral.
  * @param slave_addr the slave address
  * @retval None
  */
-void I2C_slave_init(I2C_slave_t *i2c_unit, uint8_t slave_addr)
+void I2C_slave_init(brx820_i2c_slave_regdef *i2c_unit, uint8_t slave_addr)
 {
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
 
@@ -108,7 +109,7 @@ void I2C_slave_init(I2C_slave_t *i2c_unit, uint8_t slave_addr)
  * @param i2c_unit select the I2C peripheral.
  * @retval None
  */
-void I2C_slave_deinit(I2C_slave_t *i2c_unit)
+void I2C_slave_deinit(brx820_i2c_slave_regdef *i2c_unit)
 {
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
 
@@ -117,7 +118,7 @@ void I2C_slave_deinit(I2C_slave_t *i2c_unit)
 
 /**
  * @brief checks whether the specified I2C interrupt has occurred or not.
- * 
+ *
  * @param i2c_unit select the I2C peripheral.
  * @param I2C_flag specifies the interrupt source to check.
  *          This parameter can be any combination of the following values:
@@ -128,14 +129,14 @@ void I2C_slave_deinit(I2C_slave_t *i2c_unit)
  *              @arg I2C_SLAVE_SR_RW
  * @return en_flag_status the new state of I2C_IT (SET or RESET).
  */
-en_flag_status I2C_slave_get_int_status(I2C_slave_t *i2c_unit, uint32_t I2C_flag)
+em_flag_status_t I2C_slave_get_int_status(brx820_i2c_slave_regdef *i2c_unit, uint32_t I2C_flag)
 {
-    en_flag_status ret = RESET;
+    em_flag_status_t ret = RESET;
 
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
     assert_param(IS_I2C_SLAVE_SR_IT(I2C_flag));
 
-    if (0ul != i2c_unit->SR & I2C_flag)
+    if (0ul != (i2c_unit->SR & I2C_flag))
         ret = SET;
 
     return ret;
@@ -143,11 +144,11 @@ en_flag_status I2C_slave_get_int_status(I2C_slave_t *i2c_unit, uint32_t I2C_flag
 
 /**
  * @brief read data from i2c data register.
- * 
+ *
  * @param i2c_unit select the I2C peripheral.
  * @return uint8_t data from i2c.
  */
-uint8_t I2C_slave_read_data(I2C_slave_t *i2c_unit)
+uint8_t I2C_slave_read_data(brx820_i2c_slave_regdef *i2c_unit)
 {
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
 
@@ -156,11 +157,11 @@ uint8_t I2C_slave_read_data(I2C_slave_t *i2c_unit)
 
 /**
  * @brief read addr from i2c data register.
- * 
+ *
  * @param i2c_unit select the I2C peripheral.
  * @return uint8_t word addr from i2c.
  */
-uint8_t I2C_slave_read_word_addr(I2C_slave_t *i2c_unit)
+uint8_t I2C_slave_read_word_addr(brx820_i2c_slave_regdef *i2c_unit)
 {
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
 
@@ -169,22 +170,35 @@ uint8_t I2C_slave_read_word_addr(I2C_slave_t *i2c_unit)
 
 /**
  * @brief write data to be sent to register.
- * 
+ *
  * @param i2c_unit select the I2C peripheral.
  * @param data data to be sent.
  */
-void I2C_slave_write_data(I2C_slave_t *i2c_unit, uint8_t data)
+void I2C_slave_write_data(brx820_i2c_slave_regdef *i2c_unit, uint8_t data)
 {
     assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit));
 
     i2c_unit->SEND_DATA_f.SEND_DATA = data;
 }
-/**
-  * @}
-  */ 
+
+void i2c_slave_irq_cfg(fun_i2c_slave _handler, uint8_t _priority, uint8_t _int_num)
+{
+    stc_irq_set_cfg_t  irq_timer_set_cfg;
+
+    irq_timer_set_cfg.irq_number = _int_num;
+    irq_timer_set_cfg.irq_func_pointer = _handler;
+    irq_timer_set_cfg.irq_priority = _priority;
+
+    set_irq(&irq_timer_set_cfg);
+    start_irq_x(irq_timer_set_cfg.irq_number);
+}
 
 /**
   * @}
-  */ 
+  */
+
+/**
+  * @}
+  */
 
 /************************ (C) COPYRIGHT Phosense-tech *****END OF FILE****/
