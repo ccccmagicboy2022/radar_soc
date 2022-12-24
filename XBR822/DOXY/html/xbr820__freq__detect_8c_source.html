@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_freq_detect.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_freq_detect.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__freq__detect_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00026"></a>00026 <span class="comment">/* Includes ------------------------------------------------------------------*/</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__utility_8h.html">xbr820_utility.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__interrupts_8h.html">xbr820_interrupts.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__freq__detect_8h.html" title="This file contains all the functions prototypes for freq detect.">xbr820_freq_detect.h</a>&quot;</span>
+<a name="l00031"></a>00031 
+<a name="l00039"></a><a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#ga4e47877cc7a134d95ef45a14804f40ba">00039</a> <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#ga4e47877cc7a134d95ef45a14804f40ba">freq_detect_init</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> * freq, <span class="keyword">const</span> <a class="code" href="structfreq__detect___cfg.html">freq_detect_Cfg</a>* freq_det_init)
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__freq__detect_8h.html#a22283d8b8ad513321952f6e394654c6e">IS_FREQ_PERIPH</a>(freq));
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#ad8654b27a12616e93d4fdfbf97269655">FREQ_DET_EN</a> = freq_det_init-&gt;<a class="code" href="structfreq__detect___cfg.html#ab2faf6fa77fc0ea19e3816eaac245291">enable</a>;
+<a name="l00044"></a>00044     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#a62545794c09364faad71c638862c63b8">FREQ_DET_INT_EN</a> = freq_det_init-&gt;<a class="code" href="structfreq__detect___cfg.html#a227d45b437eb2a714b8b858977fba350">int_en</a>;
+<a name="l00045"></a>00045     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#aa8bba5465e2674f60332ae4365080453">FREQ_DETECT_CFG_f</a>.<a class="code" href="structstr__freq__detect__cfg__filed__t.html#ab3c7f5a11fc675750e237427b89c073c">FREQ_DET_INTERVAL</a> = freq_det_init-&gt;<a class="code" href="structfreq__detect___cfg.html#adbae89b5909e743ed103f8dc950478b9">interval</a>;
+<a name="l00046"></a>00046 }
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="comment">/* Private typedef -----------------------------------------------------------*/</span>
+<a name="l00050"></a>00050 <span class="comment">/* Private define ------------------------------------------------------------*/</span>
+<a name="l00051"></a>00051 <span class="comment">/* Private macro -------------------------------------------------------------*/</span>
+<a name="l00052"></a>00052 <span class="comment">/* Private variables ---------------------------------------------------------*/</span>
+<a name="l00053"></a>00053 <span class="comment">/* Private function prototypes -----------------------------------------------*/</span>
+<a name="l00054"></a>00054 <span class="comment">/* Private functions ---------------------------------------------------------*/</span>
+<a name="l00060"></a><a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#ga561e526f22b1358c6b894d32b630861d">00060</a> <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#ga561e526f22b1358c6b894d32b630861d" title="freq_detect_enable. The timer should be set a initial value">freq_detect_enable</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq)
+<a name="l00061"></a>00061 {
+<a name="l00062"></a>00062     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__freq__detect_8h.html#a22283d8b8ad513321952f6e394654c6e">IS_FREQ_PERIPH</a>(freq));
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#ad8654b27a12616e93d4fdfbf97269655">FREQ_DET_EN</a> = 1;
+<a name="l00065"></a>00065     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#a62545794c09364faad71c638862c63b8">FREQ_DET_INT_EN</a> = 1;
+<a name="l00066"></a>00066 }
+<a name="l00067"></a>00067 
+<a name="l00073"></a><a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gaab8cc6e1201510163e51115afac2af25">00073</a> <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gaab8cc6e1201510163e51115afac2af25" title="freq_detect_disable.">freq_detect_disable</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq)
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__freq__detect_8h.html#a22283d8b8ad513321952f6e394654c6e">IS_FREQ_PERIPH</a>(freq));
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#ad8654b27a12616e93d4fdfbf97269655">FREQ_DET_EN</a> = 0;
+<a name="l00078"></a>00078     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#a62545794c09364faad71c638862c63b8">FREQ_DET_INT_EN</a> = 0;
+<a name="l00079"></a>00079 }
+<a name="l00080"></a>00080 
+<a name="l00086"></a><a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaef8c15927a5d7db5552b7633072516">00086</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaef8c15927a5d7db5552b7633072516" title="freq_get_value.">freq_get_value</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq)
+<a name="l00087"></a>00087 {
+<a name="l00088"></a>00088     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__freq__detect_8h.html#a22283d8b8ad513321952f6e394654c6e">IS_FREQ_PERIPH</a>(freq));
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090     <span class="keywordflow">return</span> freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a790760f80ea0370abc9a2fe4fd3175e4">FREQ_DETECT_VALUE_f</a>.<a class="code" href="structstr__freq__detect__value__filed__t.html#a512a43c4024f986bd331473fa2c17349">FREQ_DET_VAL</a>;
+<a name="l00091"></a>00091 }
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 
+<a name="l00100"></a><a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaa39819be2f3a82523c0067668258f0">00100</a> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaa39819be2f3a82523c0067668258f0" title="freq_get_interrupt_status. Reset means counting from the init value again.">freq_get_interrupt_status</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq)
+<a name="l00101"></a>00101 {
+<a name="l00102"></a>00102     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__freq__detect_8h.html#a22283d8b8ad513321952f6e394654c6e">IS_FREQ_PERIPH</a>(freq));
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104     <span class="keywordflow">return</span> freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#ae5b476ce3fd20f57027bb71b43e57ce4">FREQ_DET_STATUS</a>;
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafe8547701eb76d8b5447b861d04ec3c0">00107</a> <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafe8547701eb76d8b5447b861d04ec3c0">freq_clr_interrupt_status</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq)
+<a name="l00108"></a>00108 {
+<a name="l00109"></a>00109     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__freq__detect_8h.html#a22283d8b8ad513321952f6e394654c6e">IS_FREQ_PERIPH</a>(freq));
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111     freq-&gt;<a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>.<a class="code" href="structstr__freq__detect__ctrl__filed__t.html#ae5b476ce3fd20f57027bb71b43e57ce4">FREQ_DET_STATUS</a> = 1;
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

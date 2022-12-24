@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_flash.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_flash.c文件参考</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="pho__common_8h_source.html">pho_common.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__flash_8h_source.html">xbr820_flash.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+xbr820_flash.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__flash_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__flash_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__flash_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__flash_8c">
+<area shape="rect" id="node2" href="pho__common_8h.html" title="pho_common.h" alt="" coords="247,171,401,205"/><area shape="rect" id="node7" href="xbr820__flash_8h.html" title="xbr820_flash.h" alt="" coords="306,88,457,123"/></map>
+</div>
+</div>
+<p><a href="xbr820__flash_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a883828f39e03200a0b5f424dbca15f11">reg8_read</a>(r)&#160;&#160;&#160;(*(<a class="el" href="xbr820__flash_8c.html#a935cac9f5fb2bb1b3ae6c455eb596ecb">reg8_t</a> *)(r))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a56eb7006907bf61278d1b2d82f9108bb">reg8_write</a>(r, v)&#160;&#160;&#160;do { *(<a class="el" href="xbr820__flash_8c.html#a935cac9f5fb2bb1b3ae6c455eb596ecb">reg8_t</a> *)(r) = (<a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(v); } while(0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a1b8109235c72ead2d5a4d179e8c4d08d">reg16_read</a>(r)&#160;&#160;&#160;(*(<a class="el" href="xbr820__flash_8c.html#a1daf700d608b9b747dd2ed7ab3966fd9">reg16_t</a> *)(r))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#af229fb74178a03faca207a7a21e0dbdc">reg16_write</a>(r, v)&#160;&#160;&#160;do { *(<a class="el" href="xbr820__flash_8c.html#a1daf700d608b9b747dd2ed7ab3966fd9">reg16_t</a> *)(r) = (<a class="el" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)(v); } while(0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#aab51c5290827b595d92efe1299bd0c54">reg32_read</a>(r)&#160;&#160;&#160;(*(<a class="el" href="xbr820__flash_8c.html#a0e1b07bbc5af28a654767bb3dfb132ad">reg32_t</a> *)(r))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(r, v)&#160;&#160;&#160;do { *(<a class="el" href="xbr820__flash_8c.html#a0e1b07bbc5af28a654767bb3dfb132ad">reg32_t</a> *)(r) = (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(v); } while(0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a6790d41cc62461198b44d86460cafe48">reg32_set</a>(r, m)&#160;&#160;&#160;reg32_write(r, reg32_read(r) | (m))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#aef4f0b6df80eff16b3298abf5d78919f">reg32_clr</a>(r, m)&#160;&#160;&#160;reg32_write(r, reg32_read(r) &amp; ~(m))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#af0268c0af70a7ebd532cf36e41c9808e">send_cmd</a>(cmd)&#160;&#160;&#160;do { reg32_write(SPI_CM, 0x01 | (cmd &lt;&lt; 8)); } while(0)</td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef volatile <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a935cac9f5fb2bb1b3ae6c455eb596ecb">reg8_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef volatile <a class="el" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a1daf700d608b9b747dd2ed7ab3966fd9">reg16_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef volatile <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a0e1b07bbc5af28a654767bb3dfb132ad">reg32_t</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#af471058120916ba68760f6017ace3cd3">flashChipErase</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a23ba8b20c42054b534a3b7dcc10df085">flashSectErase</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sect)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a0b9b3f9fb991a49c4604e8b1f2fa75da">flashProgram</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, const <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *src, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__flash_8c.html#a3264423b424a8016e6beda9e5495db2b">flashRead</a> (<a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *dst, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> src, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+</table>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="a1b8109235c72ead2d5a4d179e8c4d08d"></a><!-- doxytag: member="xbr820_flash.c::reg16_read" ref="a1b8109235c72ead2d5a4d179e8c4d08d" args="(r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg16_read</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r</td><td>)</td>
+          <td>&#160;&#160;&#160;(*(<a class="el" href="xbr820__flash_8c.html#a1daf700d608b9b747dd2ed7ab3966fd9">reg16_t</a> *)(r))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00036">36</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="af229fb74178a03faca207a7a21e0dbdc"></a><!-- doxytag: member="xbr820_flash.c::reg16_write" ref="af229fb74178a03faca207a7a21e0dbdc" args="(r, v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg16_write</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;do { *(<a class="el" href="xbr820__flash_8c.html#a1daf700d608b9b747dd2ed7ab3966fd9">reg16_t</a> *)(r) = (<a class="el" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)(v); } while(0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00037">37</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="aef4f0b6df80eff16b3298abf5d78919f"></a><!-- doxytag: member="xbr820_flash.c::reg32_clr" ref="aef4f0b6df80eff16b3298abf5d78919f" args="(r, m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg32_clr</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;reg32_write(r, reg32_read(r) &amp; ~(m))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00041">41</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="aab51c5290827b595d92efe1299bd0c54"></a><!-- doxytag: member="xbr820_flash.c::reg32_read" ref="aab51c5290827b595d92efe1299bd0c54" args="(r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg32_read</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r</td><td>)</td>
+          <td>&#160;&#160;&#160;(*(<a class="el" href="xbr820__flash_8c.html#a0e1b07bbc5af28a654767bb3dfb132ad">reg32_t</a> *)(r))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00038">38</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6790d41cc62461198b44d86460cafe48"></a><!-- doxytag: member="xbr820_flash.c::reg32_set" ref="a6790d41cc62461198b44d86460cafe48" args="(r, m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg32_set</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;reg32_write(r, reg32_read(r) | (m))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00040">40</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c29e6df49201241a6b0f96a9243df09"></a><!-- doxytag: member="xbr820_flash.c::reg32_write" ref="a4c29e6df49201241a6b0f96a9243df09" args="(r, v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg32_write</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;do { *(<a class="el" href="xbr820__flash_8c.html#a0e1b07bbc5af28a654767bb3dfb132ad">reg32_t</a> *)(r) = (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(v); } while(0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00039">39</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a883828f39e03200a0b5f424dbca15f11"></a><!-- doxytag: member="xbr820_flash.c::reg8_read" ref="a883828f39e03200a0b5f424dbca15f11" args="(r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg8_read</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r</td><td>)</td>
+          <td>&#160;&#160;&#160;(*(<a class="el" href="xbr820__flash_8c.html#a935cac9f5fb2bb1b3ae6c455eb596ecb">reg8_t</a> *)(r))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00034">34</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a56eb7006907bf61278d1b2d82f9108bb"></a><!-- doxytag: member="xbr820_flash.c::reg8_write" ref="a56eb7006907bf61278d1b2d82f9108bb" args="(r, v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reg8_write</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;do { *(<a class="el" href="xbr820__flash_8c.html#a935cac9f5fb2bb1b3ae6c455eb596ecb">reg8_t</a> *)(r) = (<a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(v); } while(0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00035">35</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="af0268c0af70a7ebd532cf36e41c9808e"></a><!-- doxytag: member="xbr820_flash.c::send_cmd" ref="af0268c0af70a7ebd532cf36e41c9808e" args="(cmd)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define send_cmd</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cmd</td><td>)</td>
+          <td>&#160;&#160;&#160;do { reg32_write(SPI_CM, 0x01 | (cmd &lt;&lt; 8)); } while(0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00043">43</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>类型定义文档</h2>
+<a class="anchor" id="a1daf700d608b9b747dd2ed7ab3966fd9"></a><!-- doxytag: member="xbr820_flash.c::reg16_t" ref="a1daf700d608b9b747dd2ed7ab3966fd9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef volatile <a class="el" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="el" href="xbr820__flash_8c.html#a1daf700d608b9b747dd2ed7ab3966fd9">reg16_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00031">31</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e1b07bbc5af28a654767bb3dfb132ad"></a><!-- doxytag: member="xbr820_flash.c::reg32_t" ref="a0e1b07bbc5af28a654767bb3dfb132ad" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef volatile <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__flash_8c.html#a0e1b07bbc5af28a654767bb3dfb132ad">reg32_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00032">32</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a935cac9f5fb2bb1b3ae6c455eb596ecb"></a><!-- doxytag: member="xbr820_flash.c::reg8_t" ref="a935cac9f5fb2bb1b3ae6c455eb596ecb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef volatile <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="el" href="xbr820__flash_8c.html#a935cac9f5fb2bb1b3ae6c455eb596ecb">reg8_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copyright ******************************</p>
+<p>(C) Copyright 2022,--,China, PHO. All Rights Reserved</p>
+<p>By(--) <a href="https://--">https://--</a></p>
+<p>FileName : <a class="el" href="xbr820__flash_8c.html">xbr820_flash.c</a> Version : v1.0 Author : cccc Date : 2022-12-19 Description: Function List: 1. .... &lt;version&gt;: &lt;modify staff&gt;=""&gt;: &lt;data&gt;: : 2. ... </p>
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00030">30</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="af471058120916ba68760f6017ace3cd3"></a><!-- doxytag: member="xbr820_flash.c::flashChipErase" ref="af471058120916ba68760f6017ace3cd3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashChipErase </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to erase the whole flash.</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_CHIPERASE, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00080">80</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b9b3f9fb991a49c4604e8b1f2fa75da"></a><!-- doxytag: member="xbr820_flash.c::flashProgram" ref="a0b9b3f9fb991a49c4604e8b1f2fa75da" args="(uint32_t dst, const uint8_t *src, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashProgram </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00116">116</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3264423b424a8016e6beda9e5495db2b"></a><!-- doxytag: member="xbr820_flash.c::flashRead" ref="a3264423b424a8016e6beda9e5495db2b" args="(uint8_t *dst, uint32_t src, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashRead </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00174">174</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a23ba8b20c42054b534a3b7dcc10df085"></a><!-- doxytag: member="xbr820_flash.c::flashSectErase" ref="a23ba8b20c42054b534a3b7dcc10df085" args="(uint32_t sect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashSectErase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>sect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00095">95</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

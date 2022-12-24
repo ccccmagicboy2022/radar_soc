@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/xbr820_spiflash/main.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/xbr820_spiflash/main.c文件参考</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &quot;xbr820.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="flash__config_8h_source.html">flash_config.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+main.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2xbr820__spiflash_2main_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2xbr820__spiflash_2main_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2xbr820__spiflash_2main_8c">
+<area shape="rect" id="node3" href="flash__config_8h.html" title="flash_config.h" alt="" coords="318,88,461,123"/><area shape="rect" id="node4" href="config_8h.html" title="config.h" alt="" coords="344,171,435,205"/><area shape="rect" id="node5" href="gconfig_8h.html" title="gconfig.h" alt="" coords="339,253,440,288"/></map>
+</div>
+</div>
+<p><a href="xbr820__spiflash_2main_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ae037ef4262c18bc029eb1173b141bd48">VERS</a>&#160;&#160;&#160;2</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a9f9e0b850d75d42457f69e391e89c4c6">flashInit</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ab5101c59a4e1f46356eda08069db84e1">flashID</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *flashID)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a0b9b3f9fb991a49c4604e8b1f2fa75da">flashProgram</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, const <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *src, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a3264423b424a8016e6beda9e5495db2b">flashRead</a> (<a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *dst, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> src, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee">flashErase</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#af471058120916ba68760f6017ace3cd3">flashChipErase</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a23ba8b20c42054b534a3b7dcc10df085">flashSectErase</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sect)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ad7b251923da9be7058edcc72b30e82c9">__bkpt_label</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+变量</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ad4d8b33387b4778ef92f67d857e938a2">fd_version</a> = 0x0000 + VERS</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a410d1890d71b268c3349ebb94a9f578a">g_rwBuffer</a> [SF_BUF_SIZE/sizeof(<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)]</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ac43c352de8b3c7fe3c00dced2cde2b3c">g_dstAddress</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a1fc851937ab0b78ace7a0e0adc75ed4c">g_length</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ade904a73bcc515377eabf5557e4cdf50">g_checksum</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a4c778229114e45c6562113cf91c3e683">g_runmode</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a2edaa38c0a7ca7d41dbb62796cbd815a">g_func</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a69a22a7d953cd9d21c60345673193497">g_flashID</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a72e2da09ea98d51b2d53fa2a9aa17c5a">log_data</a> []</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#ab0a2c40c01ea9ca0353130f70b740921">log_i</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__spiflash_2main_8c.html#a1e1c93068be083ad56d7c36475e06b62">g_error</a></td></tr>
+</table>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="ae037ef4262c18bc029eb1173b141bd48"></a><!-- doxytag: member="main.c::VERS" ref="ae037ef4262c18bc029eb1173b141bd48" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VERS&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00026">26</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="ad7b251923da9be7058edcc72b30e82c9"></a><!-- doxytag: member="main.c::__bkpt_label" ref="ad7b251923da9be7058edcc72b30e82c9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __bkpt_label </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c_ad7b251923da9be7058edcc72b30e82c9_icgraph.png" border="0" usemap="#xbr820__spiflash_2main_8c_ad7b251923da9be7058edcc72b30e82c9_icgraph" alt=""/></div>
+<map name="xbr820__spiflash_2main_8c_ad7b251923da9be7058edcc72b30e82c9_icgraph" id="xbr820__spiflash_2main_8c_ad7b251923da9be7058edcc72b30e82c9_icgraph">
+<area shape="rect" id="node2" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="188,5,251,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af471058120916ba68760f6017ace3cd3"></a><!-- doxytag: member="main.c::flashChipErase" ref="af471058120916ba68760f6017ace3cd3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashChipErase </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to erase the whole flash.</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_CHIPERASE, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00080">80</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a645e01d54ddd895c55e2cd5a8f3ad4ee"></a><!-- doxytag: member="main.c::flashErase" ref="a645e01d54ddd895c55e2cd5a8f3ad4ee" args="(uint32_t dst, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashErase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to erase a group of flash blocks.</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>: a pointer to the base of the flash device. NOTE: dst will always be sector aligned, the sector size is stored in FlashDev.c::FlashDevices::Devs::PageSize </td></tr>
+    <tr><td class="paramname">length</td><td>: erase length NOTE: length will always be sector aligned, the sector size is stored in FlashDev.c::FlashDevices::Devs::PageSize</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_ERASE, Otherwise return 0 </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00440">440</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph.png" border="0" usemap="#xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph" alt=""/></div>
+<map name="xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph" id="xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph">
+<area shape="rect" id="node2" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099" title="flashChipErase" alt="" coords="168,5,323,40"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph.png" border="0" usemap="#xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph" alt=""/></div>
+<map name="xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph" id="xbr820__spiflash_2main_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph">
+<area shape="rect" id="node2" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="206,5,269,40"/><area shape="rect" id="node3" href="driver_8c.html#a0b9b3f9fb991a49c4604e8b1f2fa75da" title="flashProgram" alt="" coords="168,64,307,99"/><area shape="rect" id="node4" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="355,64,417,99"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5101c59a4e1f46356eda08069db84e1"></a><!-- doxytag: member="main.c::flashID" ref="ab5101c59a4e1f46356eda08069db84e1" args="(uint32_t *flashID)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>flashID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to read flash ID</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flashID,:</td><td>returns for flash ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_READID, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00266">266</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph.png" border="0" usemap="#xbr820__spiflash_2main_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph" alt=""/></div>
+<map name="xbr820__spiflash_2main_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph" id="xbr820__spiflash_2main_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph">
+<area shape="rect" id="node2" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="136,5,199,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f9e0b850d75d42457f69e391e89c4c6"></a><!-- doxytag: member="main.c::flashInit" ref="a9f9e0b850d75d42457f69e391e89c4c6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to perform any initialization needed to access your flash device.</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_INIT, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00239">239</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph.png" border="0" usemap="#xbr820__spiflash_2main_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph" alt=""/></div>
+<map name="xbr820__spiflash_2main_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph" id="xbr820__spiflash_2main_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph">
+<area shape="rect" id="node2" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="143,5,205,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b9b3f9fb991a49c4604e8b1f2fa75da"></a><!-- doxytag: member="main.c::flashProgram" ref="a0b9b3f9fb991a49c4604e8b1f2fa75da" args="(uint32_t dst, const uint8_t *src, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashProgram </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This method takes the data pointed to by the src parameter and writes it to the flash blocks indicated by the dst parameter.</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>: destination address where flash program </td></tr>
+    <tr><td class="paramname">src</td><td>: address of data </td></tr>
+    <tr><td class="paramname">length</td><td>: data length</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_PROGRAM, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00116">116</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph.png" border="0" usemap="#xbr820__spiflash_2main_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph" alt=""/></div>
+<map name="xbr820__spiflash_2main_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph" id="xbr820__spiflash_2main_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph">
+<area shape="rect" id="node2" href="driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee" title="flashErase" alt="" coords="192,5,307,40"/><area shape="rect" id="node3" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099" title="flashChipErase" alt="" coords="355,5,509,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3264423b424a8016e6beda9e5495db2b"></a><!-- doxytag: member="main.c::flashRead" ref="a3264423b424a8016e6beda9e5495db2b" args="(uint8_t *dst, uint32_t src, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashRead </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to read data from a group of flash blocks into a buffer</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>: reads the contents of those flash blocks into the address pointed to by the dst parameter. </td></tr>
+    <tr><td class="paramname">src</td><td>: a pointer to a single flash. </td></tr>
+    <tr><td class="paramname">length</td><td>: data length</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_READ, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00174">174</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a23ba8b20c42054b534a3b7dcc10df085"></a><!-- doxytag: member="main.c::flashSectErase" ref="a23ba8b20c42054b534a3b7dcc10df085" args="(uint32_t sect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashSectErase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>sect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__flash_8c_source.html">xbr820_flash.c</a>第<a class="el" href="xbr820__flash_8c_source.html#l00095">95</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a><!-- doxytag: member="main.c::main" ref="ae66f6b31b5ad750f1fe042a706a4e3d4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00062">62</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__spiflash_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#xbr820__spiflash_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="xbr820__spiflash_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="xbr820__spiflash_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="driver_8c.html#a9f9e0b850d75d42457f69e391e89c4c6" title="flashInit" alt="" coords="149,5,238,40"/><area shape="rect" id="node3" href="xbr820__spiflash_2main_8c.html#ad7b251923da9be7058edcc72b30e82c9" title="__bkpt_label" alt="" coords="126,64,261,99"/><area shape="rect" id="node4" href="driver_8c.html#ab5101c59a4e1f46356eda08069db84e1" title="flashID" alt="" coords="152,123,235,157"/><area shape="rect" id="node5" href="xbr820__flash_8h.html#a0b9b3f9fb991a49c4604e8b1f2fa75da" title="flashProgram" alt="" coords="124,181,263,216"/><area shape="rect" id="node6" href="xbr820__flash_8h.html#a3264423b424a8016e6beda9e5495db2b" title="flashRead" alt="" coords="138,240,249,275"/><area shape="rect" id="node7" href="driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee" title="flashErase" alt="" coords="136,299,251,333"/><area shape="rect" id="node8" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099" title="flashChipErase" alt="" coords="319,327,473,361"/><area shape="rect" id="node9" href="xbr820__flash_8h.html#a23ba8b20c42054b534a3b7dcc10df085" title="flashSectErase" alt="" coords="116,408,271,443"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>变量文档</h2>
+<a class="anchor" id="ad4d8b33387b4778ef92f67d857e938a2"></a><!-- doxytag: member="main.c::fd_version" ref="ad4d8b33387b4778ef92f67d857e938a2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#ad4d8b33387b4778ef92f67d857e938a2">fd_version</a> = 0x0000 + VERS</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00027">27</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ade904a73bcc515377eabf5557e4cdf50"></a><!-- doxytag: member="main.c::g_checksum" ref="ade904a73bcc515377eabf5557e4cdf50" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#ade904a73bcc515377eabf5557e4cdf50">g_checksum</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00041">41</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac43c352de8b3c7fe3c00dced2cde2b3c"></a><!-- doxytag: member="main.c::g_dstAddress" ref="ac43c352de8b3c7fe3c00dced2cde2b3c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#ac43c352de8b3c7fe3c00dced2cde2b3c">g_dstAddress</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00039">39</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e1c93068be083ad56d7c36475e06b62"></a><!-- doxytag: member="main.c::g_error" ref="a1e1c93068be083ad56d7c36475e06b62" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="xbr820__spiflash_2main_8c.html#a1e1c93068be083ad56d7c36475e06b62">g_error</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The engineering-driven operation error return </p>
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00061">61</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a69a22a7d953cd9d21c60345673193497"></a><!-- doxytag: member="main.c::g_flashID" ref="a69a22a7d953cd9d21c60345673193497" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#a69a22a7d953cd9d21c60345673193497">g_flashID</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00051">51</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2edaa38c0a7ca7d41dbb62796cbd815a"></a><!-- doxytag: member="main.c::g_func" ref="a2edaa38c0a7ca7d41dbb62796cbd815a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="xbr820__spiflash_2main_8c.html#a2edaa38c0a7ca7d41dbb62796cbd815a">g_func</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The definition of functional options, 0 corresponds to check id,1 corresponds to program,2 corresponds to read,3 corresponds to erase,4 corresponds to chip erase. </p>
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00050">50</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1fc851937ab0b78ace7a0e0adc75ed4c"></a><!-- doxytag: member="main.c::g_length" ref="a1fc851937ab0b78ace7a0e0adc75ed4c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#a1fc851937ab0b78ace7a0e0adc75ed4c">g_length</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00040">40</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c778229114e45c6562113cf91c3e683"></a><!-- doxytag: member="main.c::g_runmode" ref="a4c778229114e45c6562113cf91c3e683" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#a4c778229114e45c6562113cf91c3e683">g_runmode</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00042">42</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a410d1890d71b268c3349ebb94a9f578a"></a><!-- doxytag: member="main.c::g_rwBuffer" ref="a410d1890d71b268c3349ebb94a9f578a" args="[SF_BUF_SIZE/sizeof(uint32_t)]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#a410d1890d71b268c3349ebb94a9f578a">g_rwBuffer</a>[SF_BUF_SIZE/sizeof(<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)]</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__spiflash_2main_8c_source.html">main.c</a>第<a class="el" href="xbr820__spiflash_2main_8c_source.html#l00038">38</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a72e2da09ea98d51b2d53fa2a9aa17c5a"></a><!-- doxytag: member="main.c::log_data" ref="a72e2da09ea98d51b2d53fa2a9aa17c5a" args="[]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#a72e2da09ea98d51b2d53fa2a9aa17c5a">log_data</a>[]</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00103">103</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0a2c40c01ea9ca0353130f70b740921"></a><!-- doxytag: member="main.c::log_i" ref="ab0a2c40c01ea9ca0353130f70b740921" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#ab0a2c40c01ea9ca0353130f70b740921">log_i</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00104">104</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

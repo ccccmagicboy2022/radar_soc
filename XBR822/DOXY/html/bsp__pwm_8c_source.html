@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/pwm/bsp_pwm/bsp_pwm.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/pwm/bsp_pwm/bsp_pwm.c</div>  </div>
+</div>
+<div class="contents">
+<a href="bsp__pwm_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="bsp__pwm_8h.html">bsp_pwm.h</a>&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;stdint.h&quot;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__pwm_8h.html" title="pwm C head file">xbr820_pwm.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__utility_8h.html">xbr820_utility.h</a>&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 
+<a name="l00010"></a><a class="code" href="bsp__pwm_8h.html#a33da88cb7f1e188df6cd5e3ad4ca262a">00010</a> <span class="keywordtype">void</span> <a class="code" href="bsp__pwm_8c.html#a33da88cb7f1e188df6cd5e3ad4ca262a">pwm_init</a>(<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <span class="keywordtype">id</span>, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pwm_freq, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pwm_duty)
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012     <a class="code" href="struct_p_w_m___config__t.html" title="PWM Init structure definition.">PWM_Config_t</a> pwmconf;
+<a name="l00013"></a>00013         
+<a name="l00014"></a>00014     pwmconf.<a class="code" href="struct_p_w_m___config__t.html#a8ac3db453f451a3664ba0733c27aed7d">freq</a> = pwm_freq;
+<a name="l00015"></a>00015     pwmconf.<a class="code" href="struct_p_w_m___config__t.html#a72f2d8e6741cf91f090fad78d362628e">duty</a> = pwm_duty;
+<a name="l00016"></a>00016         pwmconf.<a class="code" href="struct_p_w_m___config__t.html#a79f4dd95bb01538dc0523677cc9a1409">idx</a> = id;
+<a name="l00017"></a>00017     <a class="code" href="group__pwm__group.html#gafb4f8ad15ba8149439a9dd5dfa81f930" title="PWMx enabled.">pwm_enable</a>(&amp;pwmconf);
+<a name="l00018"></a>00018 }
+<a name="l00019"></a>00019 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

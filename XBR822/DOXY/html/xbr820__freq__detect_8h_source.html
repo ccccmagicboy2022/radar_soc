@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_freq_detect.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_freq_detect.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__freq__detect_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00024"></a>00024 <span class="preprocessor">#ifndef __XBR820_FREQ_DETECT_H__</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#define  __XBR820_FREQ_DETECT_H__</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span>
+<a name="l00027"></a>00027 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030 <span class="preprocessor">#endif</span>
+<a name="l00031"></a>00031 <span class="preprocessor"></span>
+<a name="l00032"></a>00032 <span class="comment">/* Includes ------------------------------------------------------------------*/</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__interrupts_8h.html">xbr820_interrupts.h</a>&quot;</span>
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="comment">/* Exported constants --------------------------------------------------------*/</span>
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="xbr820__freq__detect_8h.html#a22283d8b8ad513321952f6e394654c6e">00037</a> <span class="preprocessor">#define IS_FREQ_PERIPH(PERIPH)                                  ((PERIPH) == BRX820_FREQ_DETECT)</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span>
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="comment">/* Exported types ------------------------------------------------------------*/</span>
+<a name="l00041"></a><a class="code" href="structfreq__detect___cfg.html">00041</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>{
+<a name="l00042"></a><a class="code" href="structfreq__detect___cfg.html#ab2faf6fa77fc0ea19e3816eaac245291">00042</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    <a class="code" href="structfreq__detect___cfg.html#ab2faf6fa77fc0ea19e3816eaac245291">enable</a>;
+<a name="l00043"></a><a class="code" href="structfreq__detect___cfg.html#a227d45b437eb2a714b8b858977fba350">00043</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    <a class="code" href="structfreq__detect___cfg.html#a227d45b437eb2a714b8b858977fba350">int_en</a>;
+<a name="l00044"></a><a class="code" href="structfreq__detect___cfg.html#adbae89b5909e743ed103f8dc950478b9">00044</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    <a class="code" href="structfreq__detect___cfg.html#adbae89b5909e743ed103f8dc950478b9">interval</a>;
+<a name="l00045"></a>00045 }<a class="code" href="structfreq__detect___cfg.html">freq_detect_Cfg</a>;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="comment">/* Exported functions --------------------------------------------------------*/</span>
+<a name="l00048"></a>00048 <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#ga4e47877cc7a134d95ef45a14804f40ba">freq_detect_init</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> * freq, <span class="keyword">const</span> <a class="code" href="structfreq__detect___cfg.html">freq_detect_Cfg</a>* freq_det_init);
+<a name="l00049"></a>00049 <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#ga561e526f22b1358c6b894d32b630861d" title="freq_detect_enable. The timer should be set a initial value">freq_detect_enable</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq);
+<a name="l00050"></a>00050 <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gaab8cc6e1201510163e51115afac2af25" title="freq_detect_disable.">freq_detect_disable</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq);
+<a name="l00051"></a>00051 <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaef8c15927a5d7db5552b7633072516" title="freq_get_value.">freq_get_value</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq);
+<a name="l00052"></a>00052 <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaa39819be2f3a82523c0067668258f0" title="freq_get_interrupt_status. Reset means counting from the init value again.">freq_get_interrupt_status</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq);
+<a name="l00053"></a>00053 <span class="keywordtype">void</span> <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafe8547701eb76d8b5447b861d04ec3c0">freq_clr_interrupt_status</a>(<a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a> *freq);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>}
+<a name="l00057"></a>00057 <span class="preprocessor">#endif</span>
+<a name="l00058"></a>00058 <span class="preprocessor"></span>
+<a name="l00059"></a>00059 <span class="preprocessor">#endif</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$group___c_s_i___s_i_m_d__intrinsics.html#gabf8aa2f1903e9d007b63b5cb801d3fb9" title="Dual 16&#45;bit signed saturate." alt="" coords="151,5,268,40"/>
+<area shape="rect" id="node3" href="$group___c_s_i___s_i_m_d__intrinsics.html#gaeb8d580314b319609825e2835abe37dd" title="Quad 8&#45;bit saturating addition." alt="" coords="153,64,265,99"/>
+<area shape="rect" id="node4" href="$group___c_s_i___s_i_m_d__intrinsics.html#gaec861ca43e6e6938f626ddabf4e19e2c" title="Quad 8&#45;bit saturating subtract." alt="" coords="154,123,265,157"/>
+<area shape="rect" id="node5" href="$group___c_s_i___s_i_m_d__intrinsics.html#gacc15f960b1dbf6842bccd99e39f7827f" title="Dual 16&#45;bit saturating addition." alt="" coords="148,181,271,216"/>
+<area shape="rect" id="node6" href="$group___c_s_i___s_i_m_d__intrinsics.html#gad82f768b5580e9c7050ae2299458fa4f" title="Dual 16&#45;bit saturating subtract." alt="" coords="149,240,270,275"/>
+<area shape="rect" id="node7" href="$group___c_s_i___s_i_m_d__intrinsics.html#ga95130ca662b4edfbf5bd34b7710c5bed" title="Dual 16&#45;bit add and subtract with exchange." alt="" coords="160,299,259,333"/>
+<area shape="rect" id="node8" href="$group___c_s_i___s_i_m_d__intrinsics.html#ga8199188a7e5e431678398a3147ddab1b" title="Dual 16&#45;bit subtract and add with exchange." alt="" coords="160,357,259,392"/>
+</map>

@@ -1,0 +1,43 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__adc_8h.html" title="adc driver C head file" alt="" coords="167,88,792,123"/>
+<area shape="rect" id="node4" href="$xbr820__flash_8h.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_flash.h" alt="" coords="1347,88,1982,123"/>
+<area shape="rect" id="node5" href="$xbr820__flash_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_flash.c" alt="" coords="658,171,1295,205"/>
+<area shape="rect" id="node7" href="$xbr820__interrupts_8h.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_interrupts.h" alt="" coords="3451,88,4126,123"/>
+<area shape="rect" id="node24" href="$xbr820__gpio_8h.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_gpio.h" alt="" coords="9368,88,9999,123"/>
+<area shape="rect" id="node29" href="$xbr820__i2c__master_8h.html" title="This file contains all the functions prototypes for the I2C firmware library." alt="" coords="11369,88,12059,123"/>
+<area shape="rect" id="node31" href="$xbr820__i2c__slave_8h.html" title="This file contains all the functions prototypes for the I2C firmware library." alt="" coords="12083,88,12758,123"/>
+<area shape="rect" id="node33" href="$xbr820__pmu_8h.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_pmu.h" alt="" coords="12783,88,13413,123"/>
+<area shape="rect" id="node34" href="$xbr820__pwm_8h.html" title="pwm C head file" alt="" coords="10710,88,11345,123"/>
+<area shape="rect" id="node37" href="$xbr820__sys__timer_8h.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_sys_timer.h" alt="" coords="14384,88,15063,123"/>
+<area shape="rect" id="node40" href="$xbr820__timer_8h.html" title="pwm C head file" alt="" coords="7323,88,7961,123"/>
+<area shape="rect" id="node41" href="$xbr820__uart_8h.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_uart.h" alt="" coords="8687,88,9314,123"/>
+<area shape="rect" id="node3" href="$xbr820__adc_8c.html" title="adc driver C source file" alt="" coords="5,171,633,205"/>
+<area shape="rect" id="node6" href="$projects_2examples_2flash_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/flash/main.c" alt="" coords="1319,171,2010,205"/>
+<area shape="rect" id="node8" href="$xbr820__freq__detect_8h.html" title="This file contains all the functions prototypes for freq detect." alt="" coords="2085,171,2780,205"/>
+<area shape="rect" id="node9" href="$xbr820__freq__detect_8c.html" title="This file provides firmware functions to manage the functionalities of the pwm." alt="" coords="2235,253,2932,288"/>
+<area shape="rect" id="node10" href="$bsp__freq__detect_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/freq_detect/bsp_freq_detect/bsp_freq_detect.c" alt="" coords="433,253,1435,288"/>
+<area shape="rect" id="node11" href="$projects_2examples_2freq__detect_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/freq_detect/main.c" alt="" coords="1460,253,2211,288"/>
+<area shape="rect" id="node12" href="$xbr820__ir_8h.html" title="This file contains all the functions prototypes for the IR firmware library." alt="" coords="2957,171,3561,205"/>
+<area shape="rect" id="node13" href="$xbr820__ir_8c.html" title="This file provides firmware functions to manage the functionalities of the InfraRed (IR)..." alt="" coords="2956,253,3563,288"/>
+<area shape="rect" id="node15" href="$projects_2examples_2ir_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/ir/main.c" alt="" coords="4345,253,5005,288"/>
+<area shape="rect" id="node16" href="$xbr820__wdg_8h.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_wdg.h" alt="" coords="5085,171,5716,205"/>
+<area shape="rect" id="node19" href="$xbr820__interrupts_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_interrupts.c" alt="" coords="3637,171,4316,205"/>
+<area shape="rect" id="node20" href="$projects_2examples_2interrupt_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/interrupt/main.c" alt="" coords="4340,171,5061,205"/>
+<area shape="rect" id="node21" href="$bsp__timer_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/timer/bsp_timer/bsp_timer.c" alt="" coords="5741,171,6573,205"/>
+<area shape="rect" id="node22" href="$projects_2examples_2timer_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/timer/main.c" alt="" coords="6597,171,7290,205"/>
+<area shape="rect" id="node23" href="$projects_2examples_2uart_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/uart/main.c" alt="" coords="7314,171,7997,205"/>
+<area shape="rect" id="node14" href="$bsp__ir_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/ir/bsp_ir/bsp_ir.c" alt="" coords="3587,253,4321,288"/>
+<area shape="rect" id="node17" href="$xbr820__wdg_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_wdg.c" alt="" coords="5057,253,5691,288"/>
+<area shape="rect" id="node18" href="$projects_2examples_2wdg_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/wdg/main.c" alt="" coords="5715,253,6401,288"/>
+<area shape="rect" id="node25" href="$xbr820__gpio_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_gpio.c" alt="" coords="10051,171,10684,205"/>
+<area shape="rect" id="node26" href="$xbr820__pwm_8c.html" title="pwm C source file" alt="" coords="10708,171,11347,205"/>
+<area shape="rect" id="node27" href="$xbr820__timer_8c.html" title="pwm C source file" alt="" coords="8021,171,8661,205"/>
+<area shape="rect" id="node28" href="$projects_2examples_2gpio_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/gpio/main.c" alt="" coords="9340,171,10027,205"/>
+<area shape="rect" id="node30" href="$xbr820__i2c__master_8c.html" title="This file provides firmware functions to manage the functionalities of the Inter&#45;integrated circuit (..." alt="" coords="12937,171,13630,205"/>
+<area shape="rect" id="node32" href="$xbr820__i2c__slave_8c.html" title="This file provides firmware functions to manage the functionalities of the Inter&#45;integrated circuit (..." alt="" coords="13654,171,14331,205"/>
+<area shape="rect" id="node35" href="$bsp__pwm_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/pwm/bsp_pwm/bsp_pwm.c" alt="" coords="12086,171,12913,205"/>
+<area shape="rect" id="node36" href="$projects_2examples_2pwm_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/pwm/main.c" alt="" coords="11371,171,12062,205"/>
+<area shape="rect" id="node38" href="$xbr820__sys__timer_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_sys_timer.c" alt="" coords="15115,171,15796,205"/>
+<area shape="rect" id="node39" href="$projects_2examples_2sys__timer_2main_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/sys_timer/main.c" alt="" coords="14356,171,15091,205"/>
+<area shape="rect" id="node42" href="$xbr820__uart_8c.html" title="D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_uart.c" alt="" coords="8685,171,9316,205"/>
+</map>

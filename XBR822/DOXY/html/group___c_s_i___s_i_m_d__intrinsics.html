@@ -1,0 +1,3053 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>CSI SIMD Intrinsics</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">CSI SIMD Intrinsics</div>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gabd3c10b0c085b64d77299c0a30c34094">__PKHBT</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val1, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val2, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val3)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Halfword packing instruction. Combines bits[15:0] of val1 with bits[31:16] of val2 levitated with the val3.  <a href="#gabd3c10b0c085b64d77299c0a30c34094"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga06fc08f781db472fa338de29dd7ba80e">__PKHTB</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val1, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val2, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val3)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Halfword packing instruction. Combines bits[31:16] of val1 with bits[15:0] of val2 right-shifted with the val3.  <a href="#ga06fc08f781db472fa338de29dd7ba80e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gabf8aa2f1903e9d007b63b5cb801d3fb9">__SSAT16</a> (int32_t x, const <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed saturate.  <a href="#gabf8aa2f1903e9d007b63b5cb801d3fb9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gac9456080fff66e873fa0730b0a2f10eb">__USAT16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, const <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned saturate.  <a href="#gac9456080fff66e873fa0730b0a2f10eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaeb8d580314b319609825e2835abe37dd">__QADD8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit saturating addition.  <a href="#gaeb8d580314b319609825e2835abe37dd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga2e578d40de9462dd9ee7a689372f5699">__UQADD8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit unsigned saturating addition.  <a href="#ga2e578d40de9462dd9ee7a689372f5699"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gacf3e377c1cc076e6eaa27f2116e9e6b1">__SADD8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit signed addition.  <a href="#gacf3e377c1cc076e6eaa27f2116e9e6b1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gac0f8252335e579939773fea2d8746b46">__UADD8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit unsigned addition.  <a href="#gac0f8252335e579939773fea2d8746b46"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaec861ca43e6e6938f626ddabf4e19e2c">__QSUB8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit saturating subtract.  <a href="#gaec861ca43e6e6938f626ddabf4e19e2c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gacc1e1e3ce7f6f1f30ae9e945c9bc8982">__UQSUB8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit unsigned saturating subtraction.  <a href="#gacc1e1e3ce7f6f1f30ae9e945c9bc8982"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga3c40760a492a85c0effb6625991de91a">__SSUB8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit signed subtraction.  <a href="#ga3c40760a492a85c0effb6625991de91a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaae8a3bd18e7bed68bc5eed1d3837b70a">__USUB8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit unsigned subtract.  <a href="#gaae8a3bd18e7bed68bc5eed1d3837b70a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga8fb6a316dad40784ca76000749139bc9">__USAD8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned sum of quad 8-bit unsigned absolute difference.  <a href="#ga8fb6a316dad40784ca76000749139bc9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga2a83f39475ad934a485d96a95510f42a">__USADA8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned sum of quad 8-bit unsigned absolute difference with 32-bit accumulate.  <a href="#ga2a83f39475ad934a485d96a95510f42a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gacc15f960b1dbf6842bccd99e39f7827f">__QADD16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit saturating addition.  <a href="#gacc15f960b1dbf6842bccd99e39f7827f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga9623e3d694492ff1e4e45db217c1de12">__UQADD16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned saturating addition.  <a href="#ga9623e3d694492ff1e4e45db217c1de12"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga674c192bb1c274054e3ad3dfef94b8d4">__SADD16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed addition.  <a href="#ga674c192bb1c274054e3ad3dfef94b8d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga335363a32bcd14985cb1333fc5e2e259">__UADD16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned addition.  <a href="#ga335363a32bcd14985cb1333fc5e2e259"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaab1adbc3b37501c43c99647fe79c0d88">__SHADD16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed addition with halved results.  <a href="#gaab1adbc3b37501c43c99647fe79c0d88"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gac141840f011df0692d68463e5f4cbd93">__UHADD16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned addition with halved results.  <a href="#gac141840f011df0692d68463e5f4cbd93"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gad8447d00eda6ee93be25efc56ea79a48">__SHADD8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit signed addition with halved results.  <a href="#gad8447d00eda6ee93be25efc56ea79a48"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga3dbff78f6f3e55816cc4e041acd7111a">__UHADD8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit unsigned addition with halved results.  <a href="#ga3dbff78f6f3e55816cc4e041acd7111a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gad82f768b5580e9c7050ae2299458fa4f">__QSUB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit saturating subtract.  <a href="#gad82f768b5580e9c7050ae2299458fa4f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaabc92409daf7ad663dc0dad65259b64d">__UQSUB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned saturating subtraction.  <a href="#gaabc92409daf7ad663dc0dad65259b64d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga6d554aa22cb5062ab2b1552569a40ca5">__SSUB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed subtraction.  <a href="#ga6d554aa22cb5062ab2b1552569a40ca5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gae0b89b7a2c17af3b9be29e3d9fb90cea">__USUB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned subtract.  <a href="#gae0b89b7a2c17af3b9be29e3d9fb90cea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gab7a8a0decd860be8c4284aec6f52f5f9">__SHSUB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed subtraction with halved results.  <a href="#gab7a8a0decd860be8c4284aec6f52f5f9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaee34612792f7778da65791e420107234">__UHSUB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned subtraction with halved results.  <a href="#gaee34612792f7778da65791e420107234"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga38800edd3cb02b2170c41da762eb3c27">__SHSUB8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit signed addition with halved results.  <a href="#ga38800edd3cb02b2170c41da762eb3c27"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaef64292862f0a429c23692b17e1b0195">__UHSUB8</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quad 8-bit unsigned subtraction with halved results.  <a href="#gaef64292862f0a429c23692b17e1b0195"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga95130ca662b4edfbf5bd34b7710c5bed">__QASX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit add and subtract with exchange.  <a href="#ga95130ca662b4edfbf5bd34b7710c5bed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga72646d3d36c966c8e053dd729bdfea78">__UQASX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned saturating addition and subtraction with exchange.  <a href="#ga72646d3d36c966c8e053dd729bdfea78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gaf63b0ae97a54682a919488ecdf07d84d">__SASX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit addition and subtraction with exchange.  <a href="#gaf63b0ae97a54682a919488ecdf07d84d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga458aad2360681763622c81f609b9cfdd">__UASX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned addition and subtraction with exchange.  <a href="#ga458aad2360681763622c81f609b9cfdd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga872f7d86c516c5153998742ce569d6ef">__SHASX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed addition and subtraction with halved results.  <a href="#ga872f7d86c516c5153998742ce569d6ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga4dbd94a165b59ebdc644fe9aafa1a2fe">__UHASX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned addition and subtraction with halved results and exchange.  <a href="#ga4dbd94a165b59ebdc644fe9aafa1a2fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga8199188a7e5e431678398a3147ddab1b">__QSAX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit subtract and add with exchange.  <a href="#ga8199188a7e5e431678398a3147ddab1b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga63885f58fe686f828479c6bae41dba94">__UQSAX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned saturating subtraction and addition with exchange.  <a href="#ga63885f58fe686f828479c6bae41dba94"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gab83c0e2411a3b318203d5aac650934d7">__USAX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned subtract and add with exchange.  <a href="#gab83c0e2411a3b318203d5aac650934d7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gae0b6a0ef552dde5a5d08e501f3ab61de">__SSAX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed subtraction and addition with exchange.  <a href="#gae0b6a0ef552dde5a5d08e501f3ab61de"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga3265de554d5915df5ffbec425e24b959">__SHSAX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed subtraction and addition with halved results.  <a href="#ga3265de554d5915df5ffbec425e24b959"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga7d4e3bcf5c834fec06d0e639052dc7d6">__UHSAX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit unsigned subtraction and addition with halved results and exchange.  <a href="#ga7d4e3bcf5c834fec06d0e639052dc7d6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gab0040ee6bc965c4003838c2df1d89270">__SMUSDX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply with exchange returning difference.  <a href="#gab0040ee6bc965c4003838c2df1d89270"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga4ffcbefe089310aa7203e168f4bc9758">__SMUADX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of dual 16-bit signed multiply with exchange.  <a href="#ga4ffcbefe089310aa7203e168f4bc9758"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gad4ad98a05fa5d80874460a0cf522df97">__QADD</a> (int32_t x, int32_t y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Saturating add.  <a href="#gad4ad98a05fa5d80874460a0cf522df97"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga1d464bf3913a3b7e62bc47262517fb71">__QSUB</a> (int32_t x, int32_t y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Saturating subtract.  <a href="#ga1d464bf3913a3b7e62bc47262517fb71"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gadf04dcc1efc80cf68e8cb51ebe5de0e6">__SMLAD</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply with single 32-bit accumulator.  <a href="#gadf04dcc1efc80cf68e8cb51ebe5de0e6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga5c29274024989b88b78495594486e3f3">__SMLADX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-exchanged dual 16-bit signed multiply with single 32-bit accumulator.  <a href="#ga5c29274024989b88b78495594486e3f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#gadf9f5cb79dc305f12f7170632aa59b05">__SMLSD</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply with exchange subtract with 32-bit accumulate.  <a href="#gadf9f5cb79dc305f12f7170632aa59b05"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga12c78c790817d6d922a585e71fff05f9">__SMLSDX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply with exchange subtract with 32-bit accumulate.  <a href="#ga12c78c790817d6d922a585e71fff05f9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga2e8882dec5efb07e5ae5360d7dc69341">__SMLALD</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, uint64_t sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply with single 64-bit accumulator.  <a href="#ga2e8882dec5efb07e5ae5360d7dc69341"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga3f852ca41b63740eab105606020c08f3">__SMLALDX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, uint64_t sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply with exchange with single 64-bit accumulator.  <a href="#ga3f852ca41b63740eab105606020c08f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga336b0c10a00b2bcfc561e32380ef590d">__SMLSLD</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, uint64_t sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">dual 16-bit signed multiply subtract with 64-bit accumulate.  <a href="#ga336b0c10a00b2bcfc561e32380ef590d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga911c30904d8ea327aa5fbeb039a46ac2">__SMLSLDX</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y, uint64_t sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply with exchange subtract with 64-bit accumulate.  <a href="#ga911c30904d8ea327aa5fbeb039a46ac2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga771d98ff5b666502f820ee741d7e874c">__SMMLA</a> (int32_t x, int32_t y, int32_t sum)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">32-bit signed multiply with 32-bit truncated accumulator.  <a href="#ga771d98ff5b666502f820ee741d7e874c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga025e094081b7da432c4275ff4315af47">__SMUAD</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of dual 16-bit signed multiply.  <a href="#ga025e094081b7da432c4275ff4315af47"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga68dee584cf26923aa2bcc7d88e89d21a">__SMUSD</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual 16-bit signed multiply returning difference.  <a href="#ga68dee584cf26923aa2bcc7d88e89d21a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga7c9789de4eb125492e4ae1290fa73f52">__SXTAB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual extracted 8-bit to 16-bit signed addition.  <a href="#ga7c9789de4eb125492e4ae1290fa73f52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga5a5d3b62144741e4a27e53b1769ebea7">__UXTAB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracted 16-bit to 32-bit unsigned addition.  <a href="#ga5a5d3b62144741e4a27e53b1769ebea7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga13b7b63aa62fec4143e3c60c6e6c929d">__SXTB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual extract 8-bits and sign extend each to 16-bits.  <a href="#ga13b7b63aa62fec4143e3c60c6e6c929d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___s_i_m_d__intrinsics.html#ga4c94ae85f08a5426a901bad1e8aed338">__UXTB16</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual extract 8-bits and zero-extend to 16-bits.  <a href="#ga4c94ae85f08a5426a901bad1e8aed338"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<p>Access to dedicated SIMD instructions <br/>
+ Single Instruction Multiple Data (SIMD) extensions are provided to simplify development of application software. SIMD extensions increase the processing capability without materially increasing the power consumption. The SIMD extensions are completely transparent to the operating system (OS), allowing existing OS ports to be used. </p>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="gabd3c10b0c085b64d77299c0a30c34094"></a><!-- doxytag: member="csi_rv32_gcc.h::__PKHBT" ref="gabd3c10b0c085b64d77299c0a30c34094" args="(uint32_t val1, uint32_t val2, uint32_t val3)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __PKHBT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>val1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>val2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>val3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Halfword packing instruction. Combines bits[15:0] of val1 with bits[31:16] of val2 levitated with the val3. </p>
+<p>Combine a halfword from one register with a halfword from another register. The second argument can be left-shifted before extraction of the halfword. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val1</td><td>first 16-bit operands </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val2</td><td>second 16-bit operands </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val3</td><td>value for left-shifting val2. Value range [0..31]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the combination of halfwords. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] <br/>
+ res[31:16] = val2[31:16] &lt;&lt; val3 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01414">1414</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga06fc08f781db472fa338de29dd7ba80e"></a><!-- doxytag: member="csi_rv32_gcc.h::__PKHTB" ref="ga06fc08f781db472fa338de29dd7ba80e" args="(uint32_t val1, uint32_t val2, uint32_t val3)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __PKHTB </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>val1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>val2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>val3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Halfword packing instruction. Combines bits[31:16] of val1 with bits[15:0] of val2 right-shifted with the val3. </p>
+<p>Combine a halfword from one register with a halfword from another register. The second argument can be right-shifted before extraction of the halfword. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val1</td><td>first 16-bit operands </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val2</td><td>second 16-bit operands </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val3</td><td>value for right-shifting val2. Value range [1..32]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the combination of halfwords. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val2[15:0] &gt;&gt; val3 <br/>
+ res[31:16] = val1[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01432">1432</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gad4ad98a05fa5d80874460a0cf522df97"></a><!-- doxytag: member="csi_rv32_gcc.h::__QADD" ref="gad4ad98a05fa5d80874460a0cf522df97" args="(int32_t x, int32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE int32_t __QADD </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Saturating add. </p>
+<p>This function enables you to obtain the saturating add of two integers. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first summand of the saturating add operation. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second summand of the saturating add operation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturating addition of val1 and val2. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[31:0] = SAT(val1 + SAT(val2)) </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02508">2508</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gacc15f960b1dbf6842bccd99e39f7827f"></a><!-- doxytag: member="csi_rv32_gcc.h::__QADD16" ref="gacc15f960b1dbf6842bccd99e39f7827f" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __QADD16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit saturating addition. </p>
+<p>This function enables you to perform two 16-bit integer arithmetic additions in parallel, saturating the results to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated addition of the low halfwords, in the low halfword of the return value.<br/>
+ the saturated addition of the high halfwords, in the high halfword of the return value.<br/>
+ The returned results are saturated to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[15:0] <br/>
+ res[31:16] = val1[31:16] + val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01784">1784</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gacc15f960b1dbf6842bccd99e39f7827f_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gacc15f960b1dbf6842bccd99e39f7827f_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gacc15f960b1dbf6842bccd99e39f7827f_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gacc15f960b1dbf6842bccd99e39f7827f_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gac3f9e7ef24ce60b53d1a8707a1c6998c" title="__SSAT" alt="" coords="176,5,271,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gaeb8d580314b319609825e2835abe37dd"></a><!-- doxytag: member="csi_rv32_gcc.h::__QADD8" ref="gaeb8d580314b319609825e2835abe37dd" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __QADD8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit saturating addition. </p>
+<p>This function enables you to perform four 8-bit integer additions, saturating the results to the 8-bit signed integer range -2^7 &lt;= x &lt;= 2^7 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated addition of the first byte of each operand in the first byte of the return value.<br/>
+ the saturated addition of the second byte of each operand in the second byte of the return value.<br/>
+ the saturated addition of the third byte of each operand in the third byte of the return value.<br/>
+ the saturated addition of the fourth byte of each operand in the fourth byte of the return value.<br/>
+ The returned results are saturated to the 8-bit signed integer range -2^7 &lt;= x &lt;= 2^7 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] + val2[7:0] <br/>
+ res[15:8] = val1[15:8] + val2[15:8] <br/>
+ res[23:16] = val1[23:16] + val2[23:16] <br/>
+ res[31:24] = val1[31:24] + val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01496">1496</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gaeb8d580314b319609825e2835abe37dd_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gaeb8d580314b319609825e2835abe37dd_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gaeb8d580314b319609825e2835abe37dd_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gaeb8d580314b319609825e2835abe37dd_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gac3f9e7ef24ce60b53d1a8707a1c6998c" title="__SSAT" alt="" coords="165,5,260,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga95130ca662b4edfbf5bd34b7710c5bed"></a><!-- doxytag: member="csi_rv32_gcc.h::__QASX" ref="ga95130ca662b4edfbf5bd34b7710c5bed" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __QASX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit add and subtract with exchange. </p>
+<p>This function enables you to exchange the halfwords of the one operand, then add the high halfwords and subtract the low halfwords, saturating the results to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the subtraction in the low halfword, and the first operand for the addition in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the subtraction in the high halfword, and the second operand for the addition in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated subtraction of the high halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value.<br/>
+ the saturated addition of the high halfword in the first operand and the low halfword in the second operand, in the high halfword of the return value.<br/>
+ The returned results are saturated to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[31:16] <br/>
+ res[31:16] = val1[31:16] + val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02162">2162</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_ga95130ca662b4edfbf5bd34b7710c5bed_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_ga95130ca662b4edfbf5bd34b7710c5bed_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_ga95130ca662b4edfbf5bd34b7710c5bed_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_ga95130ca662b4edfbf5bd34b7710c5bed_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gac3f9e7ef24ce60b53d1a8707a1c6998c" title="__SSAT" alt="" coords="152,5,247,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8199188a7e5e431678398a3147ddab1b"></a><!-- doxytag: member="csi_rv32_gcc.h::__QSAX" ref="ga8199188a7e5e431678398a3147ddab1b" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __QSAX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit subtract and add with exchange. </p>
+<p>This function enables you to exchange the halfwords of one operand, then subtract the high halfwords and add the low halfwords, saturating the results to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the addition in the low halfword, and the first operand for the subtraction in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the addition in the high halfword, and the second operand for the subtraction in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated addition of the low halfword of the first operand and the high halfword of the second operand, in the low halfword of the return value.<br/>
+ the saturated subtraction of the low halfword of the second operand from the high halfword of the first operand, in the high halfword of the return value.<br/>
+ The returned results are saturated to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[31:16] <br/>
+ res[31:16] = val1[31:16] - val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02320">2320</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_ga8199188a7e5e431678398a3147ddab1b_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_ga8199188a7e5e431678398a3147ddab1b_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_ga8199188a7e5e431678398a3147ddab1b_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_ga8199188a7e5e431678398a3147ddab1b_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gac3f9e7ef24ce60b53d1a8707a1c6998c" title="__SSAT" alt="" coords="152,5,247,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1d464bf3913a3b7e62bc47262517fb71"></a><!-- doxytag: member="csi_rv32_gcc.h::__QSUB" ref="ga1d464bf3913a3b7e62bc47262517fb71" args="(int32_t x, int32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE int32_t __QSUB </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Saturating subtract. </p>
+<p>This function enables you to obtain the saturating add of two integers. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first summand of the saturating add operation. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second summand of the saturating add operation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturating addition of val1 and val2. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[31:0] = SAT(val1 - SAT(val2)) </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02538">2538</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gad82f768b5580e9c7050ae2299458fa4f"></a><!-- doxytag: member="csi_rv32_gcc.h::__QSUB16" ref="gad82f768b5580e9c7050ae2299458fa4f" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __QSUB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit saturating subtract. </p>
+<p>This function enables you to perform two 16-bit integer subtractions in parallel, saturating the results to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated subtraction of the low halfwords, in the low halfword of the return value.<br/>
+ the saturated subtraction of the high halfwords, in the high halfword of the return value.<br/>
+ The returned results are saturated to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[15:0] <br/>
+ res[31:16] = val1[31:16] - val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01969">1969</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gad82f768b5580e9c7050ae2299458fa4f_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gad82f768b5580e9c7050ae2299458fa4f_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gad82f768b5580e9c7050ae2299458fa4f_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gad82f768b5580e9c7050ae2299458fa4f_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gac3f9e7ef24ce60b53d1a8707a1c6998c" title="__SSAT" alt="" coords="175,5,269,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gaec861ca43e6e6938f626ddabf4e19e2c"></a><!-- doxytag: member="csi_rv32_gcc.h::__QSUB8" ref="gaec861ca43e6e6938f626ddabf4e19e2c" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __QSUB8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit saturating subtract. </p>
+<p>This function enables you to perform four 8-bit integer subtractions, saturating the results to the 8-bit signed integer range -2^7 &lt;= x &lt;= 2^7 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the first byte of each operand in the first byte of the return value.<br/>
+ the subtraction of the second byte of each operand in the second byte of the return value.<br/>
+ the subtraction of the third byte of each operand in the third byte of the return value.<br/>
+ the subtraction of the fourth byte of each operand in the fourth byte of the return value.<br/>
+ The returned results are saturated to the 8-bit signed integer range -2^7 &lt;= x &lt;= 2^7 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] - val2[7:0] <br/>
+ res[15:8] = val1[15:8] - val2[15:8] <br/>
+ res[23:16] = val1[23:16] - val2[23:16] <br/>
+ res[31:24] = val1[31:24] - val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01608">1608</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gaec861ca43e6e6938f626ddabf4e19e2c_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gaec861ca43e6e6938f626ddabf4e19e2c_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gaec861ca43e6e6938f626ddabf4e19e2c_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gaec861ca43e6e6938f626ddabf4e19e2c_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gac3f9e7ef24ce60b53d1a8707a1c6998c" title="__SSAT" alt="" coords="164,5,259,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga674c192bb1c274054e3ad3dfef94b8d4"></a><!-- doxytag: member="csi_rv32_gcc.h::__SADD16" ref="ga674c192bb1c274054e3ad3dfef94b8d4" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SADD16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed addition. </p>
+<p>This function enables you to perform two 16-bit signed integer additions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of the low halfwords in the low halfword of the return value.<br/>
+ the addition of the high halfwords in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[15:0] <br/>
+ res[31:16] = val1[31:16] + val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01828">1828</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gacf3e377c1cc076e6eaa27f2116e9e6b1"></a><!-- doxytag: member="csi_rv32_gcc.h::__SADD8" ref="gacf3e377c1cc076e6eaa27f2116e9e6b1" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SADD8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit signed addition. </p>
+<p>This function performs four 8-bit signed integer additions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of the first bytes from each operand, in the first byte of the return value.<br/>
+ the addition of the second bytes of each operand, in the second byte of the return value.<br/>
+ the addition of the third bytes of each operand, in the third byte of the return value.<br/>
+ the addition of the fourth bytes of each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] + val2[7:0] <br/>
+ res[15:8] = val1[15:8] + val2[15:8] <br/>
+ res[23:16] = val1[23:16] + val2[23:16] <br/>
+ res[31:24] = val1[31:24] + val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01552">1552</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf63b0ae97a54682a919488ecdf07d84d"></a><!-- doxytag: member="csi_rv32_gcc.h::__SASX" ref="gaf63b0ae97a54682a919488ecdf07d84d" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SASX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit addition and subtraction with exchange. </p>
+<p>It enables you to exchange the halfwords of the second operand, add the high halfwords and subtract the low halfwords. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the subtraction in the low halfword, and the first operand for the addition in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the subtraction in the high halfword, and the second operand for the addition in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the high halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value.<br/>
+ the addition of the high halfword in the first operand and the low halfword in the second operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[31:16] <br/>
+ res[31:16] = val1[31:16] + val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02216">2216</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaab1adbc3b37501c43c99647fe79c0d88"></a><!-- doxytag: member="csi_rv32_gcc.h::__SHADD16" ref="gaab1adbc3b37501c43c99647fe79c0d88" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SHADD16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed addition with halved results. </p>
+<p>This function enables you to perform two signed 16-bit integer additions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved addition of the low halfwords, in the low halfword of the return value.<br/>
+ the halved addition of the high halfwords, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] + val2[15:0]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] + val2[31:16]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01871">1871</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gad8447d00eda6ee93be25efc56ea79a48"></a><!-- doxytag: member="csi_rv32_gcc.h::__SHADD8" ref="gad8447d00eda6ee93be25efc56ea79a48" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SHADD8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit signed addition with halved results. </p>
+<p>This function enables you to perform four signed 8-bit integer additions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved addition of the first bytes from each operand, in the first byte of the return value.<br/>
+ the halved addition of the second bytes from each operand, in the second byte of the return value.<br/>
+ the halved addition of the third bytes from each operand, in the third byte of the return value.<br/>
+ the halved addition of the fourth bytes from each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = (val1[7:0] + val2[7:0] ) &gt;&gt; 1 <br/>
+ res[15:8] = (val1[15:8] + val2[15:8] ) &gt;&gt; 1 <br/>
+ res[23:16] = (val1[23:16] + val2[23:16]) &gt;&gt; 1 <br/>
+ res[31:24] = (val1[31:24] + val2[31:24]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01917">1917</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga872f7d86c516c5153998742ce569d6ef"></a><!-- doxytag: member="csi_rv32_gcc.h::__SHASX" ref="ga872f7d86c516c5153998742ce569d6ef" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SHASX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed addition and subtraction with halved results. </p>
+<p>This function enables you to exchange the two halfwords of one operand, perform one signed 16-bit integer addition and one signed 16-bit subtraction, and halve the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved subtraction of the high halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value.<br/>
+ the halved addition of the low halfword in the second operand from the high halfword in the first operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] - val2[31:16]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] + val2[15:0]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02266">2266</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3265de554d5915df5ffbec425e24b959"></a><!-- doxytag: member="csi_rv32_gcc.h::__SHSAX" ref="ga3265de554d5915df5ffbec425e24b959" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SHSAX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed subtraction and addition with halved results. </p>
+<p>This function enables you to exchange the two halfwords of one operand, perform one signed 16-bit integer subtraction and one signed 16-bit addition, and halve the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved addition of the low halfword in the first operand and the high halfword in the second operand, in the low halfword of the return value.<br/>
+ the halved subtraction of the low halfword in the second operand from the high halfword in the first operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] + val2[31:16]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] - val2[15:0]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02425">2425</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gab7a8a0decd860be8c4284aec6f52f5f9"></a><!-- doxytag: member="csi_rv32_gcc.h::__SHSUB16" ref="gab7a8a0decd860be8c4284aec6f52f5f9" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SHSUB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed subtraction with halved results. </p>
+<p>This function enables you to perform two signed 16-bit integer subtractions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved subtraction of the low halfwords, in the low halfword of the return value.<br/>
+ the halved subtraction of the high halfwords, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] - val2[15:0]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] - val2[31:16]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02059">2059</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga38800edd3cb02b2170c41da762eb3c27"></a><!-- doxytag: member="csi_rv32_gcc.h::__SHSUB8" ref="ga38800edd3cb02b2170c41da762eb3c27" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SHSUB8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit signed addition with halved results. </p>
+<p>This function enables you to perform four signed 8-bit integer subtractions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved subtraction of the first bytes from each operand, in the first byte of the return value.<br/>
+ the halved subtraction of the second bytes from each operand, in the second byte of the return value.<br/>
+ the halved subtraction of the third bytes from each operand, in the third byte of the return value.<br/>
+ the halved subtraction of the fourth bytes from each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = (val1[7:0] - val2[7:0] ) &gt;&gt; 1 <br/>
+ res[15:8] = (val1[15:8] - val2[15:8] ) &gt;&gt; 1 <br/>
+ res[23:16] = (val1[23:16] - val2[23:16]) &gt;&gt; 1 <br/>
+ res[31:24] = (val1[31:24] - val2[31:24]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02105">2105</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gadf04dcc1efc80cf68e8cb51ebe5de0e6"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLAD" ref="gadf04dcc1efc80cf68e8cb51ebe5de0e6" args="(uint32_t x, uint32_t y, uint32_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMLAD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply with single 32-bit accumulator. </p>
+<p>This function enables you to perform two signed 16-bit multiplications, adding both results to a 32-bit accumulate operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the product of each multiplication added to the accumulate value, as a 32-bit integer. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[15:0] <br/>
+ p2 = val1[31:16] * val2[31:16] <br/>
+ res[31:0] = p1 + p2 + val3[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02568">2568</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5c29274024989b88b78495594486e3f3"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLADX" ref="ga5c29274024989b88b78495594486e3f3" args="(uint32_t x, uint32_t y, uint32_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMLADX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Pre-exchanged dual 16-bit signed multiply with single 32-bit accumulator. </p>
+<p>This function enables you to perform two signed 16-bit multiplications with exchanged halfwords of the second operand, adding both results to a 32-bit accumulate operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the product of each multiplication with exchanged halfwords of the second operand added to the accumulate value, as a 32-bit integer. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[31:16] <br/>
+ p2 = val1[31:16] * val2[15:0] <br/>
+ res[31:0] = p1 + p2 + val3[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02589">2589</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2e8882dec5efb07e5ae5360d7dc69341"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLALD" ref="ga2e8882dec5efb07e5ae5360d7dc69341" args="(uint32_t x, uint32_t y, uint64_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE uint64_t __SMLALD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply with single 64-bit accumulator. </p>
+<p>This function enables you to perform two signed 16-bit multiplications, adding both results to a 64-bit accumulate operand. Overflow is only possible as a result of the 64-bit addition. This overflow is not detected if it occurs. Instead, the result wraps around modulo2^64. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the product of each multiplication added to the accumulate value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[15:0] <br/>
+ p2 = val1[31:16] * val2[31:16] <br/>
+ sum = p1 + p2 + val3[63:32][31:0] <br/>
+ res[63:32] = sum[63:32] <br/>
+ res[31:0] = sum[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02653">2653</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3f852ca41b63740eab105606020c08f3"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLALDX" ref="ga3f852ca41b63740eab105606020c08f3" args="(uint32_t x, uint32_t y, uint64_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE uint64_t __SMLALDX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply with exchange with single 64-bit accumulator. </p>
+<p>This function enables you to exchange the halfwords of the second operand, and perform two signed 16-bit multiplications, adding both results to a 64-bit accumulate operand. Overflow is only possible as a result of the 64-bit addition. This overflow is not detected if it occurs. Instead, the result wraps around modulo2^64. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the product of each multiplication added to the accumulate value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[31:16] <br/>
+ p2 = val1[31:16] * val2[15:0] <br/>
+ sum = p1 + p2 + val3[63:32][31:0] <br/>
+ res[63:32] = sum[63:32] <br/>
+ res[31:0] = sum[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02677">2677</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gadf9f5cb79dc305f12f7170632aa59b05"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLSD" ref="gadf9f5cb79dc305f12f7170632aa59b05" args="(uint32_t x, uint32_t y, uint32_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMLSD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply with exchange subtract with 32-bit accumulate. </p>
+<p>This function enables you to perform two 16-bit signed multiplications, take the difference of the products, subtracting the high halfword product from the low halfword product, and add the difference to a 32-bit accumulate operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the difference of the product of each multiplication, added to the accumulate value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[15:0] <br/>
+ p2 = val1[31:16] * val2[31:16] <br/>
+ res[31:0] = p1 - p2 + val3[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02610">2610</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga12c78c790817d6d922a585e71fff05f9"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLSDX" ref="ga12c78c790817d6d922a585e71fff05f9" args="(uint32_t x, uint32_t y, uint32_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMLSDX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply with exchange subtract with 32-bit accumulate. </p>
+<p>This function enables you to exchange the halfwords in the second operand, then perform two 16-bit signed multiplications. The difference of the products is added to a 32-bit accumulate operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the difference of the product of each multiplication, added to the accumulate value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[31:16] <br/>
+ p2 = val1[31:16] * val2[15:0] <br/>
+ res[31:0] = p1 - p2 + val3[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02630">2630</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga336b0c10a00b2bcfc561e32380ef590d"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLSLD" ref="ga336b0c10a00b2bcfc561e32380ef590d" args="(uint32_t x, uint32_t y, uint64_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE uint64_t __SMLSLD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>dual 16-bit signed multiply subtract with 64-bit accumulate. </p>
+<p>This function It enables you to perform two 16-bit signed multiplications, take the difference of the products, subtracting the high halfword product from the low halfword product, and add the difference to a 64-bit accumulate operand. Overflow cannot occur during the multiplications or the subtraction. Overflow can occur as a result of the 64-bit addition, and this overflow is not detected. Instead, the result wraps round to modulo2^64. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the difference of the product of each multiplication, added to the accumulate value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[15:0] <br/>
+ p2 = val1[31:16] * val2[31:16] <br/>
+ res[63:32][31:0] = p1 - p2 + val3[63:32][31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02700">2700</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga911c30904d8ea327aa5fbeb039a46ac2"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMLSLDX" ref="ga911c30904d8ea327aa5fbeb039a46ac2" args="(uint32_t x, uint32_t y, uint64_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE uint64_t __SMLSLDX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply with exchange subtract with 64-bit accumulate. </p>
+<p>This function enables you to exchange the halfwords of the second operand, perform two 16-bit multiplications, adding the difference of the products to a 64-bit accumulate operand. Overflow cannot occur during the multiplications or the subtraction. Overflow can occur as a result of the 64-bit addition, and this overflow is not detected. Instead, the result wraps round to modulo2^64. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the difference of the product of each multiplication, added to the accumulate value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[31:16] <br/>
+ p2 = val1[31:16] * val2[15:0] <br/>
+ res[63:32][31:0] = p1 - p2 + val3[63:32][31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02722">2722</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga771d98ff5b666502f820ee741d7e874c"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMMLA" ref="ga771d98ff5b666502f820ee741d7e874c" args="(int32_t x, int32_t y, int32_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMMLA </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>32-bit signed multiply with 32-bit truncated accumulator. </p>
+<p>This function enables you to perform a signed 32-bit multiplications, adding the most significant 32 bits of the 64-bit result to a 32-bit accumulate operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulate value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the product of multiplication (most significant 32 bits) is added to the accumulate value, as a 32-bit integer. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p = val1 * val2 <br/>
+ res[31:0] = p[63:32] + val3[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02741">2741</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga025e094081b7da432c4275ff4315af47"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMUAD" ref="ga025e094081b7da432c4275ff4315af47" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMUAD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sum of dual 16-bit signed multiply. </p>
+<p>This function enables you to perform two 16-bit signed multiplications, adding the products together. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the sum of the products of the two 16-bit signed multiplications. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[15:0] <br/>
+ p2 = val1[31:16] * val2[31:16] <br/>
+ res[31:0] = p1 + p2 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02757">2757</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4ffcbefe089310aa7203e168f4bc9758"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMUADX" ref="ga4ffcbefe089310aa7203e168f4bc9758" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMUADX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sum of dual 16-bit signed multiply with exchange. </p>
+<p>This function enables you to perform two 16-bit signed multiplications with exchanged halfwords of the second operand, adding the products together. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the sum of the products of the two 16-bit signed multiplications with exchanged halfwords of the second operand. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[31:16] <br/>
+ p2 = val1[31:16] * val2[15:0] <br/>
+ res[31:0] = p1 + p2 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02492">2492</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga68dee584cf26923aa2bcc7d88e89d21a"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMUSD" ref="ga68dee584cf26923aa2bcc7d88e89d21a" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMUSD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply returning difference. </p>
+<p>This function enables you to perform two 16-bit signed multiplications, taking the difference of the products by subtracting the high halfword product from the low halfword product. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the difference of the products of the two 16-bit signed multiplications. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[15:0] <br/>
+ p2 = val1[31:16] * val2[31:16] <br/>
+ res[31:0] = p1 - p2 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02775">2775</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gab0040ee6bc965c4003838c2df1d89270"></a><!-- doxytag: member="csi_rv32_gcc.h::__SMUSDX" ref="gab0040ee6bc965c4003838c2df1d89270" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SMUSDX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed multiply with exchange returning difference. </p>
+<p>This function enables you to perform two 16-bit signed multiplications, subtracting one of the products from the other. The halfwords of the second operand are exchanged before performing the arithmetic. This produces top * bottom and bottom * top multiplication. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first 16-bit operands for each multiplication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second 16-bit operands for each multiplication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the difference of the products of the two 16-bit signed multiplications. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>p1 = val1[15:0] * val2[31:16] <br/>
+ p2 = val1[31:16] * val2[15:0] <br/>
+ res[31:0] = p1 - p2 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02474">2474</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gabf8aa2f1903e9d007b63b5cb801d3fb9"></a><!-- doxytag: member="csi_rv32_gcc.h::__SSAT16" ref="gabf8aa2f1903e9d007b63b5cb801d3fb9" args="(int32_t x, const uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SSAT16 </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed saturate. </p>
+<p>This function saturates a signed value. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>two signed 16-bit values to be saturated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>bit position for saturation, an integral constant expression in the range 1 to 16. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the sum of the absolute differences of the following bytes, added to the accumulation value:<br/>
+ the signed saturation of the low halfword in val1, saturated to the bit position specified in val2 and returned in the low halfword of the return value.<br/>
+ the signed saturation of the high halfword in val1, saturated to the bit position specified in val2 and returned in the high halfword of the return value. </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01448">1448</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gabf8aa2f1903e9d007b63b5cb801d3fb9_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gabf8aa2f1903e9d007b63b5cb801d3fb9_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gabf8aa2f1903e9d007b63b5cb801d3fb9_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gabf8aa2f1903e9d007b63b5cb801d3fb9_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gac3f9e7ef24ce60b53d1a8707a1c6998c" title="__SSAT" alt="" coords="171,5,265,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gae0b6a0ef552dde5a5d08e501f3ab61de"></a><!-- doxytag: member="csi_rv32_gcc.h::__SSAX" ref="gae0b6a0ef552dde5a5d08e501f3ab61de" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SSAX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed subtraction and addition with exchange. </p>
+<p>This function enables you to exchange the two halfwords of one operand and perform one 16-bit integer subtraction and one 16-bit addition. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the addition in the low halfword, and the first operand for the subtraction in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the addition in the high halfword, and the second operand for the subtraction in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of the low halfword of the first operand and the high halfword of the second operand, in the low halfword of the return value.<br/>
+ the subtraction of the low halfword of the second operand from the high halfword of the first operand, in the high halfword of the return value.<br/>
+ </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[31:16] <br/>
+ res[31:16] = val1[31:16] - val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02400">2400</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6d554aa22cb5062ab2b1552569a40ca5"></a><!-- doxytag: member="csi_rv32_gcc.h::__SSUB16" ref="ga6d554aa22cb5062ab2b1552569a40ca5" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SSUB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit signed subtraction. </p>
+<p>This function enables you to perform two 16-bit signed integer subtractions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit operands of each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit operands of each subtraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the low halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value. <br/>
+ the subtraction of the high halfword in the second operand from the high halfword in the first operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[15:0] <br/>
+ res[31:16] = val1[31:16] - val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02015">2015</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3c40760a492a85c0effb6625991de91a"></a><!-- doxytag: member="csi_rv32_gcc.h::__SSUB8" ref="ga3c40760a492a85c0effb6625991de91a" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SSUB8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit signed subtraction. </p>
+<p>This function enables you to perform four 8-bit signed integer subtractions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit operands of each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit operands of each subtraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the first bytes from each operand, in the first byte of the return value.<br/>
+ the subtraction of the second bytes of each operand, in the second byte of the return value.<br/>
+ the subtraction of the third bytes of each operand, in the third byte of the return value.<br/>
+ the subtraction of the fourth bytes of each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] - val2[7:0] <br/>
+ res[15:8] = val1[15:8] - val2[15:8] <br/>
+ res[23:16] = val1[23:16] - val2[23:16] <br/>
+ res[31:24] = val1[31:24] - val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01664">1664</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7c9789de4eb125492e4ae1290fa73f52"></a><!-- doxytag: member="csi_rv32_gcc.h::__SXTAB16" ref="ga7c9789de4eb125492e4ae1290fa73f52" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SXTAB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual extracted 8-bit to 16-bit signed addition. </p>
+<p>This function enables you to extract two 8-bit values from the second operand (at bit positions [7:0] and [23:16]), sign-extend them to 16-bits each, and add the results to the first operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>values added to the sign-extended to 16-bit values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>two 8-bit values to be extracted and sign-extended. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of val1 and val2, where the 8-bit values in val2[7:0] and val2[23:16] have been extracted and sign-extended prior to the addition. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + SignExtended(val2[7:0]) <br/>
+ res[31:16] = val1[31:16] + SignExtended(val2[23:16]) </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02793">2793</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga13b7b63aa62fec4143e3c60c6e6c929d"></a><!-- doxytag: member="csi_rv32_gcc.h::__SXTB16" ref="ga13b7b63aa62fec4143e3c60c6e6c929d" args="(uint32_t x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __SXTB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual extract 8-bits and sign extend each to 16-bits. </p>
+<p>This function enables you to extract two 8-bit values from an operand and sign-extend them to 16 bits each. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>two 8-bit values in val[7:0] and val[23:16] to be sign-extended. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the 8-bit values sign-extended to 16-bit values.<br/>
+ sign-extended value of val[7:0] in the low halfword of the return value.<br/>
+ sign-extended value of val[23:16] in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = SignExtended(val[7:0]) <br/>
+ res[31:16] = SignExtended(val[23:16]) </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02828">2828</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga335363a32bcd14985cb1333fc5e2e259"></a><!-- doxytag: member="csi_rv32_gcc.h::__UADD16" ref="ga335363a32bcd14985cb1333fc5e2e259" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UADD16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned addition. </p>
+<p>This function enables you to perform two 16-bit unsigned integer additions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands for each addition. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands for each addition. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of the low halfwords in the low halfword of the return value.<br/>
+ the addition of the high halfwords in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[15:0] <br/>
+ res[31:16] = val1[31:16] + val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01849">1849</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gac0f8252335e579939773fea2d8746b46"></a><!-- doxytag: member="csi_rv32_gcc.h::__UADD8" ref="gac0f8252335e579939773fea2d8746b46" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UADD8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit unsigned addition. </p>
+<p>This function performs four unsigned 8-bit integer additions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of the first bytes from each operand, in the first byte of the return value.<br/>
+ the addition of the second bytes of each operand, in the second byte of the return value.<br/>
+ the addition of the third bytes of each operand, in the third byte of the return value.<br/>
+ the addition of the fourth bytes of each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] + val2[7:0] <br/>
+ res[15:8] = val1[15:8] + val2[15:8] <br/>
+ res[23:16] = val1[23:16] + val2[23:16] <br/>
+ res[31:24] = val1[31:24] + val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01579">1579</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga458aad2360681763622c81f609b9cfdd"></a><!-- doxytag: member="csi_rv32_gcc.h::__UASX" ref="ga458aad2360681763622c81f609b9cfdd" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UASX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned addition and subtraction with exchange. </p>
+<p>This function enables you to exchange the two halfwords of the second operand, add the high halfwords and subtract the low halfwords. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the subtraction in the low halfword, and the first operand for the addition in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the subtraction in the high halfword, and the second operand for the addition in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the high halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value.<br/>
+ the addition of the high halfword in the first operand and the low halfword in the second operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[31:16] <br/>
+ res[31:16] = val1[31:16] + val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02242">2242</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gac141840f011df0692d68463e5f4cbd93"></a><!-- doxytag: member="csi_rv32_gcc.h::__UHADD16" ref="gac141840f011df0692d68463e5f4cbd93" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UHADD16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned addition with halved results. </p>
+<p>This function enables you to perform two unsigned 16-bit integer additions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved addition of the low halfwords, in the low halfword of the return value.<br/>
+ the halved addition of the high halfwords, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] + val2[15:0]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] + val2[31:16]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01892">1892</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3dbff78f6f3e55816cc4e041acd7111a"></a><!-- doxytag: member="csi_rv32_gcc.h::__UHADD8" ref="ga3dbff78f6f3e55816cc4e041acd7111a" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UHADD8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit unsigned addition with halved results. </p>
+<p>This function enables you to perform four unsigned 8-bit integer additions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved addition of the first bytes from each operand, in the first byte of the return value.<br/>
+ the halved addition of the second bytes from each operand, in the second byte of the return value.<br/>
+ the halved addition of the third bytes from each operand, in the third byte of the return value.<br/>
+ the halved addition of the fourth bytes from each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = (val1[7:0] + val2[7:0] ) &gt;&gt; 1 <br/>
+ res[15:8] = (val1[15:8] + val2[15:8] ) &gt;&gt; 1 <br/>
+ res[23:16] = (val1[23:16] + val2[23:16]) &gt;&gt; 1 <br/>
+ res[31:24] = (val1[31:24] + val2[31:24]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01944">1944</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4dbd94a165b59ebdc644fe9aafa1a2fe"></a><!-- doxytag: member="csi_rv32_gcc.h::__UHASX" ref="ga4dbd94a165b59ebdc644fe9aafa1a2fe" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UHASX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned addition and subtraction with halved results and exchange. </p>
+<p>This function enables you to exchange the halfwords of the second operand, add the high halfwords and subtract the low halfwords, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the subtraction in the low halfword, and the first operand for the addition in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the subtraction in the high halfword, and the second operand for the addition in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved subtraction of the high halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value.<br/>
+ the halved addition of the low halfword in the second operand from the high halfword in the first operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] - val2[31:16]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] + val2[15:0]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02292">2292</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7d4e3bcf5c834fec06d0e639052dc7d6"></a><!-- doxytag: member="csi_rv32_gcc.h::__UHSAX" ref="ga7d4e3bcf5c834fec06d0e639052dc7d6" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UHSAX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned subtraction and addition with halved results and exchange. </p>
+<p>This function enables you to exchange the halfwords of the second operand, subtract the high halfwords and add the low halfwords, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the addition in the low halfword, and the first operand for the subtraction in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the addition in the high halfword, and the second operand for the subtraction in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved addition of the low halfword in the first operand and the high halfword in the second operand, in the low halfword of the return value.<br/>
+ the halved subtraction of the low halfword in the second operand from the high halfword in the first operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] + val2[31:16]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] - val2[15:0]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02451">2451</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaee34612792f7778da65791e420107234"></a><!-- doxytag: member="csi_rv32_gcc.h::__UHSUB16" ref="gaee34612792f7778da65791e420107234" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UHSUB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned subtraction with halved results. </p>
+<p>This function enables you to perform two unsigned 16-bit integer subtractions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved subtraction of the low halfwords, in the low halfword of the return value.<br/>
+ the halved subtraction of the high halfwords, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = (val1[15:0] - val2[15:0]) &gt;&gt; 1 <br/>
+ res[31:16] = (val1[31:16] - val2[31:16]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02080">2080</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaef64292862f0a429c23692b17e1b0195"></a><!-- doxytag: member="csi_rv32_gcc.h::__UHSUB8" ref="gaef64292862f0a429c23692b17e1b0195" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UHSUB8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit unsigned subtraction with halved results. </p>
+<p>This function enables you to perform four unsigned 8-bit integer subtractions, halving the results. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the halved subtraction of the first bytes from each operand, in the first byte of the return value.<br/>
+ the halved subtraction of the second bytes from each operand, in the second byte of the return value.<br/>
+ the halved subtraction of the third bytes from each operand, in the third byte of the return value.<br/>
+ the halved subtraction of the fourth bytes from each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = (val1[7:0] - val2[7:0] ) &gt;&gt; 1 <br/>
+ res[15:8] = (val1[15:8] - val2[15:8] ) &gt;&gt; 1 <br/>
+ res[23:16] = (val1[23:16] - val2[23:16]) &gt;&gt; 1 <br/>
+ res[31:24] = (val1[31:24] - val2[31:24]) &gt;&gt; 1 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02132">2132</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga9623e3d694492ff1e4e45db217c1de12"></a><!-- doxytag: member="csi_rv32_gcc.h::__UQADD16" ref="ga9623e3d694492ff1e4e45db217c1de12" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UQADD16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned saturating addition. </p>
+<p>This function enables you to perform two unsigned 16-bit integer additions, saturating the results to the 16-bit unsigned integer range 0 &lt; x &lt; 2^16 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated addition of the low halfwords, in the low halfword of the return value.<br/>
+ the saturated addition of the high halfwords, in the high halfword of the return value.<br/>
+ The results are saturated to the 16-bit unsigned integer range 0 &lt; x &lt; 2^16 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[15:0] <br/>
+ res[31:16] = val1[31:16] + val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01807">1807</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_ga9623e3d694492ff1e4e45db217c1de12_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_ga9623e3d694492ff1e4e45db217c1de12_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_ga9623e3d694492ff1e4e45db217c1de12_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_ga9623e3d694492ff1e4e45db217c1de12_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga21cc5135929e882178a1e5e2d231cf97" title="Unsigned Saturate for internal use." alt="" coords="189,5,291,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2e578d40de9462dd9ee7a689372f5699"></a><!-- doxytag: member="csi_rv32_gcc.h::__UQADD8" ref="ga2e578d40de9462dd9ee7a689372f5699" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UQADD8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit unsigned saturating addition. </p>
+<p>This function enables you to perform four unsigned 8-bit integer additions, saturating the results to the 8-bit unsigned integer range 0 &lt; x &lt; 2^8 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated addition of the first byte of each operand in the first byte of the return value.<br/>
+ the saturated addition of the second byte of each operand in the second byte of the return value.<br/>
+ the saturated addition of the third byte of each operand in the third byte of the return value.<br/>
+ the saturated addition of the fourth byte of each operand in the fourth byte of the return value.<br/>
+ The returned results are saturated to the 8-bit signed integer range 0 &lt;= x &lt;= 2^8 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] + val2[7:0] <br/>
+ res[15:8] = val1[15:8] + val2[15:8] <br/>
+ res[23:16] = val1[23:16] + val2[23:16] <br/>
+ res[31:24] = val1[31:24] + val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01525">1525</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_ga2e578d40de9462dd9ee7a689372f5699_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_ga2e578d40de9462dd9ee7a689372f5699_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_ga2e578d40de9462dd9ee7a689372f5699_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_ga2e578d40de9462dd9ee7a689372f5699_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga21cc5135929e882178a1e5e2d231cf97" title="Unsigned Saturate for internal use." alt="" coords="179,5,280,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga72646d3d36c966c8e053dd729bdfea78"></a><!-- doxytag: member="csi_rv32_gcc.h::__UQASX" ref="ga72646d3d36c966c8e053dd729bdfea78" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UQASX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned saturating addition and subtraction with exchange. </p>
+<p>This function enables you to exchange the halfwords of the second operand and perform one unsigned 16-bit integer addition and one unsigned 16-bit subtraction, saturating the results to the 16-bit unsigned integer range 0 &lt;= x &lt;= 2^16 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the subtraction in the low halfword, and the first operand for the addition in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the subtraction in the high halfword, and the second operand for the addition in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated subtraction of the high halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value.<br/>
+ the saturated addition of the high halfword in the first operand and the low halfword in the second operand, in the high halfword of the return value.<br/>
+ The returned results are saturated to the 16-bit unsigned integer range 0 &lt;= x &lt;= 2^16 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[31:16] <br/>
+ res[31:16] = val1[31:16] + val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02190">2190</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_ga72646d3d36c966c8e053dd729bdfea78_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_ga72646d3d36c966c8e053dd729bdfea78_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_ga72646d3d36c966c8e053dd729bdfea78_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_ga72646d3d36c966c8e053dd729bdfea78_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga21cc5135929e882178a1e5e2d231cf97" title="Unsigned Saturate for internal use." alt="" coords="165,5,267,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga63885f58fe686f828479c6bae41dba94"></a><!-- doxytag: member="csi_rv32_gcc.h::__UQSAX" ref="ga63885f58fe686f828479c6bae41dba94" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UQSAX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned saturating subtraction and addition with exchange. </p>
+<p>This function enables you to exchange the halfwords of the second operand and perform one unsigned 16-bit integer subtraction and one unsigned 16-bit addition, saturating the results to the 16-bit unsigned integer range 0 &lt;= x &lt;= 2^16 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the addition in the low halfword, and the first operand for the subtraction in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the addition in the high halfword, and the second operand for the subtraction in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated addition of the low halfword of the first operand and the high halfword of the second operand, in the low halfword of the return value.<br/>
+ the saturated subtraction of the low halfword of the second operand from the high halfword of the first operand, in the high halfword of the return value.<br/>
+ The returned results are saturated to the 16-bit unsigned integer range 0 &lt;= x &lt;= 2^16 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[31:16] <br/>
+ res[31:16] = val1[31:16] - val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02348">2348</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_ga63885f58fe686f828479c6bae41dba94_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_ga63885f58fe686f828479c6bae41dba94_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_ga63885f58fe686f828479c6bae41dba94_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_ga63885f58fe686f828479c6bae41dba94_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga21cc5135929e882178a1e5e2d231cf97" title="Unsigned Saturate for internal use." alt="" coords="165,5,267,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gaabc92409daf7ad663dc0dad65259b64d"></a><!-- doxytag: member="csi_rv32_gcc.h::__UQSUB16" ref="gaabc92409daf7ad663dc0dad65259b64d" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UQSUB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned saturating subtraction. </p>
+<p>This function enables you to perform two unsigned 16-bit integer subtractions, saturating the results to the 16-bit unsigned integer range 0 &lt; x &lt; 2^16 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit operands for each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit operands for each subtraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturated subtraction of the low halfwords, in the low halfword of the return value.<br/>
+ the saturated subtraction of the high halfwords, in the high halfword of the return value.<br/>
+ The returned results are saturated to the 16-bit signed integer range -2^15 &lt;= x &lt;= 2^15 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[15:0] <br/>
+ res[31:16] = val1[31:16] - val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01992">1992</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gaabc92409daf7ad663dc0dad65259b64d_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gaabc92409daf7ad663dc0dad65259b64d_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gaabc92409daf7ad663dc0dad65259b64d_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gaabc92409daf7ad663dc0dad65259b64d_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga21cc5135929e882178a1e5e2d231cf97" title="Unsigned Saturate for internal use." alt="" coords="188,5,289,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gacc1e1e3ce7f6f1f30ae9e945c9bc8982"></a><!-- doxytag: member="csi_rv32_gcc.h::__UQSUB8" ref="gacc1e1e3ce7f6f1f30ae9e945c9bc8982" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UQSUB8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit unsigned saturating subtraction. </p>
+<p>This function enables you to perform four unsigned 8-bit integer subtractions, saturating the results to the 8-bit unsigned integer range 0 &lt; x &lt; 2^8 - 1. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit summands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit summands. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the first byte of each operand in the first byte of the return value.<br/>
+ the subtraction of the second byte of each operand in the second byte of the return value.<br/>
+ the subtraction of the third byte of each operand in the third byte of the return value.<br/>
+ the subtraction of the fourth byte of each operand in the fourth byte of the return value.<br/>
+ The returned results are saturated to the 8-bit unsigned integer range 0 &lt;= x &lt;= 2^8 - 1. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] - val2[7:0] <br/>
+ res[15:8] = val1[15:8] - val2[15:8] <br/>
+ res[23:16] = val1[23:16] - val2[23:16] <br/>
+ res[31:24] = val1[31:24] - val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01637">1637</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gacc1e1e3ce7f6f1f30ae9e945c9bc8982_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gacc1e1e3ce7f6f1f30ae9e945c9bc8982_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gacc1e1e3ce7f6f1f30ae9e945c9bc8982_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gacc1e1e3ce7f6f1f30ae9e945c9bc8982_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga21cc5135929e882178a1e5e2d231cf97" title="Unsigned Saturate for internal use." alt="" coords="176,5,277,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8fb6a316dad40784ca76000749139bc9"></a><!-- doxytag: member="csi_rv32_gcc.h::__USAD8" ref="ga8fb6a316dad40784ca76000749139bc9" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __USAD8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Unsigned sum of quad 8-bit unsigned absolute difference. </p>
+<p>This function enables you to perform four unsigned 8-bit subtractions, and add the absolute values of the differences together, returning the result as a single unsigned integer. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit operands of each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit operands of each subtraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the first bytes from each operand, in the first byte of the return value.<br/>
+ the subtraction of the second bytes of each operand, in the second byte of the return value.<br/>
+ the subtraction of the third bytes of each operand, in the third byte of the return value.<br/>
+ the subtraction of the fourth bytes of each operand, in the fourth byte of the return value.<br/>
+ The sum is returned as a single unsigned integer. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>absdiff1 = val1[7:0] - val2[7:0] <br/>
+ absdiff2 = val1[15:8] - val2[15:8] <br/>
+ absdiff3 = val1[23:16] - val2[23:16] <br/>
+ absdiff4 = val1[31:24] - val2[31:24] <br/>
+ res[31:0] = absdiff1 + absdiff2 + absdiff3 + absdiff4 </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01721">1721</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2a83f39475ad934a485d96a95510f42a"></a><!-- doxytag: member="csi_rv32_gcc.h::__USADA8" ref="ga2a83f39475ad934a485d96a95510f42a" args="(uint32_t x, uint32_t y, uint32_t sum)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __USADA8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Unsigned sum of quad 8-bit unsigned absolute difference with 32-bit accumulate. </p>
+<p>This function enables you to perform four unsigned 8-bit subtractions, and add the absolute values of the differences to a 32-bit accumulate operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit operands of each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit operands of each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sum</td><td>accumulation value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the sum of the absolute differences of the following bytes, added to the accumulation value: the subtraction of the first bytes from each operand, in the first byte of the return value.<br/>
+ the subtraction of the second bytes of each operand, in the second byte of the return value.<br/>
+ the subtraction of the third bytes of each operand, in the third byte of the return value.<br/>
+ the subtraction of the fourth bytes of each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>absdiff1 = val1[7:0] - val2[7:0] <br/>
+ absdiff2 = val1[15:8] - val2[15:8] <br/>
+ absdiff3 = val1[23:16] - val2[23:16] <br/>
+ absdiff4 = val1[31:24] - val2[31:24] <br/>
+ sum = absdiff1 + absdiff2 + absdiff3 + absdiff4 <br/>
+ res[31:0] = sum[31:0] + val3[31:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01753">1753</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gac9456080fff66e873fa0730b0a2f10eb"></a><!-- doxytag: member="csi_rv32_gcc.h::__USAT16" ref="gac9456080fff66e873fa0730b0a2f10eb" args="(uint32_t x, const uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __USAT16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned saturate. </p>
+<p>This function enables you to saturate two signed 16-bit values to a selected unsigned range. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>two signed 16-bit values to be saturated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>bit position for saturation, an integral constant expression in the range 1 to 16. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the saturation of the two signed 16-bit values, as non-negative values: the saturation of the low halfword in val1, saturated to the bit position specified in val2 and returned in the low halfword of the return value.<br/>
+ the saturation of the high halfword in val1, saturated to the bit position specified in val2 and returned in the high halfword of the return value. </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01469">1469</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___s_i_m_d__intrinsics_gac9456080fff66e873fa0730b0a2f10eb_cgraph.png" border="0" usemap="#group___c_s_i___s_i_m_d__intrinsics_gac9456080fff66e873fa0730b0a2f10eb_cgraph" alt=""/></div>
+<map name="group___c_s_i___s_i_m_d__intrinsics_gac9456080fff66e873fa0730b0a2f10eb_cgraph" id="group___c_s_i___s_i_m_d__intrinsics_gac9456080fff66e873fa0730b0a2f10eb_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga21cc5135929e882178a1e5e2d231cf97" title="Unsigned Saturate for internal use." alt="" coords="171,5,272,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gab83c0e2411a3b318203d5aac650934d7"></a><!-- doxytag: member="csi_rv32_gcc.h::__USAX" ref="gab83c0e2411a3b318203d5aac650934d7" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __USAX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned subtract and add with exchange. </p>
+<p>This function enables you to exchange the halfwords of the second operand, subtract the high halfwords and add the low halfwords. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first operand for the addition in the low halfword, and the first operand for the subtraction in the high halfword. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second operand for the addition in the high halfword, and the second operand for the subtraction in the low halfword. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of the low halfword of the first operand and the high halfword of the second operand, in the low halfword of the return value.<br/>
+ the subtraction of the low halfword of the second operand from the high halfword of the first operand, in the high halfword of the return value.<br/>
+ </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] + val2[31:16] <br/>
+ res[31:16] = val1[31:16] - val2[15:0] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02374">2374</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gae0b89b7a2c17af3b9be29e3d9fb90cea"></a><!-- doxytag: member="csi_rv32_gcc.h::__USUB16" ref="gae0b89b7a2c17af3b9be29e3d9fb90cea" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __USUB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual 16-bit unsigned subtract. </p>
+<p>This function enables you to perform two 16-bit unsigned integer subtractions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first two 16-bit operands of each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second two 16-bit operands of each subtraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the low halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value. <br/>
+ the subtraction of the high halfword in the second operand from the high halfword in the first operand, in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = val1[15:0] - val2[15:0] <br/>
+ res[31:16] = val1[31:16] - val2[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02038">2038</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaae8a3bd18e7bed68bc5eed1d3837b70a"></a><!-- doxytag: member="csi_rv32_gcc.h::__USUB8" ref="gaae8a3bd18e7bed68bc5eed1d3837b70a" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __USUB8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quad 8-bit unsigned subtract. </p>
+<p>This function enables you to perform four 8-bit unsigned integer subtractions. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>first four 8-bit operands of each subtraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>second four 8-bit operands of each subtraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the subtraction of the first bytes from each operand, in the first byte of the return value.<br/>
+ the subtraction of the second bytes of each operand, in the second byte of the return value.<br/>
+ the subtraction of the third bytes of each operand, in the third byte of the return value.<br/>
+ the subtraction of the fourth bytes of each operand, in the fourth byte of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[7:0] = val1[7:0] - val2[7:0] <br/>
+ res[15:8] = val1[15:8] - val2[15:8] <br/>
+ res[23:16] = val1[23:16] - val2[23:16] <br/>
+ res[31:24] = val1[31:24] - val2[31:24] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l01691">1691</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5a5d3b62144741e4a27e53b1769ebea7"></a><!-- doxytag: member="csi_rv32_gcc.h::__UXTAB16" ref="ga5a5d3b62144741e4a27e53b1769ebea7" args="(uint32_t x, uint32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UXTAB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Extracted 16-bit to 32-bit unsigned addition. </p>
+<p>This function enables you to extract two 8-bit values from one operand, zero-extend them to 16 bits each, and add the results to two 16-bit values from another operand. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>values added to the zero-extended to 16-bit values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>two 8-bit values to be extracted and zero-extended. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the addition of val1 and val2, where the 8-bit values in val2[7:0] and val2[23:16] have been extracted and zero-extended prior to the addition. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = ZeroExt(val2[7:0]   to 16 bits) + val1[15:0] <br/>
+ res[31:16] = ZeroExt(val2[31:16] to 16 bits) + val1[31:16] </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02811">2811</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4c94ae85f08a5426a901bad1e8aed338"></a><!-- doxytag: member="csi_rv32_gcc.h::__UXTB16" ref="ga4c94ae85f08a5426a901bad1e8aed338" args="(uint32_t x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__ALWAYS_STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __UXTB16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dual extract 8-bits and zero-extend to 16-bits. </p>
+<p>This function enables you to extract two 8-bit values from an operand and zero-extend them to 16 bits each. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>two 8-bit values in val[7:0] and val[23:16] to be zero-extended. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>the 8-bit values sign-extended to 16-bit values.<br/>
+ sign-extended value of val[7:0] in the low halfword of the return value.<br/>
+ sign-extended value of val[23:16] in the high halfword of the return value. </dd></dl>
+<dl class="remark"><dt><b>评论:</b></dt><dd>res[15:0] = SignExtended(val[7:0]) <br/>
+ res[31:16] = SignExtended(val[23:16]) </dd></dl>
+
+<p>在文件<a class="el" href="csi__rv32__gcc_8h_source.html">csi_rv32_gcc.h</a>第<a class="el" href="csi__rv32__gcc_8h_source.html#l02845">2845</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:49 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

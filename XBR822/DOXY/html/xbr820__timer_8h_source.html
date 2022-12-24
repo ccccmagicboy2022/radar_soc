@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_timer.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_timer.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__timer_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef __XBR820_TIMER_H__</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_TIMER_H__</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="comment">/*******************************************************************************</span>
+<a name="l00014"></a>00014 <span class="comment"> * Include files</span>
+<a name="l00015"></a>00015 <span class="comment"> ******************************************************************************/</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="pho__common_8h.html">pho_common.h</a>&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00027"></a><a class="code" href="group__timer__group.html#gaa75f34d7f307156b94d3356799aca24a">00027</a> <span class="keyword">enum</span> <a class="code" href="xbr820__pwm_8h.html#aa75f34d7f307156b94d3356799aca24a">timer_num</a>
+<a name="l00028"></a>00028 {
+<a name="l00029"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa78900d10bb4d349f1403fbd090e66cd6">00029</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa78900d10bb4d349f1403fbd090e66cd6">TIMER1</a>,
+<a name="l00030"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa9fdce91e07a880b720491a6667122d5d">00030</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa9fdce91e07a880b720491a6667122d5d">TIMER2</a>,
+<a name="l00031"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa2a815be8dbcb2f8c8f9abb53b441b041">00031</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa2a815be8dbcb2f8c8f9abb53b441b041">TIMER3</a>,
+<a name="l00032"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa355d56fa51f1cbf3b5151d14b278f9e3">00032</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa355d56fa51f1cbf3b5151d14b278f9e3">TIMER4</a>,
+<a name="l00033"></a>00033 };
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">00035</a> <span class="preprocessor">#define CONFIG_TIMER_NUM    4</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span>
+<a name="l00041"></a><a class="code" href="struct_timer___cfg__t.html">00041</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00042"></a>00042 {
+<a name="l00043"></a><a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">00043</a>     <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> id;             
+<a name="l00046"></a><a class="code" href="struct_timer___cfg__t.html#a57ac9f180ebad69519aa80f1076f3beb">00046</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> counter;
+<a name="l00050"></a>00050 }<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>;
+<a name="l00051"></a>00051 
+<a name="l00057"></a>00057 <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gad5da9cc2b66824545200231b5c8694c3" title="Start the timer. The timer should be set a initial value, or use the default value 0xFFF00000...">timer_enable</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>* timer);
+<a name="l00058"></a>00058 
+<a name="l00064"></a>00064 <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gadc411afd19047c99c1bff4a0e3c0f042" title="Stop the timer.">timer_disable</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>* timer);
+<a name="l00065"></a>00065 
+<a name="l00072"></a>00072 <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gaf0480d29aaef241b63afe32e588a2308" title="Reset the timer according to the param id. Reset means counting from the init value again...">timer_reset</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>* timer);
+<a name="l00073"></a>00073 
+<a name="l00080"></a>00080 <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#ga1d0a6249770ba0ed1193453eb36311c8" title="Restart the timer according to the param id. That means counting from the init value again...">timer_restart</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>* timer);
+<a name="l00081"></a>00081 
+<a name="l00087"></a>00087 <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#ga44db9d0e1abde691b2ec32d46bfa7654" title="Set the timer&#39;s initial value.">timer_set_initvalue</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>* timer);
+<a name="l00088"></a>00088 
+<a name="l00094"></a>00094 <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#ga668229ec3fe719465db77888c45e972b" title="Get the timer&#39;s initial value.">timer_get_initvalue</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>* timer);
+<a name="l00095"></a>00095 
+<a name="l00101"></a>00101 <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gadb5f5160c2cfd12c906fa05e3d14f63b" title="Get the timer&#39;s current value.">timer_get_currentval</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a>* timer);
+<a name="l00102"></a>00102 
+<a name="l00104"></a>00104 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_utility.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_utility.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__utility_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __XBR820_UTILITY_H__</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_UTILITY_H__</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a><a class="code" href="xbr820__utility_8h.html#ac607bf387b29162be6a9b77fc7999539">00004</a> <span class="preprocessor">#define __WEAK                          __attribute__((weak))</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00006"></a>00006 
+<a name="l00012"></a>00012 <span class="preprocessor">#ifdef __DEBUG</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">    #define assert_param(x) ((x) ? (void)0 : assert_failed((uint8_t *)__FILE__, __LINE__))</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="comment">/* Exported functions ------------------------------------------------------- */</span>
+<a name="l00015"></a>00015     <span class="keywordtype">void</span> assert_failed(<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* file, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> line);
+<a name="l00016"></a>00016 <span class="preprocessor">#else</span>
+<a name="l00017"></a><a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3">00017</a> <span class="preprocessor"></span><span class="preprocessor">#define assert_param(x) ((void)0)</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#endif </span><span class="comment">/* __DEBUG */</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="preprocessor">#endif</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span>
+<a name="l00022"></a>00022 <span class="comment">/************************ (C) COPYRIGHT Phosense-tech *****END OF FILE****/</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

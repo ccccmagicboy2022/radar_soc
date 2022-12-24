@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>brx820_ir_regdef结构参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>组合类型列表</span></a></li>
+      <li><a href="classes.html"><span>组合类型索引</span></a></li>
+      <li><a href="functions.html"><span>组合类型成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">公有属性</a>  </div>
+  <div class="headertitle">
+<div class="title">brx820_ir_regdef结构参考</div>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="brx820_ir_regdef" -->
+<p>IR.  
+ <a href="structbrx820__ir__regdef.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>&gt;</code></p>
+<div class="dynheader">
+brx820_ir_regdef合作图：</div>
+<div class="dyncontent">
+<div class="center"><img src="structbrx820__ir__regdef__coll__graph.png" border="0" usemap="#brx820__ir__regdef_coll__map" alt="Collaboration graph"/></div>
+<map name="brx820__ir__regdef_coll__map" id="brx820__ir__regdef_coll__map">
+<area shape="rect" id="node2" href="structstr__ir__int__filed__t.html" title="str_ir_int_filed_t" alt="" coords="5,5,168,40"/><area shape="rect" id="node3" href="structstr__ir__rf2__filed__t.html" title="str_ir_rf2_filed_t" alt="" coords="193,5,359,40"/><area shape="rect" id="node4" href="structstr__ir__rf__filed__t.html" title="str_ir_rf_filed_t" alt="" coords="384,5,539,40"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+
+<p><a href="structbrx820__ir__regdef-members.html">所有成员的列表。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+公有属性</h2></td></tr>
+<tr><td class="memItemLeft" >union {</td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__ir__regdef.html#ad4f41c30bb075f6cc9e534d5738072e3">IR_CMD</a></td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structstr__ir__int__filed__t.html">str_ir_int_filed_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__ir__regdef.html#a73b5d84876b59cf4e20bbcf13d182cdc">IR_CMD_f</a></td></tr>
+<tr><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#a42519143493129271dd251298dab60f0">IR_READ_DATA</a></td></tr>
+<tr><td class="memItemLeft" >union {</td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__ir__regdef.html#a12175b7cdc4b1cefb16122b799578333">IR_CMP</a></td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structstr__ir__rf__filed__t.html">str_ir_rf_filed_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__ir__regdef.html#a62f6db8177df2fd8b7b8c337e493b5cc">IR_CMP_f</a></td></tr>
+<tr><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr><td class="memItemLeft" >union {</td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__ir__regdef.html#adb0e85e9dbc4910615fb7f9ef44b131e">IR_RF2</a></td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structstr__ir__rf2__filed__t.html">str_ir_rf2_filed_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__ir__regdef.html#a0f2dab166f98a615a6acd0b22edf2f2b">IR_RF2_f</a></td></tr>
+<tr><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#a634a5b2b4e776bee81138c73ef47e23d">IR_9MS_COUNT</a>:18</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#add433fcfbc3f26fd3942507b8ac8b904">__pad0__</a>:14</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#ade30a6da037902cc845e741bfd4ed20c">IR_4P5_COUNT</a>:18</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#ac44b69ca915ab3a3fee1677b03799749">__pad1__</a>:14</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#a08fe5b6e4ba683844b87febeb0ea2afc">IR_1P69_COUNT</a>:18</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#af9f046b226c33bb0c12ef5c77807890d">__pad2__</a>:14</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#afb2d24bb4226b5a37e21d9165b28e227">IR_2P25_COUNT</a>:18</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrx820__ir__regdef.html#a6a0ab6a7c349da280cff4a979094b439">__pad3__</a>:14</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<div class="textblock"><p>IR. </p>
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00275">275</a>行定义。</p>
+</div><hr/><h2>成员数据文档</h2>
+<a class="anchor" id="ab65f7f4c1e2ac21ae9270628b3e13236"></a><!-- doxytag: member="brx820_ir_regdef::@33" ref="ab65f7f4c1e2ac21ae9270628b3e13236" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6234697d8ff6c1bfebbd74339d7807b6"></a><!-- doxytag: member="brx820_ir_regdef::@35" ref="a6234697d8ff6c1bfebbd74339d7807b6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1fdee804e369c2e87e8d875c48d050da"></a><!-- doxytag: member="brx820_ir_regdef::@37" ref="a1fdee804e369c2e87e8d875c48d050da" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add433fcfbc3f26fd3942507b8ac8b904"></a><!-- doxytag: member="brx820_ir_regdef::__pad0__" ref="add433fcfbc3f26fd3942507b8ac8b904" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#add433fcfbc3f26fd3942507b8ac8b904">brx820_ir_regdef::__pad0__</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00293">293</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac44b69ca915ab3a3fee1677b03799749"></a><!-- doxytag: member="brx820_ir_regdef::__pad1__" ref="ac44b69ca915ab3a3fee1677b03799749" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#ac44b69ca915ab3a3fee1677b03799749">brx820_ir_regdef::__pad1__</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00295">295</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="af9f046b226c33bb0c12ef5c77807890d"></a><!-- doxytag: member="brx820_ir_regdef::__pad2__" ref="af9f046b226c33bb0c12ef5c77807890d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#af9f046b226c33bb0c12ef5c77807890d">brx820_ir_regdef::__pad2__</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00297">297</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a0ab6a7c349da280cff4a979094b439"></a><!-- doxytag: member="brx820_ir_regdef::__pad3__" ref="a6a0ab6a7c349da280cff4a979094b439" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#a6a0ab6a7c349da280cff4a979094b439">brx820_ir_regdef::__pad3__</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00299">299</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a08fe5b6e4ba683844b87febeb0ea2afc"></a><!-- doxytag: member="brx820_ir_regdef::IR_1P69_COUNT" ref="a08fe5b6e4ba683844b87febeb0ea2afc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#a08fe5b6e4ba683844b87febeb0ea2afc">brx820_ir_regdef::IR_1P69_COUNT</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00296">296</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="afb2d24bb4226b5a37e21d9165b28e227"></a><!-- doxytag: member="brx820_ir_regdef::IR_2P25_COUNT" ref="afb2d24bb4226b5a37e21d9165b28e227" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#afb2d24bb4226b5a37e21d9165b28e227">brx820_ir_regdef::IR_2P25_COUNT</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00298">298</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ade30a6da037902cc845e741bfd4ed20c"></a><!-- doxytag: member="brx820_ir_regdef::IR_4P5_COUNT" ref="ade30a6da037902cc845e741bfd4ed20c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#ade30a6da037902cc845e741bfd4ed20c">brx820_ir_regdef::IR_4P5_COUNT</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00294">294</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a634a5b2b4e776bee81138c73ef47e23d"></a><!-- doxytag: member="brx820_ir_regdef::IR_9MS_COUNT" ref="a634a5b2b4e776bee81138c73ef47e23d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#a634a5b2b4e776bee81138c73ef47e23d">brx820_ir_regdef::IR_9MS_COUNT</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00292">292</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4f41c30bb075f6cc9e534d5738072e3"></a><!-- doxytag: member="brx820_ir_regdef::IR_CMD" ref="ad4f41c30bb075f6cc9e534d5738072e3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#ad4f41c30bb075f6cc9e534d5738072e3">brx820_ir_regdef::IR_CMD</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00278">278</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a73b5d84876b59cf4e20bbcf13d182cdc"></a><!-- doxytag: member="brx820_ir_regdef::IR_CMD_f" ref="a73b5d84876b59cf4e20bbcf13d182cdc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstr__ir__int__filed__t.html">str_ir_int_filed_t</a> <a class="el" href="structbrx820__ir__regdef.html#a73b5d84876b59cf4e20bbcf13d182cdc">brx820_ir_regdef::IR_CMD_f</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00279">279</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a12175b7cdc4b1cefb16122b799578333"></a><!-- doxytag: member="brx820_ir_regdef::IR_CMP" ref="a12175b7cdc4b1cefb16122b799578333" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#a12175b7cdc4b1cefb16122b799578333">brx820_ir_regdef::IR_CMP</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00284">284</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a62f6db8177df2fd8b7b8c337e493b5cc"></a><!-- doxytag: member="brx820_ir_regdef::IR_CMP_f" ref="a62f6db8177df2fd8b7b8c337e493b5cc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstr__ir__rf__filed__t.html">str_ir_rf_filed_t</a> <a class="el" href="structbrx820__ir__regdef.html#a62f6db8177df2fd8b7b8c337e493b5cc">brx820_ir_regdef::IR_CMP_f</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00285">285</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a42519143493129271dd251298dab60f0"></a><!-- doxytag: member="brx820_ir_regdef::IR_READ_DATA" ref="a42519143493129271dd251298dab60f0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#a42519143493129271dd251298dab60f0">brx820_ir_regdef::IR_READ_DATA</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00281">281</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="adb0e85e9dbc4910615fb7f9ef44b131e"></a><!-- doxytag: member="brx820_ir_regdef::IR_RF2" ref="adb0e85e9dbc4910615fb7f9ef44b131e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__ir__regdef.html#adb0e85e9dbc4910615fb7f9ef44b131e">brx820_ir_regdef::IR_RF2</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00289">289</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f2dab166f98a615a6acd0b22edf2f2b"></a><!-- doxytag: member="brx820_ir_regdef::IR_RF2_f" ref="a0f2dab166f98a615a6acd0b22edf2f2b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstr__ir__rf2__filed__t.html">str_ir_rf2_filed_t</a> <a class="el" href="structbrx820__ir__regdef.html#a0f2dab166f98a615a6acd0b22edf2f2b">brx820_ir_regdef::IR_RF2_f</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00290">290</a>行定义。</p>
+
+</div>
+</div>
+<hr/>该结构的文档由以下文件生成：<ul>
+<li>D:/cccc2022/CODE/radar_soc/XBR822/SDK/mcu/common/<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a></li>
+</ul>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:50 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>Core Definitions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">Core Definitions</div>  </div>
+<div class="ingroups"><a class="el" href="group___c_s_i__core__register.html">Defines and Type Definitions</a></div></div>
+<div class="contents">
+
+<p>Definitions for base addresses, unions, and structures.  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+Core Definitions合作图：</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group___c_s_i__core__base.png" border="0" alt="" usemap="#group______c__s__i____core____base"/>
+<map name="group______c__s__i____core____base" id="group______c__s__i____core____base">
+<area shape="rect" id="node2" href="group___c_s_i__core__register.html" title="Type definitions and defines for CK80X processor based devices." alt="" coords="5,5,277,40"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#ga3aaf318d86af8dd9171eae4c3a252030">TCIP_BASE</a>&#160;&#160;&#160;(0xE000E000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#ga7698c2110e5a7a46ad64e8483ecc59f9">CORET_BASE</a>&#160;&#160;&#160;(0xE0004000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#gaaa9b12fccaa2a340c65a8fa45b858cce">CLIC_BASE</a>&#160;&#160;&#160;(0xE0800000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#gad80d8b1d9226f932bd9fdeac6d7315a7">DCC_BASE</a>&#160;&#160;&#160;(0xE4010000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#ga2709d0accca252f2dd923e6a40135c52">CACHE_BASE</a>&#160;&#160;&#160;(TCIP_BASE +  0x1000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#gaba6899d5eb79f0c73daf792106e12afd">CORET</a>&#160;&#160;&#160;((<a class="el" href="struct_c_o_r_e_t___type.html">CORET_Type</a>   *)     CORET_BASE  )</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#ga600ac66d9a5973b7de2b642f41218870">CLIC</a>&#160;&#160;&#160;((<a class="el" href="struct_c_l_i_c___type.html">CLIC_Type</a>    *)     CLIC_BASE   )</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#ga7e93d337b9c2b223b1bc4a0851316aca">DCC</a>&#160;&#160;&#160;((<a class="el" href="struct_d_c_c___type.html">DCC_Type</a>     *)     DCC_BASE    )</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__base.html#ga43fd55aa78bd891ebbd6a450f5eecce4">CACHE</a>&#160;&#160;&#160;((CACHE_Type   *)     CACHE_BASE  )</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<p>Definitions for base addresses, unions, and structures. </p>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="ga43fd55aa78bd891ebbd6a450f5eecce4"></a><!-- doxytag: member="core_rv32.h::CACHE" ref="ga43fd55aa78bd891ebbd6a450f5eecce4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CACHE&#160;&#160;&#160;((CACHE_Type   *)     CACHE_BASE  )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>cache configuration struct </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00393">393</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2709d0accca252f2dd923e6a40135c52"></a><!-- doxytag: member="core_rv32.h::CACHE_BASE" ref="ga2709d0accca252f2dd923e6a40135c52" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CACHE_BASE&#160;&#160;&#160;(TCIP_BASE +  0x1000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>CACHE Base Address </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00388">388</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga600ac66d9a5973b7de2b642f41218870"></a><!-- doxytag: member="core_rv32.h::CLIC" ref="ga600ac66d9a5973b7de2b642f41218870" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLIC&#160;&#160;&#160;((<a class="el" href="struct_c_l_i_c___type.html">CLIC_Type</a>    *)     CLIC_BASE   )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>CLIC configuration struct </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00391">391</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaaa9b12fccaa2a340c65a8fa45b858cce"></a><!-- doxytag: member="core_rv32.h::CLIC_BASE" ref="gaaa9b12fccaa2a340c65a8fa45b858cce" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLIC_BASE&#160;&#160;&#160;(0xE0800000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>CLIC Base Address </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00386">386</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaba6899d5eb79f0c73daf792106e12afd"></a><!-- doxytag: member="core_rv32.h::CORET" ref="gaba6899d5eb79f0c73daf792106e12afd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORET&#160;&#160;&#160;((<a class="el" href="struct_c_o_r_e_t___type.html">CORET_Type</a>   *)     CORET_BASE  )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>SysTick configuration struct </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00390">390</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7698c2110e5a7a46ad64e8483ecc59f9"></a><!-- doxytag: member="core_rv32.h::CORET_BASE" ref="ga7698c2110e5a7a46ad64e8483ecc59f9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORET_BASE&#160;&#160;&#160;(0xE0004000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>CORET Base Address </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00385">385</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7e93d337b9c2b223b1bc4a0851316aca"></a><!-- doxytag: member="core_rv32.h::DCC" ref="ga7e93d337b9c2b223b1bc4a0851316aca" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DCC&#160;&#160;&#160;((<a class="el" href="struct_d_c_c___type.html">DCC_Type</a>     *)     DCC_BASE    )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>DCC configuration struct </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00392">392</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gad80d8b1d9226f932bd9fdeac6d7315a7"></a><!-- doxytag: member="core_rv32.h::DCC_BASE" ref="gad80d8b1d9226f932bd9fdeac6d7315a7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DCC_BASE&#160;&#160;&#160;(0xE4010000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>DCC Base Address </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00387">387</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3aaf318d86af8dd9171eae4c3a252030"></a><!-- doxytag: member="core_rv32.h::TCIP_BASE" ref="ga3aaf318d86af8dd9171eae4c3a252030" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCIP_BASE&#160;&#160;&#160;(0xE000E000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Titly Coupled IP Base Address </p>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00384">384</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

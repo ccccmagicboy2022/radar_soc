@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/mcu/common/xbr820.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/mcu/common/xbr820.h</div>  </div>
+</div>
+<div class="contents">
+<a href="mcu_2common_2xbr820_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __XBR820_H__</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_H__</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="csi__core_8h.html">csi_core.h</a>&quot;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6d">00006</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6d">irq_number</a>
+<a name="l00007"></a>00007 {
+<a name="l00008"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da3dc866bd0747042cbfd28304fecaf375">00008</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da3dc866bd0747042cbfd28304fecaf375">UART_RX_IRQ</a>             = 1,
+<a name="l00009"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da9b005656a3b420de9eaaa256e3e4a24c">00009</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da9b005656a3b420de9eaaa256e3e4a24c">UART_TX_IRQ</a>             = 2,
+<a name="l00010"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da2d5cbfcaecd83313a5f5e28d927638c2">00010</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da2d5cbfcaecd83313a5f5e28d927638c2">TIMER1_IRQ</a>              = 3,
+<a name="l00011"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da3da3d95094c29858f04eb966e72c1423">00011</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da3da3d95094c29858f04eb966e72c1423">TIMER2_IRQ</a>              = 4,
+<a name="l00012"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da83f49a7cad4e652cea69078e8ed1036e">00012</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da83f49a7cad4e652cea69078e8ed1036e">TIMER3_IRQ</a>              = 5,
+<a name="l00013"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da2e2396286fefb9b8ef5aec22126259fe">00013</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da2e2396286fefb9b8ef5aec22126259fe">TIMER4_IRQ</a>              = 6,
+<a name="l00014"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da6c147c2caca96fe67701c911ba8d42f6">00014</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da6c147c2caca96fe67701c911ba8d42f6">ADC_DONE_IRQ</a>            = 7,
+<a name="l00015"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da065387a68899dde5dec98c913157a5eb">00015</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da065387a68899dde5dec98c913157a5eb">IR_IRQ</a>                  = 9,
+<a name="l00016"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dae09795a48b54260bc7150502900d0178">00016</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dae09795a48b54260bc7150502900d0178">WDG_IRQ</a>                 = 10,
+<a name="l00017"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da5360a1643279f48117c6dddf4636f510">00017</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da5360a1643279f48117c6dddf4636f510">GPIO_PA0_IRQ</a>            = 11,
+<a name="l00018"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dac55f6e5eeb66a0502250834dad297d82">00018</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dac55f6e5eeb66a0502250834dad297d82">GPIO_PA1_IRQ</a>            = 12,
+<a name="l00019"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da79ef1c0064076bab0190d10e225635a4">00019</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da79ef1c0064076bab0190d10e225635a4">GPIO_PA2_IRQ</a>            = 13,
+<a name="l00020"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dae635d019d8238adb6a00bb692d0823a4">00020</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dae635d019d8238adb6a00bb692d0823a4">GPIO_PA3_IRQ</a>            = 14,
+<a name="l00021"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6daede1ec75fb8aee0530b0024de30d7dca">00021</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6daede1ec75fb8aee0530b0024de30d7dca">LIGHT_SENSOR_IRQ</a>        = 17,
+<a name="l00022"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da468966b40a13766f3f007dbf56d5358e">00022</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da468966b40a13766f3f007dbf56d5358e">FREQ_DET_IRQ</a>            = 18,
+<a name="l00023"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6daf4ca5227cff9f13557a1bbe51ad02724">00023</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6daf4ca5227cff9f13557a1bbe51ad02724">I2C_MASTER</a>              = 19,
+<a name="l00024"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dae8fe4f82e66f4463eade639f1eaca544">00024</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6dae8fe4f82e66f4463eade639f1eaca544">I2C_SLAVE</a>               = 20,
+<a name="l00025"></a>00025 }<a class="code" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a>;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="structstr__usart__ctl__field__t.html">00028</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00029"></a>00029 {
+<a name="l00030"></a><a class="code" href="structstr__usart__ctl__field__t.html#abb4b45acd878c8c0a195667ef16c3850">00030</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TX_ENABLE                 : 1;
+<a name="l00031"></a><a class="code" href="structstr__usart__ctl__field__t.html#a6699374618c0b67f816ba33db37ef218">00031</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TX_INT_CLEAR              : 1;
+<a name="l00032"></a><a class="code" href="structstr__usart__ctl__field__t.html#a49544c622d9a5fa7e2d4b959ed971ab6">00032</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RX_ENABLE                 : 1;
+<a name="l00033"></a><a class="code" href="structstr__usart__ctl__field__t.html#aeccb63e1b598d79b142cea801f70c292">00033</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RX_INT_CLEAR              : 1;
+<a name="l00034"></a><a class="code" href="structstr__usart__ctl__field__t.html#ac2dd24ff625e178a6481929fa3a9b233">00034</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FIFO_RD                   : 1;
+<a name="l00035"></a><a class="code" href="structstr__usart__ctl__field__t.html#a4e238c869e31f4ee246ce2dc082089ac">00035</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FIFO_CLR                  : 1;
+<a name="l00036"></a><a class="code" href="structstr__usart__ctl__field__t.html#aa62b8a165ef0f04b7a61d500f8f5dd50">00036</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                : 26;
+<a name="l00037"></a>00037 } <a class="code" href="structstr__usart__ctl__field__t.html">str_usart_ctl_field_t</a>;
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="structstr__usart__br__field__t.html">00039</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00040"></a>00040 {
+<a name="l00041"></a><a class="code" href="structstr__usart__br__field__t.html#a3d9652c893bebbbed90d9bc1b414dced">00041</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> BAUD_RATE                 : 16;
+<a name="l00042"></a><a class="code" href="structstr__usart__br__field__t.html#a36a2fe6ee7f6817b21d567aa049d2a95">00042</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                : 16;
+<a name="l00043"></a>00043 } <a class="code" href="structstr__usart__br__field__t.html">str_usart_br_field_t</a>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="structstr__usart__td__field__t.html">00045</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00046"></a>00046 {
+<a name="l00047"></a><a class="code" href="structstr__usart__td__field__t.html#a5ed685d454dd803fdecf84f024f91577">00047</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TX_DATA                   : 8;
+<a name="l00048"></a><a class="code" href="structstr__usart__td__field__t.html#af47e6a723e44f344ea121085c5904bcc">00048</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                : 24;
+<a name="l00049"></a>00049 } <a class="code" href="structstr__usart__td__field__t.html">str_usart_td_field_t</a>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="structstr__usart__rd__field__t.html">00051</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00052"></a>00052 {
+<a name="l00053"></a><a class="code" href="structstr__usart__rd__field__t.html#a450663f3337f369045a3832d7e088ace">00053</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RX_DATA                   : 8;
+<a name="l00054"></a><a class="code" href="structstr__usart__rd__field__t.html#a3cd878db583d89a8205fbd22a3ad8745">00054</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                : 24;
+<a name="l00055"></a>00055 } <a class="code" href="structstr__usart__rd__field__t.html">str_usart_rd_field_t</a>;
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="structstr__usart__st__field__t.html">00057</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00058"></a>00058 {
+<a name="l00059"></a><a class="code" href="structstr__usart__st__field__t.html#a396cc21366ed6bd5a219d773fe6b19ce">00059</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TI                        : 1;
+<a name="l00060"></a><a class="code" href="structstr__usart__st__field__t.html#a63bfcf05cac073b11f45070fe4a6f26b">00060</a>     <a class="code" href="core__rv32_8h.html#af63697ed9952cc71e1225efe205f6cd3">__I</a>  <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TX_STATE                  : 3;
+<a name="l00061"></a><a class="code" href="structstr__usart__st__field__t.html#aa8ff7f668674725e06831d1af4fb746d">00061</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RI                        : 1;
+<a name="l00062"></a><a class="code" href="structstr__usart__st__field__t.html#a782a54617b87f43f3b43d658b0de6b91">00062</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RX_STATE                  : 3;
+<a name="l00063"></a><a class="code" href="structstr__usart__st__field__t.html#a3966c45dc05a0c4e1a0a19776e5f4a0f">00063</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RX_ERROR                  : 2;
+<a name="l00064"></a><a class="code" href="structstr__usart__st__field__t.html#a168f61bec432d9682ec26a3a52116b7c">00064</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RDATA_CNT                 : 4;
+<a name="l00065"></a><a class="code" href="structstr__usart__st__field__t.html#a69aaa26d36be051fabdf04c5826d6f5f">00065</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                : 18;
+<a name="l00066"></a>00066 } <a class="code" href="structstr__usart__st__field__t.html">str_usart_st_field_t</a>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a><a class="code" href="structstr__gpio__ctl__field__t.html">00068</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00069"></a>00069 {
+<a name="l00070"></a><a class="code" href="structstr__gpio__ctl__field__t.html#ab9858140dbca855e0b0ec4de23e99d46">00070</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> VALUE                      : 8;
+<a name="l00071"></a><a class="code" href="structstr__gpio__ctl__field__t.html#a08750aebc6f2d94e80e41df62759a5bf">00071</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> INOUT                      : 8;
+<a name="l00072"></a><a class="code" href="structstr__gpio__ctl__field__t.html#ae2bdfa76e80fa489194b9c6b8daa8003">00072</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                 : 8;
+<a name="l00073"></a><a class="code" href="structstr__gpio__ctl__field__t.html#a904d25a3a3c9b8ec580856f673381811">00073</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                 : 8;
+<a name="l00074"></a>00074 } <a class="code" href="structstr__gpio__ctl__field__t.html">str_gpio_ctl_field_t</a>;
+<a name="l00075"></a>00075 
+<a name="l00076"></a><a class="code" href="structstr__gpio__ps__field__t.html">00076</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00077"></a>00077 {
+<a name="l00078"></a><a class="code" href="structstr__gpio__ps__field__t.html#ae9d97d59372b0434ca1818db73d66721">00078</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a38fb3b9222cb4e1405837a61b9b3b739">PX_0</a>                       : 4;
+<a name="l00079"></a><a class="code" href="structstr__gpio__ps__field__t.html#a4d71b19120bbf6c59357aa0d4fa50625">00079</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a63735336e976c3f748e40d8eba599cb0">PX_1</a>                       : 4;
+<a name="l00080"></a><a class="code" href="structstr__gpio__ps__field__t.html#ad990732a7aeed614be04f929d4d40e7b">00080</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a5b0d1dac02111f018d048629cc728f31">PX_2</a>                       : 4;
+<a name="l00081"></a><a class="code" href="structstr__gpio__ps__field__t.html#a296efcc3d697d1380b78fb43364360bf">00081</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1ae8659474f8a40239cefdb757c2896be0">PX_3</a>                       : 4;
+<a name="l00082"></a><a class="code" href="structstr__gpio__ps__field__t.html#a8b6fc3f8420c5498498084709c7c4a0e">00082</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a7e077b2026263543cc93edaa8ae9fa2b">PX_4</a>                       : 4;
+<a name="l00083"></a><a class="code" href="structstr__gpio__ps__field__t.html#ae08954609585bb824ae9c819b3f7640b">00083</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a97817769241d598e98ab8990cb4d1157">PX_5</a>                       : 4;
+<a name="l00084"></a><a class="code" href="structstr__gpio__ps__field__t.html#afbc5aba6f7da174117b7121a00d293af">00084</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1aae626022d2ae2b1b8e44f8d28aed809f">PX_6</a>                       : 4;
+<a name="l00085"></a><a class="code" href="structstr__gpio__ps__field__t.html#a121e5a39950552e46150ffc886e522f2">00085</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1acc84fb85c38e34cabbbf20837d252012">PX_7</a>                       : 4;
+<a name="l00086"></a>00086 } <a class="code" href="structstr__gpio__ps__field__t.html">str_gpio_ps_field_t</a>;
+<a name="l00087"></a>00087 
+<a name="l00088"></a><a class="code" href="structstr__adc__ctl__field__t.html">00088</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00089"></a>00089 {
+<a name="l00090"></a><a class="code" href="structstr__adc__ctl__field__t.html#a5b76ed459c38d94ea99273a4c06f12f9">00090</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ADC_DIV                    : 12;
+<a name="l00091"></a><a class="code" href="structstr__adc__ctl__field__t.html#adaba00e601af128f2225669b5e8221b5">00091</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TRI_MODE                   : 1;
+<a name="l00092"></a><a class="code" href="structstr__adc__ctl__field__t.html#a498c1b7cfe58d410ec53fe8f2efb940b">00092</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TRI_SRC                    : 1;
+<a name="l00093"></a><a class="code" href="structstr__adc__ctl__field__t.html#af371db9b1a3918929e89548281d89e0c">00093</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                 : 18;
+<a name="l00094"></a>00094 } <a class="code" href="structstr__adc__ctl__field__t.html">str_adc_ctl_field_t</a>;
+<a name="l00095"></a>00095 
+<a name="l00096"></a><a class="code" href="structstr__adc__delay__field__t.html">00096</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00097"></a>00097 {
+<a name="l00098"></a><a class="code" href="structstr__adc__delay__field__t.html#ad2fcfeaa666e21cc467e0f328d5f4beb">00098</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ADC_DELAY                  : 12;
+<a name="l00099"></a><a class="code" href="structstr__adc__delay__field__t.html#a588bb32ee7a1752b7cd8c5aa37dabf8d">00099</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                 : 20;
+<a name="l00100"></a>00100 } <a class="code" href="structstr__adc__delay__field__t.html">str_adc_delay_field_t</a>;
+<a name="l00101"></a>00101 
+<a name="l00102"></a><a class="code" href="structstr__adc__range__field__t.html">00102</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00103"></a>00103 {
+<a name="l00104"></a><a class="code" href="structstr__adc__range__field__t.html#a19e1ad6fb0a1f09c9c15e2c8d031cc3b">00104</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ADC_BEGIN                  : 11;
+<a name="l00105"></a><a class="code" href="structstr__adc__range__field__t.html#a051d1a9ba7fcb8c3742fc88c8bcc50c4">00105</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                 : 5;
+<a name="l00106"></a><a class="code" href="structstr__adc__range__field__t.html#a92d8c293385dbf8b02794c8c977f9aef">00106</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ADC_END                    : 11;
+<a name="l00107"></a><a class="code" href="structstr__adc__range__field__t.html#a6da2cb241f1f18edb1b15322e8f07668">00107</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                 : 5;
+<a name="l00108"></a>00108 } <a class="code" href="structstr__adc__range__field__t.html">str_adc_range_field_t</a>;
+<a name="l00109"></a>00109 
+<a name="l00110"></a><a class="code" href="structstr__wdg__en__filed__t.html">00110</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00111"></a><a class="code" href="structstr__wdg__en__filed__t.html#a4a88617c91f04af7971e8be31ebb8c10">00111</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> WDG_RST_EN                                      :1;
+<a name="l00112"></a><a class="code" href="structstr__wdg__en__filed__t.html#a4b3a16e97a3dac4e2e514ca8f31c8e15">00112</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> WDG_INT_EN                                      :1;
+<a name="l00113"></a><a class="code" href="structstr__wdg__en__filed__t.html#acc55aef11d6f156b89d791625ea4fa1e">00113</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                      :30;
+<a name="l00114"></a>00114 } <a class="code" href="structstr__wdg__en__filed__t.html">str_wdg_en_filed_t</a>;
+<a name="l00115"></a>00115 
+<a name="l00116"></a><a class="code" href="structstr__timer__ctrl__filed__t.html">00116</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00117"></a><a class="code" href="structstr__timer__ctrl__filed__t.html#aa53d2e51ef6cd7af67e4d76c463b0eaa">00117</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TIMER_EN                                        :1;
+<a name="l00118"></a><a class="code" href="structstr__timer__ctrl__filed__t.html#a09177c03166b3527ecded15f7eb4c9eb">00118</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TIMER_STA                                       :1;
+<a name="l00119"></a><a class="code" href="structstr__timer__ctrl__filed__t.html#a58c3904ec7f12b6dfc31c75b83aa4632">00119</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                      :30;
+<a name="l00120"></a>00120 } <a class="code" href="structstr__timer__ctrl__filed__t.html">str_timer_ctrl_filed_t</a>;
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="structstr__freq__detect__ctrl__filed__t.html">00122</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00123"></a><a class="code" href="structstr__freq__detect__ctrl__filed__t.html#ad8654b27a12616e93d4fdfbf97269655">00123</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FREQ_DET_EN                                      :1;
+<a name="l00124"></a><a class="code" href="structstr__freq__detect__ctrl__filed__t.html#a62545794c09364faad71c638862c63b8">00124</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FREQ_DET_INT_EN                                  :1;
+<a name="l00125"></a><a class="code" href="structstr__freq__detect__ctrl__filed__t.html#ae5b476ce3fd20f57027bb71b43e57ce4">00125</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FREQ_DET_STATUS                                  :1;
+<a name="l00126"></a><a class="code" href="structstr__freq__detect__ctrl__filed__t.html#a4df9139bf4fa11b12c21d9269eb16fcc">00126</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                       :29;
+<a name="l00127"></a>00127 } <a class="code" href="structstr__freq__detect__ctrl__filed__t.html">str_freq_detect_ctrl_filed_t</a>;
+<a name="l00128"></a>00128 
+<a name="l00129"></a><a class="code" href="structstr__freq__detect__cfg__filed__t.html">00129</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00130"></a><a class="code" href="structstr__freq__detect__cfg__filed__t.html#ab3c7f5a11fc675750e237427b89c073c">00130</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FREQ_DET_INTERVAL                                :24;
+<a name="l00131"></a><a class="code" href="structstr__freq__detect__cfg__filed__t.html#a21e63aaa76f207392bfe2cc5a6930c37">00131</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                       :8;
+<a name="l00132"></a>00132 } <a class="code" href="structstr__freq__detect__cfg__filed__t.html">str_freq_detect_cfg_filed_t</a>;
+<a name="l00133"></a>00133 
+<a name="l00134"></a><a class="code" href="structstr__freq__detect__value__filed__t.html">00134</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00135"></a><a class="code" href="structstr__freq__detect__value__filed__t.html#a512a43c4024f986bd331473fa2c17349">00135</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FREQ_DET_VAL                                     :24;
+<a name="l00136"></a><a class="code" href="structstr__freq__detect__value__filed__t.html#aa3ef0498f927be8faff9afd2d0ec28dc">00136</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                       :8;
+<a name="l00137"></a>00137 } <a class="code" href="structstr__freq__detect__value__filed__t.html">str_freq_detect_value_filed_t</a>;
+<a name="l00138"></a>00138 
+<a name="l00139"></a><a class="code" href="structstr__ir__int__filed__t.html">00139</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00140"></a><a class="code" href="structstr__ir__int__filed__t.html#ab078adedc33b99af52205a5aeba9540c">00140</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_INT_STA                                       :1;
+<a name="l00141"></a><a class="code" href="structstr__ir__int__filed__t.html#ade137f9931b0f94ad17c5287c966db5c">00141</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_CMP_ERR                                       :1;
+<a name="l00142"></a><a class="code" href="structstr__ir__int__filed__t.html#a7bc49125446f8390ab72c6529a903c6e">00142</a>     <a class="code" href="core__rv32_8h.html#af63697ed9952cc71e1225efe205f6cd3">__I</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_REPEAT                                        :1;
+<a name="l00143"></a><a class="code" href="structstr__ir__int__filed__t.html#a7b4f9bcd5488b87c0e90720985e3b58b">00143</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                      :29;
+<a name="l00144"></a>00144 } <a class="code" href="structstr__ir__int__filed__t.html">str_ir_int_filed_t</a>;
+<a name="l00145"></a>00145 
+<a name="l00146"></a><a class="code" href="structstr__ir__rf__filed__t.html">00146</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00147"></a><a class="code" href="structstr__ir__rf__filed__t.html#a1ce0507308f9c89c3cc46b03cfdd3edb">00147</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RF_IR_PHASE                                     :1;
+<a name="l00148"></a><a class="code" href="structstr__ir__rf__filed__t.html#ad3baffdf1ffa34071ce17e6881faf636">00148</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RF_ADDR_CMP_EN                                  :1;
+<a name="l00149"></a><a class="code" href="structstr__ir__rf__filed__t.html#aca4e5c8e11928e31dfd4bc18ac7f7dae">00149</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RF_DATA_CMP_EN                                  :1;
+<a name="l00150"></a><a class="code" href="structstr__ir__rf__filed__t.html#a2495b130ac0d5e7c688489fed98b1c63">00150</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_INT_EN                                       :1;
+<a name="l00151"></a><a class="code" href="structstr__ir__rf__filed__t.html#a96e94f0d26279b6a1e0e2e9eb0767673">00151</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                      :28;
+<a name="l00152"></a>00152 } <a class="code" href="structstr__ir__rf__filed__t.html">str_ir_rf_filed_t</a>;
+<a name="l00153"></a>00153 
+<a name="l00154"></a><a class="code" href="structstr__ir__rf2__filed__t.html">00154</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00155"></a><a class="code" href="structstr__ir__rf2__filed__t.html#a9614ec6d635b0fb64226e6a74aa19755">00155</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RF_NOISE_TH                                     :8;
+<a name="l00156"></a><a class="code" href="structstr__ir__rf2__filed__t.html#ae5dd7951f9a8823a4e06403462913054">00156</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                      :8;
+<a name="l00157"></a><a class="code" href="structstr__ir__rf2__filed__t.html#acc47411d33df750cc52dec403daa28ba">00157</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> RF_EDGE_TH                                      :13;
+<a name="l00158"></a><a class="code" href="structstr__ir__rf2__filed__t.html#ab193912dba544635c11d561d2eb09fab">00158</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                                                      :3;
+<a name="l00159"></a>00159 } <a class="code" href="structstr__ir__rf2__filed__t.html">str_ir_rf2_filed_t</a>;
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161 
+<a name="l00162"></a><a class="code" href="structbrx820__uart__regdef.html">00162</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00163"></a>00163 {
+<a name="l00164"></a>00164     <span class="keyword">union</span>
+<a name="l00165"></a>00165     {
+<a name="l00166"></a><a class="code" href="structbrx820__uart__regdef.html#a0a4b98253a254b29c7665eb6ec00acb9">00166</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__uart__regdef.html#a0a4b98253a254b29c7665eb6ec00acb9">CTL</a>;
+<a name="l00167"></a><a class="code" href="structbrx820__uart__regdef.html#a5dcf6f0b7e6e12cf1383a2451a69934a">00167</a>         <a class="code" href="structstr__usart__ctl__field__t.html">str_usart_ctl_field_t</a> <a class="code" href="structbrx820__uart__regdef.html#a5dcf6f0b7e6e12cf1383a2451a69934a">CTL_f</a>;
+<a name="l00168"></a>00168     };
+<a name="l00169"></a>00169     <span class="keyword">union</span>
+<a name="l00170"></a>00170     {
+<a name="l00171"></a><a class="code" href="structbrx820__uart__regdef.html#a2befeb85ef1c31fc60d5b29ecfe7125d">00171</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__uart__regdef.html#a2befeb85ef1c31fc60d5b29ecfe7125d">BR</a>;
+<a name="l00172"></a><a class="code" href="structbrx820__uart__regdef.html#a24c12ba6221aae125e30edc48493a5f8">00172</a>         <a class="code" href="structstr__usart__br__field__t.html">str_usart_br_field_t</a> <a class="code" href="structbrx820__uart__regdef.html#a24c12ba6221aae125e30edc48493a5f8">BR_f</a>;
+<a name="l00173"></a>00173     };
+<a name="l00174"></a>00174     <span class="keyword">union</span>
+<a name="l00175"></a>00175     {
+<a name="l00176"></a><a class="code" href="structbrx820__uart__regdef.html#a2e9af566343b8dc0937b61631e01e6ba">00176</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__uart__regdef.html#a2e9af566343b8dc0937b61631e01e6ba">TD</a>;
+<a name="l00177"></a><a class="code" href="structbrx820__uart__regdef.html#a2ec37a054d54f623510f75c9bffb66d5">00177</a>         <a class="code" href="structstr__usart__td__field__t.html">str_usart_td_field_t</a> <a class="code" href="structbrx820__uart__regdef.html#a2ec37a054d54f623510f75c9bffb66d5">TD_f</a>;
+<a name="l00178"></a>00178     };
+<a name="l00179"></a>00179     <span class="keyword">union</span>
+<a name="l00180"></a>00180     {
+<a name="l00181"></a><a class="code" href="structbrx820__uart__regdef.html#a3fbb4d5269097ce5957077ee8003fe72">00181</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__uart__regdef.html#a3fbb4d5269097ce5957077ee8003fe72">RD</a>;
+<a name="l00182"></a><a class="code" href="structbrx820__uart__regdef.html#aaabbeb2a801adbcdbdc398fa83efa2cd">00182</a>         <a class="code" href="structstr__usart__rd__field__t.html">str_usart_rd_field_t</a> <a class="code" href="structbrx820__uart__regdef.html#aaabbeb2a801adbcdbdc398fa83efa2cd">RD_f</a>;
+<a name="l00183"></a>00183     };
+<a name="l00184"></a>00184     <span class="keyword">union</span>
+<a name="l00185"></a>00185     {
+<a name="l00186"></a><a class="code" href="structbrx820__uart__regdef.html#a2a272a83c6f12e616935eafa33dec819">00186</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__uart__regdef.html#a2a272a83c6f12e616935eafa33dec819">ST</a>;
+<a name="l00187"></a><a class="code" href="structbrx820__uart__regdef.html#a16fb12d76cef97a0b0a03aaed6371a46">00187</a>         <a class="code" href="structstr__usart__st__field__t.html">str_usart_st_field_t</a> <a class="code" href="structbrx820__uart__regdef.html#a16fb12d76cef97a0b0a03aaed6371a46">ST_f</a>;
+<a name="l00188"></a>00188     };
+<a name="l00189"></a>00189 } <a class="code" href="structbrx820__uart__regdef.html">brx820_uart_regdef</a>;
+<a name="l00190"></a>00190 
+<a name="l00191"></a><a class="code" href="structbrx820__gpio__regdef.html">00191</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00192"></a>00192 {
+<a name="l00193"></a>00193     <span class="keyword">union</span>
+<a name="l00194"></a>00194     {
+<a name="l00195"></a><a class="code" href="structbrx820__gpio__regdef.html#a7fe9b976c34b63656cbfe87c21164e11">00195</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__gpio__regdef.html#a7fe9b976c34b63656cbfe87c21164e11">CTL</a>;
+<a name="l00196"></a><a class="code" href="structbrx820__gpio__regdef.html#aab29c57176ac79729b1c80f344eb9124">00196</a>         <a class="code" href="structstr__gpio__ctl__field__t.html">str_gpio_ctl_field_t</a> <a class="code" href="structbrx820__gpio__regdef.html#aab29c57176ac79729b1c80f344eb9124">CTL_f</a>;
+<a name="l00197"></a>00197     };
+<a name="l00198"></a>00198     <span class="keyword">union</span>
+<a name="l00199"></a>00199     {
+<a name="l00200"></a><a class="code" href="structbrx820__gpio__regdef.html#a48f6464d5b96fdb7d2d5bcfaa09be222">00200</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__gpio__regdef.html#a48f6464d5b96fdb7d2d5bcfaa09be222">PS</a>;
+<a name="l00201"></a><a class="code" href="structbrx820__gpio__regdef.html#a872a22de46e792f3f6ac7cc2557cc705">00201</a>         <a class="code" href="structstr__gpio__ps__field__t.html">str_gpio_ps_field_t</a> <a class="code" href="structbrx820__gpio__regdef.html#a872a22de46e792f3f6ac7cc2557cc705">PS_f</a>;
+<a name="l00202"></a>00202     };
+<a name="l00203"></a>00203 } <a class="code" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a>;
+<a name="l00204"></a>00204 
+<a name="l00205"></a><a class="code" href="structbrx820__adc__regdef.html">00205</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00206"></a>00206 {
+<a name="l00207"></a>00207     <span class="keyword">union</span>
+<a name="l00208"></a>00208     {
+<a name="l00209"></a><a class="code" href="structbrx820__adc__regdef.html#a8ed00b7fc470cea5f0d4596bcc129ef5">00209</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__adc__regdef.html#a8ed00b7fc470cea5f0d4596bcc129ef5">CTL</a>;
+<a name="l00210"></a><a class="code" href="structbrx820__adc__regdef.html#a4e28d7e36eba379e686ef2d7d5509513">00210</a>         <a class="code" href="structstr__adc__ctl__field__t.html">str_adc_ctl_field_t</a> <a class="code" href="structbrx820__adc__regdef.html#a4e28d7e36eba379e686ef2d7d5509513">CTL_f</a>;
+<a name="l00211"></a>00211     };
+<a name="l00212"></a>00212     <span class="keyword">union</span>
+<a name="l00213"></a>00213     {
+<a name="l00214"></a><a class="code" href="structbrx820__adc__regdef.html#a73a054e9fab093a05dac7b12ab5325fd">00214</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__adc__regdef.html#a73a054e9fab093a05dac7b12ab5325fd">DELAY</a>;
+<a name="l00215"></a><a class="code" href="structbrx820__adc__regdef.html#a5b9ae95256a89379ee13bd23e3374d01">00215</a>         <a class="code" href="structstr__adc__delay__field__t.html">str_adc_delay_field_t</a> <a class="code" href="structbrx820__adc__regdef.html#a5b9ae95256a89379ee13bd23e3374d01">DELAY_f</a>;
+<a name="l00216"></a>00216     };
+<a name="l00217"></a>00217     <span class="keyword">union</span>
+<a name="l00218"></a>00218     {
+<a name="l00219"></a><a class="code" href="structbrx820__adc__regdef.html#a6f1d374e86187a18b84c0b41c57a0ffe">00219</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__adc__regdef.html#a6f1d374e86187a18b84c0b41c57a0ffe">RANGE</a>;
+<a name="l00220"></a><a class="code" href="structbrx820__adc__regdef.html#a50215625239166e0b78259c1d74b23d8">00220</a>         <a class="code" href="structstr__adc__range__field__t.html">str_adc_range_field_t</a> <a class="code" href="structbrx820__adc__regdef.html#a50215625239166e0b78259c1d74b23d8">RANGE_f</a>;
+<a name="l00221"></a>00221     };
+<a name="l00222"></a>00222 } <a class="code" href="structbrx820__adc__regdef.html">brx820_adc_regdef</a>;
+<a name="l00223"></a>00223 
+<a name="l00228"></a><a class="code" href="structbrx820__wdg__regdef.html">00228</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00229"></a>00229     <span class="keyword">union</span>
+<a name="l00230"></a>00230     {
+<a name="l00231"></a><a class="code" href="structbrx820__wdg__regdef.html#a6de84ec78e97427eb9dfe0dfe46df864">00231</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__wdg__regdef.html#a6de84ec78e97427eb9dfe0dfe46df864">WDG_CFG</a>;
+<a name="l00232"></a><a class="code" href="structbrx820__wdg__regdef.html#a0f8c2fd6129ab526ba9b7b71e89b1fe4">00232</a>         <a class="code" href="structstr__wdg__en__filed__t.html">str_wdg_en_filed_t</a> <a class="code" href="structbrx820__wdg__regdef.html#a0f8c2fd6129ab526ba9b7b71e89b1fe4">WDG_CFG_f</a>;
+<a name="l00233"></a>00233     };
+<a name="l00234"></a><a class="code" href="structbrx820__wdg__regdef.html#a4ffa67c41bcafa34c5632afa261428d7">00234</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__wdg__regdef.html#a4ffa67c41bcafa34c5632afa261428d7">STC_WDG_CNT_REG</a>;
+<a name="l00235"></a>00235 } <a class="code" href="structbrx820__wdg__regdef.html" title="WFG.">brx820_wdg_regdef</a>;
+<a name="l00236"></a>00236 
+<a name="l00237"></a><a class="code" href="structbrx820__timer__regdef.html">00237</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00238"></a>00238     <span class="keyword">union</span>
+<a name="l00239"></a>00239     {
+<a name="l00240"></a><a class="code" href="structbrx820__timer__regdef.html#ac70ef6f702fdb3b131e5ac114cf9a8e8">00240</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__timer__regdef.html#ac70ef6f702fdb3b131e5ac114cf9a8e8">TIMER_CTRL</a>;
+<a name="l00241"></a><a class="code" href="structbrx820__timer__regdef.html#acdf0b241193de0883c19899831bfe8ad">00241</a>         <a class="code" href="structstr__timer__ctrl__filed__t.html">str_timer_ctrl_filed_t</a> <a class="code" href="structbrx820__timer__regdef.html#acdf0b241193de0883c19899831bfe8ad">TIMER_CTRL_f</a>;
+<a name="l00242"></a>00242     };
+<a name="l00243"></a><a class="code" href="structbrx820__timer__regdef.html#ad1e35f1d87a850ce09aa2c09bb72d588">00243</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__timer__regdef.html#ad1e35f1d87a850ce09aa2c09bb72d588">TIMER_INIT</a>;
+<a name="l00244"></a><a class="code" href="structbrx820__timer__regdef.html#af940f4a81c82fcb79ce9869a5622f87b">00244</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__timer__regdef.html#af940f4a81c82fcb79ce9869a5622f87b">TIMER_CNT</a>;
+<a name="l00245"></a>00245 } <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>;
+<a name="l00246"></a>00246 
+<a name="l00247"></a><a class="code" href="structbrx820__pwm__regdef.html">00247</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00248"></a><a class="code" href="structbrx820__pwm__regdef.html#a48bdd2fd31667d78e56c206bbc734763">00248</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__pwm__regdef.html#a48bdd2fd31667d78e56c206bbc734763">PWM_EN</a>;
+<a name="l00249"></a><a class="code" href="structbrx820__pwm__regdef.html#a5fd2ea6a146151cf70d08bdc1223b853">00249</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__pwm__regdef.html#a5fd2ea6a146151cf70d08bdc1223b853">PWM_CTR</a>;
+<a name="l00250"></a><a class="code" href="structbrx820__pwm__regdef.html#a456db61af82dad2d516e0b03910f8745">00250</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__pwm__regdef.html#a456db61af82dad2d516e0b03910f8745">PWM_DUTY</a>;
+<a name="l00251"></a>00251 } <a class="code" href="structbrx820__pwm__regdef.html">brx820_pwm_regdef</a>;
+<a name="l00252"></a>00252 
+<a name="l00253"></a><a class="code" href="structbrx820__freq__detect__regdef.html">00253</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00254"></a>00254     <span class="keyword">union</span>
+<a name="l00255"></a>00255     {
+<a name="l00256"></a><a class="code" href="structbrx820__freq__detect__regdef.html#ae89f7eeed5a2089d6bffdd6f5ea1b0e0">00256</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__freq__detect__regdef.html#ae89f7eeed5a2089d6bffdd6f5ea1b0e0">FREQ_DETECT_CTRL</a>;
+<a name="l00257"></a><a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">00257</a>         <a class="code" href="structstr__freq__detect__ctrl__filed__t.html">str_freq_detect_ctrl_filed_t</a> <a class="code" href="structbrx820__freq__detect__regdef.html#a9317cce60f1ccb740c97bb9411dc594b">FREQ_DETECT_CTRL_f</a>;
+<a name="l00258"></a>00258     };
+<a name="l00259"></a>00259     <span class="keyword">union</span>
+<a name="l00260"></a>00260     {
+<a name="l00261"></a><a class="code" href="structbrx820__freq__detect__regdef.html#a4f3c75b3188938cd4e515fa8e8088b89">00261</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__freq__detect__regdef.html#a4f3c75b3188938cd4e515fa8e8088b89">FREQ_DETECT_CFG</a>;
+<a name="l00262"></a><a class="code" href="structbrx820__freq__detect__regdef.html#aa8bba5465e2674f60332ae4365080453">00262</a>         <a class="code" href="structstr__freq__detect__cfg__filed__t.html">str_freq_detect_cfg_filed_t</a> <a class="code" href="structbrx820__freq__detect__regdef.html#aa8bba5465e2674f60332ae4365080453">FREQ_DETECT_CFG_f</a>;
+<a name="l00263"></a>00263     };
+<a name="l00264"></a>00264     <span class="keyword">union</span>
+<a name="l00265"></a>00265     {
+<a name="l00266"></a><a class="code" href="structbrx820__freq__detect__regdef.html#a14348a648dc30fc01de51f4fcb33e718">00266</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__freq__detect__regdef.html#a14348a648dc30fc01de51f4fcb33e718">FREQ_DETECT_VALUE</a>;
+<a name="l00267"></a><a class="code" href="structbrx820__freq__detect__regdef.html#a790760f80ea0370abc9a2fe4fd3175e4">00267</a>         <a class="code" href="structstr__freq__detect__value__filed__t.html">str_freq_detect_value_filed_t</a> <a class="code" href="structbrx820__freq__detect__regdef.html#a790760f80ea0370abc9a2fe4fd3175e4">FREQ_DETECT_VALUE_f</a>;
+<a name="l00268"></a>00268     };
+<a name="l00269"></a>00269 } <a class="code" href="structbrx820__freq__detect__regdef.html">brx820_freq_detect_regdef</a>;
+<a name="l00270"></a>00270 
+<a name="l00275"></a><a class="code" href="structbrx820__ir__regdef.html">00275</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00276"></a>00276     <span class="keyword">union</span>
+<a name="l00277"></a>00277     {
+<a name="l00278"></a><a class="code" href="structbrx820__ir__regdef.html#ad4f41c30bb075f6cc9e534d5738072e3">00278</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__ir__regdef.html#ad4f41c30bb075f6cc9e534d5738072e3">IR_CMD</a>;
+<a name="l00279"></a><a class="code" href="structbrx820__ir__regdef.html#a73b5d84876b59cf4e20bbcf13d182cdc">00279</a>         <a class="code" href="structstr__ir__int__filed__t.html">str_ir_int_filed_t</a> <a class="code" href="structbrx820__ir__regdef.html#a73b5d84876b59cf4e20bbcf13d182cdc">IR_CMD_f</a>;
+<a name="l00280"></a>00280     };
+<a name="l00281"></a><a class="code" href="structbrx820__ir__regdef.html#a42519143493129271dd251298dab60f0">00281</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__ir__regdef.html#a42519143493129271dd251298dab60f0">IR_READ_DATA</a>;
+<a name="l00282"></a>00282     <span class="keyword">union</span>
+<a name="l00283"></a>00283     {
+<a name="l00284"></a><a class="code" href="structbrx820__ir__regdef.html#a12175b7cdc4b1cefb16122b799578333">00284</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__ir__regdef.html#a12175b7cdc4b1cefb16122b799578333">IR_CMP</a>;
+<a name="l00285"></a><a class="code" href="structbrx820__ir__regdef.html#a62f6db8177df2fd8b7b8c337e493b5cc">00285</a>         <a class="code" href="structstr__ir__rf__filed__t.html">str_ir_rf_filed_t</a> <a class="code" href="structbrx820__ir__regdef.html#a62f6db8177df2fd8b7b8c337e493b5cc">IR_CMP_f</a>;
+<a name="l00286"></a>00286     };
+<a name="l00287"></a>00287     <span class="keyword">union</span>
+<a name="l00288"></a>00288     {
+<a name="l00289"></a><a class="code" href="structbrx820__ir__regdef.html#adb0e85e9dbc4910615fb7f9ef44b131e">00289</a>         <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__ir__regdef.html#adb0e85e9dbc4910615fb7f9ef44b131e">IR_RF2</a>;
+<a name="l00290"></a><a class="code" href="structbrx820__ir__regdef.html#a0f2dab166f98a615a6acd0b22edf2f2b">00290</a>         <a class="code" href="structstr__ir__rf2__filed__t.html">str_ir_rf2_filed_t</a> <a class="code" href="structbrx820__ir__regdef.html#a0f2dab166f98a615a6acd0b22edf2f2b">IR_RF2_f</a>;
+<a name="l00291"></a>00291     };
+<a name="l00292"></a><a class="code" href="structbrx820__ir__regdef.html#a634a5b2b4e776bee81138c73ef47e23d">00292</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_9MS_COUNT :18;
+<a name="l00293"></a><a class="code" href="structbrx820__ir__regdef.html#add433fcfbc3f26fd3942507b8ac8b904">00293</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                   :14;
+<a name="l00294"></a><a class="code" href="structbrx820__ir__regdef.html#ade30a6da037902cc845e741bfd4ed20c">00294</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_4P5_COUNT :18;
+<a name="l00295"></a><a class="code" href="structbrx820__ir__regdef.html#ac44b69ca915ab3a3fee1677b03799749">00295</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                   :14;
+<a name="l00296"></a><a class="code" href="structbrx820__ir__regdef.html#a08fe5b6e4ba683844b87febeb0ea2afc">00296</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_1P69_COUNT:18;
+<a name="l00297"></a><a class="code" href="structbrx820__ir__regdef.html#af9f046b226c33bb0c12ef5c77807890d">00297</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                   :14;
+<a name="l00298"></a><a class="code" href="structbrx820__ir__regdef.html#afb2d24bb4226b5a37e21d9165b28e227">00298</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IR_2P25_COUNT:18;
+<a name="l00299"></a><a class="code" href="structbrx820__ir__regdef.html#a6a0ab6a7c349da280cff4a979094b439">00299</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                   :14;
+<a name="l00300"></a>00300 } <a class="code" href="structbrx820__ir__regdef.html" title="IR.">brx820_ir_regdef</a>;
+<a name="l00301"></a>00301 
+<a name="l00302"></a><a class="code" href="struct_i2_c___i_n_t.html">00302</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00303"></a><a class="code" href="struct_i2_c___i_n_t.html#a25cdd6f32f63317c54a6df81387fdbba">00303</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> NACK              :1;
+<a name="l00304"></a><a class="code" href="struct_i2_c___i_n_t.html#ac14d4485f13a046d7c11f00013e028cd">00304</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FINISH            :1;
+<a name="l00305"></a><a class="code" href="struct_i2_c___i_n_t.html#ac670cd259f96101c31eb2043ad4549e2">00305</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TIME_OUT          :1;
+<a name="l00306"></a><a class="code" href="struct_i2_c___i_n_t.html#a3e9a0dd184316b37df49b028af5c78dc">00306</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ONE_BYTE_FINISH   :1;
+<a name="l00307"></a><a class="code" href="struct_i2_c___i_n_t.html#a585c10ea0ba34fed6bde44a32a81c72e">00307</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                     :28;
+<a name="l00308"></a>00308 } <a class="code" href="struct_i2_c___i_n_t.html">I2C_INT</a>;
+<a name="l00309"></a>00309 
+<a name="l00310"></a><a class="code" href="struct_i2_c__status__t.html">00310</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00311"></a><a class="code" href="struct_i2_c__status__t.html#a47e2956b09db1bab8c90b7a6f344b29c">00311</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> NACK             :1;
+<a name="l00312"></a><a class="code" href="struct_i2_c__status__t.html#a392bc054d699ee04308f6e5ac96400c1">00312</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> FINISH           :1;
+<a name="l00313"></a><a class="code" href="struct_i2_c__status__t.html#a86f2e7c9f7ab8603ff2bbce46bd9794b">00313</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> TIME_OUT         :1;
+<a name="l00314"></a><a class="code" href="struct_i2_c__status__t.html#ae9137a754103cac12eb829dcc8c6a17d">00314</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> IDLE             :1;
+<a name="l00315"></a><a class="code" href="struct_i2_c__status__t.html#afd0fed4e8b1651fd076d969922978657">00315</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ONE_BYTE_FINISH  :1;
+<a name="l00316"></a><a class="code" href="struct_i2_c__status__t.html#a30e71a02729785903c75dd4c1f6c2894">00316</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                       :3;
+<a name="l00317"></a><a class="code" href="struct_i2_c__status__t.html#adb623c3594aa167c2d2b3a4287d5b53c">00317</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> DATA_NUM         :8;
+<a name="l00318"></a><a class="code" href="struct_i2_c__status__t.html#a5a6cca60de613d5e1b3ee1635d707db9">00318</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                      :16;
+<a name="l00319"></a>00319 } <a class="code" href="struct_i2_c__status__t.html">I2C_status_t</a>;
+<a name="l00320"></a>00320 
+<a name="l00321"></a><a class="code" href="structbrx820__i2c__master__regdef.html">00321</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00322"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a1a33a7ed7378919e0b79f59e7f037df0">00322</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> SLAVE_ADDR       :8;
+<a name="l00323"></a><a class="code" href="structbrx820__i2c__master__regdef.html#af8ce66a8183a954c11c1b0d984554cc9">00323</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                       :24;
+<a name="l00324"></a>00324 
+<a name="l00325"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a96a88cadff87a588061cc8c6ab73af20">00325</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> DATA_LENTH       :8;
+<a name="l00326"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a10a02a886411708590760e8ba18eea10">00326</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                       :24;
+<a name="l00327"></a>00327 
+<a name="l00328"></a><a class="code" href="structbrx820__i2c__master__regdef.html#ac01e835a9ab49687f013eb568250bfe9">00328</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> CMD              :4;
+<a name="l00329"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a9d52dd6f9e68e7c0067ee1d52826e0f1">00329</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> CMD_W            :1;
+<a name="l00330"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a0dff61baaac0e732a982367248d61ab0">00330</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                       :27;
+<a name="l00331"></a>00331 
+<a name="l00332"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a48753956c9772164089496f584501041">00332</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> WAIT_TIME       :16;
+<a name="l00333"></a><a class="code" href="structbrx820__i2c__master__regdef.html#aab203ba34871d294cf85e6d9fc32cedf">00333</a>     <a class="code" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>                       :16;
+<a name="l00334"></a>00334 
+<a name="l00335"></a><a class="code" href="structbrx820__i2c__master__regdef.html#aafe96a7e87de8f08432161fc236ccb23">00335</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> CPU_CLK_STR_EN   :1;
+<a name="l00336"></a><a class="code" href="structbrx820__i2c__master__regdef.html#af7d1d1d0d6c4cc1217575b492ffa333d">00336</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> CPU_LAST_ACK_EN  :1;
+<a name="l00337"></a><a class="code" href="structbrx820__i2c__master__regdef.html#ab009d81f1739b367606ad6293a5a9bba">00337</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                       :30;
+<a name="l00338"></a>00338 
+<a name="l00339"></a><a class="code" href="structbrx820__i2c__master__regdef.html#aeb7949934c5b535075e9c5494e17514d">00339</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> REG_ADDR        :16;
+<a name="l00340"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a7d8b71a059387098f13f0ca54415e083">00340</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                       :16;
+<a name="l00341"></a>00341 
+<a name="l00342"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a03e8052e7f8941a35b34511ba42ca41f">00342</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__i2c__master__regdef.html#a03e8052e7f8941a35b34511ba42ca41f">T_DATA0</a>;
+<a name="l00343"></a><a class="code" href="structbrx820__i2c__master__regdef.html#adfa3d8b07aa493d1a3a06f8aadc7b1c0">00343</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__i2c__master__regdef.html#adfa3d8b07aa493d1a3a06f8aadc7b1c0">T_DATA1</a>;
+<a name="l00344"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a2defae718d5c46419f06bedd12d70194">00344</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__i2c__master__regdef.html#a2defae718d5c46419f06bedd12d70194">R_DATA0</a>;
+<a name="l00345"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a5fbb81756f30b2f274962c443a5e199e">00345</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__i2c__master__regdef.html#a5fbb81756f30b2f274962c443a5e199e">R_DATA1</a>;
+<a name="l00346"></a>00346 
+<a name="l00347"></a>00347     <span class="keyword">union </span>{
+<a name="l00348"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a08ea7f60cecffee0c4cf7cff6e1ea48f">00348</a>         <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structbrx820__i2c__master__regdef.html#a08ea7f60cecffee0c4cf7cff6e1ea48f">STATUS</a>;
+<a name="l00349"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a356089c5978b686e5b25cba27960bb1f">00349</a>         <a class="code" href="struct_i2_c__status__t.html">I2C_status_t</a> <a class="code" href="structbrx820__i2c__master__regdef.html#a356089c5978b686e5b25cba27960bb1f">STATUS_f</a>;
+<a name="l00350"></a>00350     };
+<a name="l00351"></a>00351 
+<a name="l00352"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a7f1cdc4f82c8332843e3d5d72ff849cb">00352</a>     <a class="code" href="struct_i2_c___i_n_t.html">I2C_INT</a> <a class="code" href="structbrx820__i2c__master__regdef.html#a7f1cdc4f82c8332843e3d5d72ff849cb">INT_EN</a>;
+<a name="l00353"></a>00353 
+<a name="l00354"></a><a class="code" href="structbrx820__i2c__master__regdef.html#af73a71ee1c601ae1f4a4159323f82a66">00354</a>     <a class="code" href="struct_i2_c___i_n_t.html">I2C_INT</a> <a class="code" href="structbrx820__i2c__master__regdef.html#af73a71ee1c601ae1f4a4159323f82a66">INT_CLEAR</a>;
+<a name="l00355"></a>00355 
+<a name="l00356"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a2be9f65cd88a812bb43973ff12915d13">00356</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> CLK_DIV        :16;
+<a name="l00357"></a><a class="code" href="structbrx820__i2c__master__regdef.html#affb5cad7d803c8f5aaa39d7372777637">00357</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                       :16;
+<a name="l00358"></a>00358 
+<a name="l00359"></a><a class="code" href="structbrx820__i2c__master__regdef.html#aebe571ce4811d5e25797ddeb2de2bde1">00359</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> CLK_EN          :1;
+<a name="l00360"></a><a class="code" href="structbrx820__i2c__master__regdef.html#a7760d3ff2d7a11a3ae1b19bd034fa52d">00360</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>                      :31;
+<a name="l00361"></a>00361 } <a class="code" href="structbrx820__i2c__master__regdef.html">brx820_i2c_master_regdef</a>;
+<a name="l00362"></a>00362 
+<a name="l00363"></a><a class="code" href="union_i2_c___s_l___intr.html">00363</a> <span class="keyword">typedef</span> <span class="keyword">volatile</span> <span class="keyword">union</span>{
+<a name="l00364"></a><a class="code" href="union_i2_c___s_l___intr.html#a987c47fedf7a575b43442248da7bb368">00364</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="union_i2_c___s_l___intr.html#a987c47fedf7a575b43442248da7bb368">status</a>;
+<a name="l00365"></a>00365     <span class="keyword">struct</span>{
+<a name="l00366"></a><a class="code" href="union_i2_c___s_l___intr.html#a2d690745a57f659ed23736cacf6d90cf">00366</a>         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> slave_rw            :1;
+<a name="l00367"></a><a class="code" href="union_i2_c___s_l___intr.html#a668229cb64ad28ecc7a76a3514e0b4d6">00367</a>         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> slave_nackb        :1;
+<a name="l00368"></a><a class="code" href="union_i2_c___s_l___intr.html#a12f3dc101d155856e68a78dcbb653389">00368</a>         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> slave_stopb        :1;
+<a name="l00369"></a><a class="code" href="union_i2_c___s_l___intr.html#abaaf98f34385b6d16bef7c377b41bf32">00369</a>         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> slave_addrb        :1;
+<a name="l00370"></a><a class="code" href="union_i2_c___s_l___intr.html#afb88c8d9d8dbddc0a3c7e3b8af5c4ff1">00370</a>         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> slave_rw_o        :1;
+<a name="l00371"></a><a class="code" href="union_i2_c___s_l___intr.html#acaf6690f03892d564a0848b33286e38a">00371</a>         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>          :27;
+<a name="l00372"></a>00372     }Bits;
+<a name="l00373"></a>00373 }<a class="code" href="union_i2_c___s_l___intr.html">I2C_SL_Intr</a>;
+<a name="l00374"></a>00374 
+<a name="l00375"></a><a class="code" href="structbrx820__i2c__slave__regdef.html">00375</a> <span class="keyword">typedef</span> <span class="keyword">volatile</span> <span class="keyword">struct </span>{
+<a name="l00376"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a21d909b9ab59a38c5bbf44a0fae3d342">00376</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    slavedev        :8;     <span class="comment">//device id[7:1]; what about bit0</span>
+<a name="l00377"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#aa4c491933d5f412c2bb9e7bd3994ed3e">00377</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    :24;
+<a name="l00378"></a>00378 
+<a name="l00379"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#aaadde42ceec18253b1b984c9b8b89555">00379</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    en_slaveb   :1;     <span class="comment">//iic slave enable signal</span>
+<a name="l00380"></a>00380     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    :31;
+<a name="l00381"></a>00381 
+<a name="l00382"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a5f7673ac95adca1acef033beee859994">00382</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    slaveb_data        :8;     <span class="comment">//slave data from iic slave interface</span>
+<a name="l00383"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#abae8883ae32af54b67df303662cf3e54">00383</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    slaveb_addr        :8;     <span class="comment">//slave addr from iic slave interface</span>
+<a name="l00384"></a>00384     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    :16;
+<a name="l00385"></a>00385 
+<a name="l00386"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a1f1753a12fa2bdb64133d39c8e444dc9">00386</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    slaveb_data_2_iic   :8;     <span class="comment">//data to iic slave interface</span>
+<a name="l00387"></a>00387     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    :24;
+<a name="l00388"></a>00388 
+<a name="l00389"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a51ca3c8da3fca98cf6a25026a0540f7a">00389</a>     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>   <a class="code" href="union_i2_c___s_l___intr.html">I2C_SL_Intr</a>    <a class="code" href="structbrx820__i2c__slave__regdef.html#a51ca3c8da3fca98cf6a25026a0540f7a">slave_int</a>;     <span class="comment">//iic slave rw(write/read data done)</span>
+<a name="l00390"></a>00390 
+<a name="l00391"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a0447268f38cb51d8f7b6dc8f38e34fd6">00391</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    rel_slb_rw        :1;     <span class="comment">//release iic slave rw</span>
+<a name="l00392"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a7059bdb6903a1d17d10e37d46d2da9d2">00392</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    rel_slb_nack        :1;     <span class="comment">//release iic slave nak</span>
+<a name="l00393"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a1a846e04fc5be377f07a2fd24038b50d">00393</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    rel_slb_stop        :1;     <span class="comment">//release iic slave stop</span>
+<a name="l00394"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#afed5bc4fdeaf4d844c8a6fcb330f0b95">00394</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    rel_slb_addr        :1;     <span class="comment">//release iic slave addr</span>
+<a name="l00395"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a9b49da6d3733748982fcafdecddbf7c2">00395</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    rel_slb_int        :1;     <span class="comment">//release iic slave int</span>
+<a name="l00396"></a>00396     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    :3;
+<a name="l00397"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#ab8054c37858d7af19309b486a5cd010b">00397</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    msk_slb_rw        :1;     <span class="comment">//mask iic slave rw</span>
+<a name="l00398"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a2075d7f2ecc0bd5d1c9266720f9e5ef2">00398</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    msk_slb_nack        :1;     <span class="comment">//mask iic slave nak</span>
+<a name="l00399"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a3677d9ea8a01c739ec261eb034d5be68">00399</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    msk_slb_stop        :1;     <span class="comment">//mask iic slave stop</span>
+<a name="l00400"></a><a class="code" href="structbrx820__i2c__slave__regdef.html#a420bf482b1592665348f303694e7925f">00400</a>     <a class="code" href="core__rv32_8h.html#ab6caba5853a60a17e8e04499b52bf691">__IOM</a>   <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    msk_slb_addr        :1;     <span class="comment">//mask iic slave addr</span>
+<a name="l00401"></a>00401     <a class="code" href="core__rv32_8h.html#a4cc1649793116d7c2d8afce7a4ffce43">__IM</a>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>    :20;
+<a name="l00402"></a>00402 }<a class="code" href="structbrx820__i2c__slave__regdef.html">brx820_i2c_slave_regdef</a>;
+<a name="l00403"></a>00403 
+<a name="l00404"></a>00404 
+<a name="l00405"></a>00405 
+<a name="l00406"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a95982eccb57c2ae35f8ba3d8f0b05653">00406</a> <span class="preprocessor">#define SYSTEM_CLOCK 40000000</span>
+<a name="l00407"></a>00407 <span class="preprocessor"></span>
+<a name="l00408"></a><a class="code" href="mcu_2common_2xbr820_8h.html#ac76588cd1d07683add395744799f76b3">00408</a> <span class="preprocessor">#define BRX820_UART        ((brx820_uart_regdef *)(0x1f040000UL))</span>
+<a name="l00409"></a><a class="code" href="mcu_2common_2xbr820_8h.html#ac2bbafe6c7510c97ec2513f550a21175">00409</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_GPIO_PA     ((brx820_gpio_regdef *)(0x1f000100UL))</span>
+<a name="l00410"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a060d6d8a6729cae10974281115842cfb">00410</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_GPIO_PB     ((brx820_gpio_regdef *)(0x1f000120UL))</span>
+<a name="l00411"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a41a5c338d072607dfdcc5c73588b28c1">00411</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_DSP_ADC     ((brx820_adc_regdef *)(0x1f010000UL))</span>
+<a name="l00412"></a><a class="code" href="mcu_2common_2xbr820_8h.html#af1fb43c105966e7a994d692927fb1189">00412</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_WDG         ((brx820_wdg_regdef *)(0x1f020010UL))</span>
+<a name="l00413"></a><a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">00413</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_TIMER1      ((brx820_timer_regdef *)(0x1f020020UL))</span>
+<a name="l00414"></a><a class="code" href="mcu_2common_2xbr820_8h.html#ab5526377b774b7068ebaf0643464c9db">00414</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_TIMER2      ((brx820_timer_regdef *)(0x1f020040UL))</span>
+<a name="l00415"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a9f3969209f4316f557952230641298c6">00415</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_TIMER3      ((brx820_timer_regdef *)(0x1f020060UL))</span>
+<a name="l00416"></a><a class="code" href="mcu_2common_2xbr820_8h.html#ad105186ed5cfabee0a71fe731600a2ef">00416</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_TIMER4      ((brx820_timer_regdef *)(0x1f020080UL))</span>
+<a name="l00417"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a4577d5955e1e4c0ed254c11d45479bd4">00417</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_PWM1        ((brx820_pwm_regdef *)(0x1f020100UL))</span>
+<a name="l00418"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a17c04fa80798bec709c35500aa517a39">00418</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_PWM2        ((brx820_pwm_regdef *)(0x1f020120UL))</span>
+<a name="l00419"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a1800ce4f32c61e36a046c06488003ee0">00419</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_PWM3        ((brx820_pwm_regdef *)(0x1f020140UL))</span>
+<a name="l00420"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a29ae925bb78377fb73a892ef9fa9995d">00420</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_PWM4        ((brx820_pwm_regdef *)(0x1f020160UL))</span>
+<a name="l00421"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a9725c6c61d5df502da5b12fa8b1d8d10">00421</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_PWM5        ((brx820_pwm_regdef *)(0x1f020180UL))</span>
+<a name="l00422"></a><a class="code" href="mcu_2common_2xbr820_8h.html#ac9abaf387884aa9e817ab6f31c4a15e6">00422</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_FREQ_DETECT ((brx820_freq_detect_regdef *)(0x1f020200UL))</span>
+<a name="l00423"></a><a class="code" href="mcu_2common_2xbr820_8h.html#aa85011911b47af0ee46e0e67be467683">00423</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_IR          ((brx820_ir_regdef *)(0x1f030000UL))</span>
+<a name="l00424"></a><a class="code" href="mcu_2common_2xbr820_8h.html#aa3d5687d15b1574d4647bb59ade9082b">00424</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_I2C_master  ((brx820_i2c_master_regdef *)(0x1f050000UL))</span>
+<a name="l00425"></a><a class="code" href="mcu_2common_2xbr820_8h.html#a61c8841f19cda4d2ad9c4963e1b6c7f5">00425</a> <span class="preprocessor"></span><span class="preprocessor">#define BRX820_I2C_slave   ((brx820_i2c_slave_regdef *)(0x1f060000UL))</span>
+<a name="l00426"></a>00426 <span class="preprocessor"></span>
+<a name="l00427"></a>00427 
+<a name="l00428"></a>00428 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

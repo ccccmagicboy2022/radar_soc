@@ -1,0 +1,1475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>master</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">master</div>  </div>
+<div class="ingroups"><a class="el" href="group___p_h_o___periph___driver.html">PHO_Periph_Driver</a></div></div>
+<div class="contents">
+<div class="dynheader">
+master合作图：</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group___i2_c.png" border="0" alt="" usemap="#group______i2__c"/>
+<map name="group______i2__c" id="group______i2__c">
+<area shape="rect" id="node2" href="group___p_h_o___periph___driver.html" title="PHO_Periph_Driver" alt="" coords="5,5,200,40"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(PERIPH)&#160;&#160;&#160;((PERIPH) == I2C_MASTER)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gae0d731df1b264d853703716c29309b9b">IS_I2C_CLOCK_SPEED</a>(SPEED)&#160;&#160;&#160;(((SPEED) &gt;= 0x1) &amp;&amp; ((SPEED) &lt;= 400000))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gae2695a081871336881f9105d6c847c4f">IS_I2C_CONFIG_IT</a>(IT)&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFF0) == 0) &amp;&amp; ((IT) != 0x00))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga5dcbe0727d2660f9c06ba95da72cbe2c">IS_I2C_STATUS_BIT</a>(IT)&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga501aa9c243141128de646404806bc3d8">I2C_INT_NACK</a>&#160;&#160;&#160;(1ul &lt;&lt; 0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga64bafa5614e4ff7792dedd6b3ae05948">I2C_INT_STOP</a>&#160;&#160;&#160;(1ul &lt;&lt; 1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga16b6d998ea81cd3e0d231821b324053f">I2C_INT_TIMEOUT</a>&#160;&#160;&#160;(1ul &lt;&lt; 2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gaf93e77f7573325a43e02ab72ed2782d1">I2C_INT_RW_DONE</a>&#160;&#160;&#160;(1ul &lt;&lt; 3)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga06daa49c3affc045ea00c5bb578c11b2">I2C_SR_NACK</a>&#160;&#160;&#160;(1ul &lt;&lt; 0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga176c723ec363fdbd38326b607ceac431">I2C_SR_STOP</a>&#160;&#160;&#160;(1ul &lt;&lt; 1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gabcc0003f72e0284525556607a7474b9d">I2C_SR_TIMEOUT</a>&#160;&#160;&#160;(1ul &lt;&lt; 2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga1e9e0e7145c2577c1a04c5010c82bc57">I2C_SR_IDLE</a>&#160;&#160;&#160;(1ul &lt;&lt; 3)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gacad850c9cc195e1148db19f0aa6ca57c">I2C_SR_RW_DONE</a>&#160;&#160;&#160;(1ul &lt;&lt; 4)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga6bdc4f08bdf223acdd7cae7a82a738fb">IS_I2C_SLAVE_PERIPH</a>(PERIPH)&#160;&#160;&#160;((PERIPH) == I2C_SLAVE)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga1ea3475e120fa12431dda4611a238527">IS_I2C_SLAVE_CLR_IT</a>(IT)&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gaac5fc855c960f40501ddca32a79af3f6">IS_I2C_SLAVE_MASK_IT</a>(IT)&#160;&#160;&#160;((((IT) &amp; 0xFFFFF0FF) == 0) &amp;&amp; ((IT) != 0x00))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gaf4bf4c11efc3c2119d9764ebeed6b487">IS_I2C_SLAVE_SR_IT</a>(IT)&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga810fd5de5bc77345bff86fb69705238d">I2C_SLAVE_SR_RW_DONE</a>&#160;&#160;&#160;(1ul &lt;&lt; 0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga57fc6bcfe9bd74a1bb5369cb7a647502">I2C_SLAVE_SR_NACK</a>&#160;&#160;&#160;(1ul &lt;&lt; 1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gafdd7953df4c6b5f404e9d0287142276f">I2C_SLAVE_SR_STOP</a>&#160;&#160;&#160;(1ul &lt;&lt; 2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gae6f1573a900da2ac11ae8230b86be374">I2C_SLAVE_SR_ADDR</a>&#160;&#160;&#160;(1ul &lt;&lt; 3)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gadd919894f7ce2abfa988c6f7838aa662">I2C_SLAVE_SR_RW</a>&#160;&#160;&#160;(1ul &lt;&lt; 4)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga6208fe873c750843138cbfeb9285bd21">I2C_SLAVE_CLR_RW</a>&#160;&#160;&#160;(1ul &lt;&lt; 0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga73d50039f1fc4cd12096c56f456e4859">I2C_SLAVE_CLR_NACK</a>&#160;&#160;&#160;(1ul &lt;&lt; 1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga3e8bd14eca7198147a5b6b8db20c861c">I2C_SLAVE_CLR_STOP</a>&#160;&#160;&#160;(1ul &lt;&lt; 2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga16fe5eaad3df55f78a720d0ae0a07530">I2C_SLAVE_CLR_ADDR</a>&#160;&#160;&#160;(1ul &lt;&lt; 3)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gabe896e250c9d2502ed1e511b45d2cc60">I2C_SLAVE_CLR_INT</a>&#160;&#160;&#160;(1ul &lt;&lt; 4)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga76b16d6042e050a317588eb64fe79ade">I2C_SLAVE_RW_MASK</a>&#160;&#160;&#160;(1ul &lt;&lt; 8)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gaef7b3daaee6990a5190e78905b506409">I2C_SLAVE_NACK_MASK</a>&#160;&#160;&#160;(1ul &lt;&lt; 9)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga7c0359e1e279c2f7e8a437bf99ff821d">I2C_SLAVE_STOP_MASK</a>&#160;&#160;&#160;(1ul &lt;&lt; 10)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga0a264064b49897992293a94d4c43ef18">I2C_SLAVE_ADDR_MASK</a>&#160;&#160;&#160;(1ul &lt;&lt; 11)</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gac8961a1eeb8b6b8d1c244060890f3fc0">I2C_int_cmd</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it, en_functional_state_t state) assert_param(IS_I2C_MASTER_PERIPH(i2c_unit))</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the specified I2C interrupts.  <a href="#gac8961a1eeb8b6b8d1c244060890f3fc0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga218381b72332cbcd3e5f6949ea1404c1">I2C_clear_flag</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga6154ec9b397ce5431310d12d636ccc3f">I2C_init</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> clk)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize I2C peripheral  <a href="#ga6154ec9b397ce5431310d12d636ccc3f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gaf90e2ff091ba67821e8271bc98c6ecf4">I2C_deinit</a> (I2C_master_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">de-initialize I2C unit  <a href="#gaf90e2ff091ba67821e8271bc98c6ecf4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gad007cc36d7e197ce7e6e8590bf825191">I2C_read_data</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *data, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> pos, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="el" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">flag</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">read data register, one byte per time  <a href="#gad007cc36d7e197ce7e6e8590bf825191"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga1db536f04e8f5098d24b6f7545677b83">I2C_start_read</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> reg_addr, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> word_addr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">start i2c read operation  <a href="#ga1db536f04e8f5098d24b6f7545677b83"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga00608bb5a2648039fcc822784bbdba83">I2C_start_write</a> (I2C_master_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">start i2c write operation  <a href="#ga00608bb5a2648039fcc822784bbdba83"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga2cbe97cbe43d3615587501095d95bedf">I2C_config_slave_addr</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slave_addr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">config i2c slave address  <a href="#ga2cbe97cbe43d3615587501095d95bedf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga184135719c61eb046a104586520965fe">I2C_set_rw_num</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> len)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">set i2c transfer data number.  <a href="#ga184135719c61eb046a104586520965fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">en_flag_status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gac88ea6c11c45eba4a1354156e2b6f169">I2C_get_int_status</a> (I2C_master_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> I2C_flag)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">checks whether the specified I2C interrupt has occurred or not.  <a href="#gac88ea6c11c45eba4a1354156e2b6f169"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gaec3c6fe614676e1caeea7feffb777f0a">I2C_get_trans_number</a> (I2C_master_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">get the data num transfered.  <a href="#gaec3c6fe614676e1caeea7feffb777f0a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gade584f6e82f281337fde0d792c91337f">I2C_slave_int_cmd</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it, en_functional_state_t state) assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit))</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the specified I2C interrupts.  <a href="#gade584f6e82f281337fde0d792c91337f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga802f151430b4bc53991afedb87c91326">I2C_slave_clear_flag</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga10efd0bf902994dbf6c6c831c37a0178">I2C_slave_init</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slave_addr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize I2C peripheral  <a href="#ga10efd0bf902994dbf6c6c831c37a0178"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga9eed0253109d05fa07da76389ac3ee0d">I2C_slave_deinit</a> (I2C_slave_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">de-initialize I2C unit  <a href="#ga9eed0253109d05fa07da76389ac3ee0d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">en_flag_status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gac4ba717ad69e1a20a2b9272d613065f0">I2C_slave_get_int_status</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> I2C_flag)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">checks whether the specified I2C interrupt has occurred or not.  <a href="#gac4ba717ad69e1a20a2b9272d613065f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gae5f693d1db2f27c6e67c6a8c1da57cb6">I2C_slave_read_data</a> (I2C_slave_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">read data from i2c data register.  <a href="#gae5f693d1db2f27c6e67c6a8c1da57cb6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga028f4b293bfe83341742687f39598c25">I2C_slave_read_word_addr</a> (I2C_slave_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">read addr from i2c data register.  <a href="#ga028f4b293bfe83341742687f39598c25"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga1a7ed6c1d62b67592e24a8a04cc3b190">I2C_slave_write_data</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">write data to be sent to register.  <a href="#ga1a7ed6c1d62b67592e24a8a04cc3b190"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga0bf771ef448225f54b3f4f128c041bdd">assert_param</a> (IS_FUNCTIONAL_STATE(state))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gaff4cd82bc22693ab38c38c16631543fd">assert_param</a> (IS_I2C_CONFIG_IT(i2c_it))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gac86cccbb5e8e187e27785144688e8b30">if</a> (state!=DISABLE)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga5e7f31e2d54b92f7b4d71c2320cc7b25">assert_param</a> (IS_I2C_SLAVE_MASK_IT(i2c_it))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga34f58799ad705618605674bcf46742b2">if</a> (state==DISABLE)</td></tr>
+</table>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="ga501aa9c243141128de646404806bc3d8"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_INT_NACK" ref="ga501aa9c243141128de646404806bc3d8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_INT_NACK&#160;&#160;&#160;(1ul &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00055">55</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf93e77f7573325a43e02ab72ed2782d1"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_INT_RW_DONE" ref="gaf93e77f7573325a43e02ab72ed2782d1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_INT_RW_DONE&#160;&#160;&#160;(1ul &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00058">58</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga64bafa5614e4ff7792dedd6b3ae05948"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_INT_STOP" ref="ga64bafa5614e4ff7792dedd6b3ae05948" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_INT_STOP&#160;&#160;&#160;(1ul &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00056">56</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga16b6d998ea81cd3e0d231821b324053f"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_INT_TIMEOUT" ref="ga16b6d998ea81cd3e0d231821b324053f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_INT_TIMEOUT&#160;&#160;&#160;(1ul &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00057">57</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga0a264064b49897992293a94d4c43ef18"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_ADDR_MASK" ref="ga0a264064b49897992293a94d4c43ef18" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_ADDR_MASK&#160;&#160;&#160;(1ul &lt;&lt; 11)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00070">70</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga16fe5eaad3df55f78a720d0ae0a07530"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_CLR_ADDR" ref="ga16fe5eaad3df55f78a720d0ae0a07530" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_CLR_ADDR&#160;&#160;&#160;(1ul &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00064">64</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gabe896e250c9d2502ed1e511b45d2cc60"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_CLR_INT" ref="gabe896e250c9d2502ed1e511b45d2cc60" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_CLR_INT&#160;&#160;&#160;(1ul &lt;&lt; 4)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00065">65</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga73d50039f1fc4cd12096c56f456e4859"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_CLR_NACK" ref="ga73d50039f1fc4cd12096c56f456e4859" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_CLR_NACK&#160;&#160;&#160;(1ul &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00062">62</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6208fe873c750843138cbfeb9285bd21"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_CLR_RW" ref="ga6208fe873c750843138cbfeb9285bd21" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_CLR_RW&#160;&#160;&#160;(1ul &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00061">61</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3e8bd14eca7198147a5b6b8db20c861c"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_CLR_STOP" ref="ga3e8bd14eca7198147a5b6b8db20c861c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_CLR_STOP&#160;&#160;&#160;(1ul &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00063">63</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaef7b3daaee6990a5190e78905b506409"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_NACK_MASK" ref="gaef7b3daaee6990a5190e78905b506409" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_NACK_MASK&#160;&#160;&#160;(1ul &lt;&lt; 9)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00068">68</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga76b16d6042e050a317588eb64fe79ade"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_RW_MASK" ref="ga76b16d6042e050a317588eb64fe79ade" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_RW_MASK&#160;&#160;&#160;(1ul &lt;&lt; 8)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00067">67</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gae6f1573a900da2ac11ae8230b86be374"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_SR_ADDR" ref="gae6f1573a900da2ac11ae8230b86be374" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_SR_ADDR&#160;&#160;&#160;(1ul &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00058">58</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga57fc6bcfe9bd74a1bb5369cb7a647502"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_SR_NACK" ref="ga57fc6bcfe9bd74a1bb5369cb7a647502" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_SR_NACK&#160;&#160;&#160;(1ul &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00056">56</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gadd919894f7ce2abfa988c6f7838aa662"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_SR_RW" ref="gadd919894f7ce2abfa988c6f7838aa662" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_SR_RW&#160;&#160;&#160;(1ul &lt;&lt; 4)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00059">59</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga810fd5de5bc77345bff86fb69705238d"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_SR_RW_DONE" ref="ga810fd5de5bc77345bff86fb69705238d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_SR_RW_DONE&#160;&#160;&#160;(1ul &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00055">55</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gafdd7953df4c6b5f404e9d0287142276f"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_SR_STOP" ref="gafdd7953df4c6b5f404e9d0287142276f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_SR_STOP&#160;&#160;&#160;(1ul &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00057">57</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7c0359e1e279c2f7e8a437bf99ff821d"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_SLAVE_STOP_MASK" ref="ga7c0359e1e279c2f7e8a437bf99ff821d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SLAVE_STOP_MASK&#160;&#160;&#160;(1ul &lt;&lt; 10)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00069">69</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1e9e0e7145c2577c1a04c5010c82bc57"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_SR_IDLE" ref="ga1e9e0e7145c2577c1a04c5010c82bc57" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SR_IDLE&#160;&#160;&#160;(1ul &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00063">63</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga06daa49c3affc045ea00c5bb578c11b2"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_SR_NACK" ref="ga06daa49c3affc045ea00c5bb578c11b2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SR_NACK&#160;&#160;&#160;(1ul &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00060">60</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gacad850c9cc195e1148db19f0aa6ca57c"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_SR_RW_DONE" ref="gacad850c9cc195e1148db19f0aa6ca57c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SR_RW_DONE&#160;&#160;&#160;(1ul &lt;&lt; 4)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00064">64</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga176c723ec363fdbd38326b607ceac431"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_SR_STOP" ref="ga176c723ec363fdbd38326b607ceac431" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SR_STOP&#160;&#160;&#160;(1ul &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00061">61</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gabcc0003f72e0284525556607a7474b9d"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_SR_TIMEOUT" ref="gabcc0003f72e0284525556607a7474b9d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SR_TIMEOUT&#160;&#160;&#160;(1ul &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00062">62</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gae0d731df1b264d853703716c29309b9b"></a><!-- doxytag: member="xbr820_i2c_master.h::IS_I2C_CLOCK_SPEED" ref="gae0d731df1b264d853703716c29309b9b" args="(SPEED)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_CLOCK_SPEED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SPEED</td><td>)</td>
+          <td>&#160;&#160;&#160;(((SPEED) &gt;= 0x1) &amp;&amp; ((SPEED) &lt;= 400000))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00050">50</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gae2695a081871336881f9105d6c847c4f"></a><!-- doxytag: member="xbr820_i2c_master.h::IS_I2C_CONFIG_IT" ref="gae2695a081871336881f9105d6c847c4f" args="(IT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_CONFIG_IT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IT</td><td>)</td>
+          <td>&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFF0) == 0) &amp;&amp; ((IT) != 0x00))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00051">51</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga33f31c5cb62dd834eeaacf62a9be84fa"></a><!-- doxytag: member="xbr820_i2c_master.h::IS_I2C_MASTER_PERIPH" ref="ga33f31c5cb62dd834eeaacf62a9be84fa" args="(PERIPH)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_MASTER_PERIPH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PERIPH</td><td>)</td>
+          <td>&#160;&#160;&#160;((PERIPH) == I2C_MASTER)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00049">49</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1ea3475e120fa12431dda4611a238527"></a><!-- doxytag: member="xbr820_i2c_slave.h::IS_I2C_SLAVE_CLR_IT" ref="ga1ea3475e120fa12431dda4611a238527" args="(IT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_SLAVE_CLR_IT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IT</td><td>)</td>
+          <td>&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00050">50</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaac5fc855c960f40501ddca32a79af3f6"></a><!-- doxytag: member="xbr820_i2c_slave.h::IS_I2C_SLAVE_MASK_IT" ref="gaac5fc855c960f40501ddca32a79af3f6" args="(IT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_SLAVE_MASK_IT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IT</td><td>)</td>
+          <td>&#160;&#160;&#160;((((IT) &amp; 0xFFFFF0FF) == 0) &amp;&amp; ((IT) != 0x00))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00051">51</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6bdc4f08bdf223acdd7cae7a82a738fb"></a><!-- doxytag: member="xbr820_i2c_slave.h::IS_I2C_SLAVE_PERIPH" ref="ga6bdc4f08bdf223acdd7cae7a82a738fb" args="(PERIPH)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_SLAVE_PERIPH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PERIPH</td><td>)</td>
+          <td>&#160;&#160;&#160;((PERIPH) == I2C_SLAVE)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00049">49</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf4bf4c11efc3c2119d9764ebeed6b487"></a><!-- doxytag: member="xbr820_i2c_slave.h::IS_I2C_SLAVE_SR_IT" ref="gaf4bf4c11efc3c2119d9764ebeed6b487" args="(IT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_SLAVE_SR_IT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IT</td><td>)</td>
+          <td>&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>第<a class="el" href="xbr820__i2c__slave_8h_source.html#l00052">52</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5dcbe0727d2660f9c06ba95da72cbe2c"></a><!-- doxytag: member="xbr820_i2c_master.h::IS_I2C_STATUS_BIT" ref="ga5dcbe0727d2660f9c06ba95da72cbe2c" args="(IT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_I2C_STATUS_BIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IT</td><td>)</td>
+          <td>&#160;&#160;&#160;((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8h_source.html">xbr820_i2c_master.h</a>第<a class="el" href="xbr820__i2c__master_8h_source.html#l00052">52</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="ga0bf771ef448225f54b3f4f128c041bdd"></a><!-- doxytag: member="xbr820_i2c_master.c::assert_param" ref="ga0bf771ef448225f54b3f4f128c041bdd" args="(IS_FUNCTIONAL_STATE(state))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">assert_param </td>
+          <td>(</td>
+          <td class="paramtype">IS_FUNCTIONAL_STATE(state)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gaff4cd82bc22693ab38c38c16631543fd"></a><!-- doxytag: member="xbr820_i2c_master.c::assert_param" ref="gaff4cd82bc22693ab38c38c16631543fd" args="(IS_I2C_CONFIG_IT(i2c_it))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">assert_param </td>
+          <td>(</td>
+          <td class="paramtype">IS_I2C_CONFIG_IT(i2c_it)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga5e7f31e2d54b92f7b4d71c2320cc7b25"></a><!-- doxytag: member="xbr820_i2c_slave.c::assert_param" ref="ga5e7f31e2d54b92f7b4d71c2320cc7b25" args="(IS_I2C_SLAVE_MASK_IT(i2c_it))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">assert_param </td>
+          <td>(</td>
+          <td class="paramtype">IS_I2C_SLAVE_MASK_IT(i2c_it)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga218381b72332cbcd3e5f6949ea1404c1"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_clear_flag" ref="ga218381b72332cbcd3e5f6949ea1404c1" args="(I2C_master_t *i2c_unit, uint32_t i2c_it)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_clear_flag </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>i2c_it</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___i2_c_ga218381b72332cbcd3e5f6949ea1404c1_icgraph.png" border="0" usemap="#group___i2_c_ga218381b72332cbcd3e5f6949ea1404c1_icgraph" alt=""/></div>
+<map name="group___i2_c_ga218381b72332cbcd3e5f6949ea1404c1_icgraph" id="group___i2_c_ga218381b72332cbcd3e5f6949ea1404c1_icgraph">
+<area shape="rect" id="node2" href="group___i2_c.html#ga6154ec9b397ce5431310d12d636ccc3f" title="initialize I2C peripheral" alt="" coords="204,5,292,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2cbe97cbe43d3615587501095d95bedf"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_config_slave_addr" ref="ga2cbe97cbe43d3615587501095d95bedf" args="(I2C_master_t *i2c_unit, uint8_t slave_addr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_config_slave_addr </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>slave_addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>config i2c slave address </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">slave_addr</td><td>i2c slave address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00179">179</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf90e2ff091ba67821e8271bc98c6ecf4"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_deinit" ref="gaf90e2ff091ba67821e8271bc98c6ecf4" args="(I2C_master_t *i2c_unit)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_deinit </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>de-initialize I2C unit </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00112">112</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gac88ea6c11c45eba4a1354156e2b6f169"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_get_int_status" ref="gac88ea6c11c45eba4a1354156e2b6f169" args="(I2C_master_t *i2c_unit, uint32_t I2C_flag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">en_flag_status I2C_get_int_status </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>I2C_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>checks whether the specified I2C interrupt has occurred or not. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">I2C_flag</td><td>specifies the interrupt source to check. This parameter can be any combination of the following values: <ul>
+<li>I2C_SR_NACK </li>
+<li>I2C_SR_STOP </li>
+<li>I2C_SR_TIMEOUT </li>
+<li>I2C_SR_IDLE </li>
+<li>I2C_SR_RW_DONE </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>en_flag_status the new state of I2C_IT (SET or RESET). </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00212">212</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaec3c6fe614676e1caeea7feffb777f0a"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_get_trans_number" ref="gaec3c6fe614676e1caeea7feffb777f0a" args="(I2C_master_t *i2c_unit)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> I2C_get_trans_number </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>get the data num transfered. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>uint8_t data transfer number. </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00231">231</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6154ec9b397ce5431310d12d636ccc3f"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_init" ref="ga6154ec9b397ce5431310d12d636ccc3f" args="(I2C_master_t *i2c_unit, uint32_t clk)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_init </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>clk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>initialize I2C peripheral </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">clk</td><td>I2C clock speed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00097">97</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___i2_c_ga6154ec9b397ce5431310d12d636ccc3f_cgraph.png" border="0" usemap="#group___i2_c_ga6154ec9b397ce5431310d12d636ccc3f_cgraph" alt=""/></div>
+<map name="group___i2_c_ga6154ec9b397ce5431310d12d636ccc3f_cgraph" id="group___i2_c_ga6154ec9b397ce5431310d12d636ccc3f_cgraph">
+<area shape="rect" id="node2" href="group___i2_c.html#ga218381b72332cbcd3e5f6949ea1404c1" title="I2C_clear_flag" alt="" coords="141,5,292,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gac8961a1eeb8b6b8d1c244060890f3fc0"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_int_cmd" ref="gac8961a1eeb8b6b8d1c244060890f3fc0" args="(I2C_master_t *i2c_unit, uint32_t i2c_it, en_functional_state_t state) assert_param(IS_I2C_MASTER_PERIPH(i2c_unit))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_int_cmd </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>i2c_it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">en_functional_state_t&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enables or disables the specified I2C interrupts. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit,:</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">i2c_it,:</td><td>specifies the I2C interrupts sources to be enabled or disabled. This parameter can be any combination of the following values: <ul>
+<li>I2C_INT_NACK </li>
+<li>I2C_INT_STOP </li>
+<li>I2C_INT_TIMEOUT </li>
+<li>I2C_INT_RW_DONE </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">state,:</td><td>new state of the specified I2C interrupts. This parameter can be: ENABLE or DISABLE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad007cc36d7e197ce7e6e8590bf825191"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_read_data" ref="gad007cc36d7e197ce7e6e8590bf825191" args="(I2C_master_t *i2c_unit, uint8_t *data, uint8_t pos, uint8_t flag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_read_data </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>read data register, one byte per time </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">data</td><td>point to the data buffer. </td></tr>
+    <tr><td class="paramname">pos</td><td>the position from which data is read. </td></tr>
+    <tr><td class="paramname">flag</td><td>the data register from which data is read. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00127">127</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga184135719c61eb046a104586520965fe"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_set_rw_num" ref="ga184135719c61eb046a104586520965fe" args="(I2C_master_t *i2c_unit, uint8_t len)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_set_rw_num </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>set i2c transfer data number. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">len</td><td>transfer data number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00192">192</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga802f151430b4bc53991afedb87c91326"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_clear_flag" ref="ga802f151430b4bc53991afedb87c91326" args="(I2C_slave_t *i2c_unit, uint32_t i2c_it)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_slave_clear_flag </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>i2c_it</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga9eed0253109d05fa07da76389ac3ee0d"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_deinit" ref="ga9eed0253109d05fa07da76389ac3ee0d" args="(I2C_slave_t *i2c_unit)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_slave_deinit </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>de-initialize I2C unit </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>第<a class="el" href="xbr820__i2c__slave_8c_source.html#l00111">111</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gac4ba717ad69e1a20a2b9272d613065f0"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_get_int_status" ref="gac4ba717ad69e1a20a2b9272d613065f0" args="(I2C_slave_t *i2c_unit, uint32_t I2C_flag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">en_flag_status I2C_slave_get_int_status </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>I2C_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>checks whether the specified I2C interrupt has occurred or not. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">I2C_flag</td><td>specifies the interrupt source to check. This parameter can be any combination of the following values: <ul>
+<li>I2C_SLAVE_SR_RW_DONE </li>
+<li>I2C_SLAVE_SR_NACK </li>
+<li>I2C_SLAVE_SR_STOP </li>
+<li>I2C_SLAVE_SR_ADDR </li>
+<li>I2C_SLAVE_SR_RW </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>en_flag_status the new state of I2C_IT (SET or RESET). </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>第<a class="el" href="xbr820__i2c__slave_8c_source.html#l00131">131</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga10efd0bf902994dbf6c6c831c37a0178"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_init" ref="ga10efd0bf902994dbf6c6c831c37a0178" args="(I2C_slave_t *i2c_unit, uint8_t slave_addr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_slave_init </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>slave_addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>initialize I2C peripheral </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">slave_addr</td><td>the slave address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>第<a class="el" href="xbr820__i2c__slave_8c_source.html#l00098">98</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gade584f6e82f281337fde0d792c91337f"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_int_cmd" ref="gade584f6e82f281337fde0d792c91337f" args="(I2C_slave_t *i2c_unit, uint32_t i2c_it, en_functional_state_t state) assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_slave_int_cmd </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>i2c_it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">en_functional_state_t&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enables or disables the specified I2C interrupts. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit,:</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">i2c_it,:</td><td>specifies the I2C interrupts sources to be enabled or disabled. This parameter can be any combination of the following values: <ul>
+<li>I2C_SLAVE_RW_MASK </li>
+<li>I2C_SLAVE_NACK_MASK </li>
+<li>I2C_SLAVE_STOP_MASK </li>
+<li>I2C_SLAVE_ADDR_MASK </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">state,:</td><td>new state of the specified I2C interrupts. This parameter can be: ENABLE or DISABLE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gae5f693d1db2f27c6e67c6a8c1da57cb6"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_read_data" ref="gae5f693d1db2f27c6e67c6a8c1da57cb6" args="(I2C_slave_t *i2c_unit)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> I2C_slave_read_data </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>read data from i2c data register. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>uint8_t data from i2c. </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>第<a class="el" href="xbr820__i2c__slave_8c_source.html#l00150">150</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga028f4b293bfe83341742687f39598c25"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_read_word_addr" ref="ga028f4b293bfe83341742687f39598c25" args="(I2C_slave_t *i2c_unit)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> I2C_slave_read_word_addr </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>read addr from i2c data register. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>uint8_t word addr from i2c. </dd></dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>第<a class="el" href="xbr820__i2c__slave_8c_source.html#l00163">163</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1a7ed6c1d62b67592e24a8a04cc3b190"></a><!-- doxytag: member="xbr820_i2c_slave.h::I2C_slave_write_data" ref="ga1a7ed6c1d62b67592e24a8a04cc3b190" args="(I2C_slave_t *i2c_unit, uint8_t data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_slave_write_data </td>
+          <td>(</td>
+          <td class="paramtype">I2C_slave_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>write data to be sent to register. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">data</td><td>data to be sent. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>第<a class="el" href="xbr820__i2c__slave_8c_source.html#l00176">176</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1db536f04e8f5098d24b6f7545677b83"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_start_read" ref="ga1db536f04e8f5098d24b6f7545677b83" args="(I2C_master_t *i2c_unit, uint16_t reg_addr, uint8_t word_addr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_start_read </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>reg_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>word_addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>start i2c read operation </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+    <tr><td class="paramname">reg_addr</td><td>register address. </td></tr>
+    <tr><td class="paramname">word_addr</td><td>denote if the address is byte address or word address. This parameter can be any combination of the following values: 0 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00145">145</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga00608bb5a2648039fcc822784bbdba83"></a><!-- doxytag: member="xbr820_i2c_master.h::I2C_start_write" ref="ga00608bb5a2648039fcc822784bbdba83" args="(I2C_master_t *i2c_unit)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void I2C_start_write </td>
+          <td>(</td>
+          <td class="paramtype">I2C_master_t *&#160;</td>
+          <td class="paramname"><em>i2c_unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>start i2c write operation </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i2c_unit</td><td>select the I2C peripheral. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00165">165</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gac86cccbb5e8e187e27785144688e8b30"></a><!-- doxytag: member="xbr820_i2c_master.c::if" ref="gac86cccbb5e8e187e27785144688e8b30" args="(state!=DISABLE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype">state!&#160;</td>
+          <td class="paramname"> = <code>DISABLE</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__master_8c_source.html">xbr820_i2c_master.c</a>第<a class="el" href="xbr820__i2c__master_8c_source.html#l00065">65</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga34f58799ad705618605674bcf46742b2"></a><!-- doxytag: member="xbr820_i2c_slave.c::if" ref="ga34f58799ad705618605674bcf46742b2" args="(state==DISABLE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype">state&#160;</td>
+          <td class="paramname"> = <code>=&#160;DISABLE</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>第<a class="el" href="xbr820__i2c__slave_8c_source.html#l00065">65</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:50 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/config/memory_ld.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/config/memory_ld.h</div>  </div>
+</div>
+<div class="contents">
+<a href="memory__ld_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __MEMORY_LD_H__</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __MEMORY_LD_H__</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="code" href="config_8h.html">config.h</a>&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#ifdef CONFIG_SBUS_SRAM</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span><span class="preprocessor"> #define XBR820_SRAM_BASE       0x1f080000</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00007"></a><a class="code" href="memory__ld_8h.html#ad1e6b947ca9fea54398f1ff3f91939ca">00007</a> <span class="preprocessor"></span><span class="preprocessor"> #define XBR820_SRAM_BASE       0x01000000</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="preprocessor"> #ifdef CONFIG_SBUS_LOAD</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">  #define CONFIG_IBUS2SBUS_OFFSET       0x1e080000      </span><span class="comment">/* 0x1f080000-0x01000000 */</span>
+<a name="l00010"></a>00010 <span class="preprocessor"> #endif</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#ifndef CONFIG_IBUS2SBUS_OFFSET</span>
+<a name="l00013"></a><a class="code" href="memory__ld_8h.html#ac437106327af0f2f603e78ce42f459b1">00013</a> <span class="preprocessor"></span><span class="preprocessor"> #define CONFIG_IBUS2SBUS_OFFSET        0</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00015"></a><a class="code" href="memory__ld_8h.html#a4724d2a26b53d5a07796781a11aed474">00015</a> <span class="preprocessor"></span><span class="preprocessor">#define XBR820_SRAM_SIZE        0x00001000</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

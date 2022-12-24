@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_gpio.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_gpio.c文件参考</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="xbr820__gpio_8h_source.html">xbr820_gpio.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+xbr820_gpio.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__gpio_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__gpio_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__gpio_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__gpio_8c">
+<area shape="rect" id="node2" href="xbr820__gpio_8h.html" title="xbr820_gpio.h" alt="" coords="249,88,395,123"/><area shape="rect" id="node3" href="pho__common_8h.html" title="pho_common.h" alt="" coords="245,171,399,205"/></map>
+</div>
+</div>
+<p><a href="xbr820__gpio_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__gpio_8c.html#aaf3059b95c4de2b4a12dfbe81f75241f">pin_set_func</a> (<a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> func_sel)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__gpio_8c.html#a2c969fcc3536d1f2b98e0f854dff3d2e">gpio_init</a> (<a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel, const <a class="el" href="xbr820__gpio_8h.html#a9937a9ff44b3317318379ce0597de403">str_gpio_init_cfg_t</a> *gpio_init_cfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#ae011e05f9f8df8193fe9a5f4275351da">em_flag_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__gpio_8c.html#a58a8f59a8cab8df31445b99eb499996c">gpio_get</a> (<a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__gpio_8c.html#a4e425f543c3173690ba03308e0a1357a">gpio_set</a> (<a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__gpio_8c.html#a90649e3dda7a540f4afd8dacf72095b0">gpio_reset</a> (<a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__gpio_8c.html#a431641221bbb3deecb2036e2314910a8">gpio_toggle</a> (<a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel)</td></tr>
+</table>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="a58a8f59a8cab8df31445b99eb499996c"></a><!-- doxytag: member="xbr820_gpio.c::gpio_get" ref="a58a8f59a8cab8df31445b99eb499996c" args="(brx820_gpio_regdef *px, em_pin_t pin_sel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#ae011e05f9f8df8193fe9a5f4275351da">em_flag_status_t</a> gpio_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a>&#160;</td>
+          <td class="paramname"><em>pin_sel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__gpio_8c_source.html">xbr820_gpio.c</a>第<a class="el" href="xbr820__gpio_8c_source.html#l00019">19</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__gpio_8c_a58a8f59a8cab8df31445b99eb499996c_icgraph.png" border="0" usemap="#xbr820__gpio_8c_a58a8f59a8cab8df31445b99eb499996c_icgraph" alt=""/></div>
+<map name="xbr820__gpio_8c_a58a8f59a8cab8df31445b99eb499996c_icgraph" id="xbr820__gpio_8c_a58a8f59a8cab8df31445b99eb499996c_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2gpio_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="152,5,215,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c969fcc3536d1f2b98e0f854dff3d2e"></a><!-- doxytag: member="xbr820_gpio.c::gpio_init" ref="a2c969fcc3536d1f2b98e0f854dff3d2e" args="(brx820_gpio_regdef *px, em_pin_t pin_sel, const str_gpio_init_cfg_t *gpio_init_cfg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> gpio_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a>&#160;</td>
+          <td class="paramname"><em>pin_sel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="xbr820__gpio_8h.html#a9937a9ff44b3317318379ce0597de403">str_gpio_init_cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>gpio_init_cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__gpio_8c_source.html">xbr820_gpio.c</a>第<a class="el" href="xbr820__gpio_8c_source.html#l00011">11</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__gpio_8c_a2c969fcc3536d1f2b98e0f854dff3d2e_icgraph.png" border="0" usemap="#xbr820__gpio_8c_a2c969fcc3536d1f2b98e0f854dff3d2e_icgraph" alt=""/></div>
+<map name="xbr820__gpio_8c_a2c969fcc3536d1f2b98e0f854dff3d2e_icgraph" id="xbr820__gpio_8c_a2c969fcc3536d1f2b98e0f854dff3d2e_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2gpio_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="148,5,211,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a90649e3dda7a540f4afd8dacf72095b0"></a><!-- doxytag: member="xbr820_gpio.c::gpio_reset" ref="a90649e3dda7a540f4afd8dacf72095b0" args="(brx820_gpio_regdef *px, em_pin_t pin_sel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> gpio_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a>&#160;</td>
+          <td class="paramname"><em>pin_sel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__gpio_8c_source.html">xbr820_gpio.c</a>第<a class="el" href="xbr820__gpio_8c_source.html#l00030">30</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__gpio_8c_a90649e3dda7a540f4afd8dacf72095b0_icgraph.png" border="0" usemap="#xbr820__gpio_8c_a90649e3dda7a540f4afd8dacf72095b0_icgraph" alt=""/></div>
+<map name="xbr820__gpio_8c_a90649e3dda7a540f4afd8dacf72095b0_icgraph" id="xbr820__gpio_8c_a90649e3dda7a540f4afd8dacf72095b0_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2gpio_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="168,5,231,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e425f543c3173690ba03308e0a1357a"></a><!-- doxytag: member="xbr820_gpio.c::gpio_set" ref="a4e425f543c3173690ba03308e0a1357a" args="(brx820_gpio_regdef *px, em_pin_t pin_sel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> gpio_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a>&#160;</td>
+          <td class="paramname"><em>pin_sel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__gpio_8c_source.html">xbr820_gpio.c</a>第<a class="el" href="xbr820__gpio_8c_source.html#l00024">24</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__gpio_8c_a4e425f543c3173690ba03308e0a1357a_icgraph.png" border="0" usemap="#xbr820__gpio_8c_a4e425f543c3173690ba03308e0a1357a_icgraph" alt=""/></div>
+<map name="xbr820__gpio_8c_a4e425f543c3173690ba03308e0a1357a_icgraph" id="xbr820__gpio_8c_a4e425f543c3173690ba03308e0a1357a_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2gpio_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="151,5,213,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a431641221bbb3deecb2036e2314910a8"></a><!-- doxytag: member="xbr820_gpio.c::gpio_toggle" ref="a431641221bbb3deecb2036e2314910a8" args="(brx820_gpio_regdef *px, em_pin_t pin_sel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> gpio_toggle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a>&#160;</td>
+          <td class="paramname"><em>pin_sel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__gpio_8c_source.html">xbr820_gpio.c</a>第<a class="el" href="xbr820__gpio_8c_source.html#l00036">36</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__gpio_8c_a431641221bbb3deecb2036e2314910a8_icgraph.png" border="0" usemap="#xbr820__gpio_8c_a431641221bbb3deecb2036e2314910a8_icgraph" alt=""/></div>
+<map name="xbr820__gpio_8c_a431641221bbb3deecb2036e2314910a8_icgraph" id="xbr820__gpio_8c_a431641221bbb3deecb2036e2314910a8_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2gpio_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="177,5,240,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf3059b95c4de2b4a12dfbe81f75241f"></a><!-- doxytag: member="xbr820_gpio.c::pin_set_func" ref="aaf3059b95c4de2b4a12dfbe81f75241f" args="(brx820_gpio_regdef *px, em_pin_t pin_sel, uint8_t func_sel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> pin_set_func </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a>&#160;</td>
+          <td class="paramname"><em>pin_sel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>func_sel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__gpio_8c_source.html">xbr820_gpio.c</a>第<a class="el" href="xbr820__gpio_8c_source.html#l00003">3</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__gpio_8c_aaf3059b95c4de2b4a12dfbe81f75241f_icgraph.png" border="0" usemap="#xbr820__gpio_8c_aaf3059b95c4de2b4a12dfbe81f75241f_icgraph" alt=""/></div>
+<map name="xbr820__gpio_8c_aaf3059b95c4de2b4a12dfbe81f75241f_icgraph" id="xbr820__gpio_8c_aaf3059b95c4de2b4a12dfbe81f75241f_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2gpio_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="185,5,248,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

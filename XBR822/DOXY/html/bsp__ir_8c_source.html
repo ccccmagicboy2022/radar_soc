@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/ir/bsp_ir/bsp_ir.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/ir/bsp_ir/bsp_ir.c</div>  </div>
+</div>
+<div class="contents">
+<a href="bsp__ir_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="bsp__ir_8h.html">bsp_ir.h</a>&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;stdint.h&quot;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__ir_8h.html" title="This file contains all the functions prototypes for the IR firmware library.">xbr820_ir.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__utility_8h.html">xbr820_utility.h</a>&quot;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 
+<a name="l00014"></a><a class="code" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0">00014</a> <span class="keywordtype">void</span> <a class="code" href="bsp__ir_8c.html#a8f616cb6c33c163b6869bb08ff3736f7" title="IR initialize.">ir_init</a>(<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ir_priority)
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016     <span class="comment">//set_pin_func(P1_5, FUNC_IR);</span>
+<a name="l00017"></a>00017     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__ir_8h.html#a6fa00ce3ccb81cffcadb6f17297aa5e2">IS_IR_CONFIG_IT</a>(ir_priority));
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019     <a class="code" href="structstc__irq__set__conf.html">stc_irq_set_cfg_t</a>  irq_ir_set_cfg;
+<a name="l00020"></a>00020     irq_ir_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a> = <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da065387a68899dde5dec98c913157a5eb">IR_IRQ</a>;
+<a name="l00021"></a>00021     irq_ir_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a4770eadb33bbd68dfd15ec540c345a2f">irq_func_pointer</a> = <a class="code" href="bsp__ir_8h.html#a76f26d2209bcb1ea0ae59744f9994d3e">IR_irqhandler</a>;
+<a name="l00022"></a>00022     irq_ir_set_cfg.<a class="code" href="structstc__irq__set__conf.html#af20f3fdbedebe464155d85c8cddfdcd6">irq_priority</a> = ir_priority;
+<a name="l00023"></a>00023     <a class="code" href="xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0">set_irq</a>(&amp;irq_ir_set_cfg);
+<a name="l00024"></a>00024     <a class="code" href="xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e">start_irq_x</a>(irq_ir_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a>);
+<a name="l00025"></a>00025 }
+<a name="l00026"></a>00026 
+<a name="l00033"></a><a class="code" href="bsp__ir_8h.html#adc8cc82194fad64b41c14cb758afa205">00033</a> <span class="keywordtype">void</span> <a class="code" href="bsp__ir_8c.html#adc8cc82194fad64b41c14cb758afa205" title="IR de-initialize.">ir_deinit</a>(<span class="keywordtype">void</span>)
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035      <a class="code" href="xbr820__interrupts_8h.html#af414107628d0e88db6ab45c376294366">stop_irq_x</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da065387a68899dde5dec98c913157a5eb">IR_IRQ</a>);
+<a name="l00036"></a>00036 }
+<a name="l00037"></a>00037 
+<a name="l00038"></a><a class="code" href="bsp__ir_8c.html#ae1497676aef5def4c7260f6c25928edf">00038</a> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="bsp__ir_8c.html#ae1497676aef5def4c7260f6c25928edf">ir_flag</a> = 0;
+<a name="l00039"></a><a class="code" href="bsp__ir_8c.html#a2e68d026e6aea8f42129abc6de13703e">00039</a> <a class="code" href="struct_i_r__mc__t.html">IR_mc_t</a> <a class="code" href="bsp__ir_8c.html#a2e68d026e6aea8f42129abc6de13703e">irdata</a>;
+<a name="l00040"></a>00040 
+<a name="l00041"></a><a class="code" href="bsp__ir_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">00041</a> <a class="code" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section (<span class="stringliteral">&quot;INT&quot;</span>))) void <a class="code" href="bsp__ir_8h.html#a76f26d2209bcb1ea0ae59744f9994d3e">IR_irqhandler</a>(<span class="keywordtype">void</span>)
+<a name="l00042"></a>00042 {
+<a name="l00043"></a>00043     <a class="code" href="bsp__ir_8c.html#ae1497676aef5def4c7260f6c25928edf">ir_flag</a> = 1;
+<a name="l00044"></a>00044     <span class="keywordflow">return</span>;
+<a name="l00045"></a>00045 }
+<a name="l00046"></a>00046 
+<a name="l00047"></a><a class="code" href="bsp__ir_8h.html#a2de4ef520245b056075e09f124120c9a">00047</a> <span class="keywordtype">void</span> <a class="code" href="bsp__ir_8c.html#a2de4ef520245b056075e09f124120c9a">ir_test</a>(<span class="keywordtype">void</span>)
+<a name="l00048"></a>00048 {
+<a name="l00049"></a>00049     <span class="keywordflow">if</span> (<a class="code" href="bsp__ir_8c.html#ae1497676aef5def4c7260f6c25928edf">ir_flag</a>) {
+<a name="l00050"></a>00050         <a class="code" href="group___i_r.html#gac935912d5769b902698078256a3e0a24" title="IR module interface to get out the incoming data.">IR_read_code</a>(&amp;irdata, <a class="code" href="mcu_2common_2xbr820_8h.html#aa85011911b47af0ee46e0e67be467683">BRX820_IR</a>);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052         <span class="keywordtype">int</span> i = 4;
+<a name="l00053"></a>00053         <span class="keywordflow">while</span> (i) {
+<a name="l00054"></a>00054             <span class="comment">//putchar( (irdata.ir_code &gt;&gt; (8 * (i - 1) ) ) &amp; 0xff);</span>
+<a name="l00055"></a>00055             i--;
+<a name="l00056"></a>00056         }
+<a name="l00057"></a>00057         <a class="code" href="bsp__ir_8c.html#ae1497676aef5def4c7260f6c25928edf">ir_flag</a> = 0;
+<a name="l00058"></a>00058         <a class="code" href="group___i_r.html#gacc1b68aa1fea3f96941ad1fb4f236260" title="IR struct.">IR_clr_int</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#aa85011911b47af0ee46e0e67be467683">BRX820_IR</a>);
+<a name="l00059"></a>00059     }
+<a name="l00060"></a>00060 }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

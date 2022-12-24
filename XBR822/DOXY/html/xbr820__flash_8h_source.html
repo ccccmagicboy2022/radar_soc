@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_flash.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_flash.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__flash_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00025"></a>00025 <span class="comment">/*include----------------------------------------------------------------------*/</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="pho__common_8h.html">pho_common.h</a>&quot;</span>
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="comment">/*define-----------------------------------------------------------------------*/</span>
+<a name="l00029"></a><a class="code" href="xbr820__flash_8h.html#a96eb94183486246adebeb724b10c77f0">00029</a> <span class="preprocessor">#define XBR820_SPI_BASEADDR    (0x1f070000UL)</span>
+<a name="l00030"></a><a class="code" href="xbr820__flash_8h.html#ad569374ff45fc239045e33cf05a02bf8">00030</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CMMD_LEN        11</span>
+<a name="l00031"></a><a class="code" href="xbr820__flash_8h.html#a9180b16a11d7255da7c9cea3c9def4fe">00031</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_READ_LEN        4</span>
+<a name="l00032"></a><a class="code" href="xbr820__flash_8h.html#aa6079b4c244489bc606f592172dc6a08">00032</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_BURST_LEN        4</span>
+<a name="l00033"></a>00033 <span class="preprocessor"></span><span class="preprocessor">#ifndef SF_CMD_READ</span>
+<a name="l00034"></a><a class="code" href="xbr820__flash_8h.html#a1561133132f79ec32bca11f94c79fd26">00034</a> <span class="preprocessor"></span><span class="preprocessor"> #define SF_CMD_READ        COMMON_INS_FARD</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="comment">/* XBR820 serial FLASH registers, loop mapping each 16B */</span>
+<a name="l00037"></a><a class="code" href="xbr820__flash_8h.html#a3ecc73f7a1477b6815f7f7937eebaefc">00037</a> <span class="preprocessor">#define SPI_CR                (XBR820_SPI_BASEADDR + 0)</span>
+<a name="l00038"></a><a class="code" href="xbr820__flash_8h.html#a9223a0f901212efe6a3dd2ad653a39f0">00038</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM                (XBR820_SPI_BASEADDR + 4)</span>
+<a name="l00039"></a><a class="code" href="xbr820__flash_8h.html#a03cb5afb8b2a150da283424bc2f9bd8c">00039</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM1               (XBR820_SPI_BASEADDR + 8)</span>
+<a name="l00040"></a><a class="code" href="xbr820__flash_8h.html#ae62edd0d30bd27d89b790bb37375f925">00040</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM2               (XBR820_SPI_BASEADDR + 12)</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="comment">/* XBR820 serial FLASH CR bits */</span>
+<a name="l00042"></a><a class="code" href="xbr820__flash_8h.html#ad3bc24bea78f56e260b3d2cedeccdb3f">00042</a> <span class="preprocessor">#define SPI_CR_CLKPH           0x01    </span><span class="comment">/* SPI clock phase when working */</span>
+<a name="l00043"></a><a class="code" href="xbr820__flash_8h.html#aef75d5e1518631127070683ed610c9b8">00043</a> <span class="preprocessor">#define SPI_CR_CLKPO           0x02    </span><span class="comment">/* SPI clock active porlarity */</span>
+<a name="l00044"></a><a class="code" href="xbr820__flash_8h.html#a18e49c9e57711f924dfedfd2f0ed649c">00044</a> <span class="preprocessor">#define SPI_CR_SPIEN           0x04    </span><span class="comment">/* SPI controller enable or not */</span>
+<a name="l00045"></a><a class="code" href="xbr820__flash_8h.html#a756d4ae8e2d4c21035dd65daec2c4cb1">00045</a> <span class="preprocessor">#define SPI_CR_STOP            0x08    </span><span class="comment">/* SPI sequency stop */</span>
+<a name="l00046"></a>00046 
+<a name="l00047"></a><a class="code" href="xbr820__flash_8h.html#a510ea5a3e92eeb32893872077ced7d12">00047</a> <span class="preprocessor">#define SPI_CR_HOLD            0x10    </span><span class="comment">/* SPI HOLD pin control */</span>
+<a name="l00048"></a><a class="code" href="xbr820__flash_8h.html#ac44759d1fa7929de68367e11d5e65870">00048</a> <span class="preprocessor">#define SPI_CR_DUAL            0x20    </span><span class="comment">/* SPI FLASH dual read mode */</span>
+<a name="l00049"></a>00049 
+<a name="l00050"></a><a class="code" href="xbr820__flash_8h.html#a894f6251c147e2cb8e1455e728a55aaf">00050</a> <span class="preprocessor">#define COMMON_INS_WRSR        0x01    </span><span class="comment">/* Common write status instruction */</span>
+<a name="l00051"></a><a class="code" href="xbr820__flash_8h.html#a4ed713f83ac0ed2e5d60a59798ce8604">00051</a> <span class="preprocessor">#define COMMON_INS_PP        0x02    </span><span class="comment">/* Common page program instruction */</span>
+<a name="l00052"></a><a class="code" href="xbr820__flash_8h.html#a26ee814d921730f9132531978e771fc0">00052</a> <span class="preprocessor">#define COMMON_INS_READ        0x03    </span><span class="comment">/* Common read instruction */</span>
+<a name="l00053"></a><a class="code" href="xbr820__flash_8h.html#a13512c97c58b6c9bd58cb3785404fa4c">00053</a> <span class="preprocessor">#define COMMON_INS_WRDI        0x04    </span><span class="comment">/* Common write disable instruction */</span>
+<a name="l00054"></a><a class="code" href="xbr820__flash_8h.html#ad2cb78cfaa8d029cce4d8d35ce1af28d">00054</a> <span class="preprocessor">#define COMMON_INS_RDSR        0x05    </span><span class="comment">/* Common read status instruction */</span>
+<a name="l00055"></a><a class="code" href="xbr820__flash_8h.html#a0427c38deaa8551c07058464bca84505">00055</a> <span class="preprocessor">#define COMMON_INS_WREN        0x06    </span><span class="comment">/* Common write enable instruction */</span>
+<a name="l00056"></a><a class="code" href="xbr820__flash_8h.html#a1602114d46355e135ce46fd27a2a2fdd">00056</a> <span class="preprocessor">#define COMMON_INS_FARD        0x0B    </span><span class="comment">/* Common fast read instruction */</span>
+<a name="l00057"></a><a class="code" href="xbr820__flash_8h.html#a50617dbcf7c73769e035d81dd6928a25">00057</a> <span class="preprocessor">#define COMMON_INS_RES        0xAB    </span><span class="comment">/* Common release from deep power-down &amp; read device id instruction */</span>
+<a name="l00058"></a><a class="code" href="xbr820__flash_8h.html#a839e5e8228fe123726e8b079eb43847b">00058</a> <span class="preprocessor">#define COMMON_INS_DP        0xB9    </span><span class="comment">/* Common deep power-down instruction */</span>
+<a name="l00059"></a><a class="code" href="xbr820__flash_8h.html#a7d930c33aa8a7ee58c9786925ff152c8">00059</a> <span class="preprocessor">#define COMMON_INS_BE        0xC7    </span><span class="comment">/* Common bulk erase instruction */</span>
+<a name="l00060"></a><a class="code" href="xbr820__flash_8h.html#a6b3850b65016fab171999df6754cecc1">00060</a> <span class="preprocessor">#define COMMON_INS_SE        0xD8    </span><span class="comment">/* Common sector erase instruction */</span>
+<a name="l00061"></a><a class="code" href="xbr820__flash_8h.html#a7ae4125c0d73b58ec669d4eac9d5f6e9">00061</a> <span class="preprocessor">#define COMMON_INS_FARDD    0x3B    </span><span class="comment">/* Common fast read dual-output instruction */</span>
+<a name="l00062"></a><a class="code" href="xbr820__flash_8h.html#a45c2a703909a907f98d8cd718e1a93e8">00062</a> <span class="preprocessor">#define COMMON_INS_RDID        0x90    </span><span class="comment">/* Common read ID instruction */</span>
+<a name="l00063"></a><a class="code" href="xbr820__flash_8h.html#a79c1b724d4860ee13c7430f9b364645a">00063</a> <span class="preprocessor">#define COMMON_INS_JEDEC    0x9F    </span><span class="comment">/* Common read JEDEC ID instruction */</span>
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="xbr820__flash_8h.html#a5ff44e7bcabdb93863009b15fd058301">00065</a> <span class="preprocessor">#define COMMON_INS_EN4B        0xB7    </span><span class="comment">/* Common enter 4byte mode instruction */</span>
+<a name="l00066"></a><a class="code" href="xbr820__flash_8h.html#aa2ba978b9181d766a43120c246b33a3e">00066</a> <span class="preprocessor">#define COMMON_INS_EX4B        0xE9    </span><span class="comment">/* Common exit 4byte mode instruction */</span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a><a class="code" href="xbr820__flash_8h.html#a27561e3bd0f9c4daff65806f5f8389bc">00068</a> <span class="preprocessor">#define SF_PAGE_SIZE        (1 &lt;&lt; 8)</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span>
+<a name="l00070"></a>00070 <span class="comment">/*variate statement------------------------------------------------------------*/</span>
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="comment">/*function statement-----------------------------------------------------------*/</span>
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 <span class="preprocessor">#ifndef __XBR820_FLASH_H_</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_FLASH_H_</span>
+<a name="l00077"></a>00077 <span class="preprocessor"></span>
+<a name="l00078"></a>00078 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00079"></a>00079 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>
+<a name="l00080"></a>00080 {
+<a name="l00081"></a>00081 <span class="preprocessor">#endif</span>
+<a name="l00082"></a>00082 <span class="preprocessor"></span>
+<a name="l00083"></a>00083 <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a0b9b3f9fb991a49c4604e8b1f2fa75da">flashProgram</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, <span class="keyword">const</span> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *src, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length);
+<a name="l00084"></a>00084 <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a3264423b424a8016e6beda9e5495db2b">flashRead</a>(<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* dst, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> src, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length);
+<a name="l00085"></a>00085 <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099">flashChipErase</a>(<span class="keywordtype">void</span>);
+<a name="l00086"></a>00086 <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a23ba8b20c42054b534a3b7dcc10df085">flashSectErase</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> sect);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>}
+<a name="l00090"></a>00090 <span class="preprocessor">#endif</span>
+<a name="l00091"></a>00091 <span class="preprocessor"></span>
+<a name="l00092"></a>00092 <span class="preprocessor">#endif</span>
+<a name="l00093"></a>00093 <span class="preprocessor"></span>
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$group___c_s_i___core___reg_acc_functions.html#gadc13c5d6ecce95c4bb970758580b3732" title="Data Synchronization Barrier." alt="" coords="283,5,367,40"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___reg_acc_functions.html#ga2b6c41d8791d9f67b0e5473c47f5f348" title="Instruction Synchronization Barrier." alt="" coords="287,64,363,99"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___reg_acc_functions.html#ga3975cb01c8d9c0842ff7f1035ad9bc1a" title="Get MHCR." alt="" coords="254,123,395,157"/>
+<area shape="rect" id="node5" href="$group___c_s_i___core___reg_acc_functions.html#ga85e7fdedef10ae402ac66b2d2c7cd7dd" title="Set MHCR." alt="" coords="255,181,395,216"/>
+<area shape="rect" id="node6" href="$group___c_s_i___core___reg_acc_functions.html#gae81735d38a41ffe2fdc4483ef215f212" title="Invalid all icache." alt="" coords="240,240,409,275"/>
+</map>

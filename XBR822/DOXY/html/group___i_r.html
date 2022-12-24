@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>IR</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">IR</div>  </div>
+<div class="ingroups"><a class="el" href="group___p_h_o___periph___driver.html">PHO_Periph_Driver</a></div></div>
+<div class="contents">
+<div class="dynheader">
+IR合作图：</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group___i_r.png" border="0" alt="" usemap="#group______i__r"/>
+<map name="group______i__r" id="group______i__r">
+<area shape="rect" id="node2" href="group___p_h_o___periph___driver.html" title="PHO_Periph_Driver" alt="" coords="5,5,200,40"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_r.html#gacc1b68aa1fea3f96941ad1fb4f236260">IR_clr_int</a> (<a class="el" href="structbrx820__ir__regdef.html">brx820_ir_regdef</a> *ir_clr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">IR struct.  <a href="#gacc1b68aa1fea3f96941ad1fb4f236260"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_r.html#gac935912d5769b902698078256a3e0a24">IR_read_code</a> (<a class="el" href="struct_i_r__mc__t.html">IR_mc_t</a> *<a class="el" href="bsp__ir_8c.html#a2e68d026e6aea8f42129abc6de13703e">irdata</a>, <a class="el" href="structbrx820__ir__regdef.html">brx820_ir_regdef</a> *ircfg)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">IR module interface to get out the incoming data.  <a href="#gac935912d5769b902698078256a3e0a24"></a><br/></td></tr>
+</table>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="gacc1b68aa1fea3f96941ad1fb4f236260"></a><!-- doxytag: member="xbr820_ir.c::IR_clr_int" ref="gacc1b68aa1fea3f96941ad1fb4f236260" args="(brx820_ir_regdef *ir_clr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IR_clr_int </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbrx820__ir__regdef.html">brx820_ir_regdef</a> *&#160;</td>
+          <td class="paramname"><em>ir_clr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>IR struct. </p>
+<dl class="note"><dt><b>注解:</b></dt><dd>Specifies the IR mode. This parameter can be 0~3, 0: no data; 1: income data; 2: 3: repeat data </dd>
+<dd>
+Specifies the IR code from remoter receiver.This parameter is include 4 byte,that is 16 bits customer code </dd>
+<dd>
+8 bits data code and 8 bitsdata-conversion. IR module interface to clear the interrupt of IR. </dd></dl>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">none.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__ir_8c_source.html">xbr820_ir.c</a>第<a class="el" href="xbr820__ir_8c_source.html#l00058">58</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___i_r_gacc1b68aa1fea3f96941ad1fb4f236260_icgraph.png" border="0" usemap="#group___i_r_gacc1b68aa1fea3f96941ad1fb4f236260_icgraph" alt=""/></div>
+<map name="group___i_r_gacc1b68aa1fea3f96941ad1fb4f236260_icgraph" id="group___i_r_gacc1b68aa1fea3f96941ad1fb4f236260_icgraph">
+<area shape="rect" id="node2" href="bsp__ir_8h.html#a2de4ef520245b056075e09f124120c9a" title="ir_test" alt="" coords="159,5,236,40"/><area shape="rect" id="node3" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="284,5,347,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gac935912d5769b902698078256a3e0a24"></a><!-- doxytag: member="xbr820_ir.c::IR_read_code" ref="gac935912d5769b902698078256a3e0a24" args="(IR_mc_t *irdata, brx820_ir_regdef *ircfg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IR_read_code </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_r__mc__t.html">IR_mc_t</a> *&#160;</td>
+          <td class="paramname"><em>irdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structbrx820__ir__regdef.html">brx820_ir_regdef</a> *&#160;</td>
+          <td class="paramname"><em>ircfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>IR module interface to get out the incoming data. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data,:</td><td>which is a defined structure, include ir_mode and ir_code. It is an output param. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>for success. -1 for wrong input param. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__ir_8c_source.html">xbr820_ir.c</a>第<a class="el" href="xbr820__ir_8c_source.html#l00071">71</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___i_r_gac935912d5769b902698078256a3e0a24_icgraph.png" border="0" usemap="#group___i_r_gac935912d5769b902698078256a3e0a24_icgraph" alt=""/></div>
+<map name="group___i_r_gac935912d5769b902698078256a3e0a24_icgraph" id="group___i_r_gac935912d5769b902698078256a3e0a24_icgraph">
+<area shape="rect" id="node2" href="bsp__ir_8h.html#a2de4ef520245b056075e09f124120c9a" title="ir_test" alt="" coords="200,5,277,40"/><area shape="rect" id="node3" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="325,5,388,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:50 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

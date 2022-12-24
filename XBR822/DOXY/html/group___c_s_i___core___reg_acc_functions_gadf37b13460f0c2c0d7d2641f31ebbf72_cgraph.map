@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$group___c_s_i___core___reg_acc_functions.html#ga94aa91e5f5e48ef490eafc8a5c308779" title="Get PMPCFGx Register." alt="" coords="231,5,409,40"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___reg_acc_functions.html#ga75e6cfadf3489fa374423e6c421c2bd0" title="__get_PMPCFG1" alt="" coords="231,64,409,99"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___reg_acc_functions.html#ga396165e320855c8b27033cdb38e671fd" title="__get_PMPCFG2" alt="" coords="231,123,409,157"/>
+<area shape="rect" id="node5" href="$group___c_s_i___core___reg_acc_functions.html#ga16d4dc693b54d487345d8340212bebed" title="__get_PMPCFG3" alt="" coords="231,181,409,216"/>
+</map>

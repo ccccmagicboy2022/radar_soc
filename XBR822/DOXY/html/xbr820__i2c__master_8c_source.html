@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_i2c_master.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_i2c_master.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__i2c__master_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00026"></a>00026 <span class="comment">/* Includes ------------------------------------------------------------------*/</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__i2c__master_8h.html" title="This file contains all the functions prototypes for the I2C firmware library.">xbr820_i2c_master.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__utility_8h.html">xbr820_utility.h</a>&quot;</span>
+<a name="l00029"></a>00029 
+<a name="l00038"></a>00038 <span class="comment">/* Private typedef -----------------------------------------------------------*/</span>
+<a name="l00039"></a>00039 <span class="comment">/* Private define ------------------------------------------------------------*/</span> 
+<a name="l00040"></a>00040 <span class="comment">/* Private macro -------------------------------------------------------------*/</span>
+<a name="l00041"></a>00041 <span class="comment">/* Private variables ---------------------------------------------------------*/</span>
+<a name="l00042"></a>00042 <span class="comment">/* Private function prototypes -----------------------------------------------*/</span>
+<a name="l00043"></a>00043 <span class="comment">/* Private functions ---------------------------------------------------------*/</span>
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 
+<a name="l00059"></a>00059 <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#gac8961a1eeb8b6b8d1c244060890f3fc0" title="Enables or disables the specified I2C interrupts.">I2C_int_cmd</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it, en_functional_state_t state)
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00062"></a>00062     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(IS_FUNCTIONAL_STATE(state));
+<a name="l00063"></a>00063     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#gae2695a081871336881f9105d6c847c4f">IS_I2C_CONFIG_IT</a>(i2c_it));
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="group___i2_c.html#gac86cccbb5e8e187e27785144688e8b30">00065</a>     <span class="keywordflow">if</span> (state != <a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9dad3a9df141be0ccf10389b640f492b26d">DISABLE</a>)
+<a name="l00066"></a>00066         i2c_unit-&gt;INT_EN |= i2c_it;
+<a name="l00067"></a>00067     <span class="keywordflow">else</span>
+<a name="l00068"></a>00068         i2c_unit-&gt;INT_EN &amp;= ~i2c_it;
+<a name="l00069"></a>00069 }
+<a name="l00070"></a>00070 
+<a name="l00082"></a>00082 <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga218381b72332cbcd3e5f6949ea1404c1">I2C_clear_flag</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it)
+<a name="l00083"></a>00083 {
+<a name="l00084"></a>00084     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00085"></a>00085     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#gae2695a081871336881f9105d6c847c4f">IS_I2C_CONFIG_IT</a>(i2c_it));
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087     i2c_unit-&gt;INT_CLR |= i2c_it;
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00097"></a><a class="code" href="group___i2_c.html#ga6154ec9b397ce5431310d12d636ccc3f">00097</a> <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga6154ec9b397ce5431310d12d636ccc3f" title="initialize I2C peripheral">I2C_init</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> clk)
+<a name="l00098"></a>00098 {
+<a name="l00099"></a>00099     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00100"></a>00100     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#gae0d731df1b264d853703716c29309b9b">IS_I2C_CLOCK_SPEED</a>(clk));
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102     <a class="code" href="group___i2_c.html#ga218381b72332cbcd3e5f6949ea1404c1">I2C_clear_flag</a>(i2c_unit, <a class="code" href="group___i2_c.html#ga501aa9c243141128de646404806bc3d8">I2C_INT_NACK</a> | <a class="code" href="group___i2_c.html#ga64bafa5614e4ff7792dedd6b3ae05948">I2C_INT_STOP</a> | <a class="code" href="group___i2_c.html#ga16b6d998ea81cd3e0d231821b324053f">I2C_INT_TIMEOUT</a> | <a class="code" href="group___i2_c.html#gaf93e77f7573325a43e02ab72ed2782d1">I2C_INT_RW_DONE</a>);
+<a name="l00103"></a>00103     i2c_unit-&gt;CLK_DIV = (<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)<a class="code" href="mcu_2common_2xbr820_8h.html#a95982eccb57c2ae35f8ba3d8f0b05653">SYSTEM_CLOCK</a> / clk / 8;
+<a name="l00104"></a>00104     i2c_unit-&gt;CLK_EN = 1;
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00112"></a><a class="code" href="group___i2_c.html#gaf90e2ff091ba67821e8271bc98c6ecf4">00112</a> <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#gaf90e2ff091ba67821e8271bc98c6ecf4" title="de-initialize I2C unit">I2C_deinit</a>(I2C_master_t *i2c_unit)
+<a name="l00113"></a>00113 {
+<a name="l00114"></a>00114     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116     i2c_unit-&gt;CLK_EN = 0;
+<a name="l00117"></a>00117 }
+<a name="l00118"></a>00118 
+<a name="l00127"></a><a class="code" href="group___i2_c.html#gad007cc36d7e197ce7e6e8590bf825191">00127</a> <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#gad007cc36d7e197ce7e6e8590bf825191" title="read data register, one byte per time">I2C_read_data</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *data, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> pos, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">flag</a>)
+<a name="l00128"></a>00128 {
+<a name="l00129"></a>00129     <span class="keywordflow">if</span> (!flag)
+<a name="l00130"></a>00130         data[0] = ((i2c_unit-&gt;IICM_2_DATA0) &gt;&gt; (pos * 8)) &amp; 0xff;
+<a name="l00131"></a>00131     <span class="keywordflow">else</span>
+<a name="l00132"></a>00132         data[0] = ((i2c_unit-&gt;IICM_2_DATA1) &gt;&gt; (pos * 8)) &amp; 0xff;
+<a name="l00133"></a>00133 }
+<a name="l00134"></a>00134 
+<a name="l00145"></a><a class="code" href="group___i2_c.html#ga1db536f04e8f5098d24b6f7545677b83">00145</a> <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga1db536f04e8f5098d24b6f7545677b83" title="start i2c read operation">I2C_start_read</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> reg_addr, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> word_addr)
+<a name="l00146"></a>00146 {
+<a name="l00147"></a>00147     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149     i2c_unit-&gt;SLAVE_ADDR_f.SLAVE_ADDR = reg_addr;
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151     <span class="keywordflow">if</span> (word_addr)
+<a name="l00152"></a>00152         i2c_unit-&gt;CMD_CR_f.CPU_CMD = 0xF;
+<a name="l00153"></a>00153     <span class="keywordflow">else</span>
+<a name="l00154"></a>00154         i2c_unit-&gt;CMD_CR_f.CPU_CMD = 7;
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156     i2c_unit-&gt;CMD_CR_f.CPU_CMD_W = 1;
+<a name="l00157"></a>00157 }
+<a name="l00158"></a>00158 
+<a name="l00165"></a><a class="code" href="group___i2_c.html#ga00608bb5a2648039fcc822784bbdba83">00165</a> <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga00608bb5a2648039fcc822784bbdba83" title="start i2c write operation">I2C_start_write</a>(I2C_master_t *i2c_unit)
+<a name="l00166"></a>00166 {
+<a name="l00167"></a>00167     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169     i2c_unit-&gt;CMD_CR_f.CPU_CMD = 1;
+<a name="l00170"></a>00170     i2c_unit-&gt;CMD_CR_f.CPU_CMD_W = 1;
+<a name="l00171"></a>00171 }
+<a name="l00172"></a>00172 
+<a name="l00179"></a><a class="code" href="group___i2_c.html#ga2cbe97cbe43d3615587501095d95bedf">00179</a> <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga2cbe97cbe43d3615587501095d95bedf" title="config i2c slave address">I2C_config_slave_addr</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slave_addr)
+<a name="l00180"></a>00180 {
+<a name="l00181"></a>00181     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183     i2c_unit-&gt;SLAVE_ADDR_f.SLAVE_ADDR = slave_addr &lt;&lt; 1;
+<a name="l00184"></a>00184 }
+<a name="l00185"></a>00185 
+<a name="l00192"></a><a class="code" href="group___i2_c.html#ga184135719c61eb046a104586520965fe">00192</a> <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga184135719c61eb046a104586520965fe" title="set i2c transfer data number.">I2C_set_rw_num</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> len)
+<a name="l00193"></a>00193 {
+<a name="l00194"></a>00194     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196     i2c_unit-&gt;NWORD_f.NWORD = len - 1;
+<a name="l00197"></a>00197 }
+<a name="l00198"></a>00198 
+<a name="l00212"></a><a class="code" href="group___i2_c.html#gac88ea6c11c45eba4a1354156e2b6f169">00212</a> en_flag_status <a class="code" href="group___i2_c.html#gac88ea6c11c45eba4a1354156e2b6f169" title="checks whether the specified I2C interrupt has occurred or not.">I2C_get_int_status</a>(I2C_master_t *i2c_unit, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> I2C_flag)
+<a name="l00213"></a>00213 {
+<a name="l00214"></a>00214     en_flag_status ret = <a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299ea589b7d94a3d91d145720e2fed0eb3a05">RESET</a>;
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00217"></a>00217     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga5dcbe0727d2660f9c06ba95da72cbe2c">IS_I2C_STATUS_BIT</a>(I2C_flag));
+<a name="l00218"></a>00218 
+<a name="l00219"></a>00219     <span class="keywordflow">if</span> (0ul != i2c_unit-&gt;STATUS &amp; I2C_flag)
+<a name="l00220"></a>00220         ret = <a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299eab44c8101cc294c074709ec1b14211792">SET</a>;
+<a name="l00221"></a>00221 
+<a name="l00222"></a>00222     <span class="keywordflow">return</span> ret;
+<a name="l00223"></a>00223 }
+<a name="l00224"></a>00224 
+<a name="l00231"></a><a class="code" href="group___i2_c.html#gaec3c6fe614676e1caeea7feffb777f0a">00231</a> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="group___i2_c.html#gaec3c6fe614676e1caeea7feffb777f0a" title="get the data num transfered.">I2C_get_trans_number</a>(I2C_master_t *i2c_unit)
+<a name="l00232"></a>00232 {
+<a name="l00233"></a>00233     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="group___i2_c.html#ga33f31c5cb62dd834eeaacf62a9be84fa">IS_I2C_MASTER_PERIPH</a>(i2c_unit));
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235     <span class="keywordflow">return</span> i2c_unit-&gt;STATUS_f.DATA_NUM;
+<a name="l00236"></a>00236 }
+<a name="l00245"></a>00245 <span class="comment">/************************ (C) COPYRIGHT Phosense-tech *****END OF FILE****/</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

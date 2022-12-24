@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="192,5,439,40"/>
+<area shape="rect" id="node3" href="$group___f_r_e_q___d_e_t_e_c_t.html#gafaa39819be2f3a82523c0067668258f0" title="freq_get_interrupt_status. Reset means counting from the init value again." alt="" coords="194,64,437,99"/>
+<area shape="rect" id="node4" href="$bsp__freq__detect_8c.html#a68bf1e94671bd5221a87b4cf696aa399" title="set_freq_det_flag" alt="" coords="227,123,404,157"/>
+<area shape="rect" id="node5" href="$group___f_r_e_q___d_e_t_e_c_t.html#gafe8547701eb76d8b5447b861d04ec3c0" title="freq_clr_interrupt_status" alt="" coords="197,181,433,216"/>
+</map>

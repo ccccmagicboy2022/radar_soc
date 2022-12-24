@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>Core register bit field macros</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">Core register bit field macros</div>  </div>
+<div class="ingroups"><a class="el" href="group___c_s_i__core__register.html">Defines and Type Definitions</a></div></div>
+<div class="contents">
+
+<p>Macros for use with bit field definitions (xxx_Pos, xxx_Msk).  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+Core register bit field macros合作图：</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group___c_s_i__core__bitfield.png" border="0" alt="" usemap="#group______c__s__i____core____bitfield"/>
+<map name="group______c__s__i____core____bitfield" id="group______c__s__i____core____bitfield">
+<area shape="rect" id="node1" href="group___c_s_i__core__register.html" title="Type definitions and defines for CK80X processor based devices." alt="" coords="5,5,277,40"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__bitfield.html#ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</a>(field, value)&#160;&#160;&#160;((value &lt;&lt; field ## _Pos) &amp; field ## _Msk)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask and shift a bit field value for use in a register bit range.  <a href="#ga286e3b913dbd236c7f48ea70c8821f4e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i__core__bitfield.html#ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</a>(field, value)&#160;&#160;&#160;((value &amp; field ## _Msk) &gt;&gt; field ## _Pos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask and shift a register value to extract a bit filed value.  <a href="#ga139b6e261c981f014f386927ca4a8444"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<p>Macros for use with bit field definitions (xxx_Pos, xxx_Msk). </p>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="ga139b6e261c981f014f386927ca4a8444"></a><!-- doxytag: member="core_rv32.h::_FLD2VAL" ref="ga139b6e261c981f014f386927ca4a8444" args="(field, value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _FLD2VAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">field, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((value &amp; field ## _Msk) &gt;&gt; field ## _Pos)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Mask and shift a register value to extract a bit filed value. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">field</td><td>Name of the register bit field. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value of register. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>Masked and shifted bit field value. </dd></dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00372">372</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga286e3b913dbd236c7f48ea70c8821f4e"></a><!-- doxytag: member="core_rv32.h::_VAL2FLD" ref="ga286e3b913dbd236c7f48ea70c8821f4e" args="(field, value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _VAL2FLD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">field, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((value &lt;&lt; field ## _Pos) &amp; field ## _Msk)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Mask and shift a bit field value for use in a register bit range. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">field</td><td>Name of the register bit field. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value of the bit field. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>Masked and shifted value. </dd></dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00364">364</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_adc.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_adc.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__adc_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <span class="comment">/*******************************************************************************</span>
+<a name="l00013"></a>00013 <span class="comment"> * Include files</span>
+<a name="l00014"></a>00014 <span class="comment"> ******************************************************************************/</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__adc_8h.html" title="adc driver C head file">xbr820_adc.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00028"></a><a class="code" href="group__adc__group.html#ga94f7e2eb6a616857291dea3b3ef8ad6e">00028</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga94f7e2eb6a616857291dea3b3ef8ad6e" title="initializes an ADC instance.">adc_init</a>(<span class="keyword">const</span> <a class="code" href="structstr__adc__init.html" title="ADC init structure definition.">str_adc_init_cfg_t</a> *adc_init_cfg)
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030     <span class="comment">//adc_init_cfg-&gt;ADC_CHANNEL;</span>
+<a name="l00031"></a>00031     <a class="code" href="mcu_2common_2xbr820_8h.html#a41a5c338d072607dfdcc5c73588b28c1">BRX820_DSP_ADC</a>-&gt;CTL_f.ADC_DIV = <a class="code" href="mcu_2common_2xbr820_8h.html#a95982eccb57c2ae35f8ba3d8f0b05653">SYSTEM_CLOCK</a> / adc_init_cfg-&gt;<a class="code" href="structstr__adc__init.html#a149518ec9a562feb35f774781dd8591f">ADC_SAMPLE_RATE</a>;
+<a name="l00032"></a>00032     <a class="code" href="mcu_2common_2xbr820_8h.html#a41a5c338d072607dfdcc5c73588b28c1">BRX820_DSP_ADC</a>-&gt;CTL_f.TRI_MODE = adc_init_cfg-&gt;<a class="code" href="structstr__adc__init.html#a2c945c84eccbf327e06266ccefc959c9">ADC_SAMPLE_TRI_MODE</a>;
+<a name="l00033"></a>00033     <a class="code" href="mcu_2common_2xbr820_8h.html#a41a5c338d072607dfdcc5c73588b28c1">BRX820_DSP_ADC</a>-&gt;CTL_f.TRI_SRC = adc_init_cfg-&gt;<a class="code" href="structstr__adc__init.html#a469b131e3438dd8fe3a2f080766a6e7c">ADC_SAMPLE_TRI_SRC</a>;
+<a name="l00034"></a>00034     <a class="code" href="mcu_2common_2xbr820_8h.html#a41a5c338d072607dfdcc5c73588b28c1">BRX820_DSP_ADC</a>-&gt;DELAY_f.ADC_DELAY = adc_init_cfg-&gt;<a class="code" href="structstr__adc__init.html#aee60ca5dd3bc1deb4b5e6568ede8050b">ADC_SAMPLE_DELAY_CYCLE</a>;
+<a name="l00035"></a>00035     <a class="code" href="mcu_2common_2xbr820_8h.html#a41a5c338d072607dfdcc5c73588b28c1">BRX820_DSP_ADC</a>-&gt;RANGE_f.ADC_BEGIN = adc_init_cfg-&gt;<a class="code" href="structstr__adc__init.html#ad0028873fb7d106e116700d172b3809c">ADC_SAMPLE_BEGIN</a>;
+<a name="l00036"></a>00036     <a class="code" href="mcu_2common_2xbr820_8h.html#a41a5c338d072607dfdcc5c73588b28c1">BRX820_DSP_ADC</a>-&gt;RANGE_f.ADC_END = adc_init_cfg-&gt;<a class="code" href="structstr__adc__init.html#a898f8610c0cf08c8f7f830f1bf7a946e">ADC_SAMPLE_END</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038     <span class="keywordflow">return</span> Ok;
+<a name="l00039"></a>00039 }
+<a name="l00040"></a>00040 
+<a name="l00048"></a><a class="code" href="group__adc__group.html#ga632c6b150eb8655aee076b8f1c46437f">00048</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga632c6b150eb8655aee076b8f1c46437f" title="start ADC, and get the data.">adc_get_polling</a>(<a class="code" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *adc_val)
+<a name="l00049"></a>00049 {
+<a name="l00050"></a>00050     <a class="code" href="group__adc__group.html#ga888c03118243ed02fb8de5cf78fd7682" title="wait adc ready">adc_wait_ready</a>();
+<a name="l00051"></a>00051     <a class="code" href="group__adc__group.html#ga6597816f8693ad4b196a82b909be6790" title="get adc data">adc_get_data</a>(adc_val);
+<a name="l00052"></a>00052     <a class="code" href="group__adc__group.html#gae200e6a1ab10a8f72dc857c5dba3fd26" title="clear adc finish flag for next get data">adc_clear_flag</a>();
+<a name="l00053"></a>00053     <span class="keywordflow">return</span> Ok;
+<a name="l00054"></a>00054 }
+<a name="l00055"></a>00055 
+<a name="l00062"></a><a class="code" href="group__adc__group.html#ga716d4b22fd0b337367706f6b437d5592">00062</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga716d4b22fd0b337367706f6b437d5592" title="start ADC.">adc_start_sample</a>(<span class="keywordtype">void</span>)
+<a name="l00063"></a>00063 {
+<a name="l00064"></a>00064     xbr820_TOP-&gt;TOP_CTLB_BITS.ADC_TRG = 1;
+<a name="l00065"></a>00065     delay_us(1);
+<a name="l00066"></a>00066     xbr820_TOP-&gt;TOP_CTLB_BITS.ADC_TRG = 0;
+<a name="l00067"></a>00067     <span class="keywordflow">return</span> Ok;
+<a name="l00068"></a>00068 }
+<a name="l00069"></a>00069 
+<a name="l00076"></a><a class="code" href="group__adc__group.html#ga888c03118243ed02fb8de5cf78fd7682">00076</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga888c03118243ed02fb8de5cf78fd7682" title="wait adc ready">adc_wait_ready</a>(<span class="keywordtype">void</span>)
+<a name="l00077"></a>00077 {
+<a name="l00078"></a>00078     <span class="keywordflow">while</span> (!(xbr820_TOP-&gt;TOP_INT_FLAG_BITS.ADC)) {}
+<a name="l00079"></a>00079     <span class="keywordflow">return</span> Ok;
+<a name="l00080"></a>00080 }
+<a name="l00081"></a>00081 
+<a name="l00089"></a><a class="code" href="group__adc__group.html#ga6597816f8693ad4b196a82b909be6790">00089</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga6597816f8693ad4b196a82b909be6790" title="get adc data">adc_get_data</a>(<a class="code" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *adc_val)
+<a name="l00090"></a>00090 {
+<a name="l00091"></a>00091     *adc_val = PHM820_TOP-&gt;ADC_DATA;
+<a name="l00092"></a>00092     <span class="keywordflow">return</span> Ok;
+<a name="l00093"></a>00093 }
+<a name="l00094"></a>00094 
+<a name="l00101"></a><a class="code" href="group__adc__group.html#gae200e6a1ab10a8f72dc857c5dba3fd26">00101</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#gae200e6a1ab10a8f72dc857c5dba3fd26" title="clear adc finish flag for next get data">adc_clear_flag</a>(<span class="keywordtype">void</span>)
+<a name="l00102"></a>00102 {
+<a name="l00103"></a>00103     PHM820_TOP-&gt;TOP_INT_CLEAR_BITS.ADC = 1;
+<a name="l00104"></a>00104     <span class="keywordflow">return</span> Ok;
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

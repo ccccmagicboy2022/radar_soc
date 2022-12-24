@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/xbr820_spiflash/driver.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/xbr820_spiflash/driver.c</div>  </div>
+</div>
+<div class="contents">
+<a href="driver_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*******************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (c) 2012-2019 Hangzhou C-SKY Microsystems Co., Ltd.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * All rights reserved. This software is proprietary and confidential to</span>
+<a name="l00005"></a>00005 <span class="comment"> * Hangzhou C-SKY Microsystems Co., Ltd. and its licensors.</span>
+<a name="l00006"></a>00006 <span class="comment"> *</span>
+<a name="l00007"></a>00007 <span class="comment"> * Contributors:</span>
+<a name="l00008"></a>00008 <span class="comment"> *     Hangzhou C-SKY Microsystems Co., Ltd.</span>
+<a name="l00009"></a>00009 <span class="comment"> *</span>
+<a name="l00010"></a>00010 <span class="comment"> * 2019.6.18   Jiang Long(long_jiang@c-sky.com)</span>
+<a name="l00011"></a>00011 <span class="comment"> *     Initial API and implementation</span>
+<a name="l00012"></a>00012 <span class="comment"> *******************************************************************************/</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="flash__config_8h.html">flash_config.h</a>&quot;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="driver_8c.html#acde26524a84481820e0f94cfedfed24b">00016</a> <span class="preprocessor">#define XBR820_PMU_BASE     (0x1f010000UL)</span>
+<a name="l00017"></a><a class="code" href="driver_8c.html#afec9d7688098205a25aaeaae8ac6f5d6">00017</a> <span class="preprocessor"></span><span class="preprocessor">#define XBR820_STC_BASE     (0x1f020000UL)</span>
+<a name="l00018"></a><a class="code" href="driver_8c.html#a96eb94183486246adebeb724b10c77f0">00018</a> <span class="preprocessor"></span><span class="preprocessor">#define XBR820_SPI_BASEADDR    (0x1f090000UL)</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span>
+<a name="l00020"></a><a class="code" href="driver_8c.html#ad569374ff45fc239045e33cf05a02bf8">00020</a> <span class="preprocessor">#define SPI_CMMD_LEN        11</span>
+<a name="l00021"></a><a class="code" href="driver_8c.html#a9180b16a11d7255da7c9cea3c9def4fe">00021</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_READ_LEN        4</span>
+<a name="l00022"></a><a class="code" href="driver_8c.html#aa6079b4c244489bc606f592172dc6a08">00022</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_BURST_LEN        4</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a>00024  <span class="comment">/* XBR820 serial FLASH registers, loop mapping each 16B */</span>
+<a name="l00025"></a><a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">00025</a> <span class="preprocessor">#define SPI_CR                (XBR820_SPI_BASEADDR + 0)</span>
+<a name="l00026"></a><a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">00026</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM                (XBR820_SPI_BASEADDR + 4)</span>
+<a name="l00027"></a><a class="code" href="driver_8c.html#a03cb5afb8b2a150da283424bc2f9bd8c">00027</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM1                (XBR820_SPI_BASEADDR + 8)</span>
+<a name="l00028"></a><a class="code" href="driver_8c.html#ae62edd0d30bd27d89b790bb37375f925">00028</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM2                (XBR820_SPI_BASEADDR + 12)</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span>
+<a name="l00030"></a>00030 <span class="comment">/* XBR820 serial FLASH CR bits */</span>
+<a name="l00031"></a><a class="code" href="driver_8c.html#ad3bc24bea78f56e260b3d2cedeccdb3f">00031</a> <span class="preprocessor">#define SPI_CR_CLKPH        0x01    </span><span class="comment">/* SPI clock phase when working */</span>
+<a name="l00032"></a><a class="code" href="driver_8c.html#aef75d5e1518631127070683ed610c9b8">00032</a> <span class="preprocessor">#define SPI_CR_CLKPO        0x02    </span><span class="comment">/* SPI clock active porlarity */</span>
+<a name="l00033"></a><a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">00033</a> <span class="preprocessor">#define SPI_CR_SPIEN        0x04    </span><span class="comment">/* SPI controller enable or not */</span>
+<a name="l00034"></a><a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">00034</a> <span class="preprocessor">#define SPI_CR_STOP            0x08    </span><span class="comment">/* SPI sequency stop */</span>
+<a name="l00035"></a><a class="code" href="driver_8c.html#a510ea5a3e92eeb32893872077ced7d12">00035</a> <span class="preprocessor">#define SPI_CR_HOLD            0x10    </span><span class="comment">/* SPI HOLD pin control */</span>
+<a name="l00036"></a><a class="code" href="driver_8c.html#ac44759d1fa7929de68367e11d5e65870">00036</a> <span class="preprocessor">#define SPI_CR_DUAL            0x20    </span><span class="comment">/* SPI FLASH dual read mode */</span>
+<a name="l00037"></a><a class="code" href="driver_8c.html#a5aa6939d3ee46a1317d2ae9bb890d080">00037</a> <span class="preprocessor">#define SPI_CR_SPI2            0x40    </span><span class="comment">/* SPI CS2 for second SPI FLASH */</span>
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="comment">/* XBR820 serial FLASH CM0 bits */</span>
+<a name="l00040"></a><a class="code" href="driver_8c.html#aabae4d705efc3afc145d7dbfdc931430">00040</a> <span class="preprocessor">#define SPI_CM_CMLEN        0x04</span>
+<a name="l00041"></a><a class="code" href="driver_8c.html#aa82fab6ab330d0de13ab147c2282c6e7">00041</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM_RXLEN        0x70</span>
+<a name="l00042"></a><a class="code" href="driver_8c.html#a5fafca81c5d56149ab64eed0a7224a43">00042</a> <span class="preprocessor"></span><span class="preprocessor">#define SPI_CM_RXEN            0x80</span>
+<a name="l00043"></a>00043 <span class="preprocessor"></span>
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="driver_8c.html#af0268c0af70a7ebd532cf36e41c9808e">00045</a> <span class="preprocessor">#define send_cmd(cmd)        do { reg32_write(SPI_CM, 0x01 | (cmd &lt;&lt; 8)); } while(0)</span>
+<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00047"></a>00047 <span class="preprocessor">#ifdef CONFIG_TICK_DELAY</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span><span class="preprocessor">#define STC_CTL                (XBR820_STC_BASE + 0x00)</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span><span class="preprocessor">#define TICK_INIT            (XBR820_STC_BASE + 0x08)</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span><span class="preprocessor">#define TICK_CNT            (XBR820_STC_BASE + 0x40)</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span><span class="preprocessor">#define TICK_ENABLE            (0x10)</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span><span class="preprocessor">#define TICK_CNT_MS            (SYSTEM_CLOCK / 1000)</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span><span class="preprocessor">#define TICK_CNT_MAX        (-1UL)</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00055"></a>00055 <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="driver_8c.html#abf7b1ef2956fb4863ddee3a0bf758a5b">tick_init</a>(<span class="keywordtype">void</span>) {
+<a name="l00056"></a>00056     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(TICK_INIT, TICK_CNT_MAX);
+<a name="l00057"></a>00057     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(STC_CTL, TICK_ENABLE);
+<a name="l00058"></a>00058 }
+<a name="l00059"></a>00059 <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> tick_count(<span class="keywordtype">void</span>) {
+<a name="l00060"></a>00060     <span class="keywordflow">return</span> <a class="code" href="xbr820__flash_8c.html#aab51c5290827b595d92efe1299bd0c54">reg32_read</a>(TICK_CNT);
+<a name="l00061"></a>00061 }
+<a name="l00062"></a>00062 <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> tick_diff(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> start) {
+<a name="l00063"></a>00063     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> diff;
+<a name="l00064"></a>00064     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> cnt = tick_count();
+<a name="l00065"></a>00065     <span class="keywordflow">if</span> (cnt &gt; start)
+<a name="l00066"></a>00066         diff = start + (TICK_CNT_MAX - cnt);
+<a name="l00067"></a>00067     <span class="keywordflow">else</span>
+<a name="l00068"></a>00068         diff = start - cnt;
+<a name="l00069"></a>00069     <span class="keywordflow">return</span> diff;
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="driver_8c.html#a389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ms) {
+<a name="l00072"></a>00072     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> start = tick_count();
+<a name="l00073"></a>00073     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> period = ms * TICK_CNT_MS;
+<a name="l00074"></a>00074     <span class="keywordflow">while</span> (tick_diff(start) &lt; period);
+<a name="l00075"></a>00075 }
+<a name="l00076"></a>00076 <span class="preprocessor">#else</span>
+<a name="l00077"></a><a class="code" href="driver_8c.html#a389926e6490f1d3db0f0896e8b0f5f2e">00077</a> <span class="preprocessor"></span><span class="preprocessor"> #define delay_ms(ms)    do {} while(0)</span>
+<a name="l00078"></a><a class="code" href="driver_8c.html#abf7b1ef2956fb4863ddee3a0bf758a5b">00078</a> <span class="preprocessor"></span><span class="preprocessor"> #define tick_init()    do {} while(0)</span>
+<a name="l00079"></a>00079 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span>
+<a name="l00088"></a><a class="code" href="driver_8c.html#a44f30b25078f303e66d1ebc56bc37bd7">00088</a> <span class="preprocessor">#define ERROR_INIT      -200</span>
+<a name="l00089"></a><a class="code" href="driver_8c.html#a6caf064c02adf1cb697859773cd7250c">00089</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_READID    -201</span>
+<a name="l00090"></a><a class="code" href="driver_8c.html#adb56744e172d20d6ade9364a241e77e5">00090</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_PROGRAM   -202</span>
+<a name="l00091"></a><a class="code" href="driver_8c.html#ab1d43b8f2795d4e0be3b8a1baa48d732">00091</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_READ      -203</span>
+<a name="l00092"></a><a class="code" href="driver_8c.html#a67ef81cfb0ddec7ef571175270a951ae">00092</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_ERASE     -204</span>
+<a name="l00093"></a><a class="code" href="driver_8c.html#aded10952972ef87e5d29045d853c3ff9">00093</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_CHIPERASE -205</span>
+<a name="l00094"></a><a class="code" href="driver_8c.html#a0cf87dc74e48d456686421cd0fdffb66">00094</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_UNINIT    -206</span>
+<a name="l00095"></a><a class="code" href="driver_8c.html#a66718fcb83f101fb84ab77e416619128">00095</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_CHECKSUM  -207</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a><a class="code" href="driver_8c.html#abbd4ac54cc5fd87a9b98ebda4c7cdc6d">00097</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="driver_8c.html#abbd4ac54cc5fd87a9b98ebda4c7cdc6d">sf_size</a>;
+<a name="l00098"></a><a class="code" href="driver_8c.html#af5d17c00561c20eee8afe88aba7742d2">00098</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="driver_8c.html#af5d17c00561c20eee8afe88aba7742d2">sf_id</a>;
+<a name="l00099"></a>00099 <span class="preprocessor">#ifdef CONFIG_AUTO_PROGRAM</span>
+<a name="l00100"></a><a class="code" href="driver_8c.html#a42966d4c436c48886e2fe8ed66143219">00100</a> <span class="preprocessor"></span><a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="driver_8c.html#a42966d4c436c48886e2fe8ed66143219">block_erased</a>;
+<a name="l00101"></a>00101 <span class="preprocessor">#endif</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span><span class="preprocessor">#ifdef CONFIG_LOG_NUMS</span>
+<a name="l00103"></a><a class="code" href="xbr820__spiflash_2main_8c.html#a72e2da09ea98d51b2d53fa2a9aa17c5a">00103</a> <span class="preprocessor"></span><a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="driver_8c.html#ab3d3babec0e086c39e2768643682153e">log_data</a>[<a class="code" href="config_8h.html#a359920f8751745d6f21989cf1af1d443">CONFIG_LOG_NUMS</a>] = {0};
+<a name="l00104"></a><a class="code" href="xbr820__spiflash_2main_8c.html#ab0a2c40c01ea9ca0353130f70b740921">00104</a> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="driver_8c.html#ab0a2c40c01ea9ca0353130f70b740921">log_i</a> = 0;
+<a name="l00105"></a>00105 <span class="preprocessor">#endif</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>
+<a name="l00107"></a>00107 <span class="keywordtype">int</span> <a class="code" href="driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee">flashErase</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length);
+<a name="l00108"></a>00108 <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099">flashChipErase</a>();
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="preprocessor">#if 0</span>
+<a name="l00111"></a>00111 <span class="preprocessor"></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> wait_status(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> mask, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> val)
+<a name="l00112"></a>00112 {
+<a name="l00113"></a>00113     <span class="keywordflow">while</span> (1) {
+<a name="l00114"></a>00114         <span class="comment">/* Set RDSR instruction: TX command length is 1, RX data length is 1, total 2 */</span>
+<a name="l00115"></a>00115         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x92 | (<a class="code" href="xbr820__flash_8h.html#ad2cb78cfaa8d029cce4d8d35ce1af28d">COMMON_INS_RDSR</a> &lt;&lt; 8));
+<a name="l00116"></a>00116         <span class="keywordflow">if</span> ((<a class="code" href="xbr820__flash_8c.html#aab51c5290827b595d92efe1299bd0c54">reg32_read</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>) &amp; mask) == val)
+<a name="l00117"></a>00117             <span class="keywordflow">break</span>;
+<a name="l00118"></a>00118     }
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="keyword">static</span> <span class="keywordtype">void</span> wait_ready(<span class="keywordtype">void</span>)
+<a name="l00122"></a>00122 {
+<a name="l00123"></a>00123     <span class="comment">/* Read from any address of serial flash to check device free. */</span>
+<a name="l00124"></a>00124     <span class="keywordflow">return</span> wait_status(1, 0);
+<a name="l00125"></a>00125 }
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="keyword">static</span> <span class="keywordtype">void</span> write_protect(<span class="keywordtype">int</span> en)
+<a name="l00128"></a>00128 {
+<a name="l00129"></a>00129     <a class="code" href="driver_8c.html#af0268c0af70a7ebd532cf36e41c9808e">send_cmd</a>(<a class="code" href="xbr820__flash_8h.html#a0427c38deaa8551c07058464bca84505">COMMON_INS_WREN</a>);
+<a name="l00130"></a>00130     <span class="keywordflow">if</span> (en) {
+<a name="l00131"></a>00131         <span class="comment">/* Set WRSR instruction: TX command length is 2 (SR=0x7F), RX data length is 0, total 2 */</span>
+<a name="l00132"></a>00132         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x02 | (<a class="code" href="xbr820__flash_8h.html#a894f6251c147e2cb8e1455e728a55aaf">COMMON_INS_WRSR</a> &lt;&lt; 8) | (0x7F &lt;&lt; 16));
+<a name="l00133"></a>00133         wait_status(0x05, 0x04);
+<a name="l00134"></a>00134     }
+<a name="l00135"></a>00135     <span class="keywordflow">else</span> {
+<a name="l00136"></a>00136         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00137"></a>00137         <span class="comment">/* Set WRSR instruction: TX command length is 2 (SR=0x00), RX data length is 0, total 2 */</span>
+<a name="l00138"></a>00138         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x02 | (<a class="code" href="xbr820__flash_8h.html#a894f6251c147e2cb8e1455e728a55aaf">COMMON_INS_WRSR</a> &lt;&lt; 8));
+<a name="l00139"></a>00139         wait_status(0x05, 0);
+<a name="l00140"></a>00140     }
+<a name="l00141"></a>00141 }
+<a name="l00142"></a>00142 <span class="preprocessor">#else</span>
+<a name="l00143"></a>00143 <span class="preprocessor"></span><span class="keyword">static</span> <span class="keywordtype">void</span> wait_ready(<span class="keywordtype">void</span>)
+<a name="l00144"></a>00144 {
+<a name="l00145"></a>00145     <span class="comment">/* Read from any address of serial flash to check device free. */</span>
+<a name="l00146"></a>00146     <span class="keywordflow">while</span> (1) {
+<a name="l00147"></a>00147         <span class="comment">/* Set RDSR instruction: TX command length is 1, RX data length is 1, total 2 */</span>
+<a name="l00148"></a>00148         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x92 | (<a class="code" href="xbr820__flash_8h.html#ad2cb78cfaa8d029cce4d8d35ce1af28d">COMMON_INS_RDSR</a> &lt;&lt; 8));
+<a name="l00149"></a>00149         <span class="keywordflow">if</span> ((<a class="code" href="xbr820__flash_8c.html#aab51c5290827b595d92efe1299bd0c54">reg32_read</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>) &amp; 1) == 0)
+<a name="l00150"></a>00150             <span class="keywordflow">break</span>;
+<a name="l00151"></a>00151     }
+<a name="l00152"></a>00152 }
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 <span class="keyword">static</span> <span class="keywordtype">void</span> write_protect(<span class="keywordtype">int</span> en)
+<a name="l00155"></a>00155 {
+<a name="l00156"></a>00156     <a class="code" href="driver_8c.html#af0268c0af70a7ebd532cf36e41c9808e">send_cmd</a>(<a class="code" href="xbr820__flash_8h.html#a0427c38deaa8551c07058464bca84505">COMMON_INS_WREN</a>);
+<a name="l00157"></a>00157     <span class="keywordflow">if</span> (en) {
+<a name="l00158"></a>00158         <span class="comment">/* Set WRSR instruction: TX command length is 2 (SR=0x7F), RX data length is 0, total 2 */</span>
+<a name="l00159"></a>00159         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x02 | (<a class="code" href="xbr820__flash_8h.html#a894f6251c147e2cb8e1455e728a55aaf">COMMON_INS_WRSR</a> &lt;&lt; 8) | (0x7F &lt;&lt; 16));
+<a name="l00160"></a>00160     }
+<a name="l00161"></a>00161     <span class="keywordflow">else</span> {
+<a name="l00162"></a>00162         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00163"></a>00163         <span class="comment">/* Set WRSR instruction: TX command length is 2 (SR=0x00), RX data length is 0, total 2 */</span>
+<a name="l00164"></a>00164         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x02 | (<a class="code" href="xbr820__flash_8h.html#a894f6251c147e2cb8e1455e728a55aaf">COMMON_INS_WRSR</a> &lt;&lt; 8));
+<a name="l00165"></a>00165     }
+<a name="l00166"></a>00166     wait_ready();
+<a name="l00167"></a>00167 }
+<a name="l00168"></a>00168 <span class="preprocessor">#endif</span>
+<a name="l00169"></a>00169 <span class="preprocessor"></span>
+<a name="l00170"></a>00170 <span class="keyword">static</span> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> get_id(<span class="keywordtype">void</span>)
+<a name="l00171"></a>00171 {
+<a name="l00172"></a>00172     <a class="code" href="unionbyte__half__word.html">BHW_t</a> <span class="keywordtype">id</span> = { .<a class="code" href="unionbyte__half__word.html#aa8eec977b5e1722ce8793a8d0a8914d5">w</a> = 0 };
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 <span class="preprocessor">#ifdef CONFIG_SF_JEDEC_ID</span>
+<a name="l00175"></a>00175 <span class="preprocessor"></span>    <span class="comment">/* Read Identification JEDEC ID */</span>
+<a name="l00176"></a>00176     <span class="comment">/* TX command length is 1, RX data length is 3, total is 4 */</span>
+<a name="l00177"></a>00177     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x000000B4 | (<a class="code" href="xbr820__flash_8h.html#a79c1b724d4860ee13c7430f9b364645a">COMMON_INS_JEDEC</a> &lt;&lt; 8));
+<a name="l00178"></a>00178     <span class="keywordtype">id</span>.w = <a class="code" href="xbr820__flash_8c.html#aab51c5290827b595d92efe1299bd0c54">reg32_read</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>);
+<a name="l00179"></a>00179     <a class="code" href="typdef_8h.html#a47b0567c1a3927cb25cf44122845a117">swap</a>(<span class="keywordtype">id</span>.b[0], <span class="keywordtype">id</span>.b[2], <span class="keywordtype">id</span>.b[3]);
+<a name="l00180"></a>00180     <span class="keywordtype">id</span>.w &amp;= 0x00FFFFFF;
+<a name="l00181"></a>00181 <span class="preprocessor">#else</span>
+<a name="l00182"></a>00182 <span class="preprocessor"></span>    <span class="comment">/* Read Electronic Manufacturer ID &amp; Device ID */</span>
+<a name="l00183"></a>00183     <span class="comment">/* TX command length is 4, RX data length is 2, total is 6 */</span>
+<a name="l00184"></a>00184     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a03cb5afb8b2a150da283424bc2f9bd8c">SPI_CM1</a>, 0);
+<a name="l00185"></a>00185     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x000000A6 | (<a class="code" href="xbr820__flash_8h.html#a45c2a703909a907f98d8cd718e1a93e8">COMMON_INS_RDID</a> &lt;&lt; 8));
+<a name="l00186"></a>00186     <span class="keywordtype">id</span>.w = <a class="code" href="xbr820__flash_8c.html#aab51c5290827b595d92efe1299bd0c54">reg32_read</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>);
+<a name="l00187"></a>00187     <a class="code" href="typdef_8h.html#a47b0567c1a3927cb25cf44122845a117">swap</a>(<span class="keywordtype">id</span>.b[0], <span class="keywordtype">id</span>.b[1], <span class="keywordtype">id</span>.b[3]);
+<a name="l00188"></a>00188     <span class="keywordtype">id</span>.w &amp;= 0x0000FFFF;
+<a name="l00189"></a>00189 <span class="preprocessor">#endif</span>
+<a name="l00190"></a>00190 <span class="preprocessor"></span>    <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0);
+<a name="l00191"></a>00191     <span class="keywordflow">return</span> <span class="keywordtype">id</span>.w;
+<a name="l00192"></a>00192 }
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194 <span class="keyword">static</span> <span class="keywordtype">void</span> block_erase(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> offset)
+<a name="l00195"></a>00195 {
+<a name="l00196"></a>00196 <span class="preprocessor">#ifdef CONFIG_AUTO_PROGRAM</span>
+<a name="l00197"></a>00197 <span class="preprocessor"></span>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> blk_mask = 1 &lt;&lt; (offset &gt;&gt; <a class="code" href="flash__config_8h.html#af38b92eadc87b7999732759c1b3fcb64">SF_BLOCK_SHIFT</a>);
+<a name="l00198"></a>00198     <span class="keywordflow">if</span> (blk_mask &amp; block_erased)
+<a name="l00199"></a>00199         <span class="keywordflow">return</span>;
+<a name="l00200"></a>00200 <span class="preprocessor">#endif</span>
+<a name="l00201"></a>00201 <span class="preprocessor"></span>    <span class="keywordflow">if</span> (offset &amp; (<a class="code" href="flash__config_8h.html#a7db0f95cfe73894573f56db5848fe719">SF_BLOCK_SIZE</a> - 1))
+<a name="l00202"></a>00202         <span class="keywordflow">return</span>;
+<a name="l00203"></a>00203 <span class="preprocessor">#if 0</span>
+<a name="l00204"></a>00204 <span class="preprocessor"></span>    <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0x0c);
+<a name="l00205"></a>00205     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x601);
+<a name="l00206"></a>00206     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x102);
+<a name="l00207"></a>00207     <a class="code" href="driver_8c.html#a389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(200);
+<a name="l00208"></a>00208     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x601);
+<a name="l00209"></a>00209     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a03cb5afb8b2a150da283424bc2f9bd8c">SPI_CM1</a>, 0);
+<a name="l00210"></a>00210     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0xc704);
+<a name="l00211"></a>00211     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x601);
+<a name="l00212"></a>00212     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x7f0102);
+<a name="l00213"></a>00213 <span class="preprocessor">#else</span>
+<a name="l00214"></a>00214 <span class="preprocessor"></span>    <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00215"></a>00215     write_protect(0);
+<a name="l00216"></a>00216     <span class="comment">/* Enable write */</span>
+<a name="l00217"></a>00217     <a class="code" href="driver_8c.html#af0268c0af70a7ebd532cf36e41c9808e">send_cmd</a>(<a class="code" href="xbr820__flash_8h.html#a0427c38deaa8551c07058464bca84505">COMMON_INS_WREN</a>);
+<a name="l00218"></a>00218     <span class="comment">/* Set errase instruction: TX command length is 4, RX data length is 0, total 4 */</span>
+<a name="l00219"></a>00219     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a03cb5afb8b2a150da283424bc2f9bd8c">SPI_CM1</a>, offset &amp; 0xFF);
+<a name="l00220"></a>00220     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x04 | (<a class="code" href="xbr820__flash_8h.html#a6b3850b65016fab171999df6754cecc1">COMMON_INS_SE</a> &lt;&lt; 8) | (offset &amp; 0xFF0000) | ((offset &amp; 0xFF00) &lt;&lt; 16));
+<a name="l00221"></a>00221     wait_ready();
+<a name="l00222"></a>00222     <span class="comment">/* Protect chip */</span>
+<a name="l00223"></a>00223     write_protect(1);
+<a name="l00224"></a>00224     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0);
+<a name="l00225"></a>00225 <span class="preprocessor">#endif</span>
+<a name="l00226"></a>00226 <span class="preprocessor"></span><span class="preprocessor">#ifdef CONFIG_AUTO_PROGRAM</span>
+<a name="l00227"></a>00227 <span class="preprocessor"></span>    block_erased |= blk_mask;
+<a name="l00228"></a>00228 <span class="preprocessor">#endif</span>
+<a name="l00229"></a>00229 <span class="preprocessor"></span>}
+<a name="l00230"></a>00230 
+<a name="l00231"></a>00231 
+<a name="l00239"></a><a class="code" href="xbr820__spiflash_2main_8c.html#a9f9e0b850d75d42457f69e391e89c4c6">00239</a> <span class="keywordtype">int</span>  <a class="code" href="driver_8c.html#a9f9e0b850d75d42457f69e391e89c4c6">flashInit</a>() {
+<a name="l00240"></a>00240     sf_size = 0;
+<a name="l00241"></a>00241     <a class="code" href="driver_8c.html#abf7b1ef2956fb4863ddee3a0bf758a5b">tick_init</a>();
+<a name="l00242"></a>00242     <span class="comment">//reg32_write(XBR820_PMU_BOOT_RST, 0x13); // Not boot from SPINorFlash</span>
+<a name="l00243"></a>00243     <span class="comment">/* Enable SFLASH module */</span>
+<a name="l00244"></a>00244     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0);
+<a name="l00245"></a>00245     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00246"></a>00246     write_protect(1);
+<a name="l00247"></a>00247     sf_id = get_id();
+<a name="l00248"></a>00248     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0);
+<a name="l00249"></a>00249     <span class="keywordflow">if</span> (!sf_id)
+<a name="l00250"></a>00250         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#a44f30b25078f303e66d1ebc56bc37bd7">ERROR_INIT</a>;
+<a name="l00251"></a>00251     sf_size = <a class="code" href="flash__config_8h.html#a7db0f95cfe73894573f56db5848fe719">SF_BLOCK_SIZE</a> &lt;&lt; (sf_id &amp; 0x0F);
+<a name="l00252"></a>00252 <span class="preprocessor">#ifdef CONFIG_AUTO_PROGRAM</span>
+<a name="l00253"></a>00253 <span class="preprocessor"></span>    block_erased = 0;
+<a name="l00254"></a>00254 <span class="preprocessor">#endif</span>
+<a name="l00255"></a>00255 <span class="preprocessor"></span>    <span class="keywordflow">return</span> 0;
+<a name="l00256"></a>00256 }
+<a name="l00257"></a>00257 
+<a name="l00266"></a><a class="code" href="xbr820__spiflash_2main_8c.html#ab5101c59a4e1f46356eda08069db84e1">00266</a> <span class="keywordtype">int</span>  <a class="code" href="driver_8c.html#ab5101c59a4e1f46356eda08069db84e1">flashID</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* <a class="code" href="driver_8c.html#ab5101c59a4e1f46356eda08069db84e1">flashID</a>) {
+<a name="l00267"></a>00267 <span class="preprocessor">#if 0</span>
+<a name="l00268"></a>00268 <span class="preprocessor"></span>    <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> id;
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00271"></a>00271     <span class="keywordtype">id</span> = get_id();
+<a name="l00272"></a>00272     <span class="keywordflow">if</span> (!<span class="keywordtype">id</span>)
+<a name="l00273"></a>00273         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#a6caf064c02adf1cb697859773cd7250c">ERROR_READID</a>;
+<a name="l00274"></a>00274     <span class="keywordflow">if</span> (flashID)
+<a name="l00275"></a>00275         *flashID = id;
+<a name="l00276"></a>00276 <span class="preprocessor">#else</span>
+<a name="l00277"></a>00277 <span class="preprocessor"></span>    <span class="keywordflow">if</span> (!sf_id)
+<a name="l00278"></a>00278         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#a6caf064c02adf1cb697859773cd7250c">ERROR_READID</a>;
+<a name="l00279"></a>00279     <span class="keywordflow">if</span> (flashID)
+<a name="l00280"></a>00280 <span class="preprocessor">#ifdef SF_CHIP_ALL</span>
+<a name="l00281"></a>00281 <span class="preprocessor"></span>        * flashID = <a class="code" href="flash__config_8h.html#a7c146b6fd5de7a4d0b485ee3a1d252eb">SF_CHIP_ID</a>;
+<a name="l00282"></a>00282 <span class="preprocessor">#else</span>
+<a name="l00283"></a>00283 <span class="preprocessor"></span>        * flashID = <a class="code" href="driver_8c.html#af5d17c00561c20eee8afe88aba7742d2">sf_id</a>;
+<a name="l00284"></a>00284 <span class="preprocessor">#endif</span>
+<a name="l00285"></a>00285 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00286"></a>00286 <span class="preprocessor"></span>    <span class="keywordflow">return</span> 0;
+<a name="l00287"></a>00287 }
+<a name="l00288"></a>00288 
+<a name="l00301"></a><a class="code" href="driver_8c.html#a0b9b3f9fb991a49c4604e8b1f2fa75da">00301</a> <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a0b9b3f9fb991a49c4604e8b1f2fa75da">flashProgram</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, <span class="keyword">const</span> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* src, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length) {
+<a name="l00302"></a>00302     <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> buffer[12];
+<a name="l00303"></a>00303     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> first;
+<a name="l00304"></a>00304 
+<a name="l00305"></a>00305     <span class="keywordflow">if</span> (dst &gt;= sf_size)
+<a name="l00306"></a>00306         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#adb56744e172d20d6ade9364a241e77e5">ERROR_PROGRAM</a>;
+<a name="l00307"></a>00307 <span class="preprocessor">#ifdef CONFIG_AUTO_PROGRAM</span>
+<a name="l00308"></a>00308 <span class="preprocessor"></span>    <a class="code" href="driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee">flashErase</a>(dst, length);
+<a name="l00309"></a>00309 <span class="preprocessor">#endif</span>
+<a name="l00310"></a>00310 <span class="preprocessor"></span>    <span class="keywordflow">if</span> (dst + length &gt; sf_size)
+<a name="l00311"></a>00311         length = sf_size - dst;
+<a name="l00312"></a>00312 
+<a name="l00313"></a>00313     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00314"></a>00314     write_protect(0);
+<a name="l00315"></a>00315     <span class="keywordflow">while</span> (length &gt; 0) {
+<a name="l00316"></a>00316         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_len = ((dst + <a class="code" href="xbr820__flash_8h.html#a27561e3bd0f9c4daff65806f5f8389bc">SF_PAGE_SIZE</a>) &amp; ~(<a class="code" href="xbr820__flash_8h.html#a27561e3bd0f9c4daff65806f5f8389bc">SF_PAGE_SIZE</a> - 1)) - dst;  <span class="comment">/* Num to align */</span>
+<a name="l00317"></a>00317         <span class="keywordflow">if</span> (block_len &gt; length)
+<a name="l00318"></a>00318             block_len = length;
+<a name="l00319"></a>00319         length -= block_len;
+<a name="l00320"></a>00320         first = 1;
+<a name="l00321"></a>00321         <a class="code" href="driver_8c.html#af0268c0af70a7ebd532cf36e41c9808e">send_cmd</a>(<a class="code" href="xbr820__flash_8h.html#a0427c38deaa8551c07058464bca84505">COMMON_INS_WREN</a>);
+<a name="l00322"></a>00322         <span class="keywordflow">while</span> (block_len &gt; 0) {
+<a name="l00323"></a>00323             <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pos, current_len;
+<a name="l00324"></a>00324             <span class="keywordflow">if</span> (first) {
+<a name="l00325"></a>00325                 first = 0;
+<a name="l00326"></a>00326                 buffer[1] = <a class="code" href="xbr820__flash_8h.html#a4ed713f83ac0ed2e5d60a59798ce8604">COMMON_INS_PP</a>;
+<a name="l00327"></a>00327                 current_len = (block_len + 4 &gt; <a class="code" href="driver_8c.html#ad569374ff45fc239045e33cf05a02bf8">SPI_CMMD_LEN</a>) ? <a class="code" href="driver_8c.html#ad569374ff45fc239045e33cf05a02bf8">SPI_CMMD_LEN</a> - 4 : block_len;
+<a name="l00328"></a>00328                 <span class="comment">/* TX command length is current_len + 4, RX data length is 0, total is current_len + 4 */</span>
+<a name="l00329"></a>00329                 buffer[0] = current_len + 4;
+<a name="l00330"></a>00330                 buffer[2] = (<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(dst &gt;&gt; 16);
+<a name="l00331"></a>00331                 buffer[3] = (<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(dst &gt;&gt; 8);
+<a name="l00332"></a>00332                 buffer[4] = (<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(dst);
+<a name="l00333"></a>00333                 pos = 5;
+<a name="l00334"></a>00334                 dst += block_len;
+<a name="l00335"></a>00335             }
+<a name="l00336"></a>00336             <span class="keywordflow">else</span> {
+<a name="l00337"></a>00337                 current_len = (block_len &gt; <a class="code" href="driver_8c.html#ad569374ff45fc239045e33cf05a02bf8">SPI_CMMD_LEN</a>) ? <a class="code" href="driver_8c.html#ad569374ff45fc239045e33cf05a02bf8">SPI_CMMD_LEN</a> : block_len;
+<a name="l00338"></a>00338                 <span class="comment">/* TX command length is current_len, RX data length is 0, total is current_len */</span>
+<a name="l00339"></a>00339                 buffer[0] = current_len;
+<a name="l00340"></a>00340                 pos = 1;
+<a name="l00341"></a>00341             }
+<a name="l00342"></a>00342             block_len -= current_len;
+<a name="l00343"></a>00343             <span class="comment">/* Set WR instruction */</span>
+<a name="l00344"></a>00344             <span class="keywordflow">for</span> (<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i = 0; i &lt; current_len; i++)
+<a name="l00345"></a>00345                 buffer[pos++] = *src++;
+<a name="l00346"></a>00346 
+<a name="l00347"></a>00347             <span class="keywordflow">if</span> (block_len) {
+<a name="l00348"></a>00348                 <span class="comment">/* If we need next read action, set transfer keeping */</span>
+<a name="l00349"></a>00349                 <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a>);
+<a name="l00350"></a>00350             }
+<a name="l00351"></a>00351             <span class="keywordflow">else</span> {
+<a name="l00352"></a>00352                 <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00353"></a>00353             }
+<a name="l00354"></a>00354             <span class="comment">/* Set page program instruction */</span>
+<a name="l00355"></a>00355             <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#ae62edd0d30bd27d89b790bb37375f925">SPI_CM2</a>, (buffer[11] &lt;&lt; 24) | (buffer[10] &lt;&lt; 16) | (buffer[9] &lt;&lt; 8) | buffer[8]);
+<a name="l00356"></a>00356             <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a03cb5afb8b2a150da283424bc2f9bd8c">SPI_CM1</a>, (buffer[7] &lt;&lt; 24) | (buffer[6] &lt;&lt; 16) | (buffer[5] &lt;&lt; 8) | buffer[4]);
+<a name="l00357"></a>00357             <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, (buffer[3] &lt;&lt; 24) | (buffer[2] &lt;&lt; 16) | (buffer[1] &lt;&lt; 8) | buffer[0]);
+<a name="l00358"></a>00358         }
+<a name="l00359"></a>00359         wait_ready();
+<a name="l00360"></a>00360     }
+<a name="l00361"></a>00361     <span class="comment">/* Protect chip */</span>
+<a name="l00362"></a>00362     write_protect(1);
+<a name="l00363"></a>00363     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0);
+<a name="l00364"></a>00364     <span class="keywordflow">return</span> 0;
+<a name="l00365"></a>00365 }
+<a name="l00366"></a>00366 
+<a name="l00378"></a><a class="code" href="driver_8c.html#a3264423b424a8016e6beda9e5495db2b">00378</a> <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a3264423b424a8016e6beda9e5495db2b">flashRead</a>(<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* dst, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> src, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length) {
+<a name="l00379"></a>00379     <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> cmd = <a class="code" href="xbr820__flash_8h.html#a1561133132f79ec32bca11f94c79fd26">SF_CMD_READ</a>;
+<a name="l00380"></a>00380     <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> dmlen = (cmd == <a class="code" href="xbr820__flash_8h.html#a26ee814d921730f9132531978e771fc0">COMMON_INS_READ</a>) ? 0 : 1;
+<a name="l00381"></a>00381     <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> crmsk = (cmd == <a class="code" href="xbr820__flash_8h.html#a7ae4125c0d73b58ec669d4eac9d5f6e9">COMMON_INS_FARDD</a>) ? <a class="code" href="driver_8c.html#ac44759d1fa7929de68367e11d5e65870">SPI_CR_DUAL</a> : 0;
+<a name="l00382"></a>00382     <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> buffer[5] = { 0 };
+<a name="l00383"></a>00383     <span class="keywordtype">int</span> first = 1;
+<a name="l00384"></a>00384 
+<a name="l00385"></a>00385     <span class="keywordflow">if</span> (src &gt;= sf_size)
+<a name="l00386"></a>00386         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#ab1d43b8f2795d4e0be3b8a1baa48d732">ERROR_READ</a>;
+<a name="l00387"></a>00387     <span class="keywordflow">if</span> (src + length &gt; sf_size)
+<a name="l00388"></a>00388         length = sf_size - src;
+<a name="l00389"></a>00389 
+<a name="l00390"></a>00390     <span class="keywordflow">while</span> (length) {
+<a name="l00391"></a>00391         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> current_len = length &gt; <a class="code" href="driver_8c.html#a9180b16a11d7255da7c9cea3c9def4fe">SPI_READ_LEN</a> ? <a class="code" href="driver_8c.html#a9180b16a11d7255da7c9cea3c9def4fe">SPI_READ_LEN</a> : length;
+<a name="l00392"></a>00392         length -= current_len;
+<a name="l00393"></a>00393         <span class="keywordflow">if</span> (length) {
+<a name="l00394"></a>00394             <span class="comment">/* If we need next read action, set transfer keeping */</span>
+<a name="l00395"></a>00395             <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, crmsk | <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a>);
+<a name="l00396"></a>00396         }
+<a name="l00397"></a>00397         <span class="keywordflow">else</span> {
+<a name="l00398"></a>00398             <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, crmsk | <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00399"></a>00399         }
+<a name="l00400"></a>00400         <span class="comment">/* Set RD instruction */</span>
+<a name="l00401"></a>00401         <span class="keywordflow">if</span> (first) {
+<a name="l00402"></a>00402             first = 0;
+<a name="l00403"></a>00403             buffer[1] = cmd;
+<a name="l00404"></a>00404             <span class="comment">/* TX command length is 5, RX data length is current_len, total is current_len + 5 */</span>
+<a name="l00405"></a>00405             buffer[0] = 0x80 | (current_len &lt;&lt; 4) | (current_len + dmlen + 4);
+<a name="l00406"></a>00406             buffer[2] = (<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(src &gt;&gt; 16);
+<a name="l00407"></a>00407             buffer[3] = (<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(src &gt;&gt; 8);
+<a name="l00408"></a>00408             buffer[4] = (<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(src);
+<a name="l00409"></a>00409         }
+<a name="l00410"></a>00410         <span class="keywordflow">else</span> {
+<a name="l00411"></a>00411             <span class="comment">/* TX command length is 0, RX data length is current_len, total is current_len */</span>
+<a name="l00412"></a>00412             buffer[0] = 0x80 | (current_len &lt;&lt; 4) | current_len;
+<a name="l00413"></a>00413         }
+<a name="l00414"></a>00414         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a03cb5afb8b2a150da283424bc2f9bd8c">SPI_CM1</a>, buffer[4]);
+<a name="l00415"></a>00415         <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, (buffer[3] &lt;&lt; 24) | (buffer[2] &lt;&lt; 16) | (buffer[1] &lt;&lt; 8) | buffer[0]);
+<a name="l00416"></a>00416         <span class="comment">/* Read data */</span>
+<a name="l00417"></a>00417         <span class="keywordflow">for</span> (<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> burst_len = current_len &gt; <a class="code" href="driver_8c.html#aa6079b4c244489bc606f592172dc6a08">SPI_BURST_LEN</a> ?
+<a name="l00418"></a>00418             <a class="code" href="driver_8c.html#aa6079b4c244489bc606f592172dc6a08">SPI_BURST_LEN</a> : current_len; current_len &gt; 0; current_len -= burst_len) {
+<a name="l00419"></a>00419             <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dw = <a class="code" href="xbr820__flash_8c.html#aab51c5290827b595d92efe1299bd0c54">reg32_read</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>);
+<a name="l00420"></a>00420             <span class="keywordflow">for</span> (<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i = 0; i &lt; burst_len; i++) {
+<a name="l00421"></a>00421                 *dst++ = ((dw &gt;&gt; (8 * i)) &amp; 0xFF);
+<a name="l00422"></a>00422             }
+<a name="l00423"></a>00423         }
+<a name="l00424"></a>00424     }
+<a name="l00425"></a>00425     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0);
+<a name="l00426"></a>00426     <span class="keywordflow">return</span> 0;
+<a name="l00427"></a>00427 }
+<a name="l00428"></a>00428 
+<a name="l00440"></a><a class="code" href="xbr820__spiflash_2main_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee">00440</a> <span class="keywordtype">int</span> <a class="code" href="driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee">flashErase</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length) {
+<a name="l00441"></a>00441     <span class="keywordflow">if</span> (!dst &amp;&amp; -1UL == length)
+<a name="l00442"></a>00442         <span class="keywordflow">return</span> <a class="code" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099">flashChipErase</a>();
+<a name="l00443"></a>00443 
+<a name="l00444"></a>00444     <span class="keywordflow">if</span> (dst &gt;= sf_size)
+<a name="l00445"></a>00445         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#a67ef81cfb0ddec7ef571175270a951ae">ERROR_ERASE</a>;
+<a name="l00446"></a>00446     <span class="keywordflow">if</span> (dst + length &gt; sf_size)
+<a name="l00447"></a>00447         length = sf_size - dst;
+<a name="l00448"></a>00448 
+<a name="l00449"></a>00449     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> offs = dst;
+<a name="l00450"></a>00450     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> end = dst + length;
+<a name="l00451"></a>00451     <span class="keywordflow">while</span> (dst &lt; end) {
+<a name="l00452"></a>00452         block_erase(offs);
+<a name="l00453"></a>00453         offs &amp;= ~(<a class="code" href="flash__config_8h.html#a7db0f95cfe73894573f56db5848fe719">SF_BLOCK_SIZE</a> - 1);
+<a name="l00454"></a>00454         offs += <a class="code" href="flash__config_8h.html#a7db0f95cfe73894573f56db5848fe719">SF_BLOCK_SIZE</a>;
+<a name="l00455"></a>00455         dst += <a class="code" href="flash__config_8h.html#a7db0f95cfe73894573f56db5848fe719">SF_BLOCK_SIZE</a>;
+<a name="l00456"></a>00456     }
+<a name="l00457"></a>00457     <span class="keywordflow">return</span> 0;
+<a name="l00458"></a>00458 }
+<a name="l00459"></a>00459 
+<a name="l00460"></a><a class="code" href="driver_8c.html#aead01e5bf4fa6f310a520c4b563d7e5d">00460</a> <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a23ba8b20c42054b534a3b7dcc10df085">flashSectErase</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> offs) {
+<a name="l00461"></a>00461     <span class="keywordflow">if</span> (offs &gt;= sf_size)
+<a name="l00462"></a>00462         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#a67ef81cfb0ddec7ef571175270a951ae">ERROR_ERASE</a>;
+<a name="l00463"></a>00463     block_erase(offs);
+<a name="l00464"></a>00464     <span class="keywordflow">return</span> 0;
+<a name="l00465"></a>00465 }
+<a name="l00466"></a>00466 
+<a name="l00473"></a><a class="code" href="driver_8c.html#af471058120916ba68760f6017ace3cd3">00473</a> <span class="keywordtype">int</span> <a class="code" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099">flashChipErase</a>() {
+<a name="l00474"></a>00474     <span class="keywordflow">if</span> (!sf_size)
+<a name="l00475"></a>00475         <span class="keywordflow">return</span> <a class="code" href="driver_8c.html#aded10952972ef87e5d29045d853c3ff9">ERROR_CHIPERASE</a>;
+<a name="l00476"></a>00476     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, <a class="code" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a> | <a class="code" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>);
+<a name="l00477"></a>00477     write_protect(0);
+<a name="l00478"></a>00478     <span class="comment">/* Enable write */</span>
+<a name="l00479"></a>00479     <a class="code" href="driver_8c.html#af0268c0af70a7ebd532cf36e41c9808e">send_cmd</a>(<a class="code" href="xbr820__flash_8h.html#a0427c38deaa8551c07058464bca84505">COMMON_INS_WREN</a>);
+<a name="l00480"></a>00480     <span class="comment">/* Set errase instruction: TX command length is 1, RX data length is 0, total 1 */</span>
+<a name="l00481"></a>00481     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>, 0x01 | (<a class="code" href="xbr820__flash_8h.html#a7d930c33aa8a7ee58c9786925ff152c8">COMMON_INS_BE</a> &lt;&lt; 8));
+<a name="l00482"></a>00482     wait_ready();
+<a name="l00483"></a>00483     <span class="comment">/* Protect chip */</span>
+<a name="l00484"></a>00484     write_protect(1);
+<a name="l00485"></a>00485     <a class="code" href="xbr820__flash_8c.html#a4c29e6df49201241a6b0f96a9243df09">reg32_write</a>(<a class="code" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>, 0);
+<a name="l00486"></a>00486 <span class="preprocessor">#ifdef CONFIG_AUTO_PROGRAM</span>
+<a name="l00487"></a>00487 <span class="preprocessor"></span>    block_erased = -1UL;
+<a name="l00488"></a>00488 <span class="preprocessor">#endif</span>
+<a name="l00489"></a>00489 <span class="preprocessor"></span>    <span class="keywordflow">return</span> 0;
+<a name="l00490"></a>00490 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

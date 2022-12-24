@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__interrupts_8h.html#af414107628d0e88db6ab45c376294366" title="stop_irq_x" alt="" coords="144,35,257,69"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___v_i_c_functions.html#gaa5ba90f8674fba7cbecb948f06ff0f6f" title="Disable External Interrupt." alt="" coords="335,5,522,40"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="305,64,552,99"/>
+</map>

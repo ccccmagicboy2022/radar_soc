@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_sys_timer.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_sys_timer.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__sys__timer_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__sys__timer_8h.html">xbr820_sys_timer.h</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a><a class="code" href="structstr__sys__timer__t.html">00003</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00004"></a><a class="code" href="structstr__sys__timer__t.html#a5b82635897519a6e875fc9547ec432be">00004</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> EN       :1;
+<a name="l00005"></a><a class="code" href="structstr__sys__timer__t.html#a5c17e199984d1358429963e564e60bd2">00005</a>     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>          :31;
+<a name="l00006"></a>00006 } <a class="code" href="structstr__sys__timer__t.html">str_sys_timer_t</a>;
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="xbr820__sys__timer_8c.html#a84d2d366ff5ec4759599c006dbdc7c51">00008</a> <span class="preprocessor">#define SYS_TIMER_EN  (((str_sys_timer_t *)(0x1f020000))-&gt;EN)</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span>
+<a name="l00010"></a><a class="code" href="xbr820__sys__timer_8c.html#ab0f5aa9eefba9bd012ab100790854350">00010</a> <span class="preprocessor">#define MTIMECMPLO    (*(uint32_t *)0xe0004000)</span>
+<a name="l00011"></a><a class="code" href="xbr820__sys__timer_8c.html#af2dc20f18b949171cffda29338b49675">00011</a> <span class="preprocessor"></span><span class="preprocessor">#define MTIMECMPHI    (*(uint32_t *)0xe0004004)</span>
+<a name="l00012"></a><a class="code" href="xbr820__sys__timer_8c.html#af56c66b9d93848a97e8a8442ee0ac4d7">00012</a> <span class="preprocessor"></span><span class="preprocessor">#define MTIMELO       (*(uint32_t *)0xe000bff8)</span>
+<a name="l00013"></a><a class="code" href="xbr820__sys__timer_8c.html#aae9e9503a75e4b82fcfaeb42952b4de4">00013</a> <span class="preprocessor"></span><span class="preprocessor">#define MTIMEHI       (*(uint32_t *)0xe000bffc)</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span>
+<a name="l00015"></a><a class="code" href="xbr820__sys__timer_8c.html#a9e7f8c47f173536ed47fa36a293fe087">00015</a> <span class="keywordtype">void</span> <a class="code" href="xbr820__sys__timer_8h.html#a9e7f8c47f173536ed47fa36a293fe087">sys_timer_start</a>(<a class="code" href="pho__common_8h.html#a0210dd89dbe7888f21ce2995f626301e">em_functional_state_t</a> sys_timer_ctl)
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017     <a class="code" href="xbr820__sys__timer_8c.html#a84d2d366ff5ec4759599c006dbdc7c51">SYS_TIMER_EN</a> = sys_timer_ctl;
+<a name="l00018"></a>00018 }
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="xbr820__sys__timer_8c.html#a79d5136f09f10b42a5bc42bab5e8585b">00020</a> <span class="keywordtype">void</span> <a class="code" href="xbr820__sys__timer_8h.html#a79d5136f09f10b42a5bc42bab5e8585b">sys_timer_getval</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *low32, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *high32)
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022     *low32 = <a class="code" href="xbr820__sys__timer_8c.html#af56c66b9d93848a97e8a8442ee0ac4d7">MTIMELO</a>;
+<a name="l00023"></a>00023     *high32 = <a class="code" href="xbr820__sys__timer_8c.html#aae9e9503a75e4b82fcfaeb42952b4de4">MTIMEHI</a>;
+<a name="l00024"></a>00024 }
+<a name="l00025"></a>00025 
+<a name="l00026"></a><a class="code" href="xbr820__sys__timer_8c.html#a714b998929e9558db068dd32e1fcc96c">00026</a> <span class="keywordtype">void</span> <a class="code" href="xbr820__sys__timer_8h.html#a714b998929e9558db068dd32e1fcc96c">sys_timer_setcmp</a>(<a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *low32, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *high32)
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028     <a class="code" href="xbr820__sys__timer_8c.html#ab0f5aa9eefba9bd012ab100790854350">MTIMECMPLO</a> = *low32;
+<a name="l00029"></a>00029     <a class="code" href="xbr820__sys__timer_8c.html#af2dc20f18b949171cffda29338b49675">MTIMECMPHI</a> = *high32;
+<a name="l00030"></a>00030 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

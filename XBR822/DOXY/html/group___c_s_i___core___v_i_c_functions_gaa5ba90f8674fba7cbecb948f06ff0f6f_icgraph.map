@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__interrupts_8c.html#af414107628d0e88db6ab45c376294366" title="stop_irq_x" alt="" coords="253,5,366,40"/>
+<area shape="rect" id="node4" href="$group__timer__group.html#gadc411afd19047c99c1bff4a0e3c0f042" title="Stop the timer." alt="" coords="240,64,379,99"/>
+<area shape="rect" id="node3" href="$bsp__ir_8h.html#adc8cc82194fad64b41c14cb758afa205" title="IR de&#45;initialize." alt="" coords="427,5,517,40"/>
+</map>

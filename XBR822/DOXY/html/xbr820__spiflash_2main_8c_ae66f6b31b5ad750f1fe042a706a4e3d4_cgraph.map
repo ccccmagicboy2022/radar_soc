@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$driver_8c.html#a9f9e0b850d75d42457f69e391e89c4c6" title="flashInit" alt="" coords="149,5,238,40"/>
+<area shape="rect" id="node3" href="$xbr820__spiflash_2main_8c.html#ad7b251923da9be7058edcc72b30e82c9" title="__bkpt_label" alt="" coords="126,64,261,99"/>
+<area shape="rect" id="node4" href="$driver_8c.html#ab5101c59a4e1f46356eda08069db84e1" title="flashID" alt="" coords="152,123,235,157"/>
+<area shape="rect" id="node5" href="$xbr820__flash_8h.html#a0b9b3f9fb991a49c4604e8b1f2fa75da" title="flashProgram" alt="" coords="124,181,263,216"/>
+<area shape="rect" id="node6" href="$xbr820__flash_8h.html#a3264423b424a8016e6beda9e5495db2b" title="flashRead" alt="" coords="138,240,249,275"/>
+<area shape="rect" id="node7" href="$driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee" title="flashErase" alt="" coords="136,299,251,333"/>
+<area shape="rect" id="node8" href="$xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099" title="flashChipErase" alt="" coords="319,327,473,361"/>
+<area shape="rect" id="node9" href="$xbr820__flash_8h.html#a23ba8b20c42054b534a3b7dcc10df085" title="flashSectErase" alt="" coords="116,408,271,443"/>
+</map>

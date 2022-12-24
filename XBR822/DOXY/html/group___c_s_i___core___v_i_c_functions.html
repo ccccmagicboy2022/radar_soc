@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>VIC Functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">VIC Functions</div>  </div>
+<div class="ingroups"><a class="el" href="group___c_s_i___core___function_interface.html">Functions and Instructions Reference</a></div></div>
+<div class="contents">
+
+<p>Functions that manage interrupts and exceptions via the VIC.  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+VIC Functions合作图：</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group___c_s_i___core___v_i_c_functions.png" border="0" alt="" usemap="#group______c__s__i______core______v__i__c__functions"/>
+<map name="group______c__s__i______core______v__i__c__functions" id="group______c__s__i______core______v__i__c__functions">
+<area shape="rect" id="node2" href="group___c_s_i___core___function_interface.html" title="Functions and Instructions Reference" alt="" coords="5,5,352,40"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga53c75b28823441c6153269f0ecbed878">_BIT_SHIFT</a>(IRQn)&#160;&#160;&#160;(  ((((<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(int32_t)(IRQn))         )      &amp;  0x03UL) * 8UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga370ec4b1751a6a889d849747df3763a9">_IP_IDX</a>(IRQn)&#160;&#160;&#160;(   (((<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(int32_t)(IRQn))                &gt;&gt;    5UL)      )</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#gae20ea99fac54f8cd553cfd9819c432a6">_IP2_IDX</a>(IRQn)&#160;&#160;&#160;(   (((<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(int32_t)(IRQn))                &gt;&gt;    2UL)      )</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#gaa94b94a45d6abb555ea6120501fe73f5">csi_vic_enable_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable External Interrupt.  <a href="#gaa94b94a45d6abb555ea6120501fe73f5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#gaa5ba90f8674fba7cbecb948f06ff0f6f">csi_vic_disable_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable External Interrupt.  <a href="#gaa5ba90f8674fba7cbecb948f06ff0f6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#gae60792ddd481ecd84b541187036c352d">csi_vic_enable_sirq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable External Secure Interrupt.  <a href="#gae60792ddd481ecd84b541187036c352d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga549037c2361ab30a7fdd306c8925a880">csi_vic_disable_sirq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable External Secure Interrupt.  <a href="#ga549037c2361ab30a7fdd306c8925a880"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga46b2474d5a7117bbe198822d8a1d5a47">csi_vic_get_enabled_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Interrupt is Enabled or not.  <a href="#ga46b2474d5a7117bbe198822d8a1d5a47"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga26ed584d77fbc92a389faf68cb2bc975">csi_vic_get_pending_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Interrupt is Pending or not.  <a href="#ga26ed584d77fbc92a389faf68cb2bc975"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga78e79d58179a95bed25c0aec107b4fb9">csi_vic_set_pending_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Pending Interrupt.  <a href="#ga78e79d58179a95bed25c0aec107b4fb9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2">csi_vic_clear_pending_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Pending Interrupt.  <a href="#ga825e022ae986536ba99a1039e200bec2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga4f821781842f318c4845e31ffa7df62a">csi_vic_set_prio</a> (int32_t IRQn, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> irq_priority)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Interrupt Priority.  <a href="#ga4f821781842f318c4845e31ffa7df62a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga16a27c01331e66643b758a324ad4448b">csi_vic_get_prio</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Interrupt Priority.  <a href="#ga16a27c01331e66643b758a324ad4448b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#gadedb3574113e56bd9ba630a498b07e23">csi_vic_set_vector</a> (int32_t IRQn, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> handler)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set interrupt handler.  <a href="#gadedb3574113e56bd9ba630a498b07e23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#gaae2a3d69345a6d2aab5be3b71a728410">csi_vic_get_vector</a> (int32_t IRQn)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get interrupt handler.  <a href="#gaae2a3d69345a6d2aab5be3b71a728410"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga53dcfdbb3a7e14c47b32479c91a970ec">set_shv_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#gab41a151ef80d9ec4e00463250514aed4">set_rising_edge_irq</a> (int32_t IRQn)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___v_i_c_functions.html#ga59247683fa4867b5c4b1fe929299d787">set_prio_grouping</a> (int32_t a)</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<p>Functions that manage interrupts and exceptions via the VIC. </p>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="ga53c75b28823441c6153269f0ecbed878"></a><!-- doxytag: member="core_rv32.h::_BIT_SHIFT" ref="ga53c75b28823441c6153269f0ecbed878" args="(IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BIT_SHIFT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IRQn</td><td>)</td>
+          <td>&#160;&#160;&#160;(  ((((<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(int32_t)(IRQn))         )      &amp;  0x03UL) * 8UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00417">417</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gae20ea99fac54f8cd553cfd9819c432a6"></a><!-- doxytag: member="core_rv32.h::_IP2_IDX" ref="gae20ea99fac54f8cd553cfd9819c432a6" args="(IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _IP2_IDX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IRQn</td><td>)</td>
+          <td>&#160;&#160;&#160;(   (((<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(int32_t)(IRQn))                &gt;&gt;    2UL)      )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00419">419</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga370ec4b1751a6a889d849747df3763a9"></a><!-- doxytag: member="core_rv32.h::_IP_IDX" ref="ga370ec4b1751a6a889d849747df3763a9" args="(IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _IP_IDX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IRQn</td><td>)</td>
+          <td>&#160;&#160;&#160;(   (((<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)(int32_t)(IRQn))                &gt;&gt;    5UL)      )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00418">418</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="ga825e022ae986536ba99a1039e200bec2"></a><!-- doxytag: member="core_rv32.h::csi_vic_clear_pending_irq" ref="ga825e022ae986536ba99a1039e200bec2" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_clear_pending_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Clear Pending Interrupt. </p>
+<p>Clear the pending bit of an external interrupt. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>External interrupt number. Value cannot be negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00500">500</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_ga825e022ae986536ba99a1039e200bec2_icgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_ga825e022ae986536ba99a1039e200bec2_icgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_ga825e022ae986536ba99a1039e200bec2_icgraph" id="group___c_s_i___core___v_i_c_functions_ga825e022ae986536ba99a1039e200bec2_icgraph">
+<area shape="rect" id="node2" href="xbr820__interrupts_8c.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="312,152,427,187"/><area shape="rect" id="node12" href="xbr820__interrupts_8c.html#af414107628d0e88db6ab45c376294366" title="stop_irq_x" alt="" coords="313,255,426,289"/><area shape="rect" id="node14" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f" title="__attribute__" alt="" coords="300,313,439,348"/><area shape="rect" id="node3" href="xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="500,5,668,40"/><area shape="rect" id="node5" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="553,64,615,99"/><area shape="rect" id="node6" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="487,123,681,157"/><area shape="rect" id="node8" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="550,181,618,216"/><area shape="rect" id="node10" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="515,240,653,275"/><area shape="rect" id="node4" href="projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,5,792,40"/><area shape="rect" id="node7" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,123,792,157"/><area shape="rect" id="node9" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,181,792,216"/><area shape="rect" id="node11" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,240,792,275"/><area shape="rect" id="node13" href="bsp__ir_8h.html#adc8cc82194fad64b41c14cb758afa205" title="IR de&#45;initialize." alt="" coords="539,299,629,333"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa5ba90f8674fba7cbecb948f06ff0f6f"></a><!-- doxytag: member="core_rv32.h::csi_vic_disable_irq" ref="gaa5ba90f8674fba7cbecb948f06ff0f6f" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_disable_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Disable External Interrupt. </p>
+<p>Disable a device-specific interrupt in the VIC interrupt controller. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>External interrupt number. Value cannot be negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00436">436</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_gaa5ba90f8674fba7cbecb948f06ff0f6f_icgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_gaa5ba90f8674fba7cbecb948f06ff0f6f_icgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_gaa5ba90f8674fba7cbecb948f06ff0f6f_icgraph" id="group___c_s_i___core___v_i_c_functions_gaa5ba90f8674fba7cbecb948f06ff0f6f_icgraph">
+<area shape="rect" id="node2" href="xbr820__interrupts_8c.html#af414107628d0e88db6ab45c376294366" title="stop_irq_x" alt="" coords="253,5,366,40"/><area shape="rect" id="node4" href="group__timer__group.html#gadc411afd19047c99c1bff4a0e3c0f042" title="Stop the timer." alt="" coords="240,64,379,99"/><area shape="rect" id="node3" href="bsp__ir_8h.html#adc8cc82194fad64b41c14cb758afa205" title="IR de&#45;initialize." alt="" coords="427,5,517,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga549037c2361ab30a7fdd306c8925a880"></a><!-- doxytag: member="core_rv32.h::csi_vic_disable_sirq" ref="ga549037c2361ab30a7fdd306c8925a880" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_disable_sirq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Disable External Secure Interrupt. </p>
+<p>Disable a secure device-specific interrupt in the VIC interrupt controller. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>External interrupt number. Value cannot be negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00456">456</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa94b94a45d6abb555ea6120501fe73f5"></a><!-- doxytag: member="core_rv32.h::csi_vic_enable_irq" ref="gaa94b94a45d6abb555ea6120501fe73f5" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_enable_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enable External Interrupt. </p>
+<p>Enable a device-specific interrupt in the VIC interrupt controller. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>External interrupt number. Value cannot be negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00426">426</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_gaa94b94a45d6abb555ea6120501fe73f5_icgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_gaa94b94a45d6abb555ea6120501fe73f5_icgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_gaa94b94a45d6abb555ea6120501fe73f5_icgraph" id="group___c_s_i___core___v_i_c_functions_gaa94b94a45d6abb555ea6120501fe73f5_icgraph">
+<area shape="rect" id="node2" href="xbr820__interrupts_8c.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="236,123,351,157"/><area shape="rect" id="node3" href="xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="412,5,580,40"/><area shape="rect" id="node5" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="465,64,527,99"/><area shape="rect" id="node6" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="399,123,593,157"/><area shape="rect" id="node8" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="462,181,530,216"/><area shape="rect" id="node10" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="427,240,565,275"/><area shape="rect" id="node4" href="projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,5,704,40"/><area shape="rect" id="node7" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,123,704,157"/><area shape="rect" id="node9" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,181,704,216"/><area shape="rect" id="node11" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,240,704,275"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gae60792ddd481ecd84b541187036c352d"></a><!-- doxytag: member="core_rv32.h::csi_vic_enable_sirq" ref="gae60792ddd481ecd84b541187036c352d" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_enable_sirq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enable External Secure Interrupt. </p>
+<p>Enable a secure device-specific interrupt in the VIC interrupt controller. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>External interrupt number. Value cannot be negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00446">446</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga46b2474d5a7117bbe198822d8a1d5a47"></a><!-- doxytag: member="core_rv32.h::csi_vic_get_enabled_irq" ref="ga46b2474d5a7117bbe198822d8a1d5a47" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> csi_vic_get_enabled_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check Interrupt is Enabled or not. </p>
+<p>Read the enabled register in the VIC and returns the pending bit for the specified interrupt. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>Interrupt number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>0 Interrupt status is not enabled. </dd>
+<dd>
+1 Interrupt status is enabled. </dd></dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00468">468</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga26ed584d77fbc92a389faf68cb2bc975"></a><!-- doxytag: member="core_rv32.h::csi_vic_get_pending_irq" ref="ga26ed584d77fbc92a389faf68cb2bc975" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> csi_vic_get_pending_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check Interrupt is Pending or not. </p>
+<p>Read the pending register in the VIC and returns the pending bit for the specified interrupt. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>Interrupt number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>0 Interrupt status is not pending. </dd>
+<dd>
+1 Interrupt status is pending. </dd></dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00480">480</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga16a27c01331e66643b758a324ad4448b"></a><!-- doxytag: member="core_rv32.h::csi_vic_get_prio" ref="ga16a27c01331e66643b758a324ad4448b" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> csi_vic_get_prio </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get Interrupt Priority. </p>
+<p>Read the priority of an interrupt. The interrupt number can be positive to specify an external (device specific) interrupt, or negative to specify an internal (core) interrupt. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>Interrupt number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>Interrupt Priority. Value is aligned automatically to the implemented priority bits of the microcontroller. </dd></dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00527">527</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaae2a3d69345a6d2aab5be3b71a728410"></a><!-- doxytag: member="core_rv32.h::csi_vic_get_vector" ref="gaae2a3d69345a6d2aab5be3b71a728410" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> csi_vic_get_vector </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get interrupt handler. </p>
+<p>Get the address of interrupt handler function. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>Interrupt number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00552">552</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_gaae2a3d69345a6d2aab5be3b71a728410_cgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_gaae2a3d69345a6d2aab5be3b71a728410_cgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_gaae2a3d69345a6d2aab5be3b71a728410_cgraph" id="group___c_s_i___core___v_i_c_functions_gaae2a3d69345a6d2aab5be3b71a728410_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga58001eae0e2e77bd66eb11ac75df7b5e" title="Get MTVT Register." alt="" coords="237,5,375,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga78e79d58179a95bed25c0aec107b4fb9"></a><!-- doxytag: member="core_rv32.h::csi_vic_set_pending_irq" ref="ga78e79d58179a95bed25c0aec107b4fb9" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_set_pending_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set Pending Interrupt. </p>
+<p>Set the pending bit of an external interrupt. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>Interrupt number. Value cannot be negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00490">490</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4f821781842f318c4845e31ffa7df62a"></a><!-- doxytag: member="core_rv32.h::csi_vic_set_prio" ref="ga4f821781842f318c4845e31ffa7df62a" args="(int32_t IRQn, uint32_t irq_priority)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_set_prio </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>irq_priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set Interrupt Priority. </p>
+<p>Set the priority of an interrupt. </p>
+<dl class="note"><dt><b>注解:</b></dt><dd>The priority cannot be set for every core interrupt. </dd></dl>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>Interrupt number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td>Priority to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00512">512</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_ga4f821781842f318c4845e31ffa7df62a_icgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_ga4f821781842f318c4845e31ffa7df62a_icgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_ga4f821781842f318c4845e31ffa7df62a_icgraph" id="group___c_s_i___core___v_i_c_functions_ga4f821781842f318c4845e31ffa7df62a_icgraph">
+<area shape="rect" id="node2" href="xbr820__interrupts_8c.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="216,123,299,157"/><area shape="rect" id="node3" href="xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="360,5,528,40"/><area shape="rect" id="node5" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="413,64,475,99"/><area shape="rect" id="node6" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="347,123,541,157"/><area shape="rect" id="node8" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="410,181,478,216"/><area shape="rect" id="node10" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="375,240,513,275"/><area shape="rect" id="node4" href="projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="589,5,652,40"/><area shape="rect" id="node7" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="589,123,652,157"/><area shape="rect" id="node9" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="589,181,652,216"/><area shape="rect" id="node11" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="589,240,652,275"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gadedb3574113e56bd9ba630a498b07e23"></a><!-- doxytag: member="core_rv32.h::csi_vic_set_vector" ref="gadedb3574113e56bd9ba630a498b07e23" args="(int32_t IRQn, uint32_t handler)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_vic_set_vector </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set interrupt handler. </p>
+<p>Set the interrupt handler according to the interrupt num, the handler will be filled in irq vectors. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IRQn</td><td>Interrupt number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handler</td><td>Interrupt handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00539">539</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_gadedb3574113e56bd9ba630a498b07e23_cgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_gadedb3574113e56bd9ba630a498b07e23_cgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_gadedb3574113e56bd9ba630a498b07e23_cgraph" id="group___c_s_i___core___v_i_c_functions_gadedb3574113e56bd9ba630a498b07e23_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga58001eae0e2e77bd66eb11ac75df7b5e" title="Get MTVT Register." alt="" coords="236,5,373,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga59247683fa4867b5c4b1fe929299d787"></a><!-- doxytag: member="core_rv32.h::set_prio_grouping" ref="ga59247683fa4867b5c4b1fe929299d787" args="(int32_t a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void set_prio_grouping </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00572">572</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gab41a151ef80d9ec4e00463250514aed4"></a><!-- doxytag: member="core_rv32.h::set_rising_edge_irq" ref="gab41a151ef80d9ec4e00463250514aed4" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void set_rising_edge_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00567">567</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_gab41a151ef80d9ec4e00463250514aed4_icgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_gab41a151ef80d9ec4e00463250514aed4_icgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_gab41a151ef80d9ec4e00463250514aed4_icgraph" id="group___c_s_i___core___v_i_c_functions_gab41a151ef80d9ec4e00463250514aed4_icgraph">
+<area shape="rect" id="node2" href="xbr820__interrupts_8c.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="248,123,331,157"/><area shape="rect" id="node3" href="xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="392,5,560,40"/><area shape="rect" id="node5" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="445,64,507,99"/><area shape="rect" id="node6" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="379,123,573,157"/><area shape="rect" id="node8" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="442,181,510,216"/><area shape="rect" id="node10" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="407,240,545,275"/><area shape="rect" id="node4" href="projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="621,5,684,40"/><area shape="rect" id="node7" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="621,123,684,157"/><area shape="rect" id="node9" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="621,181,684,216"/><area shape="rect" id="node11" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="621,240,684,275"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga53dcfdbb3a7e14c47b32479c91a970ec"></a><!-- doxytag: member="core_rv32.h::set_shv_irq" ref="ga53dcfdbb3a7e14c47b32479c91a970ec" args="(int32_t IRQn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void set_shv_irq </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>IRQn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00562">562</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___v_i_c_functions_ga53dcfdbb3a7e14c47b32479c91a970ec_icgraph.png" border="0" usemap="#group___c_s_i___core___v_i_c_functions_ga53dcfdbb3a7e14c47b32479c91a970ec_icgraph" alt=""/></div>
+<map name="group___c_s_i___core___v_i_c_functions_ga53dcfdbb3a7e14c47b32479c91a970ec_icgraph" id="group___c_s_i___core___v_i_c_functions_ga53dcfdbb3a7e14c47b32479c91a970ec_icgraph">
+<area shape="rect" id="node2" href="xbr820__interrupts_8c.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="176,123,259,157"/><area shape="rect" id="node3" href="xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="320,5,488,40"/><area shape="rect" id="node5" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="373,64,435,99"/><area shape="rect" id="node6" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="307,123,501,157"/><area shape="rect" id="node8" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="370,181,438,216"/><area shape="rect" id="node10" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="335,240,473,275"/><area shape="rect" id="node4" href="projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="549,5,612,40"/><area shape="rect" id="node7" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="549,123,612,157"/><area shape="rect" id="node9" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="549,181,612,216"/><area shape="rect" id="node11" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="549,240,612,275"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:49 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

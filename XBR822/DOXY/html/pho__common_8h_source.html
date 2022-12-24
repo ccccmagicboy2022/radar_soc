@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/mcu/common/pho_common.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/mcu/common/pho_common.h</div>  </div>
+</div>
+<div class="contents">
+<a href="pho__common_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __PHO_COMMON_H__</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __PHO_COMMON_H__</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;stddef.h&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;stdint.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;stdbool.h&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#if defined(XBR820)</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#endif</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00012"></a><a class="code" href="pho__common_8h.html#af63697ed9952cc71e1225efe205f6cd3">00012</a> <span class="preprocessor">#define     __I     volatile const       </span>
+<a name="l00013"></a><a class="code" href="pho__common_8h.html#a7e25d9380f9ef903923964322e71f2f6">00013</a> <span class="preprocessor">#define     __O     volatile             </span>
+<a name="l00014"></a><a class="code" href="pho__common_8h.html#aec43007d9998a0a0e01faede4133d6be">00014</a> <span class="preprocessor">#define     __IO    volatile             </span>
+<a name="l00016"></a><a class="code" href="pho__common_8h.html#a3b09ccf3e40b21639c007a8d5e217257">00016</a> <span class="preprocessor">typedef void (*func_ptr_t)(void);</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a><a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9d">00018</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9d">em_functional_state</a>
+<a name="l00019"></a>00019 {
+<a name="l00020"></a><a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9dad3a9df141be0ccf10389b640f492b26d">00020</a>     <a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9dad3a9df141be0ccf10389b640f492b26d">DISABLE</a> = 0u,
+<a name="l00021"></a><a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9da7d46875fa3ebd2c34d2756950eda83bf">00021</a>     <a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9da7d46875fa3ebd2c34d2756950eda83bf">ENABLE</a>  = 1u,
+<a name="l00022"></a>00022 } <a class="code" href="pho__common_8h.html#a0210dd89dbe7888f21ce2995f626301e">em_functional_state_t</a>;
+<a name="l00023"></a>00023 
+<a name="l00024"></a><a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299e">00024</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299e">em_flag_status</a>
+<a name="l00025"></a>00025 {
+<a name="l00026"></a><a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299ea589b7d94a3d91d145720e2fed0eb3a05">00026</a>     <a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299ea589b7d94a3d91d145720e2fed0eb3a05">RESET</a> = 0u,
+<a name="l00027"></a><a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299eab44c8101cc294c074709ec1b14211792">00027</a>     <a class="code" href="pho__common_8h.html#adde2929e70e54300918c338f4bac299eab44c8101cc294c074709ec1b14211792">SET</a>   = 1u,
+<a name="l00028"></a>00028 } <a class="code" href="pho__common_8h.html#ae011e05f9f8df8193fe9a5f4275351da">em_flag_status_t</a>, <a class="code" href="pho__common_8h.html#ae485e86252ca1a0b741f76c4b4a57d52">em_int_status_t</a>;
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7">00030</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7">em_result</a>
+<a name="l00031"></a>00031 {
+<a name="l00032"></a><a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2bc49ec37d6a5715dd23e85f1ff5bb59">00032</a>     <a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2bc49ec37d6a5715dd23e85f1ff5bb59" title="No error.">OK</a>                       = 0u,   
+<a name="l00033"></a><a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2fd6f336d08340583bd620a7f5694c90">00033</a>     <a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2fd6f336d08340583bd620a7f5694c90" title="error">ERROR</a>                    = 1u,   
+<a name="l00034"></a>00034 } <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 
+<a name="l00038"></a><a class="code" href="pho__common_8h.html#aca03da8c1db1ebf179dc5ff29375b0b4">00038</a> <span class="preprocessor">#define clear_mem_struct(x)             do {                                  \</span>
+<a name="l00039"></a>00039 <span class="preprocessor">                                        memset((void*)&amp;(x), 0, (sizeof(x)));  \</span>
+<a name="l00040"></a>00040 <span class="preprocessor">                                        }while(0)</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span>
+<a name="l00042"></a>00042 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

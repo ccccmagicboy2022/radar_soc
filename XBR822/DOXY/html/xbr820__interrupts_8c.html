@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_interrupts.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_interrupts.c文件参考</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="xbr820__interrupts_8h_source.html">xbr820_interrupts.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="csi__core_8h_source.html">csi_core.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+xbr820_interrupts.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__interrupts_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__interrupts_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__interrupts_8c">
+<area shape="rect" id="node2" href="xbr820__interrupts_8h.html" title="xbr820_interrupts.h" alt="" coords="163,88,353,123"/><area shape="rect" id="node8" href="csi__core_8h.html" title="csi_core.h" alt="" coords="378,88,490,123"/><area shape="rect" id="node3" href="pho__common_8h.html" title="pho_common.h" alt="" coords="181,171,335,205"/></map>
+</div>
+</div>
+<p><a href="xbr820__interrupts_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#aac4429e9ba2df0a797165e20458951be">IRQ_NUM_MAX</a>&#160;&#160;&#160;(20u)</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a96aad283c4d1779e6e310109464ad7b7">handle_trap</a> (unsigned int cause, unsigned int epc, unsigned int regs[32])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a93a764de9f26ec4e359142e3b0b98ee0">set_irq</a> (const <a class="el" href="xbr820__interrupts_8h.html#a00a0f8ed9493ae102d2c54aa76e14f5d">stc_irq_set_cfg_t</a> *irq_set_cfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#aba2599a343893580fb800955a392ef2e">start_irq_x</a> (<a class="el" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a> <a class="el" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6d">irq_number</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#af414107628d0e88db6ab45c376294366">stop_irq_x</a> (<a class="el" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a> <a class="el" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6d">irq_number</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a967cf25d94632b98316005222cc266e7">enable_irq_all</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a89820f375d485914994e838c12fc92ee">disable_irq_all</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a42e910ae6016bd703249fe5d7076f270">IRQ001_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a20b748c45cb75cd7cd0e9c9867ef31f2">IRQ002_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a78258b50f2f3f883cc75cf7b9946481b">IRQ003_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a1664d8081897066ae1406ce45b1f5571">IRQ004_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a7e9a2bc43a525d212235a8c50744df54">IRQ005_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#abb3ea2ade5bbfcbbee3786a2ba7728b6">IRQ006_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a4a1e6d7a789b0d82e8dfc8e2d9107b9c">IRQ007_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a3be1d2fcdbe0b08b1104b6c99e94c5a4">IRQ009_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#ae5235f05c08de7795422d81c4086fddb">IRQ010_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a339da77a900181ce0afb2ad961ada062">IRQ011_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a0a554d7f9fbd72a25a32962c91d5d424">IRQ012_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#af976cc7f53598aabe923ebac4d5709e4">IRQ013_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#ac20e59a031a5afb473acee7855bec6f4">IRQ014_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#abea9f70f3c7676ee1d5929a9f35b9b1f">IRQ017_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a35ebd65cb335e8fa1b1fede6998bb46e">IRQ018_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a72da03097a29c7a975c038d70f3b162f">IRQ019_Handler</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__INT_HANDLER __SECTION_INT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a9940c145d04c7d7346f1c80ca75f9776">IRQ020_Handler</a> (void)</td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+变量</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="pho__common_8h.html#a3b09ccf3e40b21639c007a8d5e217257">func_ptr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xbr820__interrupts_8c.html#a3701e52e8a1f689a1098be205b2b9d53">irq_handler</a> [IRQ_NUM_MAX] = {NULL}</td></tr>
+</table>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="aac4429e9ba2df0a797165e20458951be"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ_NUM_MAX" ref="aac4429e9ba2df0a797165e20458951be" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ_NUM_MAX&#160;&#160;&#160;(20u)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00009">9</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="a89820f375d485914994e838c12fc92ee"></a><!-- doxytag: member="xbr820_interrupts.c::disable_irq_all" ref="a89820f375d485914994e838c12fc92ee" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> disable_irq_all </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00070">70</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_a89820f375d485914994e838c12fc92ee_cgraph.png" border="0" usemap="#xbr820__interrupts_8c_a89820f375d485914994e838c12fc92ee_cgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_a89820f375d485914994e838c12fc92ee_cgraph" id="xbr820__interrupts_8c_a89820f375d485914994e838c12fc92ee_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga6f22c696510e3802ccb1bdab9dc6f398" title="Disable IRQ Interrupts." alt="" coords="200,5,339,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a967cf25d94632b98316005222cc266e7"></a><!-- doxytag: member="xbr820_interrupts.c::enable_irq_all" ref="a967cf25d94632b98316005222cc266e7" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> enable_irq_all </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00061">61</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_cgraph.png" border="0" usemap="#xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_cgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_cgraph" id="xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#ga438862a9edbf502288b14b1508735502" title="Enable IRQ Interrupts." alt="" coords="196,5,331,40"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_icgraph.png" border="0" usemap="#xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_icgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_icgraph" id="xbr820__interrupts_8c_a967cf25d94632b98316005222cc266e7_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="196,5,259,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a96aad283c4d1779e6e310109464ad7b7"></a><!-- doxytag: member="xbr820_interrupts.c::handle_trap" ref="a96aad283c4d1779e6e310109464ad7b7" args="(unsigned int cause, unsigned int epc, unsigned int regs[32])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handle_trap </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>cause</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>epc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>regs</em>[32]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00004">4</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a42e910ae6016bd703249fe5d7076f270"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ001_Handler" ref="a42e910ae6016bd703249fe5d7076f270" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ001_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00079">79</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a20b748c45cb75cd7cd0e9c9867ef31f2"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ002_Handler" ref="a20b748c45cb75cd7cd0e9c9867ef31f2" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ002_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00088">88</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a78258b50f2f3f883cc75cf7b9946481b"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ003_Handler" ref="a78258b50f2f3f883cc75cf7b9946481b" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ003_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00097">97</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1664d8081897066ae1406ce45b1f5571"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ004_Handler" ref="a1664d8081897066ae1406ce45b1f5571" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ004_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00106">106</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e9a2bc43a525d212235a8c50744df54"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ005_Handler" ref="a7e9a2bc43a525d212235a8c50744df54" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ005_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00115">115</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="abb3ea2ade5bbfcbbee3786a2ba7728b6"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ006_Handler" ref="abb3ea2ade5bbfcbbee3786a2ba7728b6" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ006_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00124">124</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a1e6d7a789b0d82e8dfc8e2d9107b9c"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ007_Handler" ref="a4a1e6d7a789b0d82e8dfc8e2d9107b9c" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ007_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00133">133</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3be1d2fcdbe0b08b1104b6c99e94c5a4"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ009_Handler" ref="a3be1d2fcdbe0b08b1104b6c99e94c5a4" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ009_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00141">141</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5235f05c08de7795422d81c4086fddb"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ010_Handler" ref="ae5235f05c08de7795422d81c4086fddb" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ010_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00150">150</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a339da77a900181ce0afb2ad961ada062"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ011_Handler" ref="a339da77a900181ce0afb2ad961ada062" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ011_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00159">159</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a554d7f9fbd72a25a32962c91d5d424"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ012_Handler" ref="a0a554d7f9fbd72a25a32962c91d5d424" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ012_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00168">168</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="af976cc7f53598aabe923ebac4d5709e4"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ013_Handler" ref="af976cc7f53598aabe923ebac4d5709e4" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ013_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00177">177</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac20e59a031a5afb473acee7855bec6f4"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ014_Handler" ref="ac20e59a031a5afb473acee7855bec6f4" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ014_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00185">185</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="abea9f70f3c7676ee1d5929a9f35b9b1f"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ017_Handler" ref="abea9f70f3c7676ee1d5929a9f35b9b1f" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ017_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00193">193</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a35ebd65cb335e8fa1b1fede6998bb46e"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ018_Handler" ref="a35ebd65cb335e8fa1b1fede6998bb46e" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ018_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00201">201</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a72da03097a29c7a975c038d70f3b162f"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ019_Handler" ref="a72da03097a29c7a975c038d70f3b162f" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ019_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00209">209</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9940c145d04c7d7346f1c80ca75f9776"></a><!-- doxytag: member="xbr820_interrupts.c::IRQ020_Handler" ref="a9940c145d04c7d7346f1c80ca75f9776" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__INT_HANDLER __SECTION_INT void IRQ020_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00217">217</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a93a764de9f26ec4e359142e3b0b98ee0"></a><!-- doxytag: member="xbr820_interrupts.c::set_irq" ref="a93a764de9f26ec4e359142e3b0b98ee0" args="(const stc_irq_set_cfg_t *irq_set_cfg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> set_irq </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="xbr820__interrupts_8h.html#a00a0f8ed9493ae102d2c54aa76e14f5d">stc_irq_set_cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>irq_set_cfg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00013">13</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_cgraph.png" border="0" usemap="#xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_cgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_cgraph" id="xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___v_i_c_functions.html#ga4f821781842f318c4845e31ffa7df62a" title="Set Interrupt Priority." alt="" coords="152,5,315,40"/><area shape="rect" id="node3" href="group___c_s_i___core___v_i_c_functions.html#ga53dcfdbb3a7e14c47b32479c91a970ec" title="set_shv_irq" alt="" coords="172,64,295,99"/><area shape="rect" id="node4" href="group___c_s_i___core___v_i_c_functions.html#gab41a151ef80d9ec4e00463250514aed4" title="set_rising_edge_irq" alt="" coords="136,123,331,157"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_icgraph.png" border="0" usemap="#xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_icgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_icgraph" id="xbr820__interrupts_8c_a93a764de9f26ec4e359142e3b0b98ee0_icgraph">
+<area shape="rect" id="node2" href="xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="149,5,317,40"/><area shape="rect" id="node4" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="202,64,265,99"/><area shape="rect" id="node5" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="136,123,331,157"/><area shape="rect" id="node7" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="199,181,267,216"/><area shape="rect" id="node9" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="165,240,302,275"/><area shape="rect" id="node3" href="projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="379,5,441,40"/><area shape="rect" id="node6" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="379,123,441,157"/><area shape="rect" id="node8" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="379,181,441,216"/><area shape="rect" id="node10" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="379,240,441,275"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aba2599a343893580fb800955a392ef2e"></a><!-- doxytag: member="xbr820_interrupts.c::start_irq_x" ref="aba2599a343893580fb800955a392ef2e" args="(irq_number_e irq_number)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> start_irq_x </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a>&#160;</td>
+          <td class="paramname"><em>irq_number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00031">31</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_cgraph.png" border="0" usemap="#xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_cgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_cgraph" id="xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="168,5,415,40"/><area shape="rect" id="node3" href="group___c_s_i___core___v_i_c_functions.html#gaa94b94a45d6abb555ea6120501fe73f5" title="Enable External Interrupt." alt="" coords="200,64,383,99"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_icgraph.png" border="0" usemap="#xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_icgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_icgraph" id="xbr820__interrupts_8c_aba2599a343893580fb800955a392ef2e_icgraph">
+<area shape="rect" id="node2" href="xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="181,5,349,40"/><area shape="rect" id="node4" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="234,64,297,99"/><area shape="rect" id="node5" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="168,123,363,157"/><area shape="rect" id="node7" href="bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="231,181,299,216"/><area shape="rect" id="node9" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="197,240,334,275"/><area shape="rect" id="node3" href="projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="411,5,473,40"/><area shape="rect" id="node6" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="411,123,473,157"/><area shape="rect" id="node8" href="projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="411,181,473,216"/><area shape="rect" id="node10" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="411,240,473,275"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af414107628d0e88db6ab45c376294366"></a><!-- doxytag: member="xbr820_interrupts.c::stop_irq_x" ref="af414107628d0e88db6ab45c376294366" args="(irq_number_e irq_number)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> stop_irq_x </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a>&#160;</td>
+          <td class="paramname"><em>irq_number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00046">46</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_cgraph.png" border="0" usemap="#xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_cgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_cgraph" id="xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___v_i_c_functions.html#gaa5ba90f8674fba7cbecb948f06ff0f6f" title="Disable External Interrupt." alt="" coords="197,5,383,40"/><area shape="rect" id="node3" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="167,64,413,99"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_icgraph.png" border="0" usemap="#xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_icgraph" alt=""/></div>
+<map name="xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_icgraph" id="xbr820__interrupts_8c_af414107628d0e88db6ab45c376294366_icgraph">
+<area shape="rect" id="node2" href="bsp__ir_8h.html#adc8cc82194fad64b41c14cb758afa205" title="IR de&#45;initialize." alt="" coords="167,5,257,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>变量文档</h2>
+<a class="anchor" id="a3701e52e8a1f689a1098be205b2b9d53"></a><!-- doxytag: member="xbr820_interrupts.c::irq_handler" ref="a3701e52e8a1f689a1098be205b2b9d53" args="[IRQ_NUM_MAX]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pho__common_8h.html#a3b09ccf3e40b21639c007a8d5e217257">func_ptr_t</a> <a class="el" href="xbr820__interrupts_8c.html#a3701e52e8a1f689a1098be205b2b9d53">irq_handler</a>[IRQ_NUM_MAX] = {NULL}</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__interrupts_8c_source.html">xbr820_interrupts.c</a>第<a class="el" href="xbr820__interrupts_8c_source.html#l00011">11</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

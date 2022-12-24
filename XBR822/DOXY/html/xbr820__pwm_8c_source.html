@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_pwm.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_pwm.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__pwm_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <span class="comment">/*******************************************************************************</span>
+<a name="l00013"></a>00013 <span class="comment"> * Include files</span>
+<a name="l00014"></a>00014 <span class="comment"> ******************************************************************************/</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__gpio_8h.html">xbr820_gpio.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__pwm_8h.html" title="pwm C head file">xbr820_pwm.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00026"></a><a class="code" href="group__pwm__group.html#gafb4f8ad15ba8149439a9dd5dfa81f930">00026</a> <span class="keywordtype">int</span> <a class="code" href="group__pwm__group.html#gafb4f8ad15ba8149439a9dd5dfa81f930" title="PWMx enabled.">pwm_enable</a>(<a class="code" href="struct_p_w_m___config__t.html" title="PWM Init structure definition.">PWM_Config_t</a>* pwm)
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028     <span class="keywordflow">if</span> ( (pwm == NULL) ||
+<a name="l00029"></a>00029         ((pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a8ac3db453f451a3664ba0733c27aed7d">freq</a> == 0) &amp;&amp; ( pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a72f2d8e6741cf91f090fad78d362628e">duty</a> == 0)))
+<a name="l00030"></a>00030         <span class="keywordflow">return</span> -1;
+<a name="l00031"></a>00031     <a class="code" href="structbrx820__pwm__regdef.html">brx820_pwm_regdef</a> *PWM_reg = ((<a class="code" href="structbrx820__pwm__regdef.html">brx820_pwm_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#a4577d5955e1e4c0ed254c11d45479bd4">BRX820_PWM1</a>));
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *pwm_Freq = &amp;(PWM_reg-&gt;<a class="code" href="structbrx820__pwm__regdef.html#a5fd2ea6a146151cf70d08bdc1223b853">PWM_CTR</a>);
+<a name="l00034"></a>00034     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *pwm_Duty = &amp;(PWM_reg-&gt;<a class="code" href="structbrx820__pwm__regdef.html#a456db61af82dad2d516e0b03910f8745">PWM_DUTY</a>);
+<a name="l00035"></a>00035     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *pwm_en = &amp;(PWM_reg-&gt;<a class="code" href="structbrx820__pwm__regdef.html#a48bdd2fd31667d78e56c206bbc734763">PWM_EN</a>);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037     pwm_Freq[pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a79f4dd95bb01538dc0523677cc9a1409">idx</a>] = <a class="code" href="mcu_2common_2xbr820_8h.html#a95982eccb57c2ae35f8ba3d8f0b05653">SYSTEM_CLOCK</a> / pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a8ac3db453f451a3664ba0733c27aed7d">freq</a>;<span class="comment">/* the freq register&#39;s value is the result of SYSTEM CLOCK devided by the frequence wanted */</span>
+<a name="l00038"></a>00038     pwm_Duty[pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a79f4dd95bb01538dc0523677cc9a1409">idx</a>] = (pwm_Freq[pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a79f4dd95bb01538dc0523677cc9a1409">idx</a>] * pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a72f2d8e6741cf91f090fad78d362628e">duty</a>) / 100;<span class="comment">/* the duty register&#39;s value is the ratio of frequence */</span>
+<a name="l00039"></a>00039     pwm_en[pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a79f4dd95bb01538dc0523677cc9a1409">idx</a>] = 1;
+<a name="l00040"></a>00040     <span class="keywordflow">return</span> 0;
+<a name="l00041"></a>00041 }
+<a name="l00042"></a>00042 
+<a name="l00048"></a><a class="code" href="group__pwm__group.html#ga8f113acd27d4cf4c0807db6243b777c6">00048</a> <span class="keywordtype">int</span> <a class="code" href="group__pwm__group.html#ga8f113acd27d4cf4c0807db6243b777c6" title="PWMx disabled.">pwm_disable</a>(<a class="code" href="struct_p_w_m___config__t.html" title="PWM Init structure definition.">PWM_Config_t</a>* pwm)
+<a name="l00049"></a>00049 {
+<a name="l00050"></a>00050     <span class="keywordflow">if</span> (pwm == NULL)
+<a name="l00051"></a>00051         <span class="keywordflow">return</span> -1;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053     <a class="code" href="structbrx820__pwm__regdef.html">brx820_pwm_regdef</a> *PWM_reg = ((<a class="code" href="structbrx820__pwm__regdef.html">brx820_pwm_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#a4577d5955e1e4c0ed254c11d45479bd4">BRX820_PWM1</a>));
+<a name="l00054"></a>00054     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *pwm_en = &amp;(PWM_reg-&gt;<a class="code" href="structbrx820__pwm__regdef.html#a48bdd2fd31667d78e56c206bbc734763">PWM_EN</a>);
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056     pwm_en[pwm-&gt;<a class="code" href="struct_p_w_m___config__t.html#a79f4dd95bb01538dc0523677cc9a1409">idx</a>] = 0;
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058     <span class="keywordflow">return</span> 0;
+<a name="l00059"></a>00059 }
+<a name="l00060"></a>00060 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

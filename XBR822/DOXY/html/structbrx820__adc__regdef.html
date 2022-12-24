@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>brx820_adc_regdef结构参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>组合类型列表</span></a></li>
+      <li><a href="classes.html"><span>组合类型索引</span></a></li>
+      <li><a href="functions.html"><span>组合类型成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">公有属性</a>  </div>
+  <div class="headertitle">
+<div class="title">brx820_adc_regdef结构参考</div>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="brx820_adc_regdef" -->
+<p><code>#include &lt;<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>&gt;</code></p>
+<div class="dynheader">
+brx820_adc_regdef合作图：</div>
+<div class="dyncontent">
+<div class="center"><img src="structbrx820__adc__regdef__coll__graph.png" border="0" usemap="#brx820__adc__regdef_coll__map" alt="Collaboration graph"/></div>
+<map name="brx820__adc__regdef_coll__map" id="brx820__adc__regdef_coll__map">
+<area shape="rect" id="node2" href="structstr__adc__range__field__t.html" title="str_adc_range_field_t" alt="" coords="5,5,219,40"/><area shape="rect" id="node3" href="structstr__adc__delay__field__t.html" title="str_adc_delay_field_t" alt="" coords="243,5,453,40"/><area shape="rect" id="node4" href="structstr__adc__ctl__field__t.html" title="str_adc_ctl_field_t" alt="" coords="478,5,661,40"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+
+<p><a href="structbrx820__adc__regdef-members.html">所有成员的列表。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+公有属性</h2></td></tr>
+<tr><td class="memItemLeft" >union {</td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__adc__regdef.html#a8ed00b7fc470cea5f0d4596bcc129ef5">CTL</a></td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structstr__adc__ctl__field__t.html">str_adc_ctl_field_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__adc__regdef.html#a4e28d7e36eba379e686ef2d7d5509513">CTL_f</a></td></tr>
+<tr><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr><td class="memItemLeft" >union {</td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__adc__regdef.html#a73a054e9fab093a05dac7b12ab5325fd">DELAY</a></td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structstr__adc__delay__field__t.html">str_adc_delay_field_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__adc__regdef.html#a5b9ae95256a89379ee13bd23e3374d01">DELAY_f</a></td></tr>
+<tr><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr><td class="memItemLeft" >union {</td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__adc__regdef.html#a6f1d374e86187a18b84c0b41c57a0ffe">RANGE</a></td></tr>
+<tr><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structstr__adc__range__field__t.html">str_adc_range_field_t</a>&#160;&#160;&#160;<a class="el" href="structbrx820__adc__regdef.html#a50215625239166e0b78259c1d74b23d8">RANGE_f</a></td></tr>
+<tr><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<div class="textblock">
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00205">205</a>行定义。</p>
+</div><hr/><h2>成员数据文档</h2>
+<a class="anchor" id="a8b4c8929d9f4484aff7b8a004f312198"></a><!-- doxytag: member="brx820_adc_regdef::@17" ref="a8b4c8929d9f4484aff7b8a004f312198" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6872071bad3b8a42e667275590e14d50"></a><!-- doxytag: member="brx820_adc_regdef::@19" ref="a6872071bad3b8a42e667275590e14d50" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6cad27d9a274c0ef10260d25e65f9f6a"></a><!-- doxytag: member="brx820_adc_regdef::@21" ref="a6cad27d9a274c0ef10260d25e65f9f6a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8ed00b7fc470cea5f0d4596bcc129ef5"></a><!-- doxytag: member="brx820_adc_regdef::CTL" ref="a8ed00b7fc470cea5f0d4596bcc129ef5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__adc__regdef.html#a8ed00b7fc470cea5f0d4596bcc129ef5">brx820_adc_regdef::CTL</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00209">209</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e28d7e36eba379e686ef2d7d5509513"></a><!-- doxytag: member="brx820_adc_regdef::CTL_f" ref="a4e28d7e36eba379e686ef2d7d5509513" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstr__adc__ctl__field__t.html">str_adc_ctl_field_t</a> <a class="el" href="structbrx820__adc__regdef.html#a4e28d7e36eba379e686ef2d7d5509513">brx820_adc_regdef::CTL_f</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00210">210</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a73a054e9fab093a05dac7b12ab5325fd"></a><!-- doxytag: member="brx820_adc_regdef::DELAY" ref="a73a054e9fab093a05dac7b12ab5325fd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__adc__regdef.html#a73a054e9fab093a05dac7b12ab5325fd">brx820_adc_regdef::DELAY</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00214">214</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b9ae95256a89379ee13bd23e3374d01"></a><!-- doxytag: member="brx820_adc_regdef::DELAY_f" ref="a5b9ae95256a89379ee13bd23e3374d01" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstr__adc__delay__field__t.html">str_adc_delay_field_t</a> <a class="el" href="structbrx820__adc__regdef.html#a5b9ae95256a89379ee13bd23e3374d01">brx820_adc_regdef::DELAY_f</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00215">215</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f1d374e86187a18b84c0b41c57a0ffe"></a><!-- doxytag: member="brx820_adc_regdef::RANGE" ref="a6f1d374e86187a18b84c0b41c57a0ffe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IO <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="structbrx820__adc__regdef.html#a6f1d374e86187a18b84c0b41c57a0ffe">brx820_adc_regdef::RANGE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00219">219</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a50215625239166e0b78259c1d74b23d8"></a><!-- doxytag: member="brx820_adc_regdef::RANGE_f" ref="a50215625239166e0b78259c1d74b23d8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstr__adc__range__field__t.html">str_adc_range_field_t</a> <a class="el" href="structbrx820__adc__regdef.html#a50215625239166e0b78259c1d74b23d8">brx820_adc_regdef::RANGE_f</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a>第<a class="el" href="mcu_2common_2xbr820_8h_source.html#l00220">220</a>行定义。</p>
+
+</div>
+</div>
+<hr/>该结构的文档由以下文件生成：<ul>
+<li>D:/cccc2022/CODE/radar_soc/XBR822/SDK/mcu/common/<a class="el" href="mcu_2common_2xbr820_8h_source.html">xbr820.h</a></li>
+</ul>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:50 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>PMP Functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">PMP Functions</div>  </div>
+<div class="ingroups"><a class="el" href="group___c_s_i___core___function_interface.html">Functions and Instructions Reference</a></div></div>
+<div class="contents">
+
+<p>Functions that manage interrupts and exceptions via the VIC.  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+PMP Functions合作图：</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group___c_s_i___core___p_m_p_functions.png" border="0" alt="" usemap="#group______c__s__i______core______p__m__p__functions"/>
+<map name="group______c__s__i______core______p__m__p__functions" id="group______c__s__i______core______p__m__p__functions">
+<area shape="rect" id="node1" href="group___c_s_i___core___function_interface.html" title="Functions and Instructions Reference" alt="" coords="5,5,352,40"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___p_m_p_functions.html#ga33ddd6973a998818b5a5132bfcdc1fb9">csi_mpu_config_region</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> idx, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> base_addr, <a class="el" href="group___c_s_i___p_m_p.html#ga58f75991191fb00c53297f819a9aee16">region_size_e</a> size, <a class="el" href="structmpu__region__attr__t.html">mpu_region_attr_t</a> attr, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> enable)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">configure memory protected region.  <a href="#ga33ddd6973a998818b5a5132bfcdc1fb9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_s_i___core___p_m_p_functions.html#ga34d8476a51a170f4073ba4a0f128d145">csi_mpu_disable_region</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> idx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">disable mpu region by idx.  <a href="#ga34d8476a51a170f4073ba4a0f128d145"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<p>Functions that manage interrupts and exceptions via the VIC. </p>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="ga33ddd6973a998818b5a5132bfcdc1fb9"></a><!-- doxytag: member="core_rv32.h::csi_mpu_config_region" ref="ga33ddd6973a998818b5a5132bfcdc1fb9" args="(uint32_t idx, uint32_t base_addr, region_size_e size, mpu_region_attr_t attr, uint32_t enable)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_mpu_config_region </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>base_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___c_s_i___p_m_p.html#ga58f75991191fb00c53297f819a9aee16">region_size_e</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmpu__region__attr__t.html">mpu_region_attr_t</a>&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>enable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>configure memory protected region. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>memory protected region (0, 1, 2, ..., 15). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">base_addr</td><td>base address must be aligned with page size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td><a class="el" href="group___c_s_i___p_m_p.html#ga58f75991191fb00c53297f819a9aee16">region_size_e</a>. memory protected region size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>region_size_t. memory protected region attribute. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>enable or disable memory protected region. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00596">596</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___p_m_p_functions_ga33ddd6973a998818b5a5132bfcdc1fb9_cgraph.png" border="0" usemap="#group___c_s_i___core___p_m_p_functions_ga33ddd6973a998818b5a5132bfcdc1fb9_cgraph" alt=""/></div>
+<map name="group___c_s_i___core___p_m_p_functions_ga33ddd6973a998818b5a5132bfcdc1fb9_cgraph" id="group___c_s_i___core___p_m_p_functions_ga33ddd6973a998818b5a5132bfcdc1fb9_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gafeb2e38740e0219233ba3d87f6d99568" title="Set PMPADDRx by index." alt="" coords="276,475,465,509"/><area shape="rect" id="node19" href="group___c_s_i___core___reg_acc_functions.html#gae1905cc6904d78db702c1a0b72b326f5" title="Set PMPxCFG by index." alt="" coords="283,1120,459,1155"/><area shape="rect" id="node3" href="group___c_s_i___core___reg_acc_functions.html#gaef44b11d7673f2335ec437eb60bfe748" title="Set PMPADDRx." alt="" coords="519,5,710,40"/><area shape="rect" id="node4" href="group___c_s_i___core___reg_acc_functions.html#ga265add496d5e42429d368c341c0e337c" title="__set_PMPADDR1" alt="" coords="519,64,710,99"/><area shape="rect" id="node5" href="group___c_s_i___core___reg_acc_functions.html#ga31ed0afdb5cbccc0748f104f8096a4b2" title="__set_PMPADDR2" alt="" coords="519,123,710,157"/><area shape="rect" id="node6" href="group___c_s_i___core___reg_acc_functions.html#ga1ab00a7218281d968e1c0cf4f3bfcb20" title="__set_PMPADDR3" alt="" coords="519,181,710,216"/><area shape="rect" id="node7" href="group___c_s_i___core___reg_acc_functions.html#ga8450f6f9194dc9678a71f22775e8a847" title="__set_PMPADDR4" alt="" coords="519,240,710,275"/><area shape="rect" id="node8" href="group___c_s_i___core___reg_acc_functions.html#ga56163986b9b0f3e927d1597175d2e91f" title="__set_PMPADDR5" alt="" coords="519,299,710,333"/><area shape="rect" id="node9" href="group___c_s_i___core___reg_acc_functions.html#gac03ff42946148b6fc9d33c2e87f2bf7f" title="__set_PMPADDR6" alt="" coords="519,357,710,392"/><area shape="rect" id="node10" href="group___c_s_i___core___reg_acc_functions.html#ga4cbe00453fb18b0cf535ef6793f3136e" title="__set_PMPADDR7" alt="" coords="519,416,710,451"/><area shape="rect" id="node11" href="group___c_s_i___core___reg_acc_functions.html#gafb1b4a392fee926409f9dc15dca71675" title="__set_PMPADDR8" alt="" coords="519,475,710,509"/><area shape="rect" id="node12" href="group___c_s_i___core___reg_acc_functions.html#ga66c812c062a7fd32add8c553e8b6dd6a" title="__set_PMPADDR9" alt="" coords="519,533,710,568"/><area shape="rect" id="node13" href="group___c_s_i___core___reg_acc_functions.html#ga22e8c80a287d36dd9cf79ee180519ea8" title="__set_PMPADDR10" alt="" coords="513,592,716,627"/><area shape="rect" id="node14" href="group___c_s_i___core___reg_acc_functions.html#gacb13bcb7082f05a7d78c12cc86fb2008" title="__set_PMPADDR11" alt="" coords="513,651,716,685"/><area shape="rect" id="node15" href="group___c_s_i___core___reg_acc_functions.html#ga28bbf99fc7cf118abee18a90dd290e0e" title="__set_PMPADDR12" alt="" coords="513,709,716,744"/><area shape="rect" id="node16" href="group___c_s_i___core___reg_acc_functions.html#ga7907b878bea7c3d2d50c0df0df327327" title="__set_PMPADDR13" alt="" coords="513,768,716,803"/><area shape="rect" id="node17" href="group___c_s_i___core___reg_acc_functions.html#ga4367209cf535cb2378f0aa749a1bc6bd" title="__set_PMPADDR14" alt="" coords="513,827,716,861"/><area shape="rect" id="node18" href="group___c_s_i___core___reg_acc_functions.html#ga00a465ea1c0d114dac2b426f898e97cb" title="__set_PMPADDR15" alt="" coords="513,885,716,920"/><area shape="rect" id="node20" href="group___c_s_i___core___reg_acc_functions.html#ga94aa91e5f5e48ef490eafc8a5c308779" title="Get PMPCFGx Register." alt="" coords="525,944,704,979"/><area shape="rect" id="node21" href="group___c_s_i___core___reg_acc_functions.html#ga412a975a1ab00df5e0223f6423684184" title="Set PMPCFGx." alt="" coords="525,1003,704,1037"/><area shape="rect" id="node22" href="group___c_s_i___core___reg_acc_functions.html#ga75e6cfadf3489fa374423e6c421c2bd0" title="__get_PMPCFG1" alt="" coords="525,1061,704,1096"/><area shape="rect" id="node23" href="group___c_s_i___core___reg_acc_functions.html#ga1b914de746b8bfa07f283efd7cbc3ea0" title="__set_PMPCFG1" alt="" coords="525,1120,704,1155"/><area shape="rect" id="node24" href="group___c_s_i___core___reg_acc_functions.html#ga396165e320855c8b27033cdb38e671fd" title="__get_PMPCFG2" alt="" coords="525,1179,704,1213"/><area shape="rect" id="node25" href="group___c_s_i___core___reg_acc_functions.html#gad27c9b99dfea7531ab20c1f2e279c009" title="__set_PMPCFG2" alt="" coords="525,1237,704,1272"/><area shape="rect" id="node26" href="group___c_s_i___core___reg_acc_functions.html#ga16d4dc693b54d487345d8340212bebed" title="__get_PMPCFG3" alt="" coords="525,1296,704,1331"/><area shape="rect" id="node27" href="group___c_s_i___core___reg_acc_functions.html#ga5eaafea8df23f1e218a8f44cd93bb11d" title="__set_PMPCFG3" alt="" coords="525,1355,704,1389"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga34d8476a51a170f4073ba4a0f128d145"></a><!-- doxytag: member="core_rv32.h::csi_mpu_disable_region" ref="ga34d8476a51a170f4073ba4a0f128d145" args="(uint32_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void csi_mpu_disable_region </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>disable mpu region by idx. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>memory protected region (0, 1, 2, ..., 15). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="core__rv32_8h_source.html">core_rv32.h</a>第<a class="el" href="core__rv32_8h_source.html#l00635">635</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_s_i___core___p_m_p_functions_ga34d8476a51a170f4073ba4a0f128d145_cgraph.png" border="0" usemap="#group___c_s_i___core___p_m_p_functions_ga34d8476a51a170f4073ba4a0f128d145_cgraph" alt=""/></div>
+<map name="group___c_s_i___core___p_m_p_functions_ga34d8476a51a170f4073ba4a0f128d145_cgraph" id="group___c_s_i___core___p_m_p_functions_ga34d8476a51a170f4073ba4a0f128d145_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___reg_acc_functions.html#gae1905cc6904d78db702c1a0b72b326f5" title="Set PMPxCFG by index." alt="" coords="286,181,462,216"/><area shape="rect" id="node11" href="group___c_s_i___core___reg_acc_functions.html#gadf37b13460f0c2c0d7d2641f31ebbf72" title="Get PMPxCFG Register by index." alt="" coords="285,123,463,157"/><area shape="rect" id="node3" href="group___c_s_i___core___reg_acc_functions.html#ga94aa91e5f5e48ef490eafc8a5c308779" title="Get PMPCFGx Register." alt="" coords="511,123,689,157"/><area shape="rect" id="node4" href="group___c_s_i___core___reg_acc_functions.html#ga412a975a1ab00df5e0223f6423684184" title="Set PMPCFGx." alt="" coords="511,240,689,275"/><area shape="rect" id="node5" href="group___c_s_i___core___reg_acc_functions.html#ga75e6cfadf3489fa374423e6c421c2bd0" title="__get_PMPCFG1" alt="" coords="511,181,689,216"/><area shape="rect" id="node6" href="group___c_s_i___core___reg_acc_functions.html#ga1b914de746b8bfa07f283efd7cbc3ea0" title="__set_PMPCFG1" alt="" coords="511,299,689,333"/><area shape="rect" id="node7" href="group___c_s_i___core___reg_acc_functions.html#ga396165e320855c8b27033cdb38e671fd" title="__get_PMPCFG2" alt="" coords="511,5,689,40"/><area shape="rect" id="node8" href="group___c_s_i___core___reg_acc_functions.html#gad27c9b99dfea7531ab20c1f2e279c009" title="__set_PMPCFG2" alt="" coords="511,357,689,392"/><area shape="rect" id="node9" href="group___c_s_i___core___reg_acc_functions.html#ga16d4dc693b54d487345d8340212bebed" title="__get_PMPCFG3" alt="" coords="511,64,689,99"/><area shape="rect" id="node10" href="group___c_s_i___core___reg_acc_functions.html#ga5eaafea8df23f1e218a8f44cd93bb11d" title="__set_PMPCFG3" alt="" coords="511,416,689,451"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:49 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

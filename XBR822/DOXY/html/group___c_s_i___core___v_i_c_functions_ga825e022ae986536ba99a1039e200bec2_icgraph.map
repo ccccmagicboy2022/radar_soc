@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__interrupts_8c.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="312,152,427,187"/>
+<area shape="rect" id="node12" href="$xbr820__interrupts_8c.html#af414107628d0e88db6ab45c376294366" title="stop_irq_x" alt="" coords="313,255,426,289"/>
+<area shape="rect" id="node14" href="$xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f" title="__attribute__" alt="" coords="300,313,439,348"/>
+<area shape="rect" id="node3" href="$xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="500,5,668,40"/>
+<area shape="rect" id="node5" href="$projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="553,64,615,99"/>
+<area shape="rect" id="node6" href="$bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="487,123,681,157"/>
+<area shape="rect" id="node8" href="$bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="550,181,618,216"/>
+<area shape="rect" id="node10" href="$bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="515,240,653,275"/>
+<area shape="rect" id="node4" href="$projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,5,792,40"/>
+<area shape="rect" id="node7" href="$projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,123,792,157"/>
+<area shape="rect" id="node9" href="$projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,181,792,216"/>
+<area shape="rect" id="node11" href="$projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="729,240,792,275"/>
+<area shape="rect" id="node13" href="$bsp__ir_8h.html#adc8cc82194fad64b41c14cb758afa205" title="IR de&#45;initialize." alt="" coords="539,299,629,333"/>
+</map>

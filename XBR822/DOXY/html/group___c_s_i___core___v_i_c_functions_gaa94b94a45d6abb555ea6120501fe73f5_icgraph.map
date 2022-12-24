@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__interrupts_8c.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="236,123,351,157"/>
+<area shape="rect" id="node3" href="$xbr820__wdg_8c.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="412,5,580,40"/>
+<area shape="rect" id="node5" href="$projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="465,64,527,99"/>
+<area shape="rect" id="node6" href="$bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c" title="freq_detect_irq_cfg" alt="" coords="399,123,593,157"/>
+<area shape="rect" id="node8" href="$bsp__ir_8h.html#a3bc2c959f333ec2a3d1f8609d4c176d0" title="IR initialize." alt="" coords="462,181,530,216"/>
+<area shape="rect" id="node10" href="$bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg" alt="" coords="427,240,565,275"/>
+<area shape="rect" id="node4" href="$projects_2examples_2wdg_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,5,704,40"/>
+<area shape="rect" id="node7" href="$projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,123,704,157"/>
+<area shape="rect" id="node9" href="$projects_2examples_2ir_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,181,704,216"/>
+<area shape="rect" id="node11" href="$projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="641,240,704,275"/>
+</map>

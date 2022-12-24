@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__wdg_8h.html#ab3ea324d54e51c984d952bf226e1d6ec" title="wdg initialize." alt="" coords="116,137,284,172"/>
+<area shape="rect" id="node10" href="$xbr820__wdg_8h.html#a31347985aa6a5bafb9468e5cf699a0bf" title="WDG_irqhandler" alt="" coords="116,196,284,231"/>
+<area shape="rect" id="node11" href="$xbr820__wdg_8h.html#ae608ca672f219fd71c88d09d93d9ac41" title="wdg initialize." alt="" coords="153,255,247,289"/>
+<area shape="rect" id="node3" href="$xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="355,108,437,143"/>
+<area shape="rect" id="node7" href="$xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="339,181,453,216"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___v_i_c_functions.html#ga4f821781842f318c4845e31ffa7df62a" title="Set Interrupt Priority." alt="" coords="550,5,713,40"/>
+<area shape="rect" id="node5" href="$group___c_s_i___core___v_i_c_functions.html#ga53dcfdbb3a7e14c47b32479c91a970ec" title="set_shv_irq" alt="" coords="570,64,693,99"/>
+<area shape="rect" id="node6" href="$group___c_s_i___core___v_i_c_functions.html#gab41a151ef80d9ec4e00463250514aed4" title="set_rising_edge_irq" alt="" coords="534,123,729,157"/>
+<area shape="rect" id="node8" href="$group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="508,181,755,216"/>
+<area shape="rect" id="node9" href="$group___c_s_i___core___v_i_c_functions.html#gaa94b94a45d6abb555ea6120501fe73f5" title="Enable External Interrupt." alt="" coords="540,240,723,275"/>
+<area shape="rect" id="node12" href="$xbr820__wdg_8h.html#abc20613ab5cff67e083facb044c54511" title="enable the WatchDog timer. This is a cpu watchdog, only reset cpu not system." alt="" coords="332,255,460,289"/>
+</map>

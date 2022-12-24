@@ -1,0 +1,9 @@
+<map id="structs" name="structs">
+<area shape="rect" id="node1" href="$group___c_s_i__core__base.html" title="Definitions for base addresses, unions, and structures." alt="" coords="422,5,583,40"/>
+<area shape="rect" id="node2" href="$group___c_s_i___sys_tick.html" title="Type definitions for the System Timer Registers." alt="" coords="365,64,640,99"/>
+<area shape="rect" id="node4" href="$group___c_s_i___d_c_c.html" title="Type definitions for the DCC." alt="" coords="449,123,557,157"/>
+<area shape="rect" id="node5" href="$group___c_s_i__core__bitfield.html" title="Macros for use with bit field definitions (xxx_Pos, xxx_Msk)." alt="" coords="363,181,642,216"/>
+<area shape="rect" id="node6" href="$group___c_s_i___c_l_i_c.html" title="Type definitions for the CLIC Registers." alt="" coords="325,240,680,275"/>
+<area shape="rect" id="node7" href="$group___c_s_i___c_o_r_e.html" title="Core Register type definitions." alt="" coords="365,299,640,333"/>
+<area shape="rect" id="node8" href="$group___c_s_i___p_m_p.html" title="Type definitions for the PMP Registers." alt="" coords="337,357,668,392"/>
+</map>

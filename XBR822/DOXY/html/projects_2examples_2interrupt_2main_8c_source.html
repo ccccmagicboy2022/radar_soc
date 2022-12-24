@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/interrupt/main.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/interrupt/main.c</div>  </div>
+</div>
+<div class="contents">
+<a href="projects_2examples_2interrupt_2main_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__interrupts_8h.html">xbr820_interrupts.h</a>&quot;</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a><a class="code" href="projects_2examples_2interrupt_2main_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">00004</a> <a class="code" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section (<span class="stringliteral">&quot;INT&quot;</span>))) void irq_test(<span class="keywordtype">void</span>)
+<a name="l00005"></a>00005 {
+<a name="l00006"></a>00006     <span class="keywordflow">while</span>(1);
+<a name="l00007"></a>00007 }
+<a name="l00008"></a>00008 
+<a name="l00009"></a><a class="code" href="projects_2examples_2interrupt_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">00009</a> <span class="keywordtype">int</span> <a class="code" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()
+<a name="l00010"></a>00010 {
+<a name="l00011"></a>00011     <a class="code" href="xbr820__interrupts_8h.html#a967cf25d94632b98316005222cc266e7">enable_irq_all</a>();
+<a name="l00012"></a>00012         
+<a name="l00013"></a>00013         <a class="code" href="structstc__irq__set__conf.html">stc_irq_set_cfg_t</a> irq_000_set_cfg;
+<a name="l00014"></a>00014         
+<a name="l00015"></a>00015     irq_000_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a> = <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da5360a1643279f48117c6dddf4636f510">GPIO_PA0_IRQ</a>;
+<a name="l00016"></a>00016     irq_000_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a4770eadb33bbd68dfd15ec540c345a2f">irq_func_pointer</a> = &amp;irq_test;
+<a name="l00017"></a>00017     irq_000_set_cfg.<a class="code" href="structstc__irq__set__conf.html#af20f3fdbedebe464155d85c8cddfdcd6">irq_priority</a> = <a class="code" href="xbr820__interrupts_8h.html#a4c03d3d9bfcd8970e7d196ec29514adb">IRQ_PRIORITY_DEFAULT</a>;
+<a name="l00018"></a>00018     
+<a name="l00019"></a>00019         <a class="code" href="xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0">set_irq</a>(&amp;irq_000_set_cfg);
+<a name="l00020"></a>00020         
+<a name="l00021"></a>00021     <a class="code" href="xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e">start_irq_x</a>(irq_000_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a>);
+<a name="l00022"></a>00022         
+<a name="l00023"></a>00023     <span class="keywordflow">while</span>(1);
+<a name="l00024"></a>00024     <span class="keywordflow">return</span> 0;
+<a name="l00025"></a>00025 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

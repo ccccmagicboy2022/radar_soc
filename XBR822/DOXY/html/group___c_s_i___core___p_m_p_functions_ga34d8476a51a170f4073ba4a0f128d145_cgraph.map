@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$group___c_s_i___core___reg_acc_functions.html#gae1905cc6904d78db702c1a0b72b326f5" title="Set PMPxCFG by index." alt="" coords="286,181,462,216"/>
+<area shape="rect" id="node11" href="$group___c_s_i___core___reg_acc_functions.html#gadf37b13460f0c2c0d7d2641f31ebbf72" title="Get PMPxCFG Register by index." alt="" coords="285,123,463,157"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___reg_acc_functions.html#ga94aa91e5f5e48ef490eafc8a5c308779" title="Get PMPCFGx Register." alt="" coords="511,123,689,157"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___reg_acc_functions.html#ga412a975a1ab00df5e0223f6423684184" title="Set PMPCFGx." alt="" coords="511,240,689,275"/>
+<area shape="rect" id="node5" href="$group___c_s_i___core___reg_acc_functions.html#ga75e6cfadf3489fa374423e6c421c2bd0" title="__get_PMPCFG1" alt="" coords="511,181,689,216"/>
+<area shape="rect" id="node6" href="$group___c_s_i___core___reg_acc_functions.html#ga1b914de746b8bfa07f283efd7cbc3ea0" title="__set_PMPCFG1" alt="" coords="511,299,689,333"/>
+<area shape="rect" id="node7" href="$group___c_s_i___core___reg_acc_functions.html#ga396165e320855c8b27033cdb38e671fd" title="__get_PMPCFG2" alt="" coords="511,5,689,40"/>
+<area shape="rect" id="node8" href="$group___c_s_i___core___reg_acc_functions.html#gad27c9b99dfea7531ab20c1f2e279c009" title="__set_PMPCFG2" alt="" coords="511,357,689,392"/>
+<area shape="rect" id="node9" href="$group___c_s_i___core___reg_acc_functions.html#ga16d4dc693b54d487345d8340212bebed" title="__get_PMPCFG3" alt="" coords="511,64,689,99"/>
+<area shape="rect" id="node10" href="$group___c_s_i___core___reg_acc_functions.html#ga5eaafea8df23f1e218a8f44cd93bb11d" title="__set_PMPCFG3" alt="" coords="511,416,689,451"/>
+</map>

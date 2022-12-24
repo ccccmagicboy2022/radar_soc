@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="207,93,289,128"/>
+<area shape="rect" id="node6" href="$xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="191,181,305,216"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___v_i_c_functions.html#ga4f821781842f318c4845e31ffa7df62a" title="Set Interrupt Priority." alt="" coords="395,5,558,40"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___v_i_c_functions.html#ga53dcfdbb3a7e14c47b32479c91a970ec" title="set_shv_irq" alt="" coords="415,64,538,99"/>
+<area shape="rect" id="node5" href="$group___c_s_i___core___v_i_c_functions.html#gab41a151ef80d9ec4e00463250514aed4" title="set_rising_edge_irq" alt="" coords="379,123,574,157"/>
+<area shape="rect" id="node7" href="$group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="353,181,600,216"/>
+<area shape="rect" id="node8" href="$group___c_s_i___core___v_i_c_functions.html#gaa94b94a45d6abb555ea6120501fe73f5" title="Enable External Interrupt." alt="" coords="385,240,568,275"/>
+</map>

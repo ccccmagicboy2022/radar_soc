@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_pmu.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_pmu.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__pmu_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <span class="comment">/*******************************************************************************</span>
+<a name="l00013"></a>00013 <span class="comment"> * Include files</span>
+<a name="l00014"></a>00014 <span class="comment"> ******************************************************************************/</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;phm320_pmu.h&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00025"></a><a class="code" href="group__pmu__group.html#ga0095544d49e2e1cb59ca2a53b45a5e0b">00025</a> <span class="keywordtype">void</span> <a class="code" href="group__pmu__group.html#ga0095544d49e2e1cb59ca2a53b45a5e0b" title="choose power work way">ldo_powered_way</a>(<a class="code" href="group__pmu__group.html#ga982ba7bc9024de37b5d5fe1541f5deb6" title="power work way enumeration">em_powered_way_t</a> powered_way)
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027     PHM320_TOP-&gt;ANALOG_A_BITS.RF1_EN = 1;
+<a name="l00028"></a>00028     PHM320_TOP-&gt;ANALOG_A_BITS.RF2_EN = 1;
+<a name="l00029"></a>00029     PHM320_TOP-&gt;ANALOG_A_BITS.RF4_EN = 1;
+<a name="l00030"></a>00030     PHM320_TOP-&gt;ANALOG_B_BITS.RF_EN_SEL = powered_way;
+<a name="l00031"></a>00031     PHM320_TOP-&gt;ADC_CTL_BITS.ADC_DATA_CLRN = 1;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033     <span class="keywordflow">if</span> (<a class="code" href="group__pmu__group.html#gga5f3a4a3718af82fb6c4985f002339867a87fe59ef12c3d13dc2a4d14c9b16c1f9">PLUS</a> == powered_way) {
+<a name="l00034"></a>00034         PHM320_TOP-&gt;ADC_CTL &amp;= (~(0xff &lt;&lt; 16));
+<a name="l00035"></a>00035         PHM320_TOP-&gt;ADC_CTL |= ((16 * <a class="code" href="group__pmu__group.html#ga96977e527f76fa391ed8fd2b9d897344">PLUS_HIGH_LEVEL_DURATION</a>) &lt;&lt; 16);
+<a name="l00036"></a>00036         PHM320_TOP-&gt;ANALOG_B_BITS.PGA_DC_TRIM = 0b010100;
+<a name="l00037"></a>00037     } <span class="keywordflow">else</span> {
+<a name="l00038"></a>00038         PHM320_TOP-&gt;ANALOG_B_BITS.PGA_DC_TRIM = 0b010011;
+<a name="l00039"></a>00039     }
+<a name="l00040"></a>00040     PHM320_TOP-&gt;ANALOG_B_BITS.PGA_EN = 1;
+<a name="l00041"></a>00041     PHM320_TOP-&gt;ANALOG_B_BITS.PGA_BYPASS = 0;
+<a name="l00042"></a>00042     PHM320_TOP-&gt;ANALOG_B_BITS.ADC_POW_DONE = 1;
+<a name="l00043"></a>00043     PHM320_TOP-&gt;ADC_CTL_BITS.PGA_GAIN = 2;
+<a name="l00044"></a>00044     PHM320_TOP-&gt;ADC_CTL_BITS.ADC_VREF_SEL = 0b01;
+<a name="l00045"></a>00045 }
+<a name="l00046"></a>00046 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

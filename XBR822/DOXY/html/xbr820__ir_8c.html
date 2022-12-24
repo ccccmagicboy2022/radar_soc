@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_ir.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_ir.c文件参考</div>  </div>
+</div>
+<div class="contents">
+
+<p>This file provides firmware functions to manage the functionalities of the InfraRed (IR)  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;xbr820.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__ir_8h_source.html">xbr820_ir.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__utility_8h_source.html">xbr820_utility.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__interrupts_8h_source.html">xbr820_interrupts.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+xbr820_ir.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__ir_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__ir_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__ir_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__ir_8c">
+<area shape="rect" id="node3" href="xbr820__ir_8h.html" title="This file contains all the functions prototypes for the IR firmware library." alt="" coords="201,88,321,123"/><area shape="rect" id="node4" href="xbr820__interrupts_8h.html" title="xbr820_interrupts.h" alt="" coords="256,171,447,205"/><area shape="rect" id="node10" href="xbr820__utility_8h.html" title="xbr820_utility.h" alt="" coords="396,88,549,123"/><area shape="rect" id="node5" href="pho__common_8h.html" title="pho_common.h" alt="" coords="274,253,429,288"/></map>
+</div>
+</div>
+<p><a href="xbr820__ir_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_r.html#gacc1b68aa1fea3f96941ad1fb4f236260">IR_clr_int</a> (<a class="el" href="structbrx820__ir__regdef.html">brx820_ir_regdef</a> *ir_clr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">IR struct.  <a href="group___i_r.html#gacc1b68aa1fea3f96941ad1fb4f236260"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_r.html#gac935912d5769b902698078256a3e0a24">IR_read_code</a> (<a class="el" href="struct_i_r__mc__t.html">IR_mc_t</a> *<a class="el" href="bsp__ir_8c.html#a2e68d026e6aea8f42129abc6de13703e">irdata</a>, <a class="el" href="structbrx820__ir__regdef.html">brx820_ir_regdef</a> *ircfg)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">IR module interface to get out the incoming data.  <a href="group___i_r.html#gac935912d5769b902698078256a3e0a24"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<div class="textblock"><p>This file provides firmware functions to manage the functionalities of the InfraRed (IR) </p>
+<dl class="author"><dt><b>作者:</b></dt><dd>software Team </dd></dl>
+<dl class="version"><dt><b>版本:</b></dt><dd>V1.0.0 </dd></dl>
+<dl class="date"><dt><b>日期:</b></dt><dd>24-December-2021 </dd></dl>
+<dl class="attention"><dt><b>注意:</b></dt><dd></dd></dl>
+<h2><center>&copy; COPYRIGHT 2021 PHOSENSE </center></h2>
+<p>Licensed under Liberty SW License Agreement V1, (the "License"); You may not use this file except in compliance with the License.</p>
+<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+
+<p>在文件<a class="el" href="xbr820__ir_8c_source.html">xbr820_ir.c</a>中定义。</p>
+</div></div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

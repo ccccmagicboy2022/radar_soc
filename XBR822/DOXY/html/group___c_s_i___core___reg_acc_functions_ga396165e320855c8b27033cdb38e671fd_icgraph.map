@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$group___c_s_i___core___reg_acc_functions.html#gadf37b13460f0c2c0d7d2641f31ebbf72" title="Get PMPxCFG Register by index." alt="" coords="232,5,409,40"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___reg_acc_functions.html#gae1905cc6904d78db702c1a0b72b326f5" title="Set PMPxCFG by index." alt="" coords="233,64,409,99"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___p_m_p_functions.html#ga34d8476a51a170f4073ba4a0f128d145" title="disable mpu region by idx." alt="" coords="457,5,689,40"/>
+<area shape="rect" id="node5" href="$group___c_s_i___core___p_m_p_functions.html#ga33ddd6973a998818b5a5132bfcdc1fb9" title="configure memory protected region." alt="" coords="462,64,685,99"/>
+</map>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_pwm.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_pwm.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__pwm_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <span class="preprocessor">#ifndef __XBR820_PWM_H__</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_PWM_H__</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span>
+<a name="l00015"></a>00015 <span class="comment">/*******************************************************************************</span>
+<a name="l00016"></a>00016 <span class="comment"> * Include files</span>
+<a name="l00017"></a>00017 <span class="comment"> ******************************************************************************/</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="pho__common_8h.html">pho_common.h</a>&quot;</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="xbr820__pwm_8h.html#aa75f34d7f307156b94d3356799aca24a">00020</a> <span class="keyword">enum</span> <a class="code" href="xbr820__pwm_8h.html#aa75f34d7f307156b94d3356799aca24a">timer_num</a>
+<a name="l00021"></a>00021 {
+<a name="l00022"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aacc6ab0fb66c5ba52524e32ea2ad0bd1a">00022</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aacc6ab0fb66c5ba52524e32ea2ad0bd1a">PWM1</a>,
+<a name="l00023"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaf39c2e46e9e25532f62e9967768bba0c">00023</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaf39c2e46e9e25532f62e9967768bba0c">PWM2</a>,
+<a name="l00024"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaec8dabc6a499fe64be322a93f441503e">00024</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaec8dabc6a499fe64be322a93f441503e">PWM3</a>,
+<a name="l00025"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa99bf79473a462fcf944a8ffb941bd7ae">00025</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa99bf79473a462fcf944a8ffb941bd7ae">PWM4</a>,
+<a name="l00026"></a><a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaeee7ac3e026f20fe17d40196c4bb8d42">00026</a>     <a class="code" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaeee7ac3e026f20fe17d40196c4bb8d42">PWM5</a>,
+<a name="l00027"></a>00027 };
+<a name="l00028"></a>00028 
+<a name="l00034"></a><a class="code" href="group__pwm__group.html#gaa2f627112b197759eb8fc52c9a267b37">00034</a> <span class="preprocessor">#define CONFIG_PWM_NUM  5</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span>
+<a name="l00039"></a><a class="code" href="struct_p_w_m___config__t.html">00039</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>{
+<a name="l00040"></a><a class="code" href="struct_p_w_m___config__t.html#a79f4dd95bb01538dc0523677cc9a1409">00040</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> idx;     
+<a name="l00042"></a><a class="code" href="struct_p_w_m___config__t.html#a8ac3db453f451a3664ba0733c27aed7d">00042</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> freq;    
+<a name="l00044"></a><a class="code" href="struct_p_w_m___config__t.html#a72f2d8e6741cf91f090fad78d362628e">00044</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> duty;    
+<a name="l00046"></a>00046 }<a class="code" href="struct_p_w_m___config__t.html" title="PWM Init structure definition.">PWM_Config_t</a>;
+<a name="l00047"></a>00047 
+<a name="l00053"></a>00053 <span class="keywordtype">int</span> <a class="code" href="group__pwm__group.html#gafb4f8ad15ba8149439a9dd5dfa81f930" title="PWMx enabled.">pwm_enable</a>(<a class="code" href="struct_p_w_m___config__t.html" title="PWM Init structure definition.">PWM_Config_t</a>* pwm);
+<a name="l00054"></a>00054 
+<a name="l00060"></a>00060 <span class="keywordtype">int</span> <a class="code" href="group__pwm__group.html#ga8f113acd27d4cf4c0807db6243b777c6" title="PWMx disabled.">pwm_disable</a>(<a class="code" href="struct_p_w_m___config__t.html" title="PWM Init structure definition.">PWM_Config_t</a>* pwm);
+<a name="l00061"></a>00061 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // __DRV_PWM_H__</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

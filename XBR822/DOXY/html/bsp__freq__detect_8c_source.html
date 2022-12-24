@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/freq_detect/bsp_freq_detect/bsp_freq_detect.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/freq_detect/bsp_freq_detect/bsp_freq_detect.c</div>  </div>
+</div>
+<div class="contents">
+<a href="bsp__freq__detect_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="bsp__freq__detect_8h.html">bsp_freq_detect.h</a>&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;stdint.h&quot;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__freq__detect_8h.html" title="This file contains all the functions prototypes for freq detect.">xbr820_freq_detect.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__utility_8h.html">xbr820_utility.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__interrupts_8h.html">xbr820_interrupts.h</a>&quot;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">00008</a> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">flag</a> = 0;
+<a name="l00009"></a>00009 
+<a name="l00010"></a><a class="code" href="bsp__freq__detect_8h.html#a13cdad2c33d826de3b6af49070c102d9">00010</a> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="bsp__freq__detect_8c.html#a13cdad2c33d826de3b6af49070c102d9">get_freq_det_flag</a>(<span class="keywordtype">void</span>)
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012         <span class="keywordflow">return</span> <a class="code" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">flag</a>;
+<a name="l00013"></a>00013 }
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="bsp__freq__detect_8h.html#a68bf1e94671bd5221a87b4cf696aa399">00015</a> <span class="keywordtype">void</span> <a class="code" href="bsp__freq__detect_8c.html#a68bf1e94671bd5221a87b4cf696aa399">set_freq_det_flag</a>(<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> flag0)
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017         <a class="code" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">flag</a> = flag0;
+<a name="l00018"></a>00018 }
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="bsp__freq__detect_8h.html#a7b8a01b874373a4d37f57e0b1283423c">00020</a> <span class="keywordtype">void</span> <a class="code" href="bsp__freq__detect_8c.html#aefec5dd67ded6012bcfb1a8587921ba9">freq_detect_irq_cfg</a>(<a class="code" href="bsp__freq__detect_8h.html#acd450b16a2db1e3abc78541db370dca6">fun_timer</a> _handler, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> _priority, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> _int)
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022     <a class="code" href="structstc__irq__set__conf.html">stc_irq_set_cfg_t</a>  irq_set_cfg;
+<a name="l00023"></a>00023         
+<a name="l00024"></a>00024     irq_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a> = _int;
+<a name="l00025"></a>00025     irq_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a4770eadb33bbd68dfd15ec540c345a2f">irq_func_pointer</a> = _handler;
+<a name="l00026"></a>00026     irq_set_cfg.<a class="code" href="structstc__irq__set__conf.html#af20f3fdbedebe464155d85c8cddfdcd6">irq_priority</a> = _priority;
+<a name="l00027"></a>00027         
+<a name="l00028"></a>00028     <a class="code" href="xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0">set_irq</a>(&amp;irq_set_cfg);
+<a name="l00029"></a>00029     <a class="code" href="xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e">start_irq_x</a>(irq_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a>);
+<a name="l00030"></a>00030 }
+<a name="l00031"></a>00031 
+<a name="l00032"></a><a class="code" href="bsp__freq__detect_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">00032</a> <a class="code" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section (<span class="stringliteral">&quot;INT&quot;</span>))) void <a class="code" href="bsp__freq__detect_8h.html#a1f931d89e9a0059497a5f45a61accf10">freq_detect_irqhandler</a>(<span class="keywordtype">void</span>)
+<a name="l00033"></a>00033 {
+<a name="l00034"></a>00034     <span class="comment">/*do something*/</span>
+<a name="l00035"></a>00035     <a class="code" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt.">csi_vic_clear_pending_irq</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da468966b40a13766f3f007dbf56d5358e">FREQ_DET_IRQ</a>);
+<a name="l00036"></a>00036         
+<a name="l00037"></a>00037         <span class="keywordflow">if</span> (<a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaa39819be2f3a82523c0067668258f0" title="freq_get_interrupt_status. Reset means counting from the init value again.">freq_get_interrupt_status</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#ac9abaf387884aa9e817ab6f31c4a15e6">BRX820_FREQ_DETECT</a>))
+<a name="l00038"></a>00038         {
+<a name="l00039"></a>00039                 <a class="code" href="bsp__freq__detect_8c.html#a68bf1e94671bd5221a87b4cf696aa399">set_freq_det_flag</a>(1);
+<a name="l00040"></a>00040                 <a class="code" href="group___f_r_e_q___d_e_t_e_c_t.html#gafe8547701eb76d8b5447b861d04ec3c0">freq_clr_interrupt_status</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#ac9abaf387884aa9e817ab6f31c4a15e6">BRX820_FREQ_DETECT</a>);
+<a name="l00041"></a>00041         }
+<a name="l00042"></a>00042         
+<a name="l00043"></a>00043     <span class="keywordflow">return</span>;
+<a name="l00044"></a>00044 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

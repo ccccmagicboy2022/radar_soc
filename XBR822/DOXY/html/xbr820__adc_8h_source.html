@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_adc.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_adc.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__adc_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <span class="preprocessor">#ifndef __XBR820_ADC_H__</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_ADC_H__</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span>
+<a name="l00015"></a>00015 <span class="comment">/*******************************************************************************</span>
+<a name="l00016"></a>00016 <span class="comment"> * Include files</span>
+<a name="l00017"></a>00017 <span class="comment"> ******************************************************************************/</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="pho__common_8h.html">pho_common.h</a>&quot;</span>
+<a name="l00019"></a>00019 
+<a name="l00029"></a><a class="code" href="group__adc__group.html#ga9ea988333cb1cc0dd9c6dcb520687f56">00029</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__adc__group.html#ga9ea988333cb1cc0dd9c6dcb520687f56" title="adc channel selection">em_adc_ch_sel</a>
+<a name="l00030"></a>00030 {
+<a name="l00031"></a><a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56a703cf81b7a9530ba8650e0ee2f29d68e">00031</a>     <a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56a703cf81b7a9530ba8650e0ee2f29d68e">CH1</a> = 0,
+<a name="l00032"></a><a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56ae574b39c34bd88c27ea641014831e53a">00032</a>     <a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56ae574b39c34bd88c27ea641014831e53a">CH2</a> = 1,
+<a name="l00033"></a><a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56aaee6d12bf63ae430250764aa97e9e429">00033</a>     <a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56aaee6d12bf63ae430250764aa97e9e429">CH3</a> = 2,
+<a name="l00034"></a><a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56aad6a6b3e7230ebcbbb5a26385b11ade7">00034</a>     <a class="code" href="group__adc__group.html#gga9ea988333cb1cc0dd9c6dcb520687f56aad6a6b3e7230ebcbbb5a26385b11ade7">CH4</a> = 3,
+<a name="l00035"></a>00035 } <a class="code" href="group__adc__group.html#ga936911478cd87e0522e9b5373f7dd4ec" title="adc channel selection">em_adc_ch_sel_t</a>;
+<a name="l00036"></a>00036 
+<a name="l00041"></a><a class="code" href="group__adc__group.html#gad147a81e5a24fdd21030a84dcd2484fb">00041</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__adc__group.html#gad147a81e5a24fdd21030a84dcd2484fb" title="adc trigger mode selection">em_adc_trigger_mode</a>
+<a name="l00042"></a>00042 {
+<a name="l00043"></a><a class="code" href="group__adc__group.html#ggad147a81e5a24fdd21030a84dcd2484fba066eb83735c13f0c1ba0e01ebd9503df">00043</a>     <a class="code" href="group__adc__group.html#ggad147a81e5a24fdd21030a84dcd2484fba066eb83735c13f0c1ba0e01ebd9503df">SCAN_PERIOD</a> = 0,
+<a name="l00044"></a><a class="code" href="group__adc__group.html#ggad147a81e5a24fdd21030a84dcd2484fba3b5e99d237ff75be5513189971edb51c">00044</a>     <a class="code" href="group__adc__group.html#ggad147a81e5a24fdd21030a84dcd2484fba3b5e99d237ff75be5513189971edb51c">WHOLE_CHIRP</a> = 1,
+<a name="l00045"></a>00045 } <a class="code" href="group__adc__group.html#gaa7366ee70672bc97de3bb4d3fe3cba06" title="adc trigger mode selection">em_adc_trigger_mode_t</a>;
+<a name="l00046"></a>00046 
+<a name="l00051"></a><a class="code" href="group__adc__group.html#ga183d2088d1c0dd86444713719320d054">00051</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__adc__group.html#ga183d2088d1c0dd86444713719320d054" title="adc trigger source selection">em_adc_trigger_src</a>
+<a name="l00052"></a>00052 {
+<a name="l00053"></a><a class="code" href="group__adc__group.html#gga183d2088d1c0dd86444713719320d054add65ce39d2454bde37bfbee314767d10">00053</a>     <a class="code" href="group__adc__group.html#gga183d2088d1c0dd86444713719320d054add65ce39d2454bde37bfbee314767d10">ADC_DONE</a> = 0,
+<a name="l00054"></a><a class="code" href="group__adc__group.html#gga183d2088d1c0dd86444713719320d054a9116d5bc714eaf00a73e1aaa1d6a99f6">00054</a>     <a class="code" href="group__adc__group.html#gga183d2088d1c0dd86444713719320d054a9116d5bc714eaf00a73e1aaa1d6a99f6">ADC_TD</a> = 1,
+<a name="l00055"></a>00055 } <a class="code" href="group__adc__group.html#ga1189a335a1f679cdae5c345c92f2ccf0" title="adc trigger source selection">em_adc_trigger_src_t</a>;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 
+<a name="l00062"></a><a class="code" href="structstr__adc__init.html">00062</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structstr__adc__init.html" title="ADC init structure definition.">str_adc_init</a>
+<a name="l00063"></a>00063 {
+<a name="l00064"></a><a class="code" href="structstr__adc__init.html#ab3afa2e3858ce0faec5610adfd046680">00064</a>     <a class="code" href="group__adc__group.html#ga936911478cd87e0522e9b5373f7dd4ec" title="adc channel selection">em_adc_ch_sel_t</a>  <a class="code" href="structstr__adc__init.html#ab3afa2e3858ce0faec5610adfd046680">ADC_CHANNEL</a>;
+<a name="l00065"></a><a class="code" href="structstr__adc__init.html#a2c945c84eccbf327e06266ccefc959c9">00065</a>     <a class="code" href="group__adc__group.html#gaa7366ee70672bc97de3bb4d3fe3cba06" title="adc trigger mode selection">em_adc_trigger_mode_t</a> <a class="code" href="structstr__adc__init.html#a2c945c84eccbf327e06266ccefc959c9">ADC_SAMPLE_TRI_MODE</a>;
+<a name="l00066"></a><a class="code" href="structstr__adc__init.html#a469b131e3438dd8fe3a2f080766a6e7c">00066</a>     <a class="code" href="group__adc__group.html#ga1189a335a1f679cdae5c345c92f2ccf0" title="adc trigger source selection">em_adc_trigger_src_t</a> <a class="code" href="structstr__adc__init.html#a469b131e3438dd8fe3a2f080766a6e7c">ADC_SAMPLE_TRI_SRC</a>;
+<a name="l00067"></a><a class="code" href="structstr__adc__init.html#a149518ec9a562feb35f774781dd8591f">00067</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>         <a class="code" href="structstr__adc__init.html#a149518ec9a562feb35f774781dd8591f">ADC_SAMPLE_RATE</a>;
+<a name="l00068"></a><a class="code" href="structstr__adc__init.html#aee60ca5dd3bc1deb4b5e6568ede8050b">00068</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>         <a class="code" href="structstr__adc__init.html#aee60ca5dd3bc1deb4b5e6568ede8050b">ADC_SAMPLE_DELAY_CYCLE</a>;
+<a name="l00069"></a><a class="code" href="structstr__adc__init.html#ad0028873fb7d106e116700d172b3809c">00069</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>         <a class="code" href="structstr__adc__init.html#ad0028873fb7d106e116700d172b3809c">ADC_SAMPLE_BEGIN</a>;
+<a name="l00070"></a><a class="code" href="structstr__adc__init.html#a898f8610c0cf08c8f7f830f1bf7a946e">00070</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>         <a class="code" href="structstr__adc__init.html#a898f8610c0cf08c8f7f830f1bf7a946e">ADC_SAMPLE_END</a>;
+<a name="l00071"></a>00071 } <a class="code" href="group__adc__group.html#ga0719470e3745457adf41b171ed99baca" title="ADC init structure definition.">str_adc_init_cfg_t</a>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="comment">/*******************************************************************************</span>
+<a name="l00074"></a>00074 <span class="comment"> * Global function prototypes (definition in C source)</span>
+<a name="l00075"></a>00075 <span class="comment"> ******************************************************************************/</span>
+<a name="l00076"></a>00076 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga94f7e2eb6a616857291dea3b3ef8ad6e" title="initializes an ADC instance.">adc_init</a>(<span class="keyword">const</span> <a class="code" href="structstr__adc__init.html" title="ADC init structure definition.">str_adc_init_cfg_t</a> *adc_init_cfg);
+<a name="l00077"></a>00077 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga632c6b150eb8655aee076b8f1c46437f" title="start ADC, and get the data.">adc_get_polling</a>(<a class="code" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *adc_val);
+<a name="l00078"></a>00078 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga716d4b22fd0b337367706f6b437d5592" title="start ADC.">adc_start_sample</a>(<span class="keywordtype">void</span>);
+<a name="l00079"></a>00079 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga888c03118243ed02fb8de5cf78fd7682" title="wait adc ready">adc_wait_ready</a>(<span class="keywordtype">void</span>);
+<a name="l00080"></a>00080 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#ga6597816f8693ad4b196a82b909be6790" title="get adc data">adc_get_data</a>(<a class="code" href="typdef_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *adc_val);
+<a name="l00081"></a>00081 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="group__adc__group.html#gae200e6a1ab10a8f72dc857c5dba3fd26" title="clear adc finish flag for next get data">adc_clear_flag</a>(<span class="keywordtype">void</span>);
+<a name="l00082"></a>00082 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

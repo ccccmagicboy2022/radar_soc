@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099" title="flashChipErase" alt="" coords="116,5,271,40"/>
+<area shape="rect" id="node3" href="$xbr820__flash_8h.html#a23ba8b20c42054b534a3b7dcc10df085" title="flashSectErase" alt="" coords="116,64,271,99"/>
+<area shape="rect" id="node4" href="$xbr820__flash_8h.html#a0b9b3f9fb991a49c4604e8b1f2fa75da" title="flashProgram" alt="" coords="124,123,263,157"/>
+<area shape="rect" id="node5" href="$xbr820__flash_8h.html#a3264423b424a8016e6beda9e5495db2b" title="flashRead" alt="" coords="138,181,249,216"/>
+</map>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_uart.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_uart.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__uart_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__uart_8h.html">xbr820_uart.h</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a><a class="code" href="xbr820__uart_8c.html#a4a1d5af48ecdf5b42737cf2f986773d8">00003</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__uart_8h.html#a4a1d5af48ecdf5b42737cf2f986773d8">uart_init</a>(<a class="code" href="structbrx820__uart__regdef.html">brx820_uart_regdef</a> *uartx, <span class="keyword">const</span> <a class="code" href="structstr__uart__init.html">str_uart_init_t</a> *uart_init_cfg)
+<a name="l00004"></a>00004 {
+<a name="l00005"></a>00005     uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a24c12ba6221aae125e30edc48493a5f8">BR_f</a>.<a class="code" href="structstr__usart__br__field__t.html#a3d9652c893bebbbed90d9bc1b414dced">BAUD_RATE</a> = <a class="code" href="mcu_2common_2xbr820_8h.html#a95982eccb57c2ae35f8ba3d8f0b05653">SYSTEM_CLOCK</a> / uart_init_cfg-&gt;<a class="code" href="structstr__uart__init.html#aaac0f4f4963a35f91cd8c9a0af39a173">BAND_RATE</a>;
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007     uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a5dcf6f0b7e6e12cf1383a2451a69934a">CTL_f</a>.<a class="code" href="structstr__usart__ctl__field__t.html#a6699374618c0b67f816ba33db37ef218">TX_INT_CLEAR</a> = 1;
+<a name="l00008"></a>00008     uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a5dcf6f0b7e6e12cf1383a2451a69934a">CTL_f</a>.<a class="code" href="structstr__usart__ctl__field__t.html#abb4b45acd878c8c0a195667ef16c3850">TX_ENABLE</a> = 1;
+<a name="l00009"></a>00009     uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a5dcf6f0b7e6e12cf1383a2451a69934a">CTL_f</a>.<a class="code" href="structstr__usart__ctl__field__t.html#a49544c622d9a5fa7e2d4b959ed971ab6">RX_ENABLE</a> = 1;
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011     <span class="keywordflow">return</span> <a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2bc49ec37d6a5715dd23e85f1ff5bb59" title="No error.">OK</a>;
+<a name="l00012"></a>00012 }
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="xbr820__uart_8c.html#a3cfb921a9958f5bddfaea17fde6cd24b">00014</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__uart_8h.html#a3cfb921a9958f5bddfaea17fde6cd24b">uart_sent_byte</a>(<a class="code" href="structbrx820__uart__regdef.html">brx820_uart_regdef</a> *uartx, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data)
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016     <span class="keywordflow">while</span> (!uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a16fb12d76cef97a0b0a03aaed6371a46">ST_f</a>.<a class="code" href="structstr__usart__st__field__t.html#a63bfcf05cac073b11f45070fe4a6f26b">TX_STATE</a>)
+<a name="l00017"></a>00017     uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a2ec37a054d54f623510f75c9bffb66d5">TD_f</a>.<a class="code" href="structstr__usart__td__field__t.html#a5ed685d454dd803fdecf84f024f91577">TX_DATA</a> = data;
+<a name="l00018"></a>00018     <span class="keywordflow">while</span> (!uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a16fb12d76cef97a0b0a03aaed6371a46">ST_f</a>.<a class="code" href="structstr__usart__st__field__t.html#a396cc21366ed6bd5a219d773fe6b19ce">TI</a>) {}
+<a name="l00019"></a>00019     <span class="keywordflow">return</span> <a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2bc49ec37d6a5715dd23e85f1ff5bb59" title="No error.">OK</a>;
+<a name="l00020"></a>00020 }
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="xbr820__uart_8c.html#ac62828e61bf13554576ad53485f217aa">00022</a> <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__uart_8h.html#ac62828e61bf13554576ad53485f217aa">uart_rev_byte</a>(<a class="code" href="structbrx820__uart__regdef.html">brx820_uart_regdef</a> *uartx, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *data)
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024     <span class="keywordflow">if</span> (uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a16fb12d76cef97a0b0a03aaed6371a46">ST_f</a>.<a class="code" href="structstr__usart__st__field__t.html#a168f61bec432d9682ec26a3a52116b7c">RDATA_CNT</a> != 0) {
+<a name="l00025"></a>00025         uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a5dcf6f0b7e6e12cf1383a2451a69934a">CTL_f</a>.<a class="code" href="structstr__usart__ctl__field__t.html#ac2dd24ff625e178a6481929fa3a9b233">FIFO_RD</a> = 1;
+<a name="l00026"></a>00026         *data = uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#aaabbeb2a801adbcdbdc398fa83efa2cd">RD_f</a>.<a class="code" href="structstr__usart__rd__field__t.html#a450663f3337f369045a3832d7e088ace">RX_DATA</a>;
+<a name="l00027"></a>00027         <span class="keywordflow">return</span> <a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2bc49ec37d6a5715dd23e85f1ff5bb59" title="No error.">OK</a>;
+<a name="l00028"></a>00028     } <span class="keywordflow">else</span> {
+<a name="l00029"></a>00029         <span class="keywordflow">return</span> <a class="code" href="pho__common_8h.html#a6dad770f04e2594c4a4b65eb7369eda7a2fd6f336d08340583bd620a7f5694c90" title="error">ERROR</a>;
+<a name="l00030"></a>00030     }
+<a name="l00031"></a>00031 }
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="xbr820__uart_8c.html#a95cb735143525a3ad19c6b9cd66d48f3">00033</a> <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="xbr820__uart_8h.html#a95cb735143525a3ad19c6b9cd66d48f3">uart_get_fifo_cnt</a>(<a class="code" href="structbrx820__uart__regdef.html">brx820_uart_regdef</a> *uartx)
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035         <span class="keywordflow">return</span> uartx-&gt;<a class="code" href="structbrx820__uart__regdef.html#a16fb12d76cef97a0b0a03aaed6371a46">ST_f</a>.<a class="code" href="structstr__usart__st__field__t.html#a168f61bec432d9682ec26a3a52116b7c">RDATA_CNT</a>;
+<a name="l00036"></a>00036 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_ir.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_ir.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__ir_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00026"></a>00026 <span class="comment">/* Includes ------------------------------------------------------------------*/</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__ir_8h.html" title="This file contains all the functions prototypes for the IR firmware library.">xbr820_ir.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__utility_8h.html">xbr820_utility.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__interrupts_8h.html">xbr820_interrupts.h</a>&quot;</span>
+<a name="l00031"></a>00031 
+<a name="l00040"></a>00040 <span class="comment">/* Private typedef -----------------------------------------------------------*/</span>
+<a name="l00041"></a>00041 <span class="comment">/* Private define ------------------------------------------------------------*/</span>
+<a name="l00042"></a>00042 <span class="comment">/* Private macro -------------------------------------------------------------*/</span>
+<a name="l00043"></a>00043 <span class="comment">/* Private variables ---------------------------------------------------------*/</span>
+<a name="l00044"></a>00044 <span class="comment">/* Private function prototypes -----------------------------------------------*/</span>
+<a name="l00045"></a>00045 <span class="comment">/* Private functions ---------------------------------------------------------*/</span>
+<a name="l00058"></a><a class="code" href="group___i_r.html#gacc1b68aa1fea3f96941ad1fb4f236260">00058</a> <span class="keywordtype">void</span> <a class="code" href="group___i_r.html#gacc1b68aa1fea3f96941ad1fb4f236260" title="IR struct.">IR_clr_int</a>(<a class="code" href="structbrx820__ir__regdef.html" title="IR.">brx820_ir_regdef</a> *ir_clr)
+<a name="l00059"></a>00059 {
+<a name="l00060"></a>00060     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__ir_8h.html#adccc59a55a2599f78d4ee5f2593a7d16">IS_IR_PERIPH</a>(ir_clr));
+<a name="l00061"></a>00061         
+<a name="l00062"></a>00062     ir_clr-&gt;<a class="code" href="structbrx820__ir__regdef.html#a73b5d84876b59cf4e20bbcf13d182cdc">IR_CMD_f</a>.<a class="code" href="structstr__ir__int__filed__t.html#ab078adedc33b99af52205a5aeba9540c">IR_INT_STA</a> = 0;
+<a name="l00063"></a>00063 }
+<a name="l00064"></a>00064 
+<a name="l00071"></a><a class="code" href="group___i_r.html#gac935912d5769b902698078256a3e0a24">00071</a> <span class="keywordtype">int</span> <a class="code" href="group___i_r.html#gac935912d5769b902698078256a3e0a24" title="IR module interface to get out the incoming data.">IR_read_code</a>(<a class="code" href="struct_i_r__mc__t.html">IR_mc_t</a> *<a class="code" href="bsp__ir_8c.html#a2e68d026e6aea8f42129abc6de13703e">irdata</a>, <a class="code" href="structbrx820__ir__regdef.html" title="IR.">brx820_ir_regdef</a> *ircfg)
+<a name="l00072"></a>00072 {
+<a name="l00073"></a>00073     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(<a class="code" href="xbr820__ir_8h.html#adccc59a55a2599f78d4ee5f2593a7d16">IS_IR_PERIPH</a>(ircfg));
+<a name="l00074"></a>00074         
+<a name="l00075"></a>00075     irdata-&gt;<a class="code" href="struct_i_r__mc__t.html#aa3e1e1c51d314d6ab3a8c61fffa04c7e">ir_mode</a> = ((ircfg-&gt;<a class="code" href="structbrx820__ir__regdef.html#a73b5d84876b59cf4e20bbcf13d182cdc">IR_CMD_f</a>.<a class="code" href="structstr__ir__int__filed__t.html#a7bc49125446f8390ab72c6529a903c6e">IR_REPEAT</a>) &lt;&lt;1) | (ircfg-&gt;<a class="code" href="structbrx820__ir__regdef.html#a73b5d84876b59cf4e20bbcf13d182cdc">IR_CMD_f</a>.<a class="code" href="structstr__ir__int__filed__t.html#ab078adedc33b99af52205a5aeba9540c">IR_INT_STA</a>);
+<a name="l00076"></a>00076     irdata-&gt;<a class="code" href="struct_i_r__mc__t.html#af4ec253e1d7af7548963f57cb7b2cf9a">ir_code</a> = ircfg-&gt;<a class="code" href="structbrx820__ir__regdef.html#a42519143493129271dd251298dab60f0">IR_READ_DATA</a>;
+<a name="l00077"></a>00077     <span class="keywordflow">return</span> 0;
+<a name="l00078"></a>00078 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

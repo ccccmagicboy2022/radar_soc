@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_interrupts.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_interrupts.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__interrupts_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __XBR820_INTERRUPTS_H___</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_INTERRUPTS_H___</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="pho__common_8h.html">pho_common.h</a>&quot;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a><a class="code" href="structstc__irq__set__conf.html">00006</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structstc__irq__set__conf.html">stc_irq_set_conf</a>
+<a name="l00007"></a>00007 {
+<a name="l00008"></a><a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">00008</a>     <a class="code" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a> <a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a>;
+<a name="l00009"></a><a class="code" href="structstc__irq__set__conf.html#a4770eadb33bbd68dfd15ec540c345a2f">00009</a>     <a class="code" href="pho__common_8h.html#a3b09ccf3e40b21639c007a8d5e217257">func_ptr_t</a> <a class="code" href="structstc__irq__set__conf.html#a4770eadb33bbd68dfd15ec540c345a2f">irq_func_pointer</a>;
+<a name="l00010"></a><a class="code" href="structstc__irq__set__conf.html#af20f3fdbedebe464155d85c8cddfdcd6">00010</a>     <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code" href="structstc__irq__set__conf.html#af20f3fdbedebe464155d85c8cddfdcd6">irq_priority</a>;
+<a name="l00011"></a>00011 }<a class="code" href="xbr820__interrupts_8h.html#a00a0f8ed9493ae102d2c54aa76e14f5d">stc_irq_set_cfg_t</a>;
+<a name="l00012"></a>00012 
+<a name="l00014"></a><a class="code" href="xbr820__interrupts_8h.html#a4c03d3d9bfcd8970e7d196ec29514adb">00014</a> <span class="preprocessor">#define     IRQ_PRIORITY_DEFAULT    15u</span>
+<a name="l00015"></a><a class="code" href="xbr820__interrupts_8h.html#a1374c238958d42ea22fc18d90f8769bf">00015</a> <span class="preprocessor"></span><span class="preprocessor">#define     __SECTION_INT   __attribute__ ((section (&quot;INT&quot;)))</span>
+<a name="l00016"></a><a class="code" href="xbr820__interrupts_8h.html#af0a6cb35e6e4071df1b11873831574cd">00016</a> <span class="preprocessor"></span><span class="preprocessor">#define     __INT_HANDLER   __attribute__ ((interrupt (&quot;machine&quot;)))</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00019"></a><a class="code" href="xbr820__interrupts_8h.html#a7a376584ef5cb6f61603160a9219f262">00019</a> <span class="preprocessor">#define     DDL_IRQ_PRIORITY_00         (0u)</span>
+<a name="l00020"></a><a class="code" href="xbr820__interrupts_8h.html#a271a030805c31be99c33d1800830cf2e">00020</a> <span class="preprocessor"></span><span class="preprocessor">#define     DDL_IRQ_PRIORITY_01         (1u)</span>
+<a name="l00021"></a><a class="code" href="xbr820__interrupts_8h.html#ad2e06861716ab286238dc2ce12acf1f7">00021</a> <span class="preprocessor"></span><span class="preprocessor">#define     DDL_IRQ_PRIORITY_02         (2u)</span>
+<a name="l00022"></a><a class="code" href="xbr820__interrupts_8h.html#a3f72863abc8582d95974ae5423b11c29">00022</a> <span class="preprocessor"></span><span class="preprocessor">#define     DDL_IRQ_PRIORITY_03         (3u)</span>
+<a name="l00023"></a><a class="code" href="xbr820__interrupts_8h.html#ac6716d064ab0cd9492fb6c7e17346590">00023</a> <span class="preprocessor"></span><span class="preprocessor">#define     DDL_IRQ_PRIORITY_04         (4u)</span>
+<a name="l00024"></a><a class="code" href="xbr820__interrupts_8h.html#ad1c635159e12b374c836d861b214a700">00024</a> <span class="preprocessor"></span><span class="preprocessor">#define     DDL_IRQ_PRIORITY_05         (5u)</span>
+<a name="l00025"></a><a class="code" href="xbr820__interrupts_8h.html#a00e0f56453b57830ae2354716f25bbe1">00025</a> <span class="preprocessor"></span><span class="preprocessor">#define     DDL_IRQ_PRIORITY_06         (6u)</span>
+<a name="l00026"></a><a class="code" href="xbr820__interrupts_8h.html#a383234406a74d157de07df97e68cd8bc">00026</a> <span class="preprocessor"></span><span class="preprocessor">#define     DDL_IRQ_PRIORITY_07         (7u)</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span>
+<a name="l00028"></a>00028 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0">set_irq</a>(<span class="keyword">const</span> <a class="code" href="structstc__irq__set__conf.html">stc_irq_set_cfg_t</a> *irq_set_cfg);
+<a name="l00029"></a>00029 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e">start_irq_x</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a> <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6d">irq_number</a>);
+<a name="l00030"></a>00030 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__interrupts_8h.html#af414107628d0e88db6ab45c376294366">stop_irq_x</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a1b2e648c83eef49608c067d820716f19">irq_number_e</a> <a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6d">irq_number</a>);
+<a name="l00031"></a>00031 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__interrupts_8h.html#a967cf25d94632b98316005222cc266e7">enable_irq_all</a>(<span class="keywordtype">void</span>);
+<a name="l00032"></a>00032 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__interrupts_8h.html#a89820f375d485914994e838c12fc92ee">disable_irq_all</a>(<span class="keywordtype">void</span>);
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

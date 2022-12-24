@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/freq_detect/bsp_freq_detect/bsp_freq_detect.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/freq_detect/bsp_freq_detect/bsp_freq_detect.c文件参考</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bsp__freq__detect_8h_source.html">bsp_freq_detect.h</a>&quot;</code><br/>
+<code>#include &quot;stdint.h&quot;</code><br/>
+<code>#include &quot;xbr820.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__freq__detect_8h_source.html">xbr820_freq_detect.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__utility_8h_source.html">xbr820_utility.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__interrupts_8h_source.html">xbr820_interrupts.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+bsp_freq_detect.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__freq__detect_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2projects_2examples_2freq__detect_2bsp__freq__detect_2bsp__freq__detect_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2projects_2examples_2freq__detect_2bsp__freq__detect_2bsp__freq__detect_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2projects_2examples_2freq__detect_2bsp__freq__detect_2bsp__freq__detect_8c">
+<area shape="rect" id="node2" href="bsp__freq__detect_8h.html" title="bsp_freq_detect.h" alt="" coords="165,88,347,123"/><area shape="rect" id="node5" href="xbr820__freq__detect_8h.html" title="This file contains all the functions prototypes for freq detect." alt="" coords="473,88,684,123"/><area shape="rect" id="node6" href="xbr820__interrupts_8h.html" title="xbr820_interrupts.h" alt="" coords="503,171,694,205"/><area shape="rect" id="node11" href="xbr820__utility_8h.html" title="xbr820_utility.h" alt="" coords="759,88,913,123"/><area shape="rect" id="node7" href="pho__common_8h.html" title="pho_common.h" alt="" coords="521,253,676,288"/></map>
+</div>
+</div>
+<p><a href="bsp__freq__detect_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__freq__detect_8c.html#a13cdad2c33d826de3b6af49070c102d9">get_freq_det_flag</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__freq__detect_8c.html#a68bf1e94671bd5221a87b4cf696aa399">set_freq_det_flag</a> (<a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> flag0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__freq__detect_8c.html#aefec5dd67ded6012bcfb1a8587921ba9">freq_detect_irq_cfg</a> (<a class="el" href="bsp__timer_8h.html#acd450b16a2db1e3abc78541db370dca6">fun_timer</a> _handler, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> _priority, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> _int)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__freq__detect_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section(&quot;INT&quot;)))</td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+变量</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">flag</a> = 0</td></tr>
+</table>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="ae0d99756f3ae3fed0f7e80eb8e002e4f"></a><!-- doxytag: member="bsp_freq_detect.c::__attribute__" ref="ae0d99756f3ae3fed0f7e80eb8e002e4f" args="((section(&quot;INT&quot;)))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(section(&quot;INT&quot;))&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="bsp__freq__detect_8c_source.html">bsp_freq_detect.c</a>第<a class="el" href="bsp__freq__detect_8c_source.html#l00032">32</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__freq__detect_8c_ae0d99756f3ae3fed0f7e80eb8e002e4f_cgraph.png" border="0" usemap="#bsp__freq__detect_8c_ae0d99756f3ae3fed0f7e80eb8e002e4f_cgraph" alt=""/></div>
+<map name="bsp__freq__detect_8c_ae0d99756f3ae3fed0f7e80eb8e002e4f_cgraph" id="bsp__freq__detect_8c_ae0d99756f3ae3fed0f7e80eb8e002e4f_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="192,5,439,40"/><area shape="rect" id="node3" href="group___f_r_e_q___d_e_t_e_c_t.html#gafaa39819be2f3a82523c0067668258f0" title="freq_get_interrupt_status. Reset means counting from the init value again." alt="" coords="194,64,437,99"/><area shape="rect" id="node4" href="bsp__freq__detect_8c.html#a68bf1e94671bd5221a87b4cf696aa399" title="set_freq_det_flag" alt="" coords="227,123,404,157"/><area shape="rect" id="node5" href="group___f_r_e_q___d_e_t_e_c_t.html#gafe8547701eb76d8b5447b861d04ec3c0" title="freq_clr_interrupt_status" alt="" coords="197,181,433,216"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aefec5dd67ded6012bcfb1a8587921ba9"></a><!-- doxytag: member="bsp_freq_detect.c::freq_detect_irq_cfg" ref="aefec5dd67ded6012bcfb1a8587921ba9" args="(fun_timer _handler, uint8_t _priority, uint8_t _int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void freq_detect_irq_cfg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__timer_8h.html#acd450b16a2db1e3abc78541db370dca6">fun_timer</a>&#160;</td>
+          <td class="paramname"><em>_handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>_priority</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>_int</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="bsp__freq__detect_8c_source.html">bsp_freq_detect.c</a>第<a class="el" href="bsp__freq__detect_8c_source.html#l00020">20</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_cgraph.png" border="0" usemap="#bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_cgraph" alt=""/></div>
+<map name="bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_cgraph" id="bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_cgraph">
+<area shape="rect" id="node2" href="xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="264,93,347,128"/><area shape="rect" id="node6" href="xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="248,181,363,216"/><area shape="rect" id="node3" href="group___c_s_i___core___v_i_c_functions.html#ga4f821781842f318c4845e31ffa7df62a" title="Set Interrupt Priority." alt="" coords="453,5,615,40"/><area shape="rect" id="node4" href="group___c_s_i___core___v_i_c_functions.html#ga53dcfdbb3a7e14c47b32479c91a970ec" title="set_shv_irq" alt="" coords="473,64,595,99"/><area shape="rect" id="node5" href="group___c_s_i___core___v_i_c_functions.html#gab41a151ef80d9ec4e00463250514aed4" title="set_rising_edge_irq" alt="" coords="437,123,631,157"/><area shape="rect" id="node7" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="411,181,657,216"/><area shape="rect" id="node8" href="group___c_s_i___core___v_i_c_functions.html#gaa94b94a45d6abb555ea6120501fe73f5" title="Enable External Interrupt." alt="" coords="443,240,625,275"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_icgraph.png" border="0" usemap="#bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_icgraph" alt=""/></div>
+<map name="bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_icgraph" id="bsp__freq__detect_8c_aefec5dd67ded6012bcfb1a8587921ba9_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="248,5,311,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a13cdad2c33d826de3b6af49070c102d9"></a><!-- doxytag: member="bsp_freq_detect.c::get_freq_det_flag" ref="a13cdad2c33d826de3b6af49070c102d9" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> get_freq_det_flag </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="bsp__freq__detect_8c_source.html">bsp_freq_detect.c</a>第<a class="el" href="bsp__freq__detect_8c_source.html#l00010">10</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__freq__detect_8c_a13cdad2c33d826de3b6af49070c102d9_icgraph.png" border="0" usemap="#bsp__freq__detect_8c_a13cdad2c33d826de3b6af49070c102d9_icgraph" alt=""/></div>
+<map name="bsp__freq__detect_8c_a13cdad2c33d826de3b6af49070c102d9_icgraph" id="bsp__freq__detect_8c_a13cdad2c33d826de3b6af49070c102d9_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="232,5,295,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a68bf1e94671bd5221a87b4cf696aa399"></a><!-- doxytag: member="bsp_freq_detect.c::set_freq_det_flag" ref="a68bf1e94671bd5221a87b4cf696aa399" args="(uint8_t flag0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_freq_det_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>flag0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="bsp__freq__detect_8c_source.html">bsp_freq_detect.c</a>第<a class="el" href="bsp__freq__detect_8c_source.html#l00015">15</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__freq__detect_8c_a68bf1e94671bd5221a87b4cf696aa399_icgraph.png" border="0" usemap="#bsp__freq__detect_8c_a68bf1e94671bd5221a87b4cf696aa399_icgraph" alt=""/></div>
+<map name="bsp__freq__detect_8c_a68bf1e94671bd5221a87b4cf696aa399_icgraph" id="bsp__freq__detect_8c_a68bf1e94671bd5221a87b4cf696aa399_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2freq__detect_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="269,5,331,40"/><area shape="rect" id="node3" href="bsp__freq__detect_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f" title="__attribute__" alt="" coords="231,64,369,99"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>变量文档</h2>
+<a class="anchor" id="aff31312fb16705aa73c53b945a1a6b30"></a><!-- doxytag: member="bsp_freq_detect.c::flag" ref="aff31312fb16705aa73c53b945a1a6b30" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="el" href="bsp__freq__detect_8c.html#aff31312fb16705aa73c53b945a1a6b30">flag</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="bsp__freq__detect_8c_source.html">bsp_freq_detect.c</a>第<a class="el" href="bsp__freq__detect_8c_source.html#l00008">8</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

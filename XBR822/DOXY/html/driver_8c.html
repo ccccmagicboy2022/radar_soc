@@ -1,0 +1,965 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/xbr820_spiflash/driver.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/xbr820_spiflash/driver.c文件参考</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &quot;xbr820.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="flash__config_8h_source.html">flash_config.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+driver.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2xbr820__spiflash_2driver_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2xbr820__spiflash_2driver_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2xbr820__spiflash_2driver_8c">
+<area shape="rect" id="node3" href="flash__config_8h.html" title="flash_config.h" alt="" coords="322,88,465,123"/><area shape="rect" id="node4" href="config_8h.html" title="config.h" alt="" coords="348,171,439,205"/><area shape="rect" id="node5" href="gconfig_8h.html" title="gconfig.h" alt="" coords="343,253,444,288"/></map>
+</div>
+</div>
+<p><a href="driver_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#acde26524a84481820e0f94cfedfed24b">XBR820_PMU_BASE</a>&#160;&#160;&#160;(0x1f010000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#afec9d7688098205a25aaeaae8ac6f5d6">XBR820_STC_BASE</a>&#160;&#160;&#160;(0x1f020000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a96eb94183486246adebeb724b10c77f0">XBR820_SPI_BASEADDR</a>&#160;&#160;&#160;(0x1f090000UL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ad569374ff45fc239045e33cf05a02bf8">SPI_CMMD_LEN</a>&#160;&#160;&#160;11</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a9180b16a11d7255da7c9cea3c9def4fe">SPI_READ_LEN</a>&#160;&#160;&#160;4</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#aa6079b4c244489bc606f592172dc6a08">SPI_BURST_LEN</a>&#160;&#160;&#160;4</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a3ecc73f7a1477b6815f7f7937eebaefc">SPI_CR</a>&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a9223a0f901212efe6a3dd2ad653a39f0">SPI_CM</a>&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 4)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a03cb5afb8b2a150da283424bc2f9bd8c">SPI_CM1</a>&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 8)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ae62edd0d30bd27d89b790bb37375f925">SPI_CM2</a>&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 12)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ad3bc24bea78f56e260b3d2cedeccdb3f">SPI_CR_CLKPH</a>&#160;&#160;&#160;0x01</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#aef75d5e1518631127070683ed610c9b8">SPI_CR_CLKPO</a>&#160;&#160;&#160;0x02</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a18e49c9e57711f924dfedfd2f0ed649c">SPI_CR_SPIEN</a>&#160;&#160;&#160;0x04</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a756d4ae8e2d4c21035dd65daec2c4cb1">SPI_CR_STOP</a>&#160;&#160;&#160;0x08</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a510ea5a3e92eeb32893872077ced7d12">SPI_CR_HOLD</a>&#160;&#160;&#160;0x10</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ac44759d1fa7929de68367e11d5e65870">SPI_CR_DUAL</a>&#160;&#160;&#160;0x20</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a5aa6939d3ee46a1317d2ae9bb890d080">SPI_CR_SPI2</a>&#160;&#160;&#160;0x40</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#aabae4d705efc3afc145d7dbfdc931430">SPI_CM_CMLEN</a>&#160;&#160;&#160;0x04</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#aa82fab6ab330d0de13ab147c2282c6e7">SPI_CM_RXLEN</a>&#160;&#160;&#160;0x70</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a5fafca81c5d56149ab64eed0a7224a43">SPI_CM_RXEN</a>&#160;&#160;&#160;0x80</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#af0268c0af70a7ebd532cf36e41c9808e">send_cmd</a>(cmd)&#160;&#160;&#160;do { reg32_write(SPI_CM, 0x01 | (cmd &lt;&lt; 8)); } while(0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(ms)&#160;&#160;&#160;do {} while(0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#abf7b1ef2956fb4863ddee3a0bf758a5b">tick_init</a>()&#160;&#160;&#160;do {} while(0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a44f30b25078f303e66d1ebc56bc37bd7">ERROR_INIT</a>&#160;&#160;&#160;-200</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a6caf064c02adf1cb697859773cd7250c">ERROR_READID</a>&#160;&#160;&#160;-201</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#adb56744e172d20d6ade9364a241e77e5">ERROR_PROGRAM</a>&#160;&#160;&#160;-202</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ab1d43b8f2795d4e0be3b8a1baa48d732">ERROR_READ</a>&#160;&#160;&#160;-203</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a67ef81cfb0ddec7ef571175270a951ae">ERROR_ERASE</a>&#160;&#160;&#160;-204</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#aded10952972ef87e5d29045d853c3ff9">ERROR_CHIPERASE</a>&#160;&#160;&#160;-205</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a0cf87dc74e48d456686421cd0fdffb66">ERROR_UNINIT</a>&#160;&#160;&#160;-206</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a66718fcb83f101fb84ab77e416619128">ERROR_CHECKSUM</a>&#160;&#160;&#160;-207</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee">flashErase</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#af471058120916ba68760f6017ace3cd3">flashChipErase</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a9f9e0b850d75d42457f69e391e89c4c6">flashInit</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ab5101c59a4e1f46356eda08069db84e1">flashID</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *flashID)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a0b9b3f9fb991a49c4604e8b1f2fa75da">flashProgram</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst, const <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *src, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a3264423b424a8016e6beda9e5495db2b">flashRead</a> (<a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *dst, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> src, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#aead01e5bf4fa6f310a520c4b563d7e5d">flashSectErase</a> (<a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> offs)</td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+变量</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#abbd4ac54cc5fd87a9b98ebda4c7cdc6d">sf_size</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#af5d17c00561c20eee8afe88aba7742d2">sf_id</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#a42966d4c436c48886e2fe8ed66143219">block_erased</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ab3d3babec0e086c39e2768643682153e">log_data</a> [CONFIG_LOG_NUMS] = {0}</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver_8c.html#ab0a2c40c01ea9ca0353130f70b740921">log_i</a> = 0</td></tr>
+</table>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="a389926e6490f1d3db0f0896e8b0f5f2e"></a><!-- doxytag: member="driver.c::delay_ms" ref="a389926e6490f1d3db0f0896e8b0f5f2e" args="(ms)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define delay_ms</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ms</td><td>)</td>
+          <td>&#160;&#160;&#160;do {} while(0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00077">77</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a66718fcb83f101fb84ab77e416619128"></a><!-- doxytag: member="driver.c::ERROR_CHECKSUM" ref="a66718fcb83f101fb84ab77e416619128" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_CHECKSUM&#160;&#160;&#160;-207</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00095">95</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="aded10952972ef87e5d29045d853c3ff9"></a><!-- doxytag: member="driver.c::ERROR_CHIPERASE" ref="aded10952972ef87e5d29045d853c3ff9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_CHIPERASE&#160;&#160;&#160;-205</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00093">93</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a67ef81cfb0ddec7ef571175270a951ae"></a><!-- doxytag: member="driver.c::ERROR_ERASE" ref="a67ef81cfb0ddec7ef571175270a951ae" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_ERASE&#160;&#160;&#160;-204</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00092">92</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a44f30b25078f303e66d1ebc56bc37bd7"></a><!-- doxytag: member="driver.c::ERROR_INIT" ref="a44f30b25078f303e66d1ebc56bc37bd7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_INIT&#160;&#160;&#160;-200</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Driver for flash program. ERROR TYPE. MUST NOT BE MODIFIED </p>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00088">88</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="adb56744e172d20d6ade9364a241e77e5"></a><!-- doxytag: member="driver.c::ERROR_PROGRAM" ref="adb56744e172d20d6ade9364a241e77e5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_PROGRAM&#160;&#160;&#160;-202</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00090">90</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1d43b8f2795d4e0be3b8a1baa48d732"></a><!-- doxytag: member="driver.c::ERROR_READ" ref="ab1d43b8f2795d4e0be3b8a1baa48d732" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_READ&#160;&#160;&#160;-203</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00091">91</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6caf064c02adf1cb697859773cd7250c"></a><!-- doxytag: member="driver.c::ERROR_READID" ref="a6caf064c02adf1cb697859773cd7250c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_READID&#160;&#160;&#160;-201</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00089">89</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0cf87dc74e48d456686421cd0fdffb66"></a><!-- doxytag: member="driver.c::ERROR_UNINIT" ref="a0cf87dc74e48d456686421cd0fdffb66" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_UNINIT&#160;&#160;&#160;-206</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00094">94</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="af0268c0af70a7ebd532cf36e41c9808e"></a><!-- doxytag: member="driver.c::send_cmd" ref="af0268c0af70a7ebd532cf36e41c9808e" args="(cmd)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define send_cmd</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cmd</td><td>)</td>
+          <td>&#160;&#160;&#160;do { reg32_write(SPI_CM, 0x01 | (cmd &lt;&lt; 8)); } while(0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00045">45</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6079b4c244489bc606f592172dc6a08"></a><!-- doxytag: member="driver.c::SPI_BURST_LEN" ref="aa6079b4c244489bc606f592172dc6a08" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_BURST_LEN&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00022">22</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9223a0f901212efe6a3dd2ad653a39f0"></a><!-- doxytag: member="driver.c::SPI_CM" ref="a9223a0f901212efe6a3dd2ad653a39f0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CM&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 4)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00026">26</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a03cb5afb8b2a150da283424bc2f9bd8c"></a><!-- doxytag: member="driver.c::SPI_CM1" ref="a03cb5afb8b2a150da283424bc2f9bd8c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CM1&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 8)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00027">27</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae62edd0d30bd27d89b790bb37375f925"></a><!-- doxytag: member="driver.c::SPI_CM2" ref="ae62edd0d30bd27d89b790bb37375f925" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CM2&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 12)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00028">28</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="aabae4d705efc3afc145d7dbfdc931430"></a><!-- doxytag: member="driver.c::SPI_CM_CMLEN" ref="aabae4d705efc3afc145d7dbfdc931430" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CM_CMLEN&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00040">40</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fafca81c5d56149ab64eed0a7224a43"></a><!-- doxytag: member="driver.c::SPI_CM_RXEN" ref="a5fafca81c5d56149ab64eed0a7224a43" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CM_RXEN&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00042">42</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa82fab6ab330d0de13ab147c2282c6e7"></a><!-- doxytag: member="driver.c::SPI_CM_RXLEN" ref="aa82fab6ab330d0de13ab147c2282c6e7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CM_RXLEN&#160;&#160;&#160;0x70</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00041">41</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad569374ff45fc239045e33cf05a02bf8"></a><!-- doxytag: member="driver.c::SPI_CMMD_LEN" ref="ad569374ff45fc239045e33cf05a02bf8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CMMD_LEN&#160;&#160;&#160;11</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00020">20</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ecc73f7a1477b6815f7f7937eebaefc"></a><!-- doxytag: member="driver.c::SPI_CR" ref="a3ecc73f7a1477b6815f7f7937eebaefc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR&#160;&#160;&#160;(XBR820_SPI_BASEADDR + 0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00025">25</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3bc24bea78f56e260b3d2cedeccdb3f"></a><!-- doxytag: member="driver.c::SPI_CR_CLKPH" ref="ad3bc24bea78f56e260b3d2cedeccdb3f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR_CLKPH&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00031">31</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="aef75d5e1518631127070683ed610c9b8"></a><!-- doxytag: member="driver.c::SPI_CR_CLKPO" ref="aef75d5e1518631127070683ed610c9b8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR_CLKPO&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00032">32</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac44759d1fa7929de68367e11d5e65870"></a><!-- doxytag: member="driver.c::SPI_CR_DUAL" ref="ac44759d1fa7929de68367e11d5e65870" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR_DUAL&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00036">36</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a510ea5a3e92eeb32893872077ced7d12"></a><!-- doxytag: member="driver.c::SPI_CR_HOLD" ref="a510ea5a3e92eeb32893872077ced7d12" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR_HOLD&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00035">35</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5aa6939d3ee46a1317d2ae9bb890d080"></a><!-- doxytag: member="driver.c::SPI_CR_SPI2" ref="a5aa6939d3ee46a1317d2ae9bb890d080" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR_SPI2&#160;&#160;&#160;0x40</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00037">37</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a18e49c9e57711f924dfedfd2f0ed649c"></a><!-- doxytag: member="driver.c::SPI_CR_SPIEN" ref="a18e49c9e57711f924dfedfd2f0ed649c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR_SPIEN&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00033">33</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a756d4ae8e2d4c21035dd65daec2c4cb1"></a><!-- doxytag: member="driver.c::SPI_CR_STOP" ref="a756d4ae8e2d4c21035dd65daec2c4cb1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CR_STOP&#160;&#160;&#160;0x08</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00034">34</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9180b16a11d7255da7c9cea3c9def4fe"></a><!-- doxytag: member="driver.c::SPI_READ_LEN" ref="a9180b16a11d7255da7c9cea3c9def4fe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_READ_LEN&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00021">21</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="abf7b1ef2956fb4863ddee3a0bf758a5b"></a><!-- doxytag: member="driver.c::tick_init" ref="abf7b1ef2956fb4863ddee3a0bf758a5b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define tick_init</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;do {} while(0)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00078">78</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="acde26524a84481820e0f94cfedfed24b"></a><!-- doxytag: member="driver.c::XBR820_PMU_BASE" ref="acde26524a84481820e0f94cfedfed24b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XBR820_PMU_BASE&#160;&#160;&#160;(0x1f010000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00016">16</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="a96eb94183486246adebeb724b10c77f0"></a><!-- doxytag: member="driver.c::XBR820_SPI_BASEADDR" ref="a96eb94183486246adebeb724b10c77f0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XBR820_SPI_BASEADDR&#160;&#160;&#160;(0x1f090000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00018">18</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="afec9d7688098205a25aaeaae8ac6f5d6"></a><!-- doxytag: member="driver.c::XBR820_STC_BASE" ref="afec9d7688098205a25aaeaae8ac6f5d6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XBR820_STC_BASE&#160;&#160;&#160;(0x1f020000UL)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00017">17</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="af471058120916ba68760f6017ace3cd3"></a><!-- doxytag: member="driver.c::flashChipErase" ref="af471058120916ba68760f6017ace3cd3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashChipErase </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to erase the whole flash.</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_CHIPERASE, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00473">473</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_af471058120916ba68760f6017ace3cd3_icgraph.png" border="0" usemap="#driver_8c_af471058120916ba68760f6017ace3cd3_icgraph" alt=""/></div>
+<map name="driver_8c_af471058120916ba68760f6017ace3cd3_icgraph" id="driver_8c_af471058120916ba68760f6017ace3cd3_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="557,36,620,70"/><area shape="rect" id="node3" href="xbr820__spiflash_2main_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee" title="flashErase" alt="" coords="208,33,323,68"/><area shape="rect" id="node4" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="409,33,471,68"/><area shape="rect" id="node5" href="driver_8c.html#a0b9b3f9fb991a49c4604e8b1f2fa75da" title="flashProgram" alt="" coords="371,92,509,126"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a645e01d54ddd895c55e2cd5a8f3ad4ee"></a><!-- doxytag: member="driver.c::flashErase" ref="a645e01d54ddd895c55e2cd5a8f3ad4ee" args="(uint32_t dst, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashErase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to erase a group of flash blocks.</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>: a pointer to the base of the flash device. NOTE: dst will always be sector aligned, the sector size is stored in FlashDev.c::FlashDevices::Devs::PageSize </td></tr>
+    <tr><td class="paramname">length</td><td>: erase length NOTE: length will always be sector aligned, the sector size is stored in FlashDev.c::FlashDevices::Devs::PageSize</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_ERASE, Otherwise return 0 </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00440">440</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph.png" border="0" usemap="#driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph" alt=""/></div>
+<map name="driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph" id="driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_cgraph">
+<area shape="rect" id="node2" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099" title="flashChipErase" alt="" coords="168,5,323,40"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph.png" border="0" usemap="#driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph" alt=""/></div>
+<map name="driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph" id="driver_8c_a645e01d54ddd895c55e2cd5a8f3ad4ee_icgraph">
+<area shape="rect" id="node2" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="206,5,269,40"/><area shape="rect" id="node3" href="driver_8c.html#a0b9b3f9fb991a49c4604e8b1f2fa75da" title="flashProgram" alt="" coords="168,64,307,99"/><area shape="rect" id="node4" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="355,64,417,99"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5101c59a4e1f46356eda08069db84e1"></a><!-- doxytag: member="driver.c::flashID" ref="ab5101c59a4e1f46356eda08069db84e1" args="(uint32_t *flashID)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>flashID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to read flash ID</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flashID,:</td><td>returns for flash ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_READID, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00266">266</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph.png" border="0" usemap="#driver_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph" alt=""/></div>
+<map name="driver_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph" id="driver_8c_ab5101c59a4e1f46356eda08069db84e1_icgraph">
+<area shape="rect" id="node2" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="136,5,199,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f9e0b850d75d42457f69e391e89c4c6"></a><!-- doxytag: member="driver.c::flashInit" ref="a9f9e0b850d75d42457f69e391e89c4c6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to perform any initialization needed to access your flash device.</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_INIT, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00239">239</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph.png" border="0" usemap="#driver_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph" alt=""/></div>
+<map name="driver_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph" id="driver_8c_a9f9e0b850d75d42457f69e391e89c4c6_icgraph">
+<area shape="rect" id="node2" href="xbr820__spiflash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="143,5,205,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b9b3f9fb991a49c4604e8b1f2fa75da"></a><!-- doxytag: member="driver.c::flashProgram" ref="a0b9b3f9fb991a49c4604e8b1f2fa75da" args="(uint32_t dst, const uint8_t *src, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashProgram </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>This method takes the data pointed to by the src parameter and writes it to the flash blocks indicated by the dst parameter.</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>: destination address where flash program </td></tr>
+    <tr><td class="paramname">src</td><td>: address of data </td></tr>
+    <tr><td class="paramname">length</td><td>: data length</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_PROGRAM, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00301">301</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph.png" border="0" usemap="#driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph" alt=""/></div>
+<map name="driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph" id="driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_cgraph">
+<area shape="rect" id="node2" href="driver_8c.html#a645e01d54ddd895c55e2cd5a8f3ad4ee" title="flashErase" alt="" coords="192,5,307,40"/><area shape="rect" id="node3" href="xbr820__flash_8h.html#a338bcecc9d0d79a11db5eb6c5f6ea099" title="flashChipErase" alt="" coords="355,5,509,40"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_icgraph.png" border="0" usemap="#driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_icgraph" alt=""/></div>
+<map name="driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_icgraph" id="driver_8c_a0b9b3f9fb991a49c4604e8b1f2fa75da_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="192,5,255,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3264423b424a8016e6beda9e5495db2b"></a><!-- doxytag: member="driver.c::flashRead" ref="a3264423b424a8016e6beda9e5495db2b" args="(uint8_t *dst, uint32_t src, uint32_t length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashRead </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Customize this method to read data from a group of flash blocks into a buffer</p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>: reads the contents of those flash blocks into the address pointed to by the dst parameter. </td></tr>
+    <tr><td class="paramname">src</td><td>: a pointer to a single flash. </td></tr>
+    <tr><td class="paramname">length</td><td>: data length</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>: if this method returns an error,MUST RUTURN ERROR_READ, Otherwise return 0. </dd></dl>
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00378">378</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_a3264423b424a8016e6beda9e5495db2b_icgraph.png" border="0" usemap="#driver_8c_a3264423b424a8016e6beda9e5495db2b_icgraph" alt=""/></div>
+<map name="driver_8c_a3264423b424a8016e6beda9e5495db2b_icgraph" id="driver_8c_a3264423b424a8016e6beda9e5495db2b_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="164,5,227,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aead01e5bf4fa6f310a520c4b563d7e5d"></a><!-- doxytag: member="driver.c::flashSectErase" ref="aead01e5bf4fa6f310a520c4b563d7e5d" args="(uint32_t offs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int flashSectErase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>offs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00460">460</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="driver_8c_aead01e5bf4fa6f310a520c4b563d7e5d_icgraph.png" border="0" usemap="#driver_8c_aead01e5bf4fa6f310a520c4b563d7e5d_icgraph" alt=""/></div>
+<map name="driver_8c_aead01e5bf4fa6f310a520c4b563d7e5d_icgraph" id="driver_8c_aead01e5bf4fa6f310a520c4b563d7e5d_icgraph">
+<area shape="rect" id="node2" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="208,5,271,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>变量文档</h2>
+<a class="anchor" id="a42966d4c436c48886e2fe8ed66143219"></a><!-- doxytag: member="driver.c::block_erased" ref="a42966d4c436c48886e2fe8ed66143219" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="driver_8c.html#a42966d4c436c48886e2fe8ed66143219">block_erased</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00100">100</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3d3babec0e086c39e2768643682153e"></a><!-- doxytag: member="driver.c::log_data" ref="ab3d3babec0e086c39e2768643682153e" args="[CONFIG_LOG_NUMS]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#a72e2da09ea98d51b2d53fa2a9aa17c5a">log_data</a>[CONFIG_LOG_NUMS] = {0}</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00103">103</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0a2c40c01ea9ca0353130f70b740921"></a><!-- doxytag: member="driver.c::log_i" ref="ab0a2c40c01ea9ca0353130f70b740921" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="el" href="xbr820__spiflash_2main_8c.html#ab0a2c40c01ea9ca0353130f70b740921">log_i</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00104">104</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="af5d17c00561c20eee8afe88aba7742d2"></a><!-- doxytag: member="driver.c::sf_id" ref="af5d17c00561c20eee8afe88aba7742d2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="driver_8c.html#af5d17c00561c20eee8afe88aba7742d2">sf_id</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00098">98</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="abbd4ac54cc5fd87a9b98ebda4c7cdc6d"></a><!-- doxytag: member="driver.c::sf_size" ref="abbd4ac54cc5fd87a9b98ebda4c7cdc6d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="driver_8c.html#abbd4ac54cc5fd87a9b98ebda4c7cdc6d">sf_size</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="driver_8c_source.html">driver.c</a>第<a class="el" href="driver_8c_source.html#l00097">97</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

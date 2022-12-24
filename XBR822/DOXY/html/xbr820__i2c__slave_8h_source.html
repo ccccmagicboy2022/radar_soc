@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_i2c_slave.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_i2c_slave.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__i2c__slave_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00025"></a>00025 <span class="preprocessor">#ifndef __XBR820_I2C_SLAVE_H__</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_I2C_SLAVE_H__</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span>
+<a name="l00028"></a>00028 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031 <span class="preprocessor">#endif</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span>
+<a name="l00033"></a>00033 <span class="comment">/* Includes ------------------------------------------------------------------*/</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="pho__common_8h.html">pho_common.h</a>&quot;</span>
+<a name="l00035"></a>00035 
+<a name="l00044"></a>00044 <span class="comment">/* Exported types ------------------------------------------------------------*/</span>
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="comment">/* Exported constants --------------------------------------------------------*/</span>
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="group___i2_c.html#ga6bdc4f08bdf223acdd7cae7a82a738fb">00049</a> <span class="preprocessor">#define IS_I2C_SLAVE_PERIPH(PERIPH)                          ((PERIPH) == I2C_SLAVE)</span>
+<a name="l00050"></a><a class="code" href="group___i2_c.html#ga1ea3475e120fa12431dda4611a238527">00050</a> <span class="preprocessor"></span><span class="preprocessor">#define IS_I2C_SLAVE_CLR_IT(IT)                              ((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</span>
+<a name="l00051"></a><a class="code" href="group___i2_c.html#gaac5fc855c960f40501ddca32a79af3f6">00051</a> <span class="preprocessor"></span><span class="preprocessor">#define IS_I2C_SLAVE_MASK_IT(IT)                             ((((IT) &amp; 0xFFFFF0FF) == 0) &amp;&amp; ((IT) != 0x00))</span>
+<a name="l00052"></a><a class="code" href="group___i2_c.html#gaf4bf4c11efc3c2119d9764ebeed6b487">00052</a> <span class="preprocessor"></span><span class="preprocessor">#define IS_I2C_SLAVE_SR_IT(IT)                               ((((IT) &amp; 0xFFFFFFE0) == 0) &amp;&amp; ((IT) != 0x00))</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 <span class="comment">/* Exported macro ------------------------------------------------------------*/</span>
+<a name="l00055"></a><a class="code" href="group___i2_c.html#ga810fd5de5bc77345bff86fb69705238d">00055</a> <span class="preprocessor">#define I2C_SLAVE_SR_RW_DONE                                          (1ul &lt;&lt; 0)</span>
+<a name="l00056"></a><a class="code" href="group___i2_c.html#ga57fc6bcfe9bd74a1bb5369cb7a647502">00056</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_SR_NACK                                             (1ul &lt;&lt; 1)</span>
+<a name="l00057"></a><a class="code" href="group___i2_c.html#gafdd7953df4c6b5f404e9d0287142276f">00057</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_SR_STOP                                             (1ul &lt;&lt; 2)</span>
+<a name="l00058"></a><a class="code" href="group___i2_c.html#gae6f1573a900da2ac11ae8230b86be374">00058</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_SR_ADDR                                             (1ul &lt;&lt; 3)</span>
+<a name="l00059"></a><a class="code" href="group___i2_c.html#gadd919894f7ce2abfa988c6f7838aa662">00059</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_SR_RW                                               (1ul &lt;&lt; 4)</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00061"></a><a class="code" href="group___i2_c.html#ga6208fe873c750843138cbfeb9285bd21">00061</a> <span class="preprocessor">#define I2C_SLAVE_CLR_RW                                              (1ul &lt;&lt; 0)</span>
+<a name="l00062"></a><a class="code" href="group___i2_c.html#ga73d50039f1fc4cd12096c56f456e4859">00062</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_CLR_NACK                                            (1ul &lt;&lt; 1)</span>
+<a name="l00063"></a><a class="code" href="group___i2_c.html#ga3e8bd14eca7198147a5b6b8db20c861c">00063</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_CLR_STOP                                            (1ul &lt;&lt; 2)</span>
+<a name="l00064"></a><a class="code" href="group___i2_c.html#ga16fe5eaad3df55f78a720d0ae0a07530">00064</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_CLR_ADDR                                            (1ul &lt;&lt; 3)</span>
+<a name="l00065"></a><a class="code" href="group___i2_c.html#gabe896e250c9d2502ed1e511b45d2cc60">00065</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_CLR_INT                                             (1ul &lt;&lt; 4)</span>
+<a name="l00066"></a>00066 <span class="preprocessor"></span>
+<a name="l00067"></a><a class="code" href="group___i2_c.html#ga76b16d6042e050a317588eb64fe79ade">00067</a> <span class="preprocessor">#define I2C_SLAVE_RW_MASK                                             (1ul &lt;&lt; 8)</span>
+<a name="l00068"></a><a class="code" href="group___i2_c.html#gaef7b3daaee6990a5190e78905b506409">00068</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_NACK_MASK                                           (1ul &lt;&lt; 9)</span>
+<a name="l00069"></a><a class="code" href="group___i2_c.html#ga7c0359e1e279c2f7e8a437bf99ff821d">00069</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_STOP_MASK                                           (1ul &lt;&lt; 10)</span>
+<a name="l00070"></a><a class="code" href="group___i2_c.html#ga0a264064b49897992293a94d4c43ef18">00070</a> <span class="preprocessor"></span><span class="preprocessor">#define I2C_SLAVE_ADDR_MASK                                           (1ul &lt;&lt; 11)</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span>
+<a name="l00072"></a>00072 <span class="comment">/* Exported functions --------------------------------------------------------*/</span>  
+<a name="l00073"></a>00073 <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#gade584f6e82f281337fde0d792c91337f" title="Enables or disables the specified I2C interrupts.">I2C_slave_int_cmd</a>(I2C_slave_t *i2c_unit, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it, en_functional_state_t state);
+<a name="l00074"></a>00074 <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga802f151430b4bc53991afedb87c91326">I2C_slave_clear_flag</a>(I2C_slave_t *i2c_unit, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it);
+<a name="l00075"></a>00075 <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga10efd0bf902994dbf6c6c831c37a0178" title="initialize I2C peripheral">I2C_slave_init</a>(I2C_slave_t *i2c_unit, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slave_addr);
+<a name="l00076"></a>00076 <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga9eed0253109d05fa07da76389ac3ee0d" title="de-initialize I2C unit">I2C_slave_deinit</a>(I2C_slave_t *i2c_unit);
+<a name="l00077"></a>00077 en_flag_status <a class="code" href="group___i2_c.html#gac4ba717ad69e1a20a2b9272d613065f0" title="checks whether the specified I2C interrupt has occurred or not.">I2C_slave_get_int_status</a>(I2C_slave_t *i2c_unit, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> I2C_flag);
+<a name="l00078"></a>00078 <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="group___i2_c.html#gae5f693d1db2f27c6e67c6a8c1da57cb6" title="read data from i2c data register.">I2C_slave_read_data</a>(I2C_slave_t *i2c_unit);
+<a name="l00079"></a>00079 <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="group___i2_c.html#ga028f4b293bfe83341742687f39598c25" title="read addr from i2c data register.">I2C_slave_read_word_addr</a>(I2C_slave_t *i2c_unit);
+<a name="l00080"></a>00080 <span class="keywordtype">void</span> <a class="code" href="group___i2_c.html#ga1a7ed6c1d62b67592e24a8a04cc3b190" title="write data to be sent to register.">I2C_slave_write_data</a>(I2C_slave_t *i2c_unit, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data);
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>}
+<a name="l00084"></a>00084 <span class="preprocessor">#endif</span>
+<a name="l00085"></a>00085 <span class="preprocessor"></span>
+<a name="l00086"></a>00086 <span class="preprocessor">#endif</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
+<a name="l00095"></a>00095 <span class="comment">/************************ (C) COPYRIGHT Phosense-tech *****END OF FILE****/</span>
+<a name="l00096"></a>00096 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

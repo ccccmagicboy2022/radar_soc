@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__gpio_8h.html#aaf3059b95c4de2b4a12dfbe81f75241f" title="pin_set_func" alt="" coords="116,5,248,40"/>
+<area shape="rect" id="node3" href="$xbr820__gpio_8h.html#a2c969fcc3536d1f2b98e0f854dff3d2e" title="gpio_init" alt="" coords="135,64,229,99"/>
+<area shape="rect" id="node4" href="$xbr820__gpio_8h.html#a4e425f543c3173690ba03308e0a1357a" title="gpio_set" alt="" coords="133,123,231,157"/>
+<area shape="rect" id="node5" href="$xbr820__gpio_8h.html#a90649e3dda7a540f4afd8dacf72095b0" title="gpio_reset" alt="" coords="125,181,239,216"/>
+<area shape="rect" id="node6" href="$xbr820__gpio_8h.html#a431641221bbb3deecb2036e2314910a8" title="gpio_toggle" alt="" coords="120,240,244,275"/>
+<area shape="rect" id="node7" href="$xbr820__gpio_8h.html#a58a8f59a8cab8df31445b99eb499996c" title="gpio_get" alt="" coords="133,299,231,333"/>
+</map>

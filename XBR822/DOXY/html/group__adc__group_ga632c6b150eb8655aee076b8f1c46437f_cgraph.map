@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$group__adc__group.html#ga888c03118243ed02fb8de5cf78fd7682" title="wait adc ready" alt="" coords="212,5,375,40"/>
+<area shape="rect" id="node3" href="$group__adc__group.html#ga6597816f8693ad4b196a82b909be6790" title="get adc data" alt="" coords="222,64,365,99"/>
+<area shape="rect" id="node4" href="$group__adc__group.html#gae200e6a1ab10a8f72dc857c5dba3fd26" title="clear adc finish flag for next get data" alt="" coords="218,123,369,157"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$bsp__freq__detect_8c.html#aefec5dd67ded6012bcfb1a8587921ba9" title="freq_detect_irq_cfg" alt="" coords="129,137,323,172"/>
+<area shape="rect" id="node10" href="$bsp__freq__detect_8h.html#a1f931d89e9a0059497a5f45a61accf10" title="freq_detect_irqhandler" alt="" coords="116,196,336,231"/>
+<area shape="rect" id="node11" href="$group___f_r_e_q___d_e_t_e_c_t.html#ga4e47877cc7a134d95ef45a14804f40ba" title="freq_detect_init" alt="" coords="147,255,305,289"/>
+<area shape="rect" id="node12" href="$bsp__freq__detect_8c.html#a13cdad2c33d826de3b6af49070c102d9" title="get_freq_det_flag" alt="" coords="137,313,315,348"/>
+<area shape="rect" id="node13" href="$group___f_r_e_q___d_e_t_e_c_t.html#gafaef8c15927a5d7db5552b7633072516" title="freq_get_value." alt="" coords="150,372,302,407"/>
+<area shape="rect" id="node14" href="$bsp__freq__detect_8c.html#a68bf1e94671bd5221a87b4cf696aa399" title="set_freq_det_flag" alt="" coords="137,431,315,465"/>
+<area shape="rect" id="node3" href="$xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="400,93,483,128"/>
+<area shape="rect" id="node7" href="$xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="384,181,499,216"/>
+<area shape="rect" id="node4" href="$group___c_s_i___core___v_i_c_functions.html#ga4f821781842f318c4845e31ffa7df62a" title="Set Interrupt Priority." alt="" coords="589,5,751,40"/>
+<area shape="rect" id="node5" href="$group___c_s_i___core___v_i_c_functions.html#ga53dcfdbb3a7e14c47b32479c91a970ec" title="set_shv_irq" alt="" coords="609,64,731,99"/>
+<area shape="rect" id="node6" href="$group___c_s_i___core___v_i_c_functions.html#gab41a151ef80d9ec4e00463250514aed4" title="set_rising_edge_irq" alt="" coords="573,123,767,157"/>
+<area shape="rect" id="node8" href="$group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="547,181,793,216"/>
+<area shape="rect" id="node9" href="$group___c_s_i___core___v_i_c_functions.html#gaa94b94a45d6abb555ea6120501fe73f5" title="Enable External Interrupt." alt="" coords="579,240,761,275"/>
+</map>

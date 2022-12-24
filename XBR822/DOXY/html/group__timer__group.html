@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>Timer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">组合类型</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">Timer</div>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+组合类型</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Timer config structure definition.  <a href="struct_timer___cfg__t.html#details">更多...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a>&#160;&#160;&#160;4</td></tr>
+<tr><td colspan="2"><h2><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#gaa75f34d7f307156b94d3356799aca24a">timer_num</a> { <br/>
+&#160;&#160;<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aacc6ab0fb66c5ba52524e32ea2ad0bd1a">PWM1</a>, 
+<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaf39c2e46e9e25532f62e9967768bba0c">PWM2</a>, 
+<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaec8dabc6a499fe64be322a93f441503e">PWM3</a>, 
+<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa99bf79473a462fcf944a8ffb941bd7ae">PWM4</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aaeee7ac3e026f20fe17d40196c4bb8d42">PWM5</a>, 
+<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa78900d10bb4d349f1403fbd090e66cd6">TIMER1</a>, 
+<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa9fdce91e07a880b720491a6667122d5d">TIMER2</a>, 
+<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa2a815be8dbcb2f8c8f9abb53b441b041">TIMER3</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group__timer__group.html#ggaa75f34d7f307156b94d3356799aca24aa355d56fa51f1cbf3b5151d14b278f9e3">TIMER4</a>
+<br/>
+ }</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#gad5da9cc2b66824545200231b5c8694c3">timer_enable</a> (<a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *timer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer. The timer should be set a initial value, or use the default value 0xFFF00000.  <a href="#gad5da9cc2b66824545200231b5c8694c3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#gadc411afd19047c99c1bff4a0e3c0f042">timer_disable</a> (<a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *timer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the timer.  <a href="#gadc411afd19047c99c1bff4a0e3c0f042"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#gaf0480d29aaef241b63afe32e588a2308">timer_reset</a> (<a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *timer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the timer according to the param id. Reset means counting from the init value again.  <a href="#gaf0480d29aaef241b63afe32e588a2308"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#ga1d0a6249770ba0ed1193453eb36311c8">timer_restart</a> (<a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *timer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart the timer according to the param id. That means counting from the init value again.  <a href="#ga1d0a6249770ba0ed1193453eb36311c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#ga44db9d0e1abde691b2ec32d46bfa7654">timer_set_initvalue</a> (<a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *timer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the timer's initial value.  <a href="#ga44db9d0e1abde691b2ec32d46bfa7654"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#ga668229ec3fe719465db77888c45e972b">timer_get_initvalue</a> (<a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *timer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the timer's initial value.  <a href="#ga668229ec3fe719465db77888c45e972b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__group.html#gadb5f5160c2cfd12c906fa05e3d14f63b">timer_get_currentval</a> (<a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *timer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the timer's current value.  <a href="#gadb5f5160c2cfd12c906fa05e3d14f63b"></a><br/></td></tr>
+</table>
+<hr/><h2>宏定义文档</h2>
+<a class="anchor" id="ga3e1c866cca508b123bfe893a8a3a09ce"></a><!-- doxytag: member="xbr820_timer.h::CONFIG_TIMER_NUM" ref="ga3e1c866cca508b123bfe893a8a3a09ce" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_TIMER_NUM&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>在文件<a class="el" href="xbr820__timer_8h_source.html">xbr820_timer.h</a>第<a class="el" href="xbr820__timer_8h_source.html#l00035">35</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>枚举类型文档</h2>
+<a class="anchor" id="gaa75f34d7f307156b94d3356799aca24a"></a><!-- doxytag: member="xbr820_timer.h::timer_num" ref="gaa75f34d7f307156b94d3356799aca24a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="xbr820__pwm_8h.html#aa75f34d7f307156b94d3356799aca24a">timer_num</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>枚举值: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aacc6ab0fb66c5ba52524e32ea2ad0bd1a"></a><!-- doxytag: member="PWM1" ref="ggaa75f34d7f307156b94d3356799aca24aacc6ab0fb66c5ba52524e32ea2ad0bd1a" args="" -->PWM1</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aaf39c2e46e9e25532f62e9967768bba0c"></a><!-- doxytag: member="PWM2" ref="ggaa75f34d7f307156b94d3356799aca24aaf39c2e46e9e25532f62e9967768bba0c" args="" -->PWM2</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aaec8dabc6a499fe64be322a93f441503e"></a><!-- doxytag: member="PWM3" ref="ggaa75f34d7f307156b94d3356799aca24aaec8dabc6a499fe64be322a93f441503e" args="" -->PWM3</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aa99bf79473a462fcf944a8ffb941bd7ae"></a><!-- doxytag: member="PWM4" ref="ggaa75f34d7f307156b94d3356799aca24aa99bf79473a462fcf944a8ffb941bd7ae" args="" -->PWM4</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aaeee7ac3e026f20fe17d40196c4bb8d42"></a><!-- doxytag: member="PWM5" ref="ggaa75f34d7f307156b94d3356799aca24aaeee7ac3e026f20fe17d40196c4bb8d42" args="" -->PWM5</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aa78900d10bb4d349f1403fbd090e66cd6"></a><!-- doxytag: member="TIMER1" ref="ggaa75f34d7f307156b94d3356799aca24aa78900d10bb4d349f1403fbd090e66cd6" args="" -->TIMER1</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aa9fdce91e07a880b720491a6667122d5d"></a><!-- doxytag: member="TIMER2" ref="ggaa75f34d7f307156b94d3356799aca24aa9fdce91e07a880b720491a6667122d5d" args="" -->TIMER2</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aa2a815be8dbcb2f8c8f9abb53b441b041"></a><!-- doxytag: member="TIMER3" ref="ggaa75f34d7f307156b94d3356799aca24aa2a815be8dbcb2f8c8f9abb53b441b041" args="" -->TIMER3</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ggaa75f34d7f307156b94d3356799aca24aa355d56fa51f1cbf3b5151d14b278f9e3"></a><!-- doxytag: member="TIMER4" ref="ggaa75f34d7f307156b94d3356799aca24aa355d56fa51f1cbf3b5151d14b278f9e3" args="" -->TIMER4</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8h_source.html">xbr820_timer.h</a>第<a class="el" href="xbr820__timer_8h_source.html#l00027">27</a>行定义。</p>
+
+</div>
+</div>
+<hr/><h2>函数文档</h2>
+<a class="anchor" id="gadc411afd19047c99c1bff4a0e3c0f042"></a><!-- doxytag: member="xbr820_timer.h::timer_disable" ref="gadc411afd19047c99c1bff4a0e3c0f042" args="(Timer_Cfg_t *timer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timer_disable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Stop the timer. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer,:</td><td>which is a defined structure, include timerID, counter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>for success, -1 for wrong input param. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8c_source.html">xbr820_timer.c</a>第<a class="el" href="xbr820__timer_8c_source.html#l00046">46</a>行定义。</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__timer__group_gadc411afd19047c99c1bff4a0e3c0f042_cgraph.png" border="0" usemap="#group__timer__group_gadc411afd19047c99c1bff4a0e3c0f042_cgraph" alt=""/></div>
+<map name="group__timer__group_gadc411afd19047c99c1bff4a0e3c0f042_cgraph" id="group__timer__group_gadc411afd19047c99c1bff4a0e3c0f042_cgraph">
+<area shape="rect" id="node2" href="group___c_s_i___core___v_i_c_functions.html#gaa5ba90f8674fba7cbecb948f06ff0f6f" title="Disable External Interrupt." alt="" coords="192,5,379,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gad5da9cc2b66824545200231b5c8694c3"></a><!-- doxytag: member="xbr820_timer.h::timer_enable" ref="gad5da9cc2b66824545200231b5c8694c3" args="(Timer_Cfg_t *timer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timer_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Start the timer. The timer should be set a initial value, or use the default value 0xFFF00000. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer,:</td><td>which is a defined structure, include timerID, counter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>for success, -1 for wrong input param. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8c_source.html">xbr820_timer.c</a>第<a class="el" href="xbr820__timer_8c_source.html#l00026">26</a>行定义。</p>
+
+<p><div class="dynheader">
+这是这个函数的调用图：</div>
+<div class="dyncontent">
+<div class="center"><img src="group__timer__group_gad5da9cc2b66824545200231b5c8694c3_icgraph.png" border="0" usemap="#group__timer__group_gad5da9cc2b66824545200231b5c8694c3_icgraph" alt=""/></div>
+<map name="group__timer__group_gad5da9cc2b66824545200231b5c8694c3_icgraph" id="group__timer__group_gad5da9cc2b66824545200231b5c8694c3_icgraph">
+<area shape="rect" id="node2" href="bsp__timer_8h.html#afd3228eb9bd30c01d47e48d6f8e4c3f1" title="timer initialize." alt="" coords="188,5,289,40"/><area shape="rect" id="node3" href="projects_2examples_2timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="337,5,400,40"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gadb5f5160c2cfd12c906fa05e3d14f63b"></a><!-- doxytag: member="xbr820_timer.h::timer_get_currentval" ref="gadb5f5160c2cfd12c906fa05e3d14f63b" args="(Timer_Cfg_t *timer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timer_get_currentval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the timer's current value. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer,:</td><td>which is a defined structure, include timerID, counter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">the</td><td>timer's current value; -1 for wrong timer id. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8c_source.html">xbr820_timer.c</a>第<a class="el" href="xbr820__timer_8c_source.html#l00144">144</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga668229ec3fe719465db77888c45e972b"></a><!-- doxytag: member="xbr820_timer.h::timer_get_initvalue" ref="ga668229ec3fe719465db77888c45e972b" args="(Timer_Cfg_t *timer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timer_get_initvalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the timer's initial value. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer,:</td><td>which is a defined structure, include timerID, counter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">To</td><td>return the timer's initial value for success. -1 for wrong input param. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8c_source.html">xbr820_timer.c</a>第<a class="el" href="xbr820__timer_8c_source.html#l00126">126</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf0480d29aaef241b63afe32e588a2308"></a><!-- doxytag: member="xbr820_timer.h::timer_reset" ref="gaf0480d29aaef241b63afe32e588a2308" args="(Timer_Cfg_t *timer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timer_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reset the timer according to the param id. Reset means counting from the init value again. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer,:</td><td>which is a defined structure, include timerID, counter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>for success, -1 for wrong input param. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8c_source.html">xbr820_timer.c</a>第<a class="el" href="xbr820__timer_8c_source.html#l00067">67</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1d0a6249770ba0ed1193453eb36311c8"></a><!-- doxytag: member="xbr820_timer.h::timer_restart" ref="ga1d0a6249770ba0ed1193453eb36311c8" args="(Timer_Cfg_t *timer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timer_restart </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Restart the timer according to the param id. That means counting from the init value again. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer,:</td><td>which is a defined structure, include timerID, counter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>for success, -1 for wrong input param. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8c_source.html">xbr820_timer.c</a>第<a class="el" href="xbr820__timer_8c_source.html#l00087">87</a>行定义。</p>
+
+</div>
+</div>
+<a class="anchor" id="ga44db9d0e1abde691b2ec32d46bfa7654"></a><!-- doxytag: member="xbr820_timer.h::timer_set_initvalue" ref="ga44db9d0e1abde691b2ec32d46bfa7654" args="(Timer_Cfg_t *timer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timer_set_initvalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_timer___cfg__t.html">Timer_Cfg_t</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the timer's initial value. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer,:</td><td>which is a defined structure, include timerID, counter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>返回值:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>for success, -1 for wrong input param. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件<a class="el" href="xbr820__timer_8c_source.html">xbr820_timer.c</a>第<a class="el" href="xbr820__timer_8c_source.html#l00108">108</a>行定义。</p>
+
+</div>
+</div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:50 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

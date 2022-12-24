@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$xbr820__interrupts_8h.html#a967cf25d94632b98316005222cc266e7" title="enable_irq_all" alt="" coords="116,35,259,69"/>
+<area shape="rect" id="node4" href="$bsp__ir_8c.html#a8f616cb6c33c163b6869bb08ff3736f7" title="IR initialize." alt="" coords="153,123,221,157"/>
+<area shape="rect" id="node13" href="$bsp__ir_8c.html#a2de4ef520245b056075e09f124120c9a" title="ir_test" alt="" coords="149,240,226,275"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___reg_acc_functions.html#ga438862a9edbf502288b14b1508735502" title="Enable IRQ Interrupts." alt="" coords="313,5,447,40"/>
+<area shape="rect" id="node5" href="$bsp__ir_8h.html#a76f26d2209bcb1ea0ae59744f9994d3e" title="IR_irqhandler" alt="" coords="311,64,449,99"/>
+<area shape="rect" id="node6" href="$xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0" title="set_irq" alt="" coords="339,123,421,157"/>
+<area shape="rect" id="node10" href="$xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e" title="start_irq_x" alt="" coords="323,181,437,216"/>
+<area shape="rect" id="node7" href="$group___c_s_i___core___v_i_c_functions.html#ga4f821781842f318c4845e31ffa7df62a" title="Set Interrupt Priority." alt="" coords="543,5,706,40"/>
+<area shape="rect" id="node8" href="$group___c_s_i___core___v_i_c_functions.html#ga53dcfdbb3a7e14c47b32479c91a970ec" title="set_shv_irq" alt="" coords="563,64,686,99"/>
+<area shape="rect" id="node9" href="$group___c_s_i___core___v_i_c_functions.html#gab41a151ef80d9ec4e00463250514aed4" title="set_rising_edge_irq" alt="" coords="527,123,722,157"/>
+<area shape="rect" id="node11" href="$group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt." alt="" coords="501,181,748,216"/>
+<area shape="rect" id="node12" href="$group___c_s_i___core___v_i_c_functions.html#gaa94b94a45d6abb555ea6120501fe73f5" title="Enable External Interrupt." alt="" coords="533,240,716,275"/>
+<area shape="rect" id="node14" href="$group___i_r.html#gac935912d5769b902698078256a3e0a24" title="IR module interface to get out the incoming data." alt="" coords="307,240,453,275"/>
+<area shape="rect" id="node15" href="$group___i_r.html#gacc1b68aa1fea3f96941ad1fb4f236260" title="IR struct." alt="" coords="327,299,433,333"/>
+</map>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_i2c_slave.c文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_i2c_slave.c文件参考</div>  </div>
+</div>
+<div class="contents">
+
+<p>This file provides firmware functions to manage the functionalities of the Inter-integrated circuit (I2C)  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="xbr820__i2c__slave_8h_source.html">xbr820_i2c_slave.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="xbr820__utility_8h_source.html">xbr820_utility.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+xbr820_i2c_slave.c包含/依赖关系图：</div>
+<div class="dyncontent">
+<div class="center"><img src="xbr820__i2c__slave_8c__incl.png" border="0" usemap="#_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__i2c__slave_8c" alt=""/></div>
+<map name="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__i2c__slave_8c" id="_d_1_2cccc2022_2_c_o_d_e_2radar__soc_2_x_b_r822_2_s_d_k_2driver_2src_2xbr820__i2c__slave_8c">
+<area shape="rect" id="node2" href="xbr820__i2c__slave_8h.html" title="This file contains all the functions prototypes for the I2C firmware library." alt="" coords="151,88,342,123"/><area shape="rect" id="node8" href="xbr820__utility_8h.html" title="xbr820_utility.h" alt="" coords="366,88,519,123"/><area shape="rect" id="node3" href="pho__common_8h.html" title="pho_common.h" alt="" coords="169,171,324,205"/></map>
+</div>
+</div>
+<p><a href="xbr820__i2c__slave_8c_source.html">浏览该文件的源代码。</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gade584f6e82f281337fde0d792c91337f">I2C_slave_int_cmd</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i2c_it, en_functional_state_t state) assert_param(IS_I2C_SLAVE_PERIPH(i2c_unit))</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the specified I2C interrupts.  <a href="group___i2_c.html#gade584f6e82f281337fde0d792c91337f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga0bf771ef448225f54b3f4f128c041bdd">assert_param</a> (IS_FUNCTIONAL_STATE(state))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga5e7f31e2d54b92f7b4d71c2320cc7b25">assert_param</a> (IS_I2C_SLAVE_MASK_IT(i2c_it))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga34f58799ad705618605674bcf46742b2">if</a> (state==DISABLE)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga10efd0bf902994dbf6c6c831c37a0178">I2C_slave_init</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> slave_addr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize I2C peripheral  <a href="group___i2_c.html#ga10efd0bf902994dbf6c6c831c37a0178"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga9eed0253109d05fa07da76389ac3ee0d">I2C_slave_deinit</a> (I2C_slave_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">de-initialize I2C unit  <a href="group___i2_c.html#ga9eed0253109d05fa07da76389ac3ee0d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">en_flag_status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gac4ba717ad69e1a20a2b9272d613065f0">I2C_slave_get_int_status</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> I2C_flag)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">checks whether the specified I2C interrupt has occurred or not.  <a href="group___i2_c.html#gac4ba717ad69e1a20a2b9272d613065f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#gae5f693d1db2f27c6e67c6a8c1da57cb6">I2C_slave_read_data</a> (I2C_slave_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">read data from i2c data register.  <a href="group___i2_c.html#gae5f693d1db2f27c6e67c6a8c1da57cb6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga028f4b293bfe83341742687f39598c25">I2C_slave_read_word_addr</a> (I2C_slave_t *i2c_unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">read addr from i2c data register.  <a href="group___i2_c.html#ga028f4b293bfe83341742687f39598c25"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c.html#ga1a7ed6c1d62b67592e24a8a04cc3b190">I2C_slave_write_data</a> (I2C_slave_t *i2c_unit, <a class="el" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">write data to be sent to register.  <a href="group___i2_c.html#ga1a7ed6c1d62b67592e24a8a04cc3b190"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<div class="textblock"><p>This file provides firmware functions to manage the functionalities of the Inter-integrated circuit (I2C) </p>
+<dl class="author"><dt><b>作者:</b></dt><dd>software Team </dd></dl>
+<dl class="version"><dt><b>版本:</b></dt><dd>V1.0.0 </dd></dl>
+<dl class="date"><dt><b>日期:</b></dt><dd>24-December-2021 </dd></dl>
+<dl class="attention"><dt><b>注意:</b></dt><dd></dd></dl>
+<h2><center>&copy; COPYRIGHT 2021 PHOSENSE </center></h2>
+<p>Licensed under Liberty SW License Agreement V1, (the "License"); You may not use this file except in compliance with the License.</p>
+<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+
+<p>在文件<a class="el" href="xbr820__i2c__slave_8c_source.html">xbr820_i2c_slave.c</a>中定义。</p>
+</div></div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:48 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

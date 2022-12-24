@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/sys_timer/main.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/sys_timer/main.c</div>  </div>
+</div>
+<div class="contents">
+<a href="projects_2examples_2sys__timer_2main_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__sys__timer_8h.html">xbr820_sys_timer.h</a>&quot;</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a><a class="code" href="projects_2examples_2sys__timer_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">00004</a> <span class="keywordtype">int</span> <a class="code" href="projects_2examples_2flash_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()
+<a name="l00005"></a>00005 {
+<a name="l00006"></a>00006         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> hi32;
+<a name="l00007"></a>00007         <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lo32;
+<a name="l00008"></a>00008         
+<a name="l00009"></a>00009         <a class="code" href="pho__common_8h.html#a0210dd89dbe7888f21ce2995f626301e">em_functional_state_t</a> systimer_ctl = <a class="code" href="pho__common_8h.html#a3752718c2f4dd3b66f2f81f6f2bbfb9da7d46875fa3ebd2c34d2756950eda83bf">ENABLE</a>;
+<a name="l00010"></a>00010         
+<a name="l00011"></a>00011         <a class="code" href="xbr820__sys__timer_8h.html#a9e7f8c47f173536ed47fa36a293fe087">sys_timer_start</a>(systimer_ctl);
+<a name="l00012"></a>00012         
+<a name="l00013"></a>00013         hi32 = 0x33ff2255;
+<a name="l00014"></a>00014         lo32 = 0x88fe1122;
+<a name="l00015"></a>00015         
+<a name="l00016"></a>00016         <a class="code" href="xbr820__sys__timer_8h.html#a79d5136f09f10b42a5bc42bab5e8585b">sys_timer_getval</a>(&amp;lo32, &amp;hi32);
+<a name="l00017"></a>00017         hi32++;
+<a name="l00018"></a>00018         lo32++;
+<a name="l00019"></a>00019         <a class="code" href="xbr820__sys__timer_8h.html#a714b998929e9558db068dd32e1fcc96c">sys_timer_setcmp</a>(&amp;lo32, &amp;hi32); 
+<a name="l00020"></a>00020         
+<a name="l00021"></a>00021     <span class="keywordflow">while</span>(1);
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023     <span class="keywordflow">return</span> 0;
+<a name="l00024"></a>00024 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

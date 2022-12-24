@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_gpio.h源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/inc/xbr820_gpio.h</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__gpio_8h.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __XBR820_GPIO_H___</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __XBR820_GPIO_H___</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="pho__common_8h.html">pho_common.h</a>&quot;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1">00006</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1">em_pin</a>
+<a name="l00007"></a>00007 {
+<a name="l00008"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a38fb3b9222cb4e1405837a61b9b3b739">00008</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a38fb3b9222cb4e1405837a61b9b3b739">PX_0</a> = 0,
+<a name="l00009"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a63735336e976c3f748e40d8eba599cb0">00009</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a63735336e976c3f748e40d8eba599cb0">PX_1</a> = 1,
+<a name="l00010"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a5b0d1dac02111f018d048629cc728f31">00010</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a5b0d1dac02111f018d048629cc728f31">PX_2</a> = 2,
+<a name="l00011"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1ae8659474f8a40239cefdb757c2896be0">00011</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1ae8659474f8a40239cefdb757c2896be0">PX_3</a> = 3,
+<a name="l00012"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a7e077b2026263543cc93edaa8ae9fa2b">00012</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a7e077b2026263543cc93edaa8ae9fa2b">PX_4</a> = 4,
+<a name="l00013"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a97817769241d598e98ab8990cb4d1157">00013</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1a97817769241d598e98ab8990cb4d1157">PX_5</a> = 5,
+<a name="l00014"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1aae626022d2ae2b1b8e44f8d28aed809f">00014</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1aae626022d2ae2b1b8e44f8d28aed809f">PX_6</a> = 6,
+<a name="l00015"></a><a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1acc84fb85c38e34cabbbf20837d252012">00015</a>     <a class="code" href="xbr820__gpio_8h.html#abc73472b10c9e80076f47dbbe43798b1acc84fb85c38e34cabbbf20837d252012">PX_7</a> = 7,
+<a name="l00016"></a>00016 }<a class="code" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a>;
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0">00018</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00019"></a>00019 {
+<a name="l00020"></a><a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0a6170b39ad4c6966f3efacc7708a4850a">00020</a>         <a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0a6170b39ad4c6966f3efacc7708a4850a">PA0_FUNC_GPIO</a> = 0u,
+<a name="l00021"></a><a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0a25739b8fb89d3113e0fb780c3fdd2c64">00021</a>         <a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0a25739b8fb89d3113e0fb780c3fdd2c64">PA0_FUNC_IR_IN</a> = 1u,
+<a name="l00022"></a><a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0a3e99b3b6d9a8dbc4f369be53f90803cf">00022</a>         <a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0a3e99b3b6d9a8dbc4f369be53f90803cf">PA0_FUNC_OSC32K</a> = 9u,
+<a name="l00023"></a><a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0aa769221ffa46180939d88f094b68dde6">00023</a>         <a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0aa769221ffa46180939d88f094b68dde6">PA0_FUNC_SADC0</a> = 10u
+<a name="l00024"></a>00024 }<a class="code" href="xbr820__gpio_8h.html#a50f81a2b084705cb097d11d61144deb0">em_pin_pa0_func_t</a>;
+<a name="l00025"></a>00025 
+<a name="l00026"></a><a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1">00026</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00027"></a>00027 {
+<a name="l00028"></a><a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a07a2c7f8ee99992dc8ce780a544dc0f5">00028</a>         <a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a07a2c7f8ee99992dc8ce780a544dc0f5">PA1_FUNC_GPIO</a> = 0u,
+<a name="l00029"></a><a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1af0f336c7cab61bbaf44478d270e05895">00029</a>         <a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1af0f336c7cab61bbaf44478d270e05895">PA1_FUNC_PWM1</a> = 6u,
+<a name="l00030"></a><a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a7a90c53c47ddca7914150607dbd45c4a">00030</a>         <a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a7a90c53c47ddca7914150607dbd45c4a">PA1_FUNC_IO_VALUE_P</a> = 8u,
+<a name="l00031"></a><a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a59e596fe33091992dba0c6398413ab59">00031</a>         <a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a59e596fe33091992dba0c6398413ab59">PA1_FUNC_XTAL40M</a> = 9u,
+<a name="l00032"></a><a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a5058a73f41d79d560b65475150d72f53">00032</a>         <a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1a5058a73f41d79d560b65475150d72f53">PA1_FUNC_SADC1</a> = 10u
+<a name="l00033"></a>00033 }<a class="code" href="xbr820__gpio_8h.html#a8bf7dd13cbb6dbec280f388dcc9f7aa1">em_pin_pa1_func_t</a>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1">00035</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00036"></a>00036 {
+<a name="l00037"></a><a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1a5025db4dcdf7868de8ae5e2d1e0b48ab">00037</a>         <a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1a5025db4dcdf7868de8ae5e2d1e0b48ab">PA2_FUNC_GPIO</a> = 0u,
+<a name="l00038"></a><a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1a52bda46ffb3ec412f99fd916821c9993">00038</a>         <a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1a52bda46ffb3ec412f99fd916821c9993">PA2_FUNC_PWM2</a> = 6u,
+<a name="l00039"></a><a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1a75e5253c0bdd481efc79930a8a613c6a">00039</a>         <a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1a75e5253c0bdd481efc79930a8a613c6a">PA2_FUNC_PLL_PRE</a> = 9u,
+<a name="l00040"></a><a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1ac2992dd9284cab80f4000f737fbc8967">00040</a>         <a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1ac2992dd9284cab80f4000f737fbc8967">PA2_FUNC_SADC2</a> = 10u
+<a name="l00041"></a>00041 }<a class="code" href="xbr820__gpio_8h.html#a797179cade10f0c99fa5b584d79136f1">em_pin_pa2_func_t</a>;
+<a name="l00042"></a>00042 
+<a name="l00043"></a><a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725">00043</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00044"></a>00044 {
+<a name="l00045"></a><a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a7ff9c288d479194dd3d6502e7f9f151a">00045</a>         <a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a7ff9c288d479194dd3d6502e7f9f151a">PA3_FUNC_GPIO</a> = 0u,
+<a name="l00046"></a><a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725adac88a0f488ad19e1544fe89f60e5824">00046</a>         <a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725adac88a0f488ad19e1544fe89f60e5824">PA3_FUNC_PWM3</a> = 6u,
+<a name="l00047"></a><a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a19733f58cd9942d8d15d9c6dc81569eb">00047</a>         <a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a19733f58cd9942d8d15d9c6dc81569eb">PA3_FUNC_IO_VALUE_N</a> = 8u,
+<a name="l00048"></a><a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a93b5318fb39a866e61f62f3cd9acb64e">00048</a>         <a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a93b5318fb39a866e61f62f3cd9acb64e">PA3_FUNC_PLL_FB</a> = 9u,
+<a name="l00049"></a><a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a174f0be0ab03372f494455b072905d07">00049</a>         <a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725a174f0be0ab03372f494455b072905d07">PA3_FUNC_SADC3</a> = 10u
+<a name="l00050"></a>00050 }<a class="code" href="xbr820__gpio_8h.html#a8f92414ee47468f0dbb34a89c6869725">em_pin_pa3_func_t</a>;
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786">00052</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00053"></a>00053 {
+<a name="l00054"></a><a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a21b9452ed95e856929970769b8928e0b">00054</a>         <a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a21b9452ed95e856929970769b8928e0b">PA4_FUNC_GPIO</a> = 0u,
+<a name="l00055"></a><a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a5972a6643a2599bc85e2fa765a6dae16">00055</a>         <a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a5972a6643a2599bc85e2fa765a6dae16">PA4_FUNC_MSCL</a> = 3u,
+<a name="l00056"></a><a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a12ee8bce9dceb30b1c522a2c505d4667">00056</a>         <a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a12ee8bce9dceb30b1c522a2c505d4667">PA4_FUNC_PWM4</a> = 6u,
+<a name="l00057"></a><a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a8ba20602c3374babf0abbd7085443643">00057</a>         <a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786a8ba20602c3374babf0abbd7085443643">PA4_FUNC_SADC4</a> = 10u
+<a name="l00058"></a>00058 }<a class="code" href="xbr820__gpio_8h.html#a2235eb12f579789ce3b92ee786e06786">em_pin_pa4_func_t</a>;
+<a name="l00059"></a>00059 
+<a name="l00060"></a><a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884c">00060</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00061"></a>00061 {
+<a name="l00062"></a><a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884cabc0ec139ebdfdf764c31be3b4f79ea32">00062</a>         <a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884cabc0ec139ebdfdf764c31be3b4f79ea32">PA5_FUNC_GPIO</a> = 0u,
+<a name="l00063"></a><a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884ca69ec502a748379c6c39ec2417f997415">00063</a>         <a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884ca69ec502a748379c6c39ec2417f997415">PA5_FUNC_MSDA</a> = 3u,
+<a name="l00064"></a><a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884ca5a3339dc4a4c21754948afb21d5d41a1">00064</a>         <a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884ca5a3339dc4a4c21754948afb21d5d41a1">PA5_FUNC_PWM5</a> = 6u,
+<a name="l00065"></a><a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884cabeef06942504117263326ec230f154ce">00065</a>         <a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884cabeef06942504117263326ec230f154ce">PA5_FUNC_LIGHT_TRIGGER</a> = 9u,
+<a name="l00066"></a><a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884ca4ea2587c9c8e64f550330431486d45f9">00066</a>         <a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884ca4ea2587c9c8e64f550330431486d45f9">PA5_FUNC_SADC5</a> = 10u
+<a name="l00067"></a>00067 }<a class="code" href="xbr820__gpio_8h.html#a32ee0a4f5b3c8be05ab4f6773633884c">em_pin_pa5_func_t</a>;
+<a name="l00068"></a>00068 
+<a name="l00069"></a><a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495a">00069</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00070"></a>00070 {
+<a name="l00071"></a><a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aa81294aac967342a3bf5081da5074060f">00071</a>         <a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aa81294aac967342a3bf5081da5074060f">PA6_FUNC_GPIO</a> = 0u,
+<a name="l00072"></a><a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aa807c88bea6094b84b13c846fef0d223c">00072</a>         <a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aa807c88bea6094b84b13c846fef0d223c">PA6_FUNC_UART_RX</a> = 2u,
+<a name="l00073"></a><a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aa6022bb613744689707821bf2475c6a6f">00073</a>         <a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aa6022bb613744689707821bf2475c6a6f">PA6_FUNC_LIGHT_LATCH</a> = 9u,
+<a name="l00074"></a><a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aaeecf017f0425838bc865ae331be7f8e2">00074</a>         <a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495aaeecf017f0425838bc865ae331be7f8e2">PA6_FUNC_SADC6</a> = 10u
+<a name="l00075"></a>00075 }<a class="code" href="xbr820__gpio_8h.html#a3902999729ecfeb99dc3aba3253c495a">em_pin_pa6_func_t</a>;
+<a name="l00076"></a>00076 
+<a name="l00077"></a><a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4">00077</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00078"></a>00078 {
+<a name="l00079"></a><a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a4e116e0a3f165a50217a5e90f31740a3">00079</a>         <a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a4e116e0a3f165a50217a5e90f31740a3">PA7_FUNC_GPIO</a> = 0u,
+<a name="l00080"></a><a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a242b39ec2a039bf9442e0ff23458d84b">00080</a>         <a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a242b39ec2a039bf9442e0ff23458d84b">PA7_FUNC_UART_TX</a> = 2u,
+<a name="l00081"></a><a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a1ca463b1fe5ea55ccc673ff7860add26">00081</a>         <a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a1ca463b1fe5ea55ccc673ff7860add26">PA7_FUNC_LIGHT_FLAG</a> = 9u,
+<a name="l00082"></a><a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a347b332d3faad1e2f8c30c0cf4aef70a">00082</a>         <a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4a347b332d3faad1e2f8c30c0cf4aef70a">PA7_FUNC_SADC7</a> = 10u
+<a name="l00083"></a>00083 }<a class="code" href="xbr820__gpio_8h.html#a45582122dfaacc247adfb2f9dfb06ad4">em_pin_pa7_func_t</a>;
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660">00085</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00086"></a>00086 {
+<a name="l00087"></a><a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660aabd57d1dca25ec92e9a947afd4c9908a">00087</a>         <a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660aabd57d1dca25ec92e9a947afd4c9908a">PB0_FUNC_GPIO</a> = 0u,
+<a name="l00088"></a><a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660a86ff89c8b8a1e7d868ef05a9f6027a98">00088</a>         <a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660a86ff89c8b8a1e7d868ef05a9f6027a98">PB0_FUNC_SSCL</a> = 3u,
+<a name="l00089"></a><a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660a494869820e2d878b41a4aad00388375c">00089</a>         <a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660a494869820e2d878b41a4aad00388375c">PB0_FUNC_PWM1</a> = 6u,
+<a name="l00090"></a><a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660ac57c0401bb1e1b50b7f3cb0306247e51">00090</a>         <a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660ac57c0401bb1e1b50b7f3cb0306247e51">PB0_FUNC_SADC8</a> = 10u
+<a name="l00091"></a>00091 }<a class="code" href="xbr820__gpio_8h.html#a9cbdd834a621c2d5f5901ed460fae660">em_pin_pb0_func_t</a>;
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82">00093</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00094"></a>00094 {
+<a name="l00095"></a><a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82aba5add81d8db46be8e8f0b1d0dbac169">00095</a>         <a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82aba5add81d8db46be8e8f0b1d0dbac169">PB1_FUNC_GPIO</a> = 0u,
+<a name="l00096"></a><a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82ac7d210e88b698cef6b6161817ef1d92d">00096</a>         <a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82ac7d210e88b698cef6b6161817ef1d92d">PB1_FUNC_SSDA</a> = 3u,
+<a name="l00097"></a><a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82a4b1765363f58f19d730dc9725aa98544">00097</a>         <a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82a4b1765363f58f19d730dc9725aa98544">PB1_FUNC_PWM2</a> = 6u,
+<a name="l00098"></a><a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82a4c37383fb04758866418139663c45c82">00098</a>         <a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82a4c37383fb04758866418139663c45c82">PB1_FUNC_SADC9</a> = 10u
+<a name="l00099"></a>00099 }<a class="code" href="xbr820__gpio_8h.html#a402540f1b06f1b6e497910ce56189a82">em_pin_pb1_func_t</a>;
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05">00101</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00102"></a>00102 {
+<a name="l00103"></a><a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05a7bd4edde8c01b18c6d381de640af6376">00103</a>         <a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05a7bd4edde8c01b18c6d381de640af6376">PB2_FUNC_GPIO</a> = 0u,
+<a name="l00104"></a><a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05a9ba156ea6f0e87747f54e334cb2d8e0a">00104</a>         <a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05a9ba156ea6f0e87747f54e334cb2d8e0a">PB2_FUNC_PWM3</a> = 6u,
+<a name="l00105"></a><a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05a3e2f3ed5b40b3fb56b694327ae70d643">00105</a>         <a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05a3e2f3ed5b40b3fb56b694327ae70d643">PB2_FUNC_IO_VALUE_P</a> = 8u,
+<a name="l00106"></a><a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05ab6ea75d31cb93d2acba06bed31a852d9">00106</a>         <a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05ab6ea75d31cb93d2acba06bed31a852d9">PB2_FUNC_SADC10</a> = 10u
+<a name="l00107"></a>00107 }<a class="code" href="xbr820__gpio_8h.html#a5ec6ac70da6398673dcd8c0aeea8ea05">em_pin_pb2_func_t</a>;
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3">00109</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00110"></a>00110 {
+<a name="l00111"></a><a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3a6ed443cee0c6f28896ef202b244ee4b8">00111</a>         <a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3a6ed443cee0c6f28896ef202b244ee4b8">PB3_FUNC_GPIO</a> = 0u,
+<a name="l00112"></a><a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3a20745172514b3a987b517f4e084bc4e3">00112</a>         <a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3a20745172514b3a987b517f4e084bc4e3">PB3_FUNC_PWM4</a> = 6u,
+<a name="l00113"></a><a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3aac87b2f751811561bfe79fa068e987a9">00113</a>         <a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3aac87b2f751811561bfe79fa068e987a9">PB3_FUNC_IO_VALUE_N</a> = 8u,
+<a name="l00114"></a><a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3adf204e3d0c5f8d4a12d6130dbf35cd93">00114</a>         <a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3adf204e3d0c5f8d4a12d6130dbf35cd93">PB3_FUNC_SADC11</a> = 10u
+<a name="l00115"></a>00115 }<a class="code" href="xbr820__gpio_8h.html#a859cdf5d62d9e7be1ef74da2f582eee3">em_pin_pb3_func_t</a>;
+<a name="l00116"></a>00116 
+<a name="l00117"></a><a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929">00117</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00118"></a>00118 {
+<a name="l00119"></a><a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929a568497ad2075a3d6deea62a88e2a1f6b">00119</a>         <a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929a568497ad2075a3d6deea62a88e2a1f6b">PB4_FUNC_GPIO</a> = 0u,
+<a name="l00120"></a><a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929a2de817e2249f5180d79c6c650d4868f8">00120</a>         <a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929a2de817e2249f5180d79c6c650d4868f8">PB4_FUNC_PWM5</a> = 6u,
+<a name="l00121"></a><a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929a60bbb0b6eb400f3022e295b8b378b256">00121</a>         <a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929a60bbb0b6eb400f3022e295b8b378b256">PB4_FUNC_SADC_DONE</a> = 10u
+<a name="l00122"></a>00122 }<a class="code" href="xbr820__gpio_8h.html#a5e32074ea6e76e2d58073d6f38492929">em_pin_pb4_func_t</a>;
+<a name="l00123"></a>00123 
+<a name="l00124"></a><a class="code" href="xbr820__gpio_8h.html#a0479b7b18b6dbae0dd50a5e6ca91ab31">00124</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> 
+<a name="l00125"></a>00125 {
+<a name="l00126"></a><a class="code" href="xbr820__gpio_8h.html#a0479b7b18b6dbae0dd50a5e6ca91ab31a3c3ac91eef908cdd8407a98b0b18468d">00126</a>         <a class="code" href="xbr820__gpio_8h.html#a0479b7b18b6dbae0dd50a5e6ca91ab31a3c3ac91eef908cdd8407a98b0b18468d">PB5_FUNC_GPIO</a> = 0u,
+<a name="l00127"></a>00127 }<a class="code" href="xbr820__gpio_8h.html#a0479b7b18b6dbae0dd50a5e6ca91ab31">em_pin_pb5_func_t</a>;
+<a name="l00128"></a>00128 
+<a name="l00129"></a><a class="code" href="xbr820__gpio_8h.html#a29ca7336642eb6f47dc436ba2a96f583">00129</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="xbr820__gpio_8h.html#a29ca7336642eb6f47dc436ba2a96f583">em_pin_mode</a>
+<a name="l00130"></a>00130 {
+<a name="l00131"></a><a class="code" href="xbr820__gpio_8h.html#a29ca7336642eb6f47dc436ba2a96f583a3343e227f62c4c536efff81438a8e155">00131</a>     <a class="code" href="xbr820__gpio_8h.html#a29ca7336642eb6f47dc436ba2a96f583a3343e227f62c4c536efff81438a8e155">GPIO_IN</a>  = 0,
+<a name="l00132"></a><a class="code" href="xbr820__gpio_8h.html#a29ca7336642eb6f47dc436ba2a96f583a1b59f059dea546f0248fb26232ee3531">00132</a>     <a class="code" href="xbr820__gpio_8h.html#a29ca7336642eb6f47dc436ba2a96f583a1b59f059dea546f0248fb26232ee3531">GPIO_OUT</a> = 1,
+<a name="l00133"></a>00133 }<a class="code" href="xbr820__gpio_8h.html#a0c4d64b136a39054f7e7e06a8b80d4b3">em_gpio_inout_t</a>;
+<a name="l00134"></a>00134 
+<a name="l00135"></a><a class="code" href="structstr__gpio__init.html">00135</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structstr__gpio__init.html">str_gpio_init</a>
+<a name="l00136"></a>00136 {
+<a name="l00137"></a><a class="code" href="structstr__gpio__init.html#a5a802345de2491abf058c2aebf06bed6">00137</a>     <a class="code" href="xbr820__gpio_8h.html#a0c4d64b136a39054f7e7e06a8b80d4b3">em_gpio_inout_t</a>        <a class="code" href="structstr__gpio__init.html#a5a802345de2491abf058c2aebf06bed6">gpio_inout</a>;
+<a name="l00138"></a><a class="code" href="structstr__gpio__init.html#a87df48999bf8c9144cc922d6c2e73bfd">00138</a>         <a class="code" href="pho__common_8h.html#a0210dd89dbe7888f21ce2995f626301e">em_functional_state_t</a>  <a class="code" href="structstr__gpio__init.html#a87df48999bf8c9144cc922d6c2e73bfd">gpio_int_en</a>;
+<a name="l00139"></a>00139 } <a class="code" href="xbr820__gpio_8h.html#a9937a9ff44b3317318379ce0597de403">str_gpio_init_cfg_t</a>;
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__gpio_8h.html#aaf3059b95c4de2b4a12dfbe81f75241f">pin_set_func</a>(<a class="code" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="code" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel,
+<a name="l00142"></a>00142                             <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> func_sel);
+<a name="l00143"></a>00143 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__gpio_8h.html#a2c969fcc3536d1f2b98e0f854dff3d2e">gpio_init</a>(<a class="code" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="code" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel,
+<a name="l00144"></a>00144                         <span class="keyword">const</span> <a class="code" href="structstr__gpio__init.html">str_gpio_init_cfg_t</a> *gpio_init_cfg);
+<a name="l00145"></a>00145 <a class="code" href="pho__common_8h.html#ae011e05f9f8df8193fe9a5f4275351da">em_flag_status_t</a> <a class="code" href="xbr820__gpio_8h.html#a58a8f59a8cab8df31445b99eb499996c">gpio_get</a>(<a class="code" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="code" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel);
+<a name="l00146"></a>00146 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__gpio_8h.html#a4e425f543c3173690ba03308e0a1357a">gpio_set</a>(<a class="code" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="code" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel);
+<a name="l00147"></a>00147 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__gpio_8h.html#a90649e3dda7a540f4afd8dacf72095b0">gpio_reset</a>(<a class="code" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="code" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel);
+<a name="l00148"></a>00148 <a class="code" href="pho__common_8h.html#a80b84d175fd3aa2f538134dfd651b9fc">em_result_t</a> <a class="code" href="xbr820__gpio_8h.html#a431641221bbb3deecb2036e2314910a8">gpio_toggle</a>(<a class="code" href="structbrx820__gpio__regdef.html">brx820_gpio_regdef</a> *px, <a class="code" href="xbr820__gpio_8h.html#ab248642a15e0f31e985978168565268e">em_pin_t</a> pin_sel);
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

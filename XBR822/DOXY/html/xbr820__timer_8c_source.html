@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_timer.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/driver/src/xbr820_timer.c</div>  </div>
+</div>
+<div class="contents">
+<a href="xbr820__timer_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <span class="comment">/*******************************************************************************</span>
+<a name="l00013"></a>00013 <span class="comment"> * Include files</span>
+<a name="l00014"></a>00014 <span class="comment"> ******************************************************************************/</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__timer_8h.html" title="pwm C head file">xbr820_timer.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="csi__core_8h.html">csi_core.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__gpio_8h.html">xbr820_gpio.h</a>&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00026"></a><a class="code" href="group__timer__group.html#gad5da9cc2b66824545200231b5c8694c3">00026</a> <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gad5da9cc2b66824545200231b5c8694c3" title="Start the timer. The timer should be set a initial value, or use the default value 0xFFF00000...">timer_enable</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> *timer)
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028     <span class="keywordflow">if</span> ((timer == NULL) || (timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> &gt; (<a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a> - 1)))
+<a name="l00029"></a>00029         <span class="keywordflow">return</span> -1;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031     <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a> *tmr_reg = ((<a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">BRX820_TIMER1</a>));
+<a name="l00032"></a>00032     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_Init = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ad1e35f1d87a850ce09aa2c09bb72d588">TIMER_INIT</a>);
+<a name="l00033"></a>00033     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_En = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ac70ef6f702fdb3b131e5ac114cf9a8e8">TIMER_CTRL</a>);
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035     tmr_Init[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = timer-&gt;<a class="code" href="struct_timer___cfg__t.html#a57ac9f180ebad69519aa80f1076f3beb">counter</a>;
+<a name="l00036"></a>00036     tmr_En[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = 0x1;
+<a name="l00037"></a>00037         
+<a name="l00038"></a>00038     <span class="keywordflow">return</span> 0;
+<a name="l00039"></a>00039 }
+<a name="l00040"></a>00040 
+<a name="l00046"></a><a class="code" href="group__timer__group.html#gadc411afd19047c99c1bff4a0e3c0f042">00046</a> <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gadc411afd19047c99c1bff4a0e3c0f042" title="Stop the timer.">timer_disable</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> *timer)
+<a name="l00047"></a>00047 {
+<a name="l00048"></a>00048     <span class="keywordflow">if</span> ((timer == NULL) || (timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> &gt; (<a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a> - 1)))
+<a name="l00049"></a>00049         <span class="keywordflow">return</span> -1;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051     <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a> *tmr_reg = ((<a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">BRX820_TIMER1</a>));
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_En = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ac70ef6f702fdb3b131e5ac114cf9a8e8">TIMER_CTRL</a>);
+<a name="l00054"></a>00054     tmr_En[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = 0;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056     <a class="code" href="group___c_s_i___core___v_i_c_functions.html#gaa5ba90f8674fba7cbecb948f06ff0f6f" title="Disable External Interrupt.">csi_vic_disable_irq</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da2d5cbfcaecd83313a5f5e28d927638c2">TIMER1_IRQ</a> + timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058     <span class="keywordflow">return</span> 0;
+<a name="l00059"></a>00059 }
+<a name="l00060"></a>00060 
+<a name="l00067"></a><a class="code" href="group__timer__group.html#gaf0480d29aaef241b63afe32e588a2308">00067</a> <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gaf0480d29aaef241b63afe32e588a2308" title="Reset the timer according to the param id. Reset means counting from the init value again...">timer_reset</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> *timer)
+<a name="l00068"></a>00068 {
+<a name="l00069"></a>00069     <span class="keywordflow">if</span> ((timer == NULL) || (timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> &gt; (<a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a> - 1)))
+<a name="l00070"></a>00070         <span class="keywordflow">return</span> -1;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072     <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a> *tmr_reg = ((<a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">BRX820_TIMER1</a>));
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_Init = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ad1e35f1d87a850ce09aa2c09bb72d588">TIMER_INIT</a>);
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076     tmr_Init[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = 0xFFFFF;
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078     <span class="keywordflow">return</span> 0;
+<a name="l00079"></a>00079 }
+<a name="l00080"></a>00080 
+<a name="l00087"></a><a class="code" href="group__timer__group.html#ga1d0a6249770ba0ed1193453eb36311c8">00087</a> <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#ga1d0a6249770ba0ed1193453eb36311c8" title="Restart the timer according to the param id. That means counting from the init value again...">timer_restart</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> *timer)
+<a name="l00088"></a>00088 {
+<a name="l00089"></a>00089     <span class="keywordflow">if</span> ((timer == NULL) || (timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> &gt; (<a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a> - 1)))
+<a name="l00090"></a>00090         <span class="keywordflow">return</span> -1;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092     <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a> *tmr_reg = ((<a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">BRX820_TIMER1</a>));
+<a name="l00093"></a>00093     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_En = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ac70ef6f702fdb3b131e5ac114cf9a8e8">TIMER_CTRL</a>);
+<a name="l00094"></a>00094     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_Init = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ad1e35f1d87a850ce09aa2c09bb72d588">TIMER_INIT</a>);
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096     tmr_En[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = 0;
+<a name="l00097"></a>00097     tmr_Init[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = 0xFFFFF;
+<a name="l00098"></a>00098     tmr_En[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = 1;
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100     <span class="keywordflow">return</span> 0;
+<a name="l00101"></a>00101 }
+<a name="l00102"></a>00102 
+<a name="l00108"></a><a class="code" href="group__timer__group.html#ga44db9d0e1abde691b2ec32d46bfa7654">00108</a> <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#ga44db9d0e1abde691b2ec32d46bfa7654" title="Set the timer&#39;s initial value.">timer_set_initvalue</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> *timer)
+<a name="l00109"></a>00109 {
+<a name="l00110"></a>00110     <span class="keywordflow">if</span> ((timer == NULL) || (timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> &gt; (<a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a> - 1)))
+<a name="l00111"></a>00111         <span class="keywordflow">return</span> -1;
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113     <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a> *tmr_reg = ((<a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">BRX820_TIMER1</a>));
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_Init = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ad1e35f1d87a850ce09aa2c09bb72d588">TIMER_INIT</a>);
+<a name="l00116"></a>00116     tmr_Init[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>] = timer-&gt;<a class="code" href="struct_timer___cfg__t.html#a57ac9f180ebad69519aa80f1076f3beb">counter</a>;
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118     <span class="keywordflow">return</span> 0;
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
+<a name="l00126"></a><a class="code" href="group__timer__group.html#ga668229ec3fe719465db77888c45e972b">00126</a> <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#ga668229ec3fe719465db77888c45e972b" title="Get the timer&#39;s initial value.">timer_get_initvalue</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> *timer)
+<a name="l00127"></a>00127 {
+<a name="l00128"></a>00128     <span class="keywordtype">int</span> retval = 0;
+<a name="l00129"></a>00129     <span class="keywordflow">if</span> ((timer == NULL) || (timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> &gt; (<a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a> - 1)))
+<a name="l00130"></a>00130         <span class="keywordflow">return</span> -1;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132     <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a> *tmr_reg = ((<a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">BRX820_TIMER1</a>));
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134     <a class="code" href="core__rv32_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* tmr_Init = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#ad1e35f1d87a850ce09aa2c09bb72d588">TIMER_INIT</a>);
+<a name="l00135"></a>00135     retval = tmr_Init[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>];
+<a name="l00136"></a>00136     <span class="keywordflow">return</span> retval;
+<a name="l00137"></a>00137 }
+<a name="l00138"></a>00138 
+<a name="l00144"></a><a class="code" href="group__timer__group.html#gadb5f5160c2cfd12c906fa05e3d14f63b">00144</a> <span class="keywordtype">int</span> <a class="code" href="group__timer__group.html#gadb5f5160c2cfd12c906fa05e3d14f63b" title="Get the timer&#39;s current value.">timer_get_currentval</a>(<a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> *timer)
+<a name="l00145"></a>00145 {
+<a name="l00146"></a>00146     <span class="keywordtype">int</span> retval = 0;
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148     <span class="keywordflow">if</span> ((timer == NULL) || (timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> &gt; (<a class="code" href="group__timer__group.html#ga3e1c866cca508b123bfe893a8a3a09ce">CONFIG_TIMER_NUM</a> - 1)))
+<a name="l00149"></a>00149         <span class="keywordflow">return</span> -1;
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151     <a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a> *tmr_reg = ((<a class="code" href="structbrx820__timer__regdef.html">brx820_timer_regdef</a>*)(<a class="code" href="mcu_2common_2xbr820_8h.html#ad6027a1ffcc4ea53ae365e864dd13f7f">BRX820_TIMER1</a>));
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153     <a class="code" href="core__rv32_8h.html#af63697ed9952cc71e1225efe205f6cd3">__I</a> <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *tmrCurr = &amp;(tmr_reg-&gt;<a class="code" href="structbrx820__timer__regdef.html#af940f4a81c82fcb79ce9869a5622f87b">TIMER_CNT</a>);
+<a name="l00154"></a>00154     retval = tmrCurr[timer-&gt;<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a>];
+<a name="l00155"></a>00155     <span class="keywordflow">return</span> retval;
+<a name="l00156"></a>00156 }
+<a name="l00157"></a>00157 
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:46 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

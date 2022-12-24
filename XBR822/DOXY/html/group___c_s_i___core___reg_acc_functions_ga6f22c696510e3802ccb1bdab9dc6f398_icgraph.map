@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$core__rv32_8h.html#ac381ddc62b65670d036020593071c266" title="Save the Irq context." alt="" coords="222,5,353,40"/>
+<area shape="rect" id="node3" href="$group___c_s_i___core___reg_acc_functions.html#gaf839aba2fc7aef775209e79374aaed53" title="Disable interrupts and exceptions." alt="" coords="192,64,383,99"/>
+<area shape="rect" id="node4" href="$xbr820__interrupts_8c.html#a89820f375d485914994e838c12fc92ee" title="disable_irq_all" alt="" coords="214,123,361,157"/>
+</map>

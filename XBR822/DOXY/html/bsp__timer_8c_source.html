@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+
+<title>D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/timer/bsp_timer/bsp_timer.c源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<!-- 制作者 Doxygen 1.7.5.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/cccc2022/CODE/radar_soc/XBR822/SDK/projects/examples/timer/bsp_timer/bsp_timer.c</div>  </div>
+</div>
+<div class="contents">
+<a href="bsp__timer_8c.html">浏览该文件的文档。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="bsp__timer_8h.html">bsp_timer.h</a>&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;stdint.h&quot;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;xbr820.h&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__timer_8h.html" title="pwm C head file">xbr820_timer.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__utility_8h.html">xbr820_utility.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="xbr820__interrupts_8h.html">xbr820_interrupts.h</a>&quot;</span>
+<a name="l00007"></a>00007 
+<a name="l00014"></a><a class="code" href="bsp__timer_8h.html#a98c8bcf3bbc82304d69372507bc1ef77">00014</a> <span class="keywordtype">void</span> <a class="code" href="bsp__timer_8c.html#a98c8bcf3bbc82304d69372507bc1ef77" title="timer_priority_cfg">timer_irq_cfg</a>(<a class="code" href="bsp__freq__detect_8h.html#acd450b16a2db1e3abc78541db370dca6">fun_timer</a> timer_handler, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> timer_priority, <a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> timer_int)
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(IS_TIMER_CONFIG_IT(timer_priority));
+<a name="l00017"></a>00017     <a class="code" href="xbr820__utility_8h.html#a71ea819692ca077204a711982fc2dfd3" title="The assert_param macro is used for function&#39;s parameters check.">assert_param</a>(IS_TIMER_CONFIG_INT(timer_int));
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019     <a class="code" href="structstc__irq__set__conf.html">stc_irq_set_cfg_t</a>  irq_timer_set_cfg;
+<a name="l00020"></a>00020         
+<a name="l00021"></a>00021     irq_timer_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a> = timer_int;
+<a name="l00022"></a>00022     irq_timer_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a4770eadb33bbd68dfd15ec540c345a2f">irq_func_pointer</a> = timer_handler;
+<a name="l00023"></a>00023     irq_timer_set_cfg.<a class="code" href="structstc__irq__set__conf.html#af20f3fdbedebe464155d85c8cddfdcd6">irq_priority</a> = timer_priority;
+<a name="l00024"></a>00024         
+<a name="l00025"></a>00025     <a class="code" href="xbr820__interrupts_8h.html#a93a764de9f26ec4e359142e3b0b98ee0">set_irq</a>(&amp;irq_timer_set_cfg);
+<a name="l00026"></a>00026     <a class="code" href="xbr820__interrupts_8h.html#aba2599a343893580fb800955a392ef2e">start_irq_x</a>(irq_timer_set_cfg.<a class="code" href="structstc__irq__set__conf.html#a3c0e2124a5d89f1664e100a861c0d971">irq_number</a>);
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00035"></a><a class="code" href="bsp__timer_8h.html#afd3228eb9bd30c01d47e48d6f8e4c3f1">00035</a> <span class="keywordtype">void</span> <a class="code" href="bsp__timer_8c.html#afd3228eb9bd30c01d47e48d6f8e4c3f1" title="timer initialize.">timer_init</a>(<a class="code" href="typdef_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <span class="keywordtype">id</span>, <a class="code" href="typdef_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> counter)
+<a name="l00036"></a>00036 {
+<a name="l00037"></a>00037         <a class="code" href="struct_timer___cfg__t.html" title="TIM Timer config structure definition.">Timer_Cfg_t</a> tim;
+<a name="l00038"></a>00038         
+<a name="l00039"></a>00039         tim.<a class="code" href="struct_timer___cfg__t.html#ae0f866d4cdac784e313b3d4db47b696f">id</a> = id;
+<a name="l00040"></a>00040         tim.<a class="code" href="struct_timer___cfg__t.html#a57ac9f180ebad69519aa80f1076f3beb">counter</a> = counter;
+<a name="l00041"></a>00041         
+<a name="l00042"></a>00042     <a class="code" href="group__timer__group.html#gad5da9cc2b66824545200231b5c8694c3" title="Start the timer. The timer should be set a initial value, or use the default value 0xFFF00000...">timer_enable</a>(&amp;tim);
+<a name="l00043"></a>00043 }
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="bsp__timer_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">00045</a> <a class="code" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section (<span class="stringliteral">&quot;INT&quot;</span>))) void <a class="code" href="bsp__timer_8h.html#a895de2a3e4d6bc59ad386f107f7358fd">TIMER1_irqhandler</a>(<span class="keywordtype">void</span>)
+<a name="l00046"></a>00046 {
+<a name="l00047"></a>00047     <span class="comment">/*do something*/</span>
+<a name="l00048"></a>00048     <a class="code" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt.">csi_vic_clear_pending_irq</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da2d5cbfcaecd83313a5f5e28d927638c2">TIMER1_IRQ</a>);
+<a name="l00049"></a>00049     <span class="keywordflow">return</span>;
+<a name="l00050"></a>00050 }
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <a class="code" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section (<span class="stringliteral">&quot;INT&quot;</span>))) void <a class="code" href="bsp__timer_8h.html#a51453bf510d340f1d6f8d3e9baf46d14">TIMER2_irqhandler</a>(<span class="keywordtype">void</span>)
+<a name="l00053"></a>00053 {
+<a name="l00054"></a>00054     <span class="comment">/*do something*/</span>
+<a name="l00055"></a>00055     <a class="code" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt.">csi_vic_clear_pending_irq</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da3da3d95094c29858f04eb966e72c1423">TIMER2_IRQ</a>);
+<a name="l00056"></a>00056     <span class="keywordflow">return</span>;
+<a name="l00057"></a>00057 }
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <a class="code" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section (<span class="stringliteral">&quot;INT&quot;</span>))) void <a class="code" href="bsp__timer_8h.html#a8f9ca9d630ec055c36c1d6a3c57755c2">TIMER3_irqhandler</a>(<span class="keywordtype">void</span>)
+<a name="l00060"></a>00060 {
+<a name="l00061"></a>00061     <span class="comment">/*do something*/</span>
+<a name="l00062"></a>00062     <a class="code" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt.">csi_vic_clear_pending_irq</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da83f49a7cad4e652cea69078e8ed1036e">TIMER3_IRQ</a>);
+<a name="l00063"></a>00063     <span class="keywordflow">return</span>;
+<a name="l00064"></a>00064 }
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <a class="code" href="xbr820__wdg_8c.html#ae0d99756f3ae3fed0f7e80eb8e002e4f">__attribute__</a> ((section (<span class="stringliteral">&quot;INT&quot;</span>))) void <a class="code" href="bsp__timer_8h.html#a1a07a680f2b1b7124b21d89e5f59a7b0">TIMER4_irqhandler</a>(<span class="keywordtype">void</span>)
+<a name="l00067"></a>00067 {
+<a name="l00068"></a>00068     <span class="comment">/*do something*/</span>
+<a name="l00069"></a>00069     <a class="code" href="group___c_s_i___core___v_i_c_functions.html#ga825e022ae986536ba99a1039e200bec2" title="Clear Pending Interrupt.">csi_vic_clear_pending_irq</a>(<a class="code" href="mcu_2common_2xbr820_8h.html#a811984b436ab69d0540cbabd8ea82e6da2e2396286fefb9b8ef5aec22126259fe">TIMER4_IRQ</a>);
+<a name="l00070"></a>00070     <span class="keywordflow">return</span>;
+<a name="l00071"></a>00071 }
+</pre></div></div>
+</div>
+
+
+<hr class="footer"/><address class="footer"><small>
+Generated at 2022年十二月24日 星期六 16:31:47 by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>
