@@ -1,0 +1,10 @@
+*.txt
+*filelist*
+*5mat.ini
+*~$*
+*modify.bat
+*.mk
+.cdk
+*Lst
+*Obj
+*.tags

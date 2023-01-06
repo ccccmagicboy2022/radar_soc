@@ -154,12 +154,14 @@ void feed_dog(void)
 
 
 /////用P1_0口模拟串口发送数据，波特率9600
-void send_data(unsigned char d)
+
+void send_data(unsigned char d)		//for 57600
 {
     unsigned char i;//,j;
 
     PHM320_TOP->GPIO_VAL &= (~(1ul << P1_0));
-    delay_us(111);		//91	
+    //delay_us(111);		//91	
+	delay_us(15);		//91	
     for(i=0;i<8;i++)
     {
         if((d&0x01)==0)
@@ -170,13 +172,16 @@ void send_data(unsigned char d)
         {
             PHM320_TOP->GPIO_VAL |= (1ul << P1_0);
         }
-        delay_us(110);
+        //delay_us(110);
+		delay_us(15);
 
         d>>=1;
     }
     PHM320_TOP->GPIO_VAL |= (1ul << P1_0);
-    delay_us(150);
+    //delay_us(150);
+	delay_us(50);
 }
+
 
 //延时n个50ms
 void delay_sub(unsigned char n)
@@ -186,7 +191,7 @@ void delay_sub(unsigned char n)
         for(;n>0;n--)
         {
             for(i=0;i<250;i++)delay_us(219);	//10MHz	  //16MHz- 176  //50ms
-            feed_dog();
+            //feed_dog();
 		   // watch_dog(1,1,16100000);  //递减计数
         }
 }
@@ -242,6 +247,35 @@ void set_freq(void)
 	PHM320_TOP->ANALOG_A_BITS.RFLDO_OSC=RFLDO_OSC_VAL;
 }
 
+uint8_t C;
+/////用P1_5口模拟串口发送数据，波特率115200
+/*
+void send_data(unsigned char d)
+{
+    unsigned char i;//,j;
+
+    PHM320_TOP->GPIO_VAL &= (~(1ul << P1_0));
+        for(C = 0;C < 0;C++);
+    delay_us(9);                //        晶振慢1%的允许87~96     93(9600)          15(57600）
+    for(i=0;i<8;i++)
+    {
+        if((d&0x01)==0)
+        {
+            PHM320_TOP->GPIO_VAL &= (~(1ul << P1_0));//5
+        }
+        else
+        {
+            PHM320_TOP->GPIO_VAL |= (1ul << P1_0);
+        }
+        for(C = 0;C < 0;C++);
+        delay_us(5);//92   13(57600)
+
+        d>>=1;
+    }
+    PHM320_TOP->GPIO_VAL |= (1ul << P1_0);
+    delay_us(50);   //150    50
+}*/
+
 int main()
 {
 	unsigned long SUM1_counter=0,SUM1_num=24,SUM0_num=8,stop_times=0,light_ad0,check_light_times=8,times=0;//,check_light_interval=8;
@@ -268,7 +302,7 @@ int main()
 	LIGHT_ON();
   //  adc_config();
 	adc_init(CH1);
-	watch_dog(1,1,10000000);  //递减计数
+	//watch_dog(1,1,10000000);  //递减计数
 
 	delay_sub(4);
 	
@@ -367,7 +401,7 @@ int main()
 	
     //延时9秒
 	//send_data(0X31);		
-    delay_sub(180);
+    //delay_sub(180);
 	//send_data(0X32);	
 	
 	LIGHT_STANDBY();
@@ -389,243 +423,17 @@ int main()
 	
     SUM=0;
 	for(i=0;i<NUM;i++)SUM1_MAX[i]=0;
+	
+	static uint8_t cnt = 0;
     while (1)
     {
-		k32=0;
-		for(i=0;i<32;i++)
-		{
-			adc_get_polling1(&k);
-			k32+=k;
-		}
-		k32+=16;
-		k=k32>>5;
-		SUM+=k;
+		adc_get_polling1(&k); //1k sps and 1.25V Vref
 		
-        times++;
-
-        if(k>average){k-=average;}
-        else {k=average-k;}
-        SUM11+=k;
-
-		if((times&0x1)==0)	//每2(64)次采样的信号积分值存一次	//总共80段
-		{
-			//SUM11>>=1;
-			SUM1+=SUM11;
-			
-			for(i=0;i<NUM;i++)
-			{
-				if(SUM11>SUM1_MAX[i])
-				{
-					for(j=NUM-1;j>i;j--)
-					{
-						SUM1_MAX[j]=SUM1_MAX[j-1];	//移位排序得出积分值最大的8段
-					}
-					SUM1_MAX[i]=SUM11;
-					break;
-				}
-			}
-			SUM11=0;
-		}
-		
-        if(times>=160)//5120)//&0x1000)>0)	//每5120次采样（256ms）统计一次信号积分值，滑窗取4次信号积分值的和做判断
-        {
-			if(init_times>0)
-			{
-				init_times--;
-				if(init_times==0)
-				{
-					set_var();
-				}
-			}
-			
-			if(run_times<3000)run_times++;
-				
-            average+=SUM/160;//5120;//>>12;
-            average>>=1;		//每260ms重新计算一次直流电压值
-
-//舍弃数值较大的16个64次信号积分值，取较小的64个64次信号积分值累加为一个采样周期的信号积分值			
-			for(i=0;i<NUM;i++)
-			{
-				SUM1-=SUM1_MAX[i];
-				SUM1_MAX[i]=0;
-			}
-			
-            SUM=SUM1;
-            SUM1+=SUM20;
-			SUM1+=SUM21;
-			SUM1+=SUM22;			
-//上电前4次测到的信号值累加作为噪声积分值，+200是避免噪声积分值过小,同时限制最大噪声积分值
-            if((SUM20>0)&&(SUM0==16000000))
-            {
-                SUM0=SUM1+200;
-                if(SUM0>300000)SUM0=300000;
-            }
-
-            SUM20=SUM21;
-			SUM21=SUM22;
-			SUM22=SUM;
-			
-            SUM2=SUM1;
-            //asm("clrwdt");
-            times=0;
-			feed_dog();
-
-            if(LIGHT==0)
-            {
-                check_light_times++;
-                if(check_light_times>=8)
-                {
-                    //读取感光AD值
-					adc_init(CH2);
-					PHM320_TOP->ANALOG_B_BITS.PGA_BYPASS = 1;
-					adc_get_polling1(&k);
-					SUM=0;
-					for(i=0;i<16;i++)
-					{
-						adc_get_polling1(&k);
-						SUM+=k;
-					}
-					light_ad=SUM>>8;	//转换为8位AD值
-
-					adc_init(CH1);
-					PHM320_TOP->ANALOG_B_BITS.PGA_BYPASS = 0;
-					adc_get_polling1(&k);
-
-                    if((light_ad<=(light_ad0+2))&&(light_ad0<=(light_ad+2)))
-                        light_ad=light_ad0;
-                    light_ad0=light_ad;
-                    check_light_times=0;
-                }
-            }
-            if(SUM1_counter==0)
-            {
-                SUM10=SUM1;
-                MAX_DELTA=1;
-            }
-			
-			if((SUM10<(SUM1+MAX_DELTA))&&(SUM1<(SUM10+MAX_DELTA)))//噪声波动在一定范围内时
-            {
-                SUM1_counter++;
-                ALL_SUM1+=SUM1;
-                SUM10=ALL_SUM1/SUM1_counter;
-                MAX_DELTA=SUM10>>3;
-                if(MAX_DELTA<MAX_DELTA0)MAX_DELTA=MAX_DELTA0;
-                if(MAX_DELTA>MAX_DELTA1)MAX_DELTA=MAX_DELTA1;
-
-                if(SUM0>SUM10)
-                {
-                    SUM=SUM0-SUM10;
-
-					if(SUM>10000)SUM0_num=5;
-					else if(SUM>5000)SUM0_num=6;
-					else SUM0_num=8;
-					
-					if((SUM1_counter>=SUM0_num)) //&&(SUM10<SUM0))
-					{
-						if(run_times<3000)
-						{
-							if(SUM1_num>16)	//没有点亮灯时允许噪声积分值减小
-							{
-								if(SUM0_num<=6)SUM0=SUM10;
-								else if(SUM0>(SUM10+200))
-								{
-									SUM0+=SUM10;
-									SUM0/=2;
-								}
-							}
-						}
-						SUM1_counter=0;
-						ALL_SUM1=0;
-					}
-				}
-                else if(SUM1_counter>=SUM1_num)		//SUM10>SUM0
-                {
-                   // if(SUM10>(SUM0+0X800))
-                    {
-                        SUM=SUM10-SUM0;
-
-                        //if((SUM10<12000000)&&(SUM<3000000))
-						if(SUM<300000)
-//噪声积分值没有达到满幅时,并且新检测到的噪声值增加值小于3000000时，允许噪声值增大
-                        {
-                            SUM0+=SUM10;
-                            SUM0/=2;
-                        }
-                    }
-                    SUM1_counter=0;
-                    ALL_SUM1=0;
-                }
-            }
-            else
-            {
-                SUM1_counter=0;
-                ALL_SUM1=0;
-            }
-
-            if(stop_times>0)	//灯灭后1秒以内不再判断是否有目标动作
-            {
-                stop_times--;
-                if((SUM0>SUM01)&&(SUM1<(SUM01+2000)))SUM0=SUM01;
-				//LIGHT_STANDBY();
-            }
-            else
-            {
-                if(SUM1>(SUM0+TH))
-                {
-                    if(light_ad<=LIGHT_TH)
-                    {
-                        if(LIGHT==0)SUM01=SUM0;
-                        LIGHT=1;
-
-                        LIGHT_ON();
-
-                        SUM1_num=6;
-                    }
-                }
-                else if(LIGHT>0)	//灯点亮时
-                {
-                    LIGHT++;
-                    if(LIGHT>DELAY_NUM)
-                    {
-                        LIGHT=0;
-                        SUM1_num=24;
-                        LIGHT_STANDBY();
-                        stop_times=7;
-                        check_light_times=3;
-                        SUM1_counter=0;
-                        ALL_SUM1=0;
-						run_times=2600;
-                    }
-                }
-            }
-
-//发送数据，测试用
-
- //           send_data(VERSION);
-  //          send_data(TH>>10);
-/*			
-           // send_data(TH>>8);
- //           send_data(DELAY_NUM>>8);
- //           send_data(DELAY_NUM);
-
-            send_data(average>>4);
-           // send_data(average);
-		
- //           send_data(LIGHT_TH);
-           // send_data(light_ad);
-
-            send_data(SUM0>>12);
-            send_data(SUM0>>4);
-            send_data(SUM2>>12);
-            send_data(SUM2>>4);
-
-            send_data(LIGHT);
-			delay_sub(1);
-*/			
-            SUM=0;
-            SUM1=0;
-        }
-    }
+		send_data(0xaa);
+		send_data(0xff & (k));
+		send_data(0xff & (k>>8));
+		send_data(0xeb);
+	}
 
     return 0;
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Name="move_detect" Version="1" Language="C" Type="Simple">
+<Project Name="phm320_daq_1k" Version="1" Language="C" Type="Simple">
   <Description/>
   <Dependencies Name="Debug"/>
   <VirtualDirectory Name="src">
@@ -8,8 +8,8 @@
     </File>
   </VirtualDirectory>
   <MonitorProgress>
-    <FlashOperate>65</FlashOperate>
-    <DebugLaunch>47</DebugLaunch>
+    <FlashOperate>63</FlashOperate>
+    <DebugLaunch>73</DebugLaunch>
   </MonitorProgress>
   <VirtualDirectory Name="hal">
     <VirtualDirectory Name="inc">
