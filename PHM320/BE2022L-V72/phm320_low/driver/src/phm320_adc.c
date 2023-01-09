@@ -31,7 +31,7 @@ em_result_t adc_init(unsigned char ch)		//默认AUTO,16000
  //       PHM320_TOP->BB_CTL = (PHM320_TOP->BB_CTL & (~0xfful)) \
  //                           | ((32000 / adc_init_cfg->ADC_SAMPLE_RATE) & 0xfful);
   
-      PHM320_TOP->BB_CTL = (PHM320_TOP->BB_CTL & (~0xfful)) | (2*20);	//1K FS				
+      PHM320_TOP->BB_CTL = (PHM320_TOP->BB_CTL & (~0xfful)) | (61);	//1K FS				
 							
         PHM320_TOP->BB_CTL_BITS.BPEN = 1;
     } 

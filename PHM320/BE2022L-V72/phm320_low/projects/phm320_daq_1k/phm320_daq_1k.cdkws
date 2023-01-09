@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CDK_Workspace Name="move_detect" Database="move_detect.tags" DoubleClick="Yes">
+<CDK_Workspace Name="phm320_daq_1k" Database="phm320_daq_1k.tags" DoubleClick="Yes">
   <DefaultPackPath>$(CDKWS)\__workspace_pack__</DefaultPackPath>
-  <Project Name="phm320_daq_1k" Path="move_detect.cdkproj" RootPath="" Active="Yes"/>
+  <Project Name="phm320_daq_1k" Path="phm320_daq_1k.cdkproj" RootPath="" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
