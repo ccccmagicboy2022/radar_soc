@@ -10,23 +10,26 @@ if ~isempty(instrfind)
     delete(instrfind);
 end
 % 端口配置
-s = serialport('com22', 57600); % 创建串行端口对象
+s = serialport('com11', 57600); % 创建串行端口对象
 s.Timeout = 300; % 300秒未读到串口数据报错
 s.flush();
 
 k = 0;
+m = 0;
 
 AD_INT = zeros(20, 1);
 A = zeros(5, 1);
 B = zeros(4, 1);
 res = 0;
 
-CC = 12; %unit: mV
+CC = 10; %unit: mV
 
 CC_RT = 0;
 USE_POINTS = 100;
 KEEP_CYCLES = 10;
-Y_MAX_VALUE = CC*2;
+AVG_RT_NUM = 30;
+CC_RT_AVG = zeros(AVG_RT_NUM, 1);
+Y_MAX_VALUE = CC*15;
 pp = zeros(USE_POINTS, 1);
 h = animatedline('MaximumNumPoints', USE_POINTS*KEEP_CYCLES, 'Color',[0 .7 .7], 'LineWidth', 1);
 hcc = animatedline('MaximumNumPoints', USE_POINTS*KEEP_CYCLES, 'Color',[1 0 0], 'LineWidth', 1);
@@ -50,13 +53,13 @@ while(1)
             end
         end
     end
-    
+
     for j=0:4
         AD_INT2 = bubble_sort(AD_INT(j*4+1:j*4+4, 1));
         AD_INT2 = AD_INT2(2:end - 1);
         A(j+1, 1) = sum(AD_INT2) / 2;
     end
-    
+
     A2 = bubble_sort(A);
     k = k + 1;
 
@@ -79,15 +82,25 @@ while(1)
     else
         CC_RT = (B(2) - B(1))*1250/4096;
     end
-    
+
     addpoints(h, k, abs(CC_RT));
     addpoints(hcc, k, CC);
-    
+
     if abs(CC_RT) >= CC
-        title([num2str(abs(CC_RT), '%3.3f'),'mV'], 'FontSize', 100);
+        m = m + 1;
+        CC_RT_AVG(m, 1) = abs(CC_RT);
+
+        if m == 1
+            title([num2str(abs(CC_RT), '%3.3f'),'mV'], 'FontSize', 100);
+        else
+            if mod(m, AVG_RT_NUM) == 0
+                title([num2str(mean(CC_RT_AVG), '%3.3f'),'mV'], 'FontSize', 100, 'Color', 'red');
+                m = 0;
+            end
+        end
     end
     drawnow limitrate
-    
+
     tEnd = (cputime - tStart)*1000;
     tStart = cputime;
 end
