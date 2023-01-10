@@ -16,25 +16,34 @@ s.flush();
 
 k = 0;
 m = 0;
+n = 0;
 
 AD_INT = zeros(20, 1);
 A = zeros(5, 1);
 B = zeros(4, 1);
 res = 0;
 
-CC = 10; %unit: mV
+%CC = 100; %unit: mV
+CC = 150; %unit: mV
 
-CC_RT = 0;
+CC_RT1 = 0;
+CC_RT2 = 0;
 USE_POINTS = 100;
 KEEP_CYCLES = 10;
-AVG_RT_NUM = 30;
-CC_RT_AVG = zeros(AVG_RT_NUM, 1);
+AVG_RT_NUM = 2;
+CC_RT1_AVG = zeros(AVG_RT_NUM, 1);
+CC_RT2_AVG = zeros(AVG_RT_NUM, 1);
 Y_MAX_VALUE = CC*15;
 pp = zeros(USE_POINTS, 1);
-h = animatedline('MaximumNumPoints', USE_POINTS*KEEP_CYCLES, 'Color',[0 .7 .7], 'LineWidth', 1);
+h1 = animatedline('MaximumNumPoints', USE_POINTS*KEEP_CYCLES, 'Color',[0 .7 .7], 'LineWidth', 1);
+h2 = animatedline('MaximumNumPoints', USE_POINTS*KEEP_CYCLES, 'Color',[0 .3 .9], 'LineWidth', 1);
 hcc = animatedline('MaximumNumPoints', USE_POINTS*KEEP_CYCLES, 'Color',[1 0 0], 'LineWidth', 1);
 yy = (1:1:USE_POINTS);
 axis([-inf inf 0 Y_MAX_VALUE]);
+
+str = '---';
+h_annot1 = annotation('textbox',[.15 .6 .3 .3],'String',str,'FitBoxToText','on', 'FontSize', 80, 'Color', 'red','EdgeColor','none');
+h_annot2 = annotation('textbox',[.15 .4 .3 .3],'String',str,'FitBoxToText','on', 'FontSize', 80, 'Color', 'blue','EdgeColor','none');
 
 s.flush();
 tStart = 0;
@@ -77,28 +86,47 @@ while(1)
         res = 0;
     end
 
-    if B(3) > B(2)
-        CC_RT = (B(3) - B(1))*1250/4096;
-    else
-        CC_RT = (B(2) - B(1))*1250/4096;
-    end
+    CC_RT1 = (B(3) - B(1))*1250/4096;
+    CC_RT2 = (B(2) - B(1))*1250/4096;
 
-    addpoints(h, k, abs(CC_RT));
-    addpoints(hcc, k, CC);
-
-    if abs(CC_RT) >= CC
+    %addpoints(h1, k, abs(CC_RT1));
+	%addpoints(h2, k, abs(CC_RT2));
+    %addpoints(hcc, k, CC);
+    
+    if abs(CC_RT1) >= CC
+        addpoints(h1, k, abs(CC_RT1));
         m = m + 1;
-        CC_RT_AVG(m, 1) = abs(CC_RT);
+        CC_RT1_AVG(m, 1) = abs(CC_RT1);
 
         if m == 1
-            title([num2str(abs(CC_RT), '%3.3f'),'mV'], 'FontSize', 100);
+            txt = sprintf('RT1: %3.3f mV',abs(CC_RT1));
+            set(h_annot1,'String',txt)
         else
             if mod(m, AVG_RT_NUM) == 0
-                title([num2str(mean(CC_RT_AVG), '%3.3f'),'mV'], 'FontSize', 100, 'Color', 'red');
+                txt = sprintf('RT1: %3.3f mV',mean(CC_RT1_AVG));
+                set(h_annot1,'String',txt)
                 m = 0;
             end
         end
     end
+    
+    if abs(CC_RT2) >= CC
+        addpoints(h2, k, abs(CC_RT2));
+        n = n + 1;
+        CC_RT2_AVG(n, 1) = abs(CC_RT2);
+
+        if n == 1
+            txt = sprintf('RT2: %3.3f mV',abs(CC_RT2));
+            set(h_annot2,'String',txt)
+        else
+            if mod(n, AVG_RT_NUM) == 0
+                txt = sprintf('RT2: %3.3f mV',mean(CC_RT2_AVG));
+                set(h_annot2,'String',txt)
+                n = 0;
+            end
+        end
+    end
+    
     drawnow limitrate
 
     tEnd = (cputime - tStart)*1000;
@@ -121,4 +149,5 @@ function [a,b]=swap(x,y)
     a=y;
     b=x;
 end
+
 

@@ -294,7 +294,7 @@ int main()
 	//PHM320_TOP->TOP_CTLA_BITS.MUX6 = 3;		//P1.5管脚设置为16M频率输出
 	
     //ldo_powered_way(ALWAYS); //常供电
-    ldo_powered_way(PLUS); //脉冲供电
+    ldo_powered_way(ALWAYS); //脉冲供电
 	SUM0=16000000;
 
     gpio_config();
